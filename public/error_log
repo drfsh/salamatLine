@@ -1,0 +1,1023 @@
+[12-Oct-2021 17:40:23 Asia/Tehran] PHP Fatal error:  Uncaught InvalidArgumentException: View [front.global.footer.top.left.box1] not found. in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php:137
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('front.global.fo...', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/Factory.php(138): Illuminate\View\FileViewFinder->find('front.global.fo...')
+#2 /home/cp44578/public_html/storage/framework/views/90876de01218e24dc6494e79360e68159bb70bd2.php(3): Illuminate\View\Factory->make('front.global.fo...', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/cp44578/p...')
+#4 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#5 /home/cp44578/public_html/vendor/laravel/ in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php on line 137
+[12-Oct-2021 17:40:32 Asia/Tehran] PHP Fatal error:  Uncaught InvalidArgumentException: View [front.global.footer.top.left.box1] not found. in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php:137
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('front.global.fo...', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/Factory.php(138): Illuminate\View\FileViewFinder->find('front.global.fo...')
+#2 /home/cp44578/public_html/storage/framework/views/90876de01218e24dc6494e79360e68159bb70bd2.php(3): Illuminate\View\Factory->make('front.global.fo...', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/cp44578/p...')
+#4 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#5 /home/cp44578/public_html/vendor/laravel/ in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php on line 137
+[12-Oct-2021 17:41:09 Asia/Tehran] PHP Fatal error:  Uncaught InvalidArgumentException: View [front.global.footer.top.left.box1] not found. in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php:137
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('front.global.fo...', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/Factory.php(138): Illuminate\View\FileViewFinder->find('front.global.fo...')
+#2 /home/cp44578/public_html/storage/framework/views/90876de01218e24dc6494e79360e68159bb70bd2.php(3): Illuminate\View\Factory->make('front.global.fo...', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/cp44578/p...')
+#4 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#5 /home/cp44578/public_html/vendor/laravel/ in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php on line 137
+[12-Oct-2021 17:41:19 Asia/Tehran] PHP Fatal error:  Uncaught InvalidArgumentException: View [front.global.footer.top.left.box1] not found. in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php:137
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('front.global.fo...', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/Factory.php(138): Illuminate\View\FileViewFinder->find('front.global.fo...')
+#2 /home/cp44578/public_html/storage/framework/views/90876de01218e24dc6494e79360e68159bb70bd2.php(3): Illuminate\View\Factory->make('front.global.fo...', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/cp44578/p...')
+#4 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#5 /home/cp44578/public_html/vendor/laravel/ in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php on line 137
+[21-Nov-2021 09:51:17 Asia/Tehran] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [home] not defined. in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:429
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(726): Illuminate\Routing\UrlGenerator->route('home', Array, true)
+#1 /home/cp44578/public_html/storage/framework/views/93f865a0666d017b88ac4a8e3d4ab94d482c1084.php(13): route('home')
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/cp44578/p...')
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/cp44578/p...', Array)
+#5 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 429
+[21-Nov-2021 09:51:18 Asia/Tehran] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [home] not defined. in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:429
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(726): Illuminate\Routing\UrlGenerator->route('home', Array, true)
+#1 /home/cp44578/public_html/storage/framework/views/93f865a0666d017b88ac4a8e3d4ab94d482c1084.php(13): route('home')
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/cp44578/p...')
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/cp44578/p...', Array)
+#5 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 429
+[21-Nov-2021 09:51:19 Asia/Tehran] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [home] not defined. in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:429
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(726): Illuminate\Routing\UrlGenerator->route('home', Array, true)
+#1 /home/cp44578/public_html/storage/framework/views/93f865a0666d017b88ac4a8e3d4ab94d482c1084.php(13): route('home')
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/cp44578/p...')
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/cp44578/p...', Array)
+#5 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 429
+[04-Dec-2021 10:47:21 Asia/Tehran] PHP Fatal error:  During class fetch: Uncaught ErrorException: include(): read of 2570 bytes failed with errno=12 Cannot allocate memory in /home/cp44578/public_html/vendor/composer/ClassLoader.php:444
+Stack trace:
+#0 /home/cp44578/public_html/vendor/composer/ClassLoader.php(444): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'include(): read...', '/home/cp44578/p...', 444, Array)
+#1 /home/cp44578/public_html/vendor/composer/ClassLoader.php(444): include()
+#2 /home/cp44578/public_html/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/home/cp44578/p...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('Symfony\\Contrac...')
+#4 [internal function]: spl_autoload_call('Symfony\\Contrac...')
+#5 /home/cp44578/public_html/vendor/nesbot/carbon/src/Carbon/Traits/Localization.php(27): class_alias('Symfony\\Contrac...', 'Symfony\\Compone...')
+#6 /home/cp44578/public_html/vendor/composer/ClassLoader.php(444): include('/home/cp44578/p...')
+#7 /home/cp44578/public_html/vendor/composer/ in /home/cp44578/public_html/vendor/nesbot/carbon/src/Carbon/Traits/Options.php on line 26
+[04-Dec-2021 10:47:22 Asia/Tehran] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [home] not defined. in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:429
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(726): Illuminate\Routing\UrlGenerator->route('home', Array, true)
+#1 /home/cp44578/public_html/storage/framework/views/93f865a0666d017b88ac4a8e3d4ab94d482c1084.php(13): route('home')
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/cp44578/p...')
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/cp44578/p...', Array)
+#5 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 429
+[03-Feb-2022 16:27:07 Asia/Tehran] PHP Fatal error:  During class fetch: Uncaught ErrorException: include(): read of 7110 bytes failed with errno=12 Cannot allocate memory in /home/cp44578/public_html/vendor/composer/ClassLoader.php:444
+Stack trace:
+#0 /home/cp44578/public_html/vendor/composer/ClassLoader.php(444): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'include(): read...', '/home/cp44578/p...', 444, Array)
+#1 /home/cp44578/public_html/vendor/composer/ClassLoader.php(444): include()
+#2 /home/cp44578/public_html/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/home/cp44578/p...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('Illuminate\\Data...')
+#4 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/HasOne.php(14): spl_autoload_call('Illuminate\\Data...')
+#5 /home/cp44578/public_html/vendor/composer/ClassLoader.php(444): include('/home/cp44578/p...')
+#6 /home/cp44578/public_html/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/home/ in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/HasOne.php on line 14
+[03-Feb-2022 16:27:16 Asia/Tehran] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [home] not defined. in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:429
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(726): Illuminate\Routing\UrlGenerator->route('home', Array, true)
+#1 /home/cp44578/public_html/storage/framework/views/93f865a0666d017b88ac4a8e3d4ab94d482c1084.php(13): route('home')
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/cp44578/p...')
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/cp44578/p...', Array)
+#5 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 429
+[03-Feb-2022 16:27:30 Asia/Tehran] PHP Fatal error:  During class fetch: Uncaught ErrorException: include(): read of 1916 bytes failed with errno=12 Cannot allocate memory in /home/cp44578/public_html/vendor/composer/ClassLoader.php:444
+Stack trace:
+#0 /home/cp44578/public_html/vendor/composer/ClassLoader.php(444): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'include(): read...', '/home/cp44578/p...', 444, Array)
+#1 /home/cp44578/public_html/vendor/composer/ClassLoader.php(444): include()
+#2 /home/cp44578/public_html/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/home/cp44578/p...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('Facade\\Ignition...')
+#4 /home/cp44578/public_html/vendor/facade/ignition/src/Views/Engines/CompilerEngine.php(17): spl_autoload_call('Facade\\Ignition...')
+#5 /home/cp44578/public_html/vendor/composer/ClassLoader.php(444): include('/home/cp44578/p...')
+#6 /home/cp44578/public_html/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/home/cp44578/p...')
+#7 [ in /home/cp44578/public_html/vendor/facade/ignition/src/Views/Engines/CompilerEngine.php on line 17
+[03-Feb-2022 16:27:31 Asia/Tehran] PHP Fatal error:  During class fetch: Uncaught ErrorException: include(): read of 25916 bytes failed with errno=12 Cannot allocate memory in /home/cp44578/public_html/vendor/composer/ClassLoader.php:444
+Stack trace:
+#0 /home/cp44578/public_html/vendor/composer/ClassLoader.php(444): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'include(): read...', '/home/cp44578/p...', 444, Array)
+#1 /home/cp44578/public_html/vendor/composer/ClassLoader.php(444): include()
+#2 /home/cp44578/public_html/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/home/cp44578/p...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('Kalnoy\\Nestedse...')
+#4 /home/cp44578/public_html/vendor/rinvex/laravel-categories/src/Models/Category.php(45): spl_autoload_call('Kalnoy\\Nestedse...')
+#5 /home/cp44578/public_html/vendor/composer/ClassLoader.php(444): include('/home/cp44578/p...')
+#6 /home/cp44578/public_html/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/home/cp44578/p...')
+#7 [in in /home/cp44578/public_html/vendor/rinvex/laravel-categories/src/Models/Category.php on line 45
+[03-Feb-2022 16:27:31 Asia/Tehran] PHP Fatal error:  During class fetch: Uncaught ErrorException: include(): read of 6785 bytes failed with errno=12 Cannot allocate memory in /home/cp44578/public_html/vendor/composer/ClassLoader.php:444
+Stack trace:
+#0 /home/cp44578/public_html/vendor/composer/ClassLoader.php(444): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'include(): read...', '/home/cp44578/p...', 444, Array)
+#1 /home/cp44578/public_html/vendor/composer/ClassLoader.php(444): include()
+#2 /home/cp44578/public_html/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/home/cp44578/p...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('Spatie\\Translat...')
+#4 /home/cp44578/public_html/vendor/rinvex/laravel-support/src/Traits/HasTranslations.php(12): spl_autoload_call('Spatie\\Translat...')
+#5 /home/cp44578/public_html/vendor/composer/ClassLoader.php(444): include('/home/cp44578/p...')
+#6 /home/cp44578/public_html/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/home/cp44578/p...')
+#7  in /home/cp44578/public_html/vendor/rinvex/laravel-support/src/Traits/HasTranslations.php on line 12
+[03-Feb-2022 16:27:34 Asia/Tehran] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [home] not defined. in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:429
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(726): Illuminate\Routing\UrlGenerator->route('home', Array, true)
+#1 /home/cp44578/public_html/storage/framework/views/93f865a0666d017b88ac4a8e3d4ab94d482c1084.php(13): route('home')
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/cp44578/p...')
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/cp44578/p...', Array)
+#5 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 429
+[11-Mar-2022 09:04:02 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[11-Mar-2022 09:04:04 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[11-Mar-2022 09:04:06 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:35:02 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:35:07 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:35:18 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:35:23 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:35:33 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:35:39 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:35:49 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:35:49 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:35:55 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:36:05 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:36:06 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:36:10 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:36:20 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:36:26 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:36:36 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:36:41 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:36:52 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:36:57 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:37:07 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:37:13 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:37:23 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Mar-2022 09:37:28 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[16-Mar-2022 09:42:34 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[16-Mar-2022 09:42:36 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[16-Mar-2022 09:42:38 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[16-Mar-2022 09:42:40 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[16-Mar-2022 09:43:00 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[16-Mar-2022 09:43:04 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[16-Mar-2022 09:43:07 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[16-Mar-2022 09:44:05 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[16-Mar-2022 09:44:24 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[16-Mar-2022 09:44:26 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[16-Mar-2022 09:44:29 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[18-Mar-2022 08:29:06 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[18-Mar-2022 08:29:08 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[18-Mar-2022 08:29:11 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[18-Mar-2022 08:29:17 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[18-Mar-2022 08:29:19 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[18-Mar-2022 08:29:23 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[18-Mar-2022 08:29:34 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[18-Mar-2022 08:29:37 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[18-Mar-2022 08:29:39 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[18-Mar-2022 08:29:47 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[18-Mar-2022 08:29:51 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[18-Mar-2022 08:29:53 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[22-Mar-2022 10:15:08 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[30-Mar-2022 06:45:51 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[29-May-2022 12:01:28 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[29-May-2022 12:02:41 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[29-May-2022 12:02:47 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[29-May-2022 12:03:00 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[29-May-2022 12:03:06 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[29-May-2022 12:04:06 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[01-Jul-2022 06:43:48 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[08-Jul-2022 11:31:35 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[10-Jul-2022 09:08:08 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[10-Jul-2022 09:08:09 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[10-Jul-2022 09:08:10 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[10-Jul-2022 09:08:29 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_officia...', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_officia...', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_officia...', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Datab in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[10-Jul-2022 09:08:32 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_officia...', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_officia...', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_officia...', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Datab in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:02:02 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:02:08 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:02:11 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:02:12 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:02:13 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:02:16 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:02:19 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:02:21 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:02:22 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:02:37 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:02:44 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:02:45 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:02:58 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:03:15 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:03:16 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:03:39 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:03:45 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:03:52 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:04:00 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:04:04 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:04:35 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:04:37 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:05:03 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[14-Jul-2022 12:05:13 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#1 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(100): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#2 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(50): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'cp44578_invoice', 'salamatbn418mu2', Array)
+#3 /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Conne in /home/cp44578/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[28-Jul-2022 17:22:16 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1142 SELECT command denied to user 'twinmoti_invoice'@'localhost' for table 'invoices' in /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php:338
+Stack trace:
+#0 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): PDO->prepare('select count(*)...')
+#1 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(671): Illuminate\Database\Connection->Illuminate\Database\{closure}('select count(*)...', Array)
+#2 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(638): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#3 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(346): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#4 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2315): Illuminate\Database\Connection->select('select count(*)...', Array, true)
+#5 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2303): Illuminate\Database\Query\Builder->runSelect()
+#6 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2867): Illuminate\Database\Query\Builder->Illuminate\Database\Query\{closure}()
+#7 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2304): Illuminate\Database\Query\Builder->onceWithColumns(Array, Object(Closure))
+#8 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2794): Illuminate\Database\Query\Builder->get(Array)
+#9 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2722): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#10 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1642): Illuminate\Database\Query\Builder->count()
+#11 /home/twinmoti/public_html/demo/app/Providers/AppServiceProvider.php(43): Illuminate\Database\Eloquent\Builder->__call('count', Array)
+#12 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(162): App\Providers\AppServiceProvider->App\Providers\{closure}(Object(Illuminate\View\View))
+#13 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(389): Illuminate\View\Factory->Illuminate\View\Concerns\{closure}('composing: erro...', Array)
+#14 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(237): Illuminate\Events\Dispatcher->Illuminate\Events\{closure}('composing: erro...', Array)
+#15 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(177): Illuminate\Events\Dispatcher->dispatch('composing: erro...', Array)
+#16 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\Factory->callComposer(Object(Illuminate\View\View))
+#17 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#18 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#19 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#20 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#21 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#22 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(571): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#23 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(476): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#24 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(354): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#25 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Illuminate\Database\QueryException))
+#26 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\Database\QueryException))
+#27 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\Database\QueryException))
+#28 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[42000]: Syntax error or access violation: 1142 SELECT command denied to user 'twinmoti_invoice'@'localhost' for table 'invoices' (SQL: select count(*) as aggregate from `cp44578_invoice`.`invoices` where `situation` = unpaid and `user_id` is null) in /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php:678
+Stack trace:
+#0 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(638): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#1 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(346): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2315): Illuminate\Database\Connection->select('select count(*)...', Array, true)
+#3 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2303): Illuminate\Database\Query\Builder->runSelect()
+#4 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2867): Illuminate\Database\Query\Builder->Illuminate\Database\Query\{closure}()
+#5 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2304): Illuminate\Database\Query\Builder->onceWithColumns(Array, Object(Closure))
+#6 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2794): Illuminate\Database\Query\Builder->get(Array)
+#7 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2722): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#8 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1642): Illuminate\Database\Query\Builder->count()
+#9 /home/twinmoti/public_html/demo/app/Providers/AppServiceProvider.php(43): Illuminate\Database\Eloquent\Builder->__call('count', Array)
+#10 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(162): App\Providers\AppServiceProvider->App\Providers\{closure}(Object(Illuminate\View\View))
+#11 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(389): Illuminate\View\Factory->Illuminate\View\Concerns\{closure}('composing: erro...', Array)
+#12 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(237): Illuminate\Events\Dispatcher->Illuminate\Events\{closure}('composing: erro...', Array)
+#13 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(177): Illuminate\Events\Dispatcher->dispatch('composing: erro...', Array)
+#14 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\Factory->callComposer(Object(Illuminate\View\View))
+#15 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#16 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#17 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#18 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#19 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#20 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(571): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#21 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(476): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#22 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(354): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#23 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Illuminate\Database\QueryException))
+#24 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\Database\QueryException))
+#25 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\Database\QueryException))
+#26 {main}
+  thrown in /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[28-Jul-2022 17:22:20 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1142 SELECT command denied to user 'twinmoti_invoice'@'localhost' for table 'invoices' in /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php:338
+Stack trace:
+#0 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): PDO->prepare('select count(*)...')
+#1 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(671): Illuminate\Database\Connection->Illuminate\Database\{closure}('select count(*)...', Array)
+#2 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(638): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#3 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(346): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#4 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2315): Illuminate\Database\Connection->select('select count(*)...', Array, true)
+#5 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2303): Illuminate\Database\Query\Builder->runSelect()
+#6 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2867): Illuminate\Database\Query\Builder->Illuminate\Database\Query\{closure}()
+#7 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2304): Illuminate\Database\Query\Builder->onceWithColumns(Array, Object(Closure))
+#8 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2794): Illuminate\Database\Query\Builder->get(Array)
+#9 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2722): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#10 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1642): Illuminate\Database\Query\Builder->count()
+#11 /home/twinmoti/public_html/demo/app/Providers/AppServiceProvider.php(43): Illuminate\Database\Eloquent\Builder->__call('count', Array)
+#12 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(162): App\Providers\AppServiceProvider->App\Providers\{closure}(Object(Illuminate\View\View))
+#13 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(389): Illuminate\View\Factory->Illuminate\View\Concerns\{closure}('composing: erro...', Array)
+#14 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(237): Illuminate\Events\Dispatcher->Illuminate\Events\{closure}('composing: erro...', Array)
+#15 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(177): Illuminate\Events\Dispatcher->dispatch('composing: erro...', Array)
+#16 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\Factory->callComposer(Object(Illuminate\View\View))
+#17 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#18 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#19 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#20 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#21 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#22 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(571): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#23 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(476): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#24 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(354): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#25 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Illuminate\Database\QueryException))
+#26 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\Database\QueryException))
+#27 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\Database\QueryException))
+#28 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[42000]: Syntax error or access violation: 1142 SELECT command denied to user 'twinmoti_invoice'@'localhost' for table 'invoices' (SQL: select count(*) as aggregate from `cp44578_invoice`.`invoices` where `situation` = unpaid and `user_id` is null) in /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php:678
+Stack trace:
+#0 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(638): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#1 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(346): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2315): Illuminate\Database\Connection->select('select count(*)...', Array, true)
+#3 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2303): Illuminate\Database\Query\Builder->runSelect()
+#4 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2867): Illuminate\Database\Query\Builder->Illuminate\Database\Query\{closure}()
+#5 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2304): Illuminate\Database\Query\Builder->onceWithColumns(Array, Object(Closure))
+#6 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2794): Illuminate\Database\Query\Builder->get(Array)
+#7 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2722): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#8 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1642): Illuminate\Database\Query\Builder->count()
+#9 /home/twinmoti/public_html/demo/app/Providers/AppServiceProvider.php(43): Illuminate\Database\Eloquent\Builder->__call('count', Array)
+#10 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(162): App\Providers\AppServiceProvider->App\Providers\{closure}(Object(Illuminate\View\View))
+#11 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(389): Illuminate\View\Factory->Illuminate\View\Concerns\{closure}('composing: erro...', Array)
+#12 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(237): Illuminate\Events\Dispatcher->Illuminate\Events\{closure}('composing: erro...', Array)
+#13 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(177): Illuminate\Events\Dispatcher->dispatch('composing: erro...', Array)
+#14 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\Factory->callComposer(Object(Illuminate\View\View))
+#15 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#16 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#17 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#18 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#19 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#20 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(571): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#21 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(476): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#22 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(354): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#23 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Illuminate\Database\QueryException))
+#24 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\Database\QueryException))
+#25 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\Database\QueryException))
+#26 {main}
+  thrown in /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[28-Jul-2022 17:24:34 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1142 SELECT command denied to user 'twinmoti_invoice'@'localhost' for table 'invoices' in /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php:338
+Stack trace:
+#0 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): PDO->prepare('select count(*)...')
+#1 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(671): Illuminate\Database\Connection->Illuminate\Database\{closure}('select count(*)...', Array)
+#2 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(638): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#3 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(346): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#4 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2315): Illuminate\Database\Connection->select('select count(*)...', Array, true)
+#5 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2303): Illuminate\Database\Query\Builder->runSelect()
+#6 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2867): Illuminate\Database\Query\Builder->Illuminate\Database\Query\{closure}()
+#7 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2304): Illuminate\Database\Query\Builder->onceWithColumns(Array, Object(Closure))
+#8 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2794): Illuminate\Database\Query\Builder->get(Array)
+#9 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2722): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#10 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1642): Illuminate\Database\Query\Builder->count()
+#11 /home/twinmoti/public_html/demo/app/Providers/AppServiceProvider.php(43): Illuminate\Database\Eloquent\Builder->__call('count', Array)
+#12 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(162): App\Providers\AppServiceProvider->App\Providers\{closure}(Object(Illuminate\View\View))
+#13 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(389): Illuminate\View\Factory->Illuminate\View\Concerns\{closure}('composing: erro...', Array)
+#14 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(237): Illuminate\Events\Dispatcher->Illuminate\Events\{closure}('composing: erro...', Array)
+#15 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(177): Illuminate\Events\Dispatcher->dispatch('composing: erro...', Array)
+#16 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\Factory->callComposer(Object(Illuminate\View\View))
+#17 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#18 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#19 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#20 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#21 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#22 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(571): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#23 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(476): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#24 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(354): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#25 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Illuminate\Database\QueryException))
+#26 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\Database\QueryException))
+#27 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\Database\QueryException))
+#28 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[42000]: Syntax error or access violation: 1142 SELECT command denied to user 'twinmoti_invoice'@'localhost' for table 'invoices' (SQL: select count(*) as aggregate from `cp44578_invoice`.`invoices` where `situation` = unpaid and `user_id` is null) in /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php:678
+Stack trace:
+#0 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(638): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#1 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(346): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2315): Illuminate\Database\Connection->select('select count(*)...', Array, true)
+#3 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2303): Illuminate\Database\Query\Builder->runSelect()
+#4 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2867): Illuminate\Database\Query\Builder->Illuminate\Database\Query\{closure}()
+#5 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2304): Illuminate\Database\Query\Builder->onceWithColumns(Array, Object(Closure))
+#6 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2794): Illuminate\Database\Query\Builder->get(Array)
+#7 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2722): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#8 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1642): Illuminate\Database\Query\Builder->count()
+#9 /home/twinmoti/public_html/demo/app/Providers/AppServiceProvider.php(43): Illuminate\Database\Eloquent\Builder->__call('count', Array)
+#10 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(162): App\Providers\AppServiceProvider->App\Providers\{closure}(Object(Illuminate\View\View))
+#11 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(389): Illuminate\View\Factory->Illuminate\View\Concerns\{closure}('composing: erro...', Array)
+#12 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(237): Illuminate\Events\Dispatcher->Illuminate\Events\{closure}('composing: erro...', Array)
+#13 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(177): Illuminate\Events\Dispatcher->dispatch('composing: erro...', Array)
+#14 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\Factory->callComposer(Object(Illuminate\View\View))
+#15 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#16 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#17 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#18 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#19 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#20 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(571): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#21 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(476): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#22 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(354): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#23 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Illuminate\Database\QueryException))
+#24 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\Database\QueryException))
+#25 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\Database\QueryException))
+#26 {main}
+  thrown in /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[28-Jul-2022 17:24:39 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1142 SELECT command denied to user 'twinmoti_invoice'@'localhost' for table 'invoices' in /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php:338
+Stack trace:
+#0 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): PDO->prepare('select count(*)...')
+#1 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(671): Illuminate\Database\Connection->Illuminate\Database\{closure}('select count(*)...', Array)
+#2 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(638): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#3 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(346): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#4 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2315): Illuminate\Database\Connection->select('select count(*)...', Array, true)
+#5 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2303): Illuminate\Database\Query\Builder->runSelect()
+#6 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2867): Illuminate\Database\Query\Builder->Illuminate\Database\Query\{closure}()
+#7 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2304): Illuminate\Database\Query\Builder->onceWithColumns(Array, Object(Closure))
+#8 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2794): Illuminate\Database\Query\Builder->get(Array)
+#9 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2722): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#10 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1642): Illuminate\Database\Query\Builder->count()
+#11 /home/twinmoti/public_html/demo/app/Providers/AppServiceProvider.php(43): Illuminate\Database\Eloquent\Builder->__call('count', Array)
+#12 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(162): App\Providers\AppServiceProvider->App\Providers\{closure}(Object(Illuminate\View\View))
+#13 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(389): Illuminate\View\Factory->Illuminate\View\Concerns\{closure}('composing: erro...', Array)
+#14 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(237): Illuminate\Events\Dispatcher->Illuminate\Events\{closure}('composing: erro...', Array)
+#15 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(177): Illuminate\Events\Dispatcher->dispatch('composing: erro...', Array)
+#16 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\Factory->callComposer(Object(Illuminate\View\View))
+#17 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#18 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#19 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#20 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#21 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#22 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(571): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#23 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(476): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#24 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(354): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#25 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Illuminate\Database\QueryException))
+#26 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\Database\QueryException))
+#27 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\Database\QueryException))
+#28 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[42000]: Syntax error or access violation: 1142 SELECT command denied to user 'twinmoti_invoice'@'localhost' for table 'invoices' (SQL: select count(*) as aggregate from `cp44578_invoice`.`invoices` where `situation` = unpaid and `user_id` is null) in /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php:678
+Stack trace:
+#0 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(638): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#1 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(346): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2315): Illuminate\Database\Connection->select('select count(*)...', Array, true)
+#3 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2303): Illuminate\Database\Query\Builder->runSelect()
+#4 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2867): Illuminate\Database\Query\Builder->Illuminate\Database\Query\{closure}()
+#5 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2304): Illuminate\Database\Query\Builder->onceWithColumns(Array, Object(Closure))
+#6 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2794): Illuminate\Database\Query\Builder->get(Array)
+#7 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2722): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#8 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1642): Illuminate\Database\Query\Builder->count()
+#9 /home/twinmoti/public_html/demo/app/Providers/AppServiceProvider.php(43): Illuminate\Database\Eloquent\Builder->__call('count', Array)
+#10 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(162): App\Providers\AppServiceProvider->App\Providers\{closure}(Object(Illuminate\View\View))
+#11 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(389): Illuminate\View\Factory->Illuminate\View\Concerns\{closure}('composing: erro...', Array)
+#12 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(237): Illuminate\Events\Dispatcher->Illuminate\Events\{closure}('composing: erro...', Array)
+#13 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(177): Illuminate\Events\Dispatcher->dispatch('composing: erro...', Array)
+#14 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\Factory->callComposer(Object(Illuminate\View\View))
+#15 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#16 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#17 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#18 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#19 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#20 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(571): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#21 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(476): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#22 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(354): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#23 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Illuminate\Database\QueryException))
+#24 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\Database\QueryException))
+#25 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\Database\QueryException))
+#26 {main}
+  thrown in /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[28-Jul-2022 17:25:22 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1142 SELECT command denied to user 'twinmoti_invoice'@'localhost' for table 'invoices' in /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php:338
+Stack trace:
+#0 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): PDO->prepare('select count(*)...')
+#1 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(671): Illuminate\Database\Connection->Illuminate\Database\{closure}('select count(*)...', Array)
+#2 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(638): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#3 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(346): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#4 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2315): Illuminate\Database\Connection->select('select count(*)...', Array, true)
+#5 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2303): Illuminate\Database\Query\Builder->runSelect()
+#6 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2867): Illuminate\Database\Query\Builder->Illuminate\Database\Query\{closure}()
+#7 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2304): Illuminate\Database\Query\Builder->onceWithColumns(Array, Object(Closure))
+#8 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2794): Illuminate\Database\Query\Builder->get(Array)
+#9 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2722): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#10 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1642): Illuminate\Database\Query\Builder->count()
+#11 /home/twinmoti/public_html/demo/app/Providers/AppServiceProvider.php(43): Illuminate\Database\Eloquent\Builder->__call('count', Array)
+#12 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(162): App\Providers\AppServiceProvider->App\Providers\{closure}(Object(Illuminate\View\View))
+#13 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(389): Illuminate\View\Factory->Illuminate\View\Concerns\{closure}('composing: erro...', Array)
+#14 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(237): Illuminate\Events\Dispatcher->Illuminate\Events\{closure}('composing: erro...', Array)
+#15 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(177): Illuminate\Events\Dispatcher->dispatch('composing: erro...', Array)
+#16 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\Factory->callComposer(Object(Illuminate\View\View))
+#17 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#18 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#19 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#20 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#21 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#22 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(571): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#23 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(476): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#24 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(354): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#25 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Illuminate\Database\QueryException))
+#26 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\Database\QueryException))
+#27 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\Database\QueryException))
+#28 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[42000]: Syntax error or access violation: 1142 SELECT command denied to user 'twinmoti_invoice'@'localhost' for table 'invoices' (SQL: select count(*) as aggregate from `cp44578_invoice`.`invoices` where `situation` = unpaid and `user_id` is null) in /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php:678
+Stack trace:
+#0 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(638): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#1 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(346): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2315): Illuminate\Database\Connection->select('select count(*)...', Array, true)
+#3 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2303): Illuminate\Database\Query\Builder->runSelect()
+#4 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2867): Illuminate\Database\Query\Builder->Illuminate\Database\Query\{closure}()
+#5 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2304): Illuminate\Database\Query\Builder->onceWithColumns(Array, Object(Closure))
+#6 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2794): Illuminate\Database\Query\Builder->get(Array)
+#7 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2722): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#8 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1642): Illuminate\Database\Query\Builder->count()
+#9 /home/twinmoti/public_html/demo/app/Providers/AppServiceProvider.php(43): Illuminate\Database\Eloquent\Builder->__call('count', Array)
+#10 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(162): App\Providers\AppServiceProvider->App\Providers\{closure}(Object(Illuminate\View\View))
+#11 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(389): Illuminate\View\Factory->Illuminate\View\Concerns\{closure}('composing: erro...', Array)
+#12 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(237): Illuminate\Events\Dispatcher->Illuminate\Events\{closure}('composing: erro...', Array)
+#13 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(177): Illuminate\Events\Dispatcher->dispatch('composing: erro...', Array)
+#14 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\Factory->callComposer(Object(Illuminate\View\View))
+#15 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#16 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#17 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#18 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#19 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#20 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(571): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#21 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(476): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#22 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(354): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#23 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Illuminate\Database\QueryException))
+#24 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\Database\QueryException))
+#25 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\Database\QueryException))
+#26 {main}
+  thrown in /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678
+[28-Jul-2022 17:25:25 Asia/Tehran] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1142 SELECT command denied to user 'twinmoti_invoice'@'localhost' for table 'invoices' in /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php:338
+Stack trace:
+#0 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): PDO->prepare('select count(*)...')
+#1 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(671): Illuminate\Database\Connection->Illuminate\Database\{closure}('select count(*)...', Array)
+#2 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(638): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#3 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(346): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#4 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2315): Illuminate\Database\Connection->select('select count(*)...', Array, true)
+#5 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2303): Illuminate\Database\Query\Builder->runSelect()
+#6 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2867): Illuminate\Database\Query\Builder->Illuminate\Database\Query\{closure}()
+#7 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2304): Illuminate\Database\Query\Builder->onceWithColumns(Array, Object(Closure))
+#8 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2794): Illuminate\Database\Query\Builder->get(Array)
+#9 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2722): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#10 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1642): Illuminate\Database\Query\Builder->count()
+#11 /home/twinmoti/public_html/demo/app/Providers/AppServiceProvider.php(43): Illuminate\Database\Eloquent\Builder->__call('count', Array)
+#12 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(162): App\Providers\AppServiceProvider->App\Providers\{closure}(Object(Illuminate\View\View))
+#13 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(389): Illuminate\View\Factory->Illuminate\View\Concerns\{closure}('composing: erro...', Array)
+#14 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(237): Illuminate\Events\Dispatcher->Illuminate\Events\{closure}('composing: erro...', Array)
+#15 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(177): Illuminate\Events\Dispatcher->dispatch('composing: erro...', Array)
+#16 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\Factory->callComposer(Object(Illuminate\View\View))
+#17 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#18 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#19 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#20 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#21 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#22 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(571): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#23 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(476): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#24 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(354): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#25 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Illuminate\Database\QueryException))
+#26 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\Database\QueryException))
+#27 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\Database\QueryException))
+#28 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[42000]: Syntax error or access violation: 1142 SELECT command denied to user 'twinmoti_invoice'@'localhost' for table 'invoices' (SQL: select count(*) as aggregate from `cp44578_invoice`.`invoices` where `situation` = unpaid and `user_id` is null) in /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php:678
+Stack trace:
+#0 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(638): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#1 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(346): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2315): Illuminate\Database\Connection->select('select count(*)...', Array, true)
+#3 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2303): Illuminate\Database\Query\Builder->runSelect()
+#4 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2867): Illuminate\Database\Query\Builder->Illuminate\Database\Query\{closure}()
+#5 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2304): Illuminate\Database\Query\Builder->onceWithColumns(Array, Object(Closure))
+#6 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2794): Illuminate\Database\Query\Builder->get(Array)
+#7 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2722): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#8 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1642): Illuminate\Database\Query\Builder->count()
+#9 /home/twinmoti/public_html/demo/app/Providers/AppServiceProvider.php(43): Illuminate\Database\Eloquent\Builder->__call('count', Array)
+#10 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(162): App\Providers\AppServiceProvider->App\Providers\{closure}(Object(Illuminate\View\View))
+#11 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(389): Illuminate\View\Factory->Illuminate\View\Concerns\{closure}('composing: erro...', Array)
+#12 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(237): Illuminate\Events\Dispatcher->Illuminate\Events\{closure}('composing: erro...', Array)
+#13 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(177): Illuminate\Events\Dispatcher->dispatch('composing: erro...', Array)
+#14 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\Factory->callComposer(Object(Illuminate\View\View))
+#15 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#16 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#17 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#18 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#19 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#20 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(571): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#21 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(476): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#22 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(354): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#23 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Illuminate\Database\QueryException))
+#24 /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\Database\QueryException))
+#25 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\Database\QueryException))
+#26 {main}
+  thrown in /home/twinmoti/public_html/demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 678

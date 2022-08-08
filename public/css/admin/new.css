@@ -1,0 +1,77 @@
+body{
+    background: #f3f6fd;
+}
+.card-3-part{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.card-3-part .c1{
+    width: 100%;
+    padding: 30px;
+    border: 2px solid red;
+    border-bottom: none;
+}
+.card-3-part .c2{
+    width: 50%;
+    border: 2px solid red;
+    padding: 24px 8px;
+    font-size: 13px;
+}
+.card-3-part .n2{
+    width: 33.3%;
+    border: 2px solid red;
+    padding: 24px 8px;
+    font-size: 13px;
+}
+.card-3-part .n2.b-l-none{
+    border-left: none;
+}
+.card-3-part .n2.b-r-none{
+    border-right: none;
+}.card-3-part .n2.p{
+     padding: 14px 8px;
+ }
+.card-3-part .c2:last-child{
+    border-right: none;
+}
+.s-card .title, .s-card .total{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-l {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.vertical li{
+    padding: 0 8px;
+}
+.vertical li:first-child{
+    padding: 11px 0;
+    text-align: center;
+}
+.sticky-container .GlobalSide{
+    padding: 0;
+}
+.GlobalSide a i{
+    font-size: 100%;
+}
+
+.input-days-admin{
+    width: 60px;
+    display: inline;
+}
+.btn{
+    background: #0a5385;
+    color: white;
+    padding: 11px;
+
+}
+.m-0{
+    margin: 0!important;
+}
