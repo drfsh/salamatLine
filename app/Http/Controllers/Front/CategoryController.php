@@ -41,6 +41,7 @@ class CategoryController extends Controller
 
 		$cat_id = $data['category']->id;
 		// $data['sub_cats'] = $data['category']->descendants()->where('parent_id',$cat_id)->get();
+
 		$data['sub_cats'] = $data['category']->descendants()->get()->toTree();
 
 		$sub_cat_id  = Category::descendantsAndSelf($cat_id)->pluck('id')->toArray();

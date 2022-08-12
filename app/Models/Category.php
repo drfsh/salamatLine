@@ -11,5 +11,7 @@ class Category extends RinvexCategory implements Viewable
 {
 	use InteractsWithViews;
 
-	
+    function descendants(){
+        return $this->hasMany(Category::class,'parent_id','id');
+    }
 }

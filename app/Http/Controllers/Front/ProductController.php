@@ -41,10 +41,13 @@ class ProductController extends Controller
 		}
 
 		$avgRate = $data['product']->averageRating(2, true);
+        if ($avgRate!==null)
 		$data['rate_percent'] = $avgRate[0]*20;
-		$data['countRate'] = $data['product']->getApprovedRatings($data['product']->id)->count();	
+        else
+            $data['rate_percent'] = 0;
+        $data['countRate'] = $data['product']->getApprovedRatings($data['product']->id)->count();
 
-		$data['product']->categories;
+        $data['product']->categories;
 
 		views($data['product'])->cooldown(1440)->record();
 		$this->seo()->setTitle($data['product']->title);
