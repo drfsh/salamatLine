@@ -16,5 +16,5 @@ mix.js('resources/js/app/app2.js', 'public/js/front/')
     .vue();
     // .sass('resources/sass/app.scss', 'public/css');
 
-// mix.js('resources/js/admin/admin.js', 'public/js')
-//     .vue();
+mix.js('resources/js/admin/admin2.js', 'public/js/admin')
+    .vue();

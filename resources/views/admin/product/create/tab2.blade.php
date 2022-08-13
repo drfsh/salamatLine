@@ -12,6 +12,12 @@
             {{ Form::text('price', null, ['class' => 'number input-group-field']) }}
             <span class="input-group-label">ريال</span>
         </div>
+        <nerkh></nerkh>
+        {{ Form::label('price', 'قیمت') }}
+        <div class="input-group">
+            {{ Form::text('price', null, ['class' => 'number input-group-field']) }}
+            <span class="input-group-label">دلار</span>
+        </div>
         @if ($errors->has('price'))
             <span class="label warning">
                 <strong>{{ $errors->first('price') }}</strong>
@@ -84,3 +90,18 @@
         </div>
     </div>
 </div>
+
+<script>
+    (async () => {
+        const rawResponse = await fetch('https://sourcearena.ir/api/?token=aabf695de1c1a4126099c708324406c1&currency', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+        });
+        const content = await rawResponse.json();
+
+        console.log(content);
+    })();
+</script>
