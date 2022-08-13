@@ -11,7 +11,7 @@
             @yield('bread')
             <div class="double-gap"></div>
             <div class="grid-container">
-                @include('profile.global.router')
+                {{ Breadcrumbs::render(\Request::route()->getName()) }}
                 <div class="grid-x grid-padding-x">
                     <div class="cell medium-3 large-3">
                         @include('profile.global.sidebar.main')

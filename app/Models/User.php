@@ -62,8 +62,12 @@ class User extends Authenticatable
            return asset('img/profile/default.jpg');
         }
         return asset('img/profile/' . $value);
-    } 
+    }
 
+    public function tickets()
+    {
+        return $this->hasMany(Ticket::class);
+    }
 
 
 }

@@ -3,7 +3,9 @@
 		<div class="hupload">
 				<img style="border-radius: 100%;" src="{{Auth::user()->avatar}}">
 			<label class="upload" for="FileUpload">
-				<i class="fas fa-camera"></i>
+				<i style="width: 15px;height: 15px;">
+                    @include('icons.edit')
+                </i>
 			</label>
 		</div>
 		{!! Form::open(['route'=>'ChangeAvatar','method' => 'PUT','class'=>'hide','files'=>true]) !!}
@@ -26,4 +28,4 @@
 {{--			<form id="logout-form" action="{{ url('/logout') }}" method="POST" class="hide">{{ csrf_field() }} </form>--}}
 {{--		</div>--}}
 {{--	</div>--}}
-</div>	
+</div>

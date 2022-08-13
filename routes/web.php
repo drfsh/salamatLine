@@ -45,15 +45,13 @@ Route::group(['middleware' => ['web']], function () {
 	Route::post('add-coupon', [App\Http\Controllers\Front\CouponController::class, 'addCoupon'])->name('CartCoupon');
 	Route::get('remove-coupon',[App\Http\Controllers\Front\CouponController::class, 'DeleteCoupon'])->name('RemoveCoupon');
 	Route::get('get-condition', [App\Http\Controllers\Front\CouponController::class, 'getCondition'])->name('GetCondition');
-	
+
 	Route::post('payment/pasargad',[App\Http\Controllers\Front\Payment\MainController::class, 'main']);
 	Route::put('repayment/pasargad/{id}',[App\Http\Controllers\Front\Payment\MainController::class, 'repay']);
 	Route::get('payment/pasargad-callback',[App\Http\Controllers\Front\Payment\MainController::class, 'passarGadCallback']);
 
 // End cart routes
 
-	Route::post('add-favorite/{id}',[App\Http\Controllers\Front\FavoriteController::class, 'Favorite'])->name('Favorite');
-	Route::get('my-favorites',[App\Http\Controllers\Front\FavoriteController::class, 'main'])->name('MyFavorites');
 	Route::get('search',[App\Http\Controllers\Front\SearchController::class, 'main'])->name('search');
 
 	Route::get('/category',[App\Http\Controllers\Front\CategoryController::class, 'holder'])->name('categoryHolder');
@@ -89,14 +87,20 @@ Route::group(['middleware' => ['web']], function () {
 
 	Route::get('/partner', [App\Http\Controllers\Front\PartnerController::class, 'main'])->name('Partner');
 	Route::post('/partner', [App\Http\Controllers\Front\PartnerController::class, 'PartnerRequest'])->name('PartnerRequest');
-	
+
 	Route::get('/compare/search', [App\Http\Controllers\Front\CompareController::class, 'search'])->name('CompareSearch');
 	Route::get('/compare/add-product/{id}', [App\Http\Controllers\Front\CompareController::class, 'add'])->name('AddCompare');
 	Route::get('/compare/{slug}', [App\Http\Controllers\Front\CompareController::class, 'main'])->name('Compare');
-	
+
 	Route::post('/notify-stock/{id}', [App\Http\Controllers\Front\ReStockController::class, 'main'])->name('NotifyStock');
 
 	Route::get('/auth/{provider}', [App\Http\Controllers\Auth\SocialController::class, 'redirectToProvider'])->name('SocialLogin');
 	Route::get('/auth/{provider}/callback', [App\Http\Controllers\Auth\SocialController::class, 'handleProviderCallback']);
+
+    Route::get('/tickets', [App\Http\Controllers\Front\Ticket\TicketController::class, 'main'])->name('Tickets');
+    Route::get('/new-ticket', [App\Http\Controllers\Front\Ticket\TicketController::class, 'newTicket'])->name('NewTickets');
+    Route::get('/ticket/{code}-{id}', [App\Http\Controllers\Front\Ticket\TicketController::class, 'view'])->name('ticket');
+    Route::get('/ticket/make', [App\Http\Controllers\Front\Ticket\TicketController::class, 'make'])->name('CreateTicket');
+    Route::get('/tickets/get', [App\Http\Controllers\Front\Ticket\TicketController::class, 'getList'])->name('getTicket');
 
 });

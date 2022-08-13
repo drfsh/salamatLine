@@ -13,7 +13,7 @@
 				@include('front.product.holder.item.assets.price')
 				@if(!$item->discount->isEmpty())
 					<div class="dis">{{$item->discount[0]->percent}} تخفیف</div>
-				@endif	
+				@endif
 			</div>
 		</div>
 	</div>

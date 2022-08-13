@@ -53,7 +53,7 @@ class CategoryController extends Controller
 		->orderBy('active', 'desc')
 		->withAnyCategories($sub_cat_id)
 		->paginate(12);
-		// return $data;	
+		// return $data;
 		return view('front.category.main.main',compact('data'));
 	}
 }

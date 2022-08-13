@@ -36,7 +36,8 @@
         "spatie/laravel-analytics": "^3.11",
         "spatie/laravel-permission": "^3.18",
         "spatie/laravel-searchable": "^1.9",
-        "spatie/laravel-sluggable": "^2.6"
+        "spatie/laravel-sluggable": "^2.6",
+        "kalnoy/nestedset": "5.0.3"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",

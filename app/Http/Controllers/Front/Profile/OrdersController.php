@@ -14,7 +14,7 @@ class OrdersController extends Controller
 {
     use Smstrait;
     public function __construct(){$this->middleware('auth');}
-    
+
 	public function main()
 	{
       	$userId = Auth::id();
@@ -29,6 +29,15 @@ class OrdersController extends Controller
         $data['invoice'] = Invoice::with('detail','orders.product','orders.detail')->where('user_id', $userId)->where('situation','finish')->paginate(5);
 		return view('profile.orders.history.main',compact('data'));
 	}
+
+	public function tracking()
+	{
+		return view('profile.orders.tracking.main');
+	}
+
+    public function check(){
+
+    }
 
     public function Success($id){
         $invoice = Invoice::with('user')->find($id);

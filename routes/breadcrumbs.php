@@ -2,7 +2,7 @@
 
 // Home
 Breadcrumbs::for('home', function ($trail) {
-    $trail->push('صفحه نخست', route('home'));
+    $trail->push('خانه', route('home'));
 });
 
 
@@ -12,7 +12,7 @@ Breadcrumbs::for('cart', function ($trail) {
 });
 
 
-Breadcrumbs::for('favorite', function ($trail) {
+Breadcrumbs::for('MyFavorites', function ($trail) {
     $trail->parent('home');
     $trail->push('علاقه‌مندی‌ها', route('cart'));
 });
@@ -47,38 +47,51 @@ Breadcrumbs::for('product', function ($trail,$data) {
 
 
 
-// ===============Profile==================
-Breadcrumbs::for('Profile', function ($trail) {
+// ===============profile==================
+Breadcrumbs::for('profile', function ($trail) {
     $trail->parent('home');
-    $trail->push('پروفایل', route('profile'));
+    $trail->push('پیشخوان', route('profile'));
 });
 
 Breadcrumbs::for('Password', function ($trail) {
-    $trail->parent('Profile');
+    $trail->parent('profile');
     $trail->push('تغییر رمز عبور', route('ChangePassword'));
 });
 
-Breadcrumbs::for('Address', function ($trail) {
-    $trail->parent('Profile');
+Breadcrumbs::for('ProfileAddress', function ($trail) {
+    $trail->parent('profile');
     $trail->push('مدیریت آدرس‌ها', route('ProfileAddress'));
 });
 
+Breadcrumbs::for('Tickets', function ($trail) {
+    $trail->parent('profile');
+    $trail->push('تیکت ها', route('Tickets'));
+});
+Breadcrumbs::for('NewTickets', function ($trail) {
+    $trail->parent('profile');
+    $trail->push('ارسال تیکت', route('NewTickets'));
+});
+
 Breadcrumbs::for('NewAddress', function ($trail) {
-    $trail->parent('Address');
+    $trail->parent('ProfileAddress');
     $trail->push('ثبت آدرس جدید', route('NewAddress'));
 });
 
-Breadcrumbs::for('Edit', function ($trail) {
-    $trail->parent('Profile');
+Breadcrumbs::for('ProfileEdit', function ($trail) {
+    $trail->parent('profile');
     $trail->push('ویرایش اطلاعات', route('ProfileEdit'));
 });
+Breadcrumbs::for('OrdersTracking', function ($trail) {
+    $trail->parent('profile');
+    $trail->push('پیگیری سفارشات', route('ProfileEdit'));
+});
 
-Breadcrumbs::for('Orders', function ($trail) {
-    $trail->parent('Profile');
-    $trail->push('سفارشات فعال', route('ProfileOrders'));
+Breadcrumbs::for('ProfileOrders', function ($trail) {
+    $trail->parent('profile');
+    $trail->push('سفارشات', route('ProfileOrders'));
 });
 Breadcrumbs::for('History', function ($trail) {
-    $trail->parent('Profile');
+    $trail->parent('profile');
     $trail->push('بایگانی سفارشات گذشته', route('OrderHistory'));
 });
 

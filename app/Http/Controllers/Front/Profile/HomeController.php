@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Front\Profile;
 
 use App\Http\Controllers\Controller;
+use App\Models\Product;
+use CyrildeWit\EloquentViewable\Support\Period;
 use Illuminate\Http\Request;
 use Auth;
 use Redirect;
@@ -14,7 +16,9 @@ class HomeController extends Controller
 
 	public function main()
 	{
-		return view('profile.home.main');
+        $data['most_view'] = Product::published()->orderByUniqueViews('desc', Period::pastDays(1))->limit(4)->get();
+
+        return view('profile.home.main',compact('data'));
 	}
 
     public function ChangeProfilePic(Request $request){
@@ -27,7 +31,7 @@ class HomeController extends Controller
         \Image::make($image)->fit(400, 400)->save(public_path('img/profile/').$imageName)->orientate();
         $user->avatar = $imageName;
         $user->save();
-                    
+
         return Redirect::back()->withErrors(['تصویر پروفایل با موفقیت آپلود شد.']);
 
     }
