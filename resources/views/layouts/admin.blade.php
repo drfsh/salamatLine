@@ -3,7 +3,7 @@
 <head>
     @include('admin.global.head.main')
     @yield('headScript')
-    
+
 </head>
 <body>
 	<div class="off-canvas-wrapper">
@@ -39,6 +39,7 @@
 		</div>
 	</div>
     <script src="{{ mix('js/admin/app.js') }}"></script>
+    <script src="{{ mix('js/admin/admin2.js') }}"></script>
     @yield('js')
 </body>
 </html>

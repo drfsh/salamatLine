@@ -31,6 +31,7 @@
         "vue-moment-jalaali": "^2.0.0",
         "vue-owl-carousel": "^2.0.3",
         "vue-persian-datetime-picker": "^2.10.3",
-        "vue3-webcomponent-wrapper": "^0.1.4"
+        "vue3-webcomponent-wrapper": "^0.1.4",
+        "vuejs-paginate-next": "^1.0.2"
     }
 }

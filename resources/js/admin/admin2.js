@@ -1,3 +1,4 @@
+import brand from "./components/brand/brand";
 
 require('./bootstrap')
 require('jquery-confirm')
@@ -7,18 +8,13 @@ window.axios = require('axios')
 import wrapper from "vue3-webcomponent-wrapper";
 import * as Vue from 'vue'
 
-import address from "./components/address/address";
-import tickets from "./components/ticket/tickets";
+
 
 
 setApp([
     {
-        name: 'address-page',
-        component: address
-    },
-    {
-        name: 'ticket-list',
-        component: tickets
+        name: 'brand-admin',
+        component: brand
     },
 ])
 

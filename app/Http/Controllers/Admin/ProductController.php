@@ -69,6 +69,25 @@ class ProductController extends Controller
         }else{
             $product->price = (float) str_replace(',', '', $request->price);
         }
+
+        if($request->price_usd == 0){
+            $product->price_usd =  Null;
+        }else{
+            $product->price_usd = (float) str_replace(',', '', $request->price_usd);
+        }
+
+        if($request->price_AED == 0){
+            $product->price_AED =  Null;
+        }else{
+            $product->price_AED = (float) str_replace(',', '', $request->price_AED);
+        }
+
+        if($request->value_added == 0){
+            $product->value_added =  0;
+        }else{
+            $product->value_added = (float) str_replace(',', '', $request->value_added);
+        }
+
         if ($request->brand_id == 'NULL') {
             $product->brand_id = null;
         }else{
@@ -224,6 +243,24 @@ class ProductController extends Controller
             $product->price =  Null;
         }else{
             $product->price = (float) str_replace(',', '', $request->input('price'));
+        }
+
+        if($request->price_usd == 0){
+            $product->price_usd =  Null;
+        }else{
+            $product->price_usd = (float) str_replace(',', '', $request->price_usd);
+        }
+
+        if($request->price_AED == 0){
+            $product->price_AED =  Null;
+        }else{
+            $product->price_AED = (float) str_replace(',', '', $request->price_AED);
+        }
+
+        if($request->value_added == 0){
+            $product->value_added =  0;
+        }else{
+            $product->value_added = (float) str_replace(',', '', $request->value_added);
         }
 
         if ($request->brand_id == 'NULL') {

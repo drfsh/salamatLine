@@ -6,7 +6,7 @@
 
 @section('content')
 	<div class="grid-x grid-padding-x">
-		<div class="cell medium-6 medium-offset-3">
+		<div class="cell medium-8 medium-offset-3 m-auto">
 			@if (Session::has('success'))
 				<div class="cell callout success">
 					{{ Session::get('success') }}

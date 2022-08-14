@@ -75,3 +75,101 @@ body{
 .m-0{
     margin: 0!important;
 }
+.GlobalNavigation{
+    padding: 0 4px;
+}
+.more-price{
+    font-size: 13px;
+    margin: 10px 0;
+    color: #216499;
+}
+label{
+    padding: 3px;
+}
+
+body::-webkit-scrollbar {
+    background-color: #fefefe;
+    width: 12px;
+}
+body::-webkit-scrollbar-thumb {
+    background: #094873;
+    border-radius: 18px;
+    border: 2px solid white;
+}
+.pagination2{
+
+}
+.pagination2 li{
+    border: 1px solid #3492c6;
+}
+.pagination2 li .page-link.active{
+    border: 1px solid #094873;
+    color: #094873;
+}
+.text-center{
+    text-align: center;
+}
+/*loading*/
+@keyframes loading-dot {
+    to {
+        opacity: 0.1;
+        transform: translate3d(0, -1rem, 0);
+    }
+}
+.loading-dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading-dot > div {
+    width: 1rem;
+    height: 1rem;
+    margin: 3rem 0.2rem;
+    background: #094873;
+    border-radius: 50%;
+    animation: loading-dot 0.6s infinite alternate;
+}
+.loading-dot > div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.loading-dot > div:nth-child(3) {
+    animation-delay: 0.4s;
+}
+/*end loading*/
+.m-auto{
+    margin: auto;
+}
+.jc-bs3-container.container{
+
+    max-width: 501px!important;
+    margin: auto!important;
+}
+.disable-all-product{
+    transition: 0.2s;
+    background: #ff00001c;
+    color: #131313;
+    border-radius: 10px;
+    padding: 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.enable-all-product{
+    transition: 0.2s;
+    background: rgba(10, 131, 255, 0.25);
+    color: #131313;
+    border-radius: 10px;
+    padding: 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 9px;
+}
+.enable-all-product:hover,.disable-all-product:hover {
+    box-shadow: 0px 0px 15px -6px #0000009e;
+}
+.pp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
