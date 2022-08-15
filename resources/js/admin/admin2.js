@@ -7,6 +7,7 @@ window.axios = require('axios')
 
 import wrapper from "vue3-webcomponent-wrapper";
 import * as Vue from 'vue'
+import product from "./components/product/product";
 
 
 
@@ -15,6 +16,10 @@ setApp([
     {
         name: 'brand-admin',
         component: brand
+    },
+    {
+        name: 'product-admin',
+        component: product
     },
 ])
 

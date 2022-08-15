@@ -19,17 +19,21 @@
             <td>{{item.product_count}}</td>
             <td>
                 <ul class="modify">
-                    <li class="edit"><a :href="'../brands/'+item.slug" target="_blank"><i class="fas fa-eye"></i></a></li>
-                    <li class="edit"><a :href="'./brand/'+item.id+'/edit'" target="_blank"><i class="fas fa-edit"></i></a></li>
+                    <li class="edit"><a class="btn-edit-blue" :href="'../brands/'+item.slug" target="_blank"><i class="fas fa-eye"></i></a></li>
+                    <li class="edit"><a class="btn-edit-blue" style="margin-right: 2px" :href="'./brand/'+item.id+'/edit'" target="_blank"><i class="fas fa-edit"></i></a></li>
                     <li class="delete">
-                        <button @click="delete_(item.id,i)" type="submit" value="Delete"><i class="fas fa-trash"></i></button>
+                        <button class="btn-edit-danger" @click="delete_(item.id,i)" type="submit" value="Delete"><i class="fas fa-trash"></i></button>
                     </li>
                 </ul>
             </td>
             <td>
                 <div class="pp">
-                    <div class="disable-all-product">غیرفعال کردن محصولات</div>
-                    <div class="enable-all-product">فعال کردن محصولات</div>
+                    <div @click="disableProduct(item.id,item.title)" class="btn-edit-blue" title="غیرفعال کردن تمام محصولات">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div @click="enableProduct(item.id,item.title)" class="btn-edit-danger" title="فعال کردن تمام محصولات">
+                        <i class="fas fa-check"></i>
+                    </div>
                 </div>
             </td>
         </tr>
@@ -55,6 +59,47 @@ export default {
                         action: async function () {
                              vm.list.splice(i, 1)
                             let {data} = await window.axios.delete('./brand/' + id)
+                        }
+                    },
+                    cancel:{
+                        text:'لغو',
+                        btnClass:'btn-danger'
+                    }
+                }
+            })
+        },
+        enableProduct(id,name){
+            $.confirm({
+                title:'فعال سازی',
+                content:'تمامی محصولات این برند فعال شوند؟',
+                buttons:{
+                    ok:{
+                        text:'فعال سازی',
+                        btnClass:'btn-blue',
+                        action: async function () {
+                            let {data} = await window.axios.put('./brand/change/product',{type:1,id:id})
+                            $.alert('تمام محصولات برند'+name+'فعال شدند!')
+                        }
+                    },
+                    cancel:{
+                        text:'لغو',
+                        btnClass:'btn-danger'
+                    }
+                }
+            })
+
+        },
+        disableProduct(id,name){
+            $.confirm({
+                title:'فعال سازی',
+                content:'تمامی محصولات این برند فعال شوند؟',
+                buttons:{
+                    ok:{
+                        text:'فعال سازی',
+                        btnClass:'btn-blue',
+                        action: async function () {
+                            let {data} = await window.axios.put('./brand/change/product',{type:1,id:id})
+                            $.alert('تمام محصولات برند '+name+' غیر فعال شدند!')
                         }
                     },
                     cancel:{

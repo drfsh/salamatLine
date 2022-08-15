@@ -15,9 +15,10 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
 	Route::resource('category', App\Http\Controllers\Admin\CategoryController::class, ['except' => ['show']]);
 	Route::get('category/up/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'up'])->name('UpCategory');
 	Route::get('category/down/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'down'])->name('DownCategory');
-
-	Route::resource('brand', App\Http\Controllers\Admin\BrandController::class, ['except' => ['show']]);
-	Route::get('brand/api', [App\Http\Controllers\Admin\BrandController::class, 'api']);
+//1365 product
+    Route::put('brand/change/product', [App\Http\Controllers\Admin\BrandController::class, 'productStatus']);
+    Route::resource('brand', App\Http\Controllers\Admin\BrandController::class, ['except' => ['show']]);
+    Route::get('brand/api', [App\Http\Controllers\Admin\BrandController::class, 'api']);
 
 	Route::resource('company', App\Http\Controllers\Admin\CompanyController::class, ['except' => ['show']]);
 	Route::resource('country', App\Http\Controllers\Admin\CountryController::class, ['except' => ['show']]);

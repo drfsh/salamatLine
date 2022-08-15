@@ -21,7 +21,11 @@
 			</div> --}}
 			<a class="button success" href="{{ route('product.create') }}"><i class="fas fa-plus"></i> ایجاد محصول</a>
 			<div class="double-gap"></div>
-			<product-holder />
+				<product-admin></product-admin>
+{{--				<product-holder></product-holder>--}}
 		</div>
 	</div>
+
+	<script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+
 @endsection

@@ -17,7 +17,8 @@ use File;
 
 class BrandController extends Controller
 {
-    public function __construct() {
+    public function __construct()
+    {
         $this->middleware(['auth', 'isAdmin']);
     }
 
@@ -42,16 +43,16 @@ class BrandController extends Controller
             $filenameWithExt = $image->getClientOriginalName();
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $image->getClientOriginalExtension();
-            $fileNameToStore = $request->title.'_'.time().'.'.$extension;
+            $fileNameToStore = $request->title . '_' . time() . '.' . $extension;
             $location = public_path('img/brand/' . $fileNameToStore);
             $location2 = public_path('img/brand/tiny/' . $fileNameToStore);
-            Image::make($image)->fit(640,640)->save($location);
-            Image::make($image)->fit(300,300)->save($location2);
+            Image::make($image)->fit(640, 640)->save($location);
+            Image::make($image)->fit(300, 300)->save($location2);
             $brand->image = $fileNameToStore;
         }
         $brand->save();
 
-        if ($request->metadesc || $request->keywords){
+        if ($request->metadesc || $request->keywords) {
             $seo = new Seo;
             $seo->metadesc = $request->metadesc;
             $seo->keywords = $request->keywords;
@@ -82,11 +83,11 @@ class BrandController extends Controller
             $filenameWithExt = $image->getClientOriginalName();
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $image->getClientOriginalExtension();
-            $fileNameToStore = $request->title.'_'.time().'.'.$extension;
+            $fileNameToStore = $request->title . '_' . time() . '.' . $extension;
             $location = public_path('img/brand/' . $fileNameToStore);
             $location2 = public_path('img/brand/tiny/' . $fileNameToStore);
-            Image::make($image)->fit(640,640)->save($location);
-            Image::make($image)->fit(300,300)->save($location2);
+            Image::make($image)->fit(640, 640)->save($location);
+            Image::make($image)->fit(300, 300)->save($location2);
             $oldFilename = $brand->image;
             $brand->image = $fileNameToStore;
 
@@ -96,12 +97,12 @@ class BrandController extends Controller
 
         $brand->save();
 
-        if ($brand->seo){
+        if ($brand->seo) {
             $seo = $brand->seo()->first();
             $seo->metadesc = $request->input('metadesc');
             $seo->keywords = $request->input('keywords');
             $brand->seo()->save($seo);
-        } else if ($request->metadesc || $request->keywords){
+        } else if ($request->metadesc || $request->keywords) {
             $seo = new Seo;
             $seo->metadesc = $request->metadesc;
             $seo->keywords = $request->keywords;
@@ -114,12 +115,12 @@ class BrandController extends Controller
     public function destroy($id)
     {
         $brand = Brand::find($id);
-        File::delete('img/brand/' .$brand->image);
-        File::delete('img/brand/tiny/' .$brand->image);
-        $products = Product::where('brand_id',$brand->id)->update(['brand_id' => NULL]);
+        File::delete('img/brand/' . $brand->image);
+        File::delete('img/brand/tiny/' . $brand->image);
+        $products = Product::where('brand_id', $brand->id)->update(['brand_id' => NULL]);
         $brand->delete();
         $brand->seo()->delete();
-        
+
         Session::flash('success', 'برند حذف شد');
         return redirect()->route('brand.index');
     }
@@ -127,8 +128,22 @@ class BrandController extends Controller
     public function api(BrandFilter $filters)
     {
         $brands = Brand::withCount('product')->latest()->filter($filters);
-        return $brands; 
+        return $brands;
     }
 
+    public function productStatus(Request $request)
+    {
+        $id = $request->id;
+        $product = Brand::find($id)->product;
+        if ($request->type == null) {
+            $type = 0;
+        }else{
+            $type = $request->type;
+        }
+        foreach ($product as $p) {
+            $p->active = $type;
+            $p->save();
+        }
 
+    }
 }
