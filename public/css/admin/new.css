@@ -221,3 +221,19 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     justify-content: center;
 }
+.check-label{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #cfdcea;
+    border-radius: 7px;
+    width: 50px;
+    height: 40px;
+    padding: 0;
+    margin-right: 4px;
+}
+
+.checkbox-non-m input[type='checkbox']{
+    margin: 0 !important;
+}
