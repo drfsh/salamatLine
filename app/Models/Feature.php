@@ -9,8 +9,9 @@ use OwenIt\Auditing\Contracts\Auditable;
 class Feature extends Model implements Auditable
 {
     use SoftDeletes,\Rinvex\Categories\Traits\Categorizable,\OwenIt\Auditing\Auditable;
-    
-    protected $fillable = ['product_id', 'material_id', 'weight', 'numberin', 'length', 'width', 'height', 'volume', 'purity', 'density', 'company_id', 'guarantee', 'warranty', 'teamstar', 'expire_at', 'kind', 'mechanism', 'operation', 'transport', 'content', 'days'];
+
+    protected $guarded =[];
+//    protected $fillable = ['product_id', 'material_id', 'weight', 'numberin', 'length', 'width', 'height', 'volume', 'purity', 'density', 'company_id', 'guarantee', 'warranty', 'teamstar', 'expire_at', 'kind', 'mechanism', 'operation', 'transport', 'content', 'days'];
 
     public function product()
     {
@@ -43,7 +44,7 @@ class Feature extends Model implements Auditable
         if ($value >= 1000) {
             return (($value/1000).' کیلوگرم');
         }
-    } 
+    }
     public function getLengthAttribute($value){
         if (!$value) {return null;}
         if ($value < 100) {

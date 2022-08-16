@@ -45,7 +45,7 @@
                     <div class="tabs-panel" id="panel6">
                         @include('admin.product.edit.tab6')
                     </div>
-                </div> 
+                </div>
             </div>
             @include('admin.product.edit.button')
             {!! Form::close() !!}
@@ -63,9 +63,9 @@
             ++i;
             $("#dynamicAddRemove").append('<div class="grid-x grid-padding-x" id="radif"><div class="cell medium-4 text-center"><input type="text" name="moreFields['+i+'][title]" placeholder="عنوان" /></div><div class="cell medium-4 text-center"><input type="number" name="moreFields['+i+'][price]" placeholder="قیمت" /></div><div class="cell medium-4 text-center"><button type="button" id="add-btn" class="button warning hollow remove-tr">حذف</button></div></div>');
         });
-        $(document).on('click', '.remove-tr', function(){  
+        $(document).on('click', '.remove-tr', function(){
             $('#radif').remove();
-        });  
+        });
     </script>
     <script type="text/javascript">
         var x = 0;
@@ -73,9 +73,9 @@
             ++x;
             $("#AddRemove").append('<div class="grid-x grid-padding-x" id="fitem"><div class="cell medium-8 text-center"><input type="text" name="moreFeatures['+x+'][title]" placeholder="عنوان" /></div><div class="cell medium-4 text-center"><button type="button" id="add-bt" class="button warning hollow remove-tr">حذف</button></div></div>');
         });
-        $(document).on('click', '.remove-tr', function(){  
+        $(document).on('click', '.remove-tr', function(){
             $('#fitem').remove();
-        });  
+        });
     </script>
     <script>
         $('input.number').keyup(function(event) {
@@ -92,6 +92,28 @@
             });
             });
     </script>
-    @include('admin.global.CkEditor')
+    <script>
 
+        // let checkbox = document.querySelectorAll('.ed')
+        // for (const i in checkbox) {
+        //
+        //     if(!checkbox[i].checked){
+        //         let name =checkbox[i].name.replace('is_','')
+        //         let input = document.getElementById(name)
+        //         input.disabled = 'disabled'
+        //     }
+        //     checkbox[i].addEventListener('click',function (e) {
+        //         let name = e.target.name.replace('is_','')
+        //
+        //         let checked = e.target.checked
+        //         let input = document.getElementById(name)
+        //         if (checked){
+        //             input.disabled = ''
+        //         }else{
+        //             input.disabled = 'disabled'
+        //         }
+        //     })
+        // }
+    </script>
+    @include('admin.global.CkEditor')
 @endsection

@@ -30,7 +30,7 @@
 				@include('front.product.main.tabs.main')
 				@include('front.product.main.suggest.main')
 				@include('front.product.main.suggest.collection')
-				
+
 			</div>
 		</div>
 	</div>

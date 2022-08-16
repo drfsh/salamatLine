@@ -67,7 +67,8 @@ export default {
     props: ['item', 'i'],
     methods: {
         async setChange() {
-            let {data} = await window.axios.post('/admin/product/inline-update/' + this.item.id())
+
+            let {data} = await window.axios.post('/admin/product/inline-update/' + this.item.id,{price:this.item.price,subtitle:this.item.subtitle,title:this.item.title})
             $.alert('با موفقیت ویرایش شد')
         },
         async delete_() {

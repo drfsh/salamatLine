@@ -84,20 +84,20 @@
     </script>
     @include('admin.global.CkEditor')
 
-    <script>
+{{--    <script>--}}
 
-        let checkbox = document.querySelectorAll('.ed')
-        for (const i in checkbox) {
-            checkbox[i].addEventListener('click',function (e) {
-                let name = e.target.name.replace('hide_','')
-                let checked = e.target.checked
-                let input = document.getElementById(name)
-                if (checked){
-                    input.disabled = ''
-                }else{
-                    input.disabled = 'disabled'
-                }
-            })
-        }
-    </script>
+{{--        let checkbox = document.querySelectorAll('.ed')--}}
+{{--        for (const i in checkbox) {--}}
+{{--            checkbox[i].addEventListener('click',function (e) {--}}
+{{--                let name = e.target.name.replace('is_','')--}}
+{{--                let checked = e.target.checked--}}
+{{--                let input = document.getElementById(name)--}}
+{{--                if (checked){--}}
+{{--                    input.disabled = ''--}}
+{{--                }else{--}}
+{{--                    input.disabled = 'disabled'--}}
+{{--                }--}}
+{{--            })--}}
+{{--        }--}}
+{{--    </script>--}}
 @endsection

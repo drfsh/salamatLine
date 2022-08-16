@@ -28,8 +28,7 @@ class ProductController extends Controller
 		$data['product'] = Product::published()->where('slug',$slug)->with('multiprice','multifeature','feature','photos','brand','country','inventory','discount','collection')->first();
 		$data['collection'] =  [];
 
-
-		foreach($data['product']->collection as $item){
+        foreach($data['product']->collection as $item){
 			$data['collection'][$item->id] = $item;
 			$data['collection'][$item->id]['products'] = $item->products()->where('active',1)->inRandomOrder()->limit(5)->get();
 		}
@@ -53,7 +52,7 @@ class ProductController extends Controller
 		$this->seo()->setTitle($data['product']->title);
 
 		$data['favorited'] = $data['product']->isFavorited();
-		
+
 
 
 
@@ -158,6 +157,6 @@ class ProductController extends Controller
         }else{
             Session::flash('success', 'جهت ارسال نظرات خود عضو شوید.');
         	return redirect()->back();
-        }			
+        }
     }
 }

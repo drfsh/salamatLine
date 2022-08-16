@@ -60,6 +60,7 @@ class ProductController extends Controller
 
     public function store(ProductCreate $request)
     {
+
         $product = new Product;
         $product->title = $request->title;
         $product->subtitle = $request->subtitle;
@@ -160,27 +161,27 @@ class ProductController extends Controller
             'days' => $request->days,
             'content' => $request->content,
 
-            'is_material_id' => $request->hide_material_id,
-            'is_weight' => $request->hide_weight,
-            'is_numberin' => $request->hide_numberin,
-            'is_length' => $request->hide_length,
-            'is_width' => $request->hide_width,
-            'is_height' => $request->hide_height,
-            'is_diameter' => $request->hide_diameter,
-            'is_volume' => $request->hide_volume,
-            'is_purity' => $request->hide_purity,
-            'is_density' => $request->hide_density,
-            'is_company_id' => $request->hide_company_id,
-            'is_guarantee' => $request->hide_guarantee,
-            'is_warranty' => $request->hide_warranty,
-            'is_teamstar' => $request->hide_teamstar,
-            'is_expire_at' => $request->hide_expire_at,
-            'is_kind' => $request->hide_kind,
-            'is_mechanism' => $request->hide_mechanism,
-            'is_operation' => $request->hide_operation,
-            'is_transport' => $request->hide_transport,
-            'is_days' => $request->hide_days,
-            'is_content' => $request->hide_content,
+            'is_material_id' => !($request->is_material_id == null),
+            'is_weight' => !($request->is_weight == null),
+            'is_numberin' => !($request->is_numberin == null),
+            'is_length' => !($request->is_length == null),
+            'is_width' => !($request->is_width == null),
+            'is_height' => !($request->is_height == null),
+            'is_diameter' => !($request->is_diameter == null),
+            'is_volume' => !($request->is_volume == null),
+            'is_purity' => !($request->is_purity == null),
+            'is_density' => !($request->is_density == null),
+            'is_company_id' => !($request->is_company_id == null),
+            'is_guarantee' => !($request->is_guarantee == null),
+            'is_warranty' => !($request->is_warranty == null),
+            'is_teamstar' => !($request->is_teamstar == null),
+            'is_expire_at' => !($request->is_expire_at == null),
+            'is_kind' => !($request->is_kind == null),
+            'is_mechanism' => !($request->is_mechanism == null),
+            'is_operation' => !($request->is_operation == null),
+            'is_transport' => !($request->is_transport == null),
+            'is_days' => !($request->is_days == null),
+            'is_content' => !($request->is_content == null),
         ]);
 
         if ($request->hasFile('photos')){
@@ -363,6 +364,31 @@ class ProductController extends Controller
             $feature->transport = $request->input('transport');
             $feature->content = $request->input('content');
             $feature->days = $request->input('days');
+
+            $feature->is_material_id = !($request->is_material_id == null);
+            $feature->is_weight = !($request->is_weight == null);
+            $feature->is_numberin = !($request->is_numberin == null);
+            $feature->is_length = !($request->is_length == null);
+            $feature->is_width = !($request->is_width == null);
+            $feature->is_height = !($request->is_height == null);
+            $feature->is_diameter = !($request->is_diameter == null);
+            $feature->is_volume = !($request->is_volume == null);
+            $feature->is_purity = !($request->is_purity == null);
+            $feature->is_density = !($request->is_density == null);
+            $feature->is_company_id = !($request->is_company_id == null);
+            $feature->is_guarantee = !($request->is_guarantee == null);
+            $feature->is_warranty = !($request->is_warranty == null);
+            $feature->is_teamstar = !($request->is_teamstar == null);
+            $feature->is_expire_at = !($request->is_expire_at == null);
+            $feature->is_kind = !($request->is_kind == null);
+            $feature->is_mechanism = !($request->is_mechanism == null);
+            $feature->is_operation = !($request->is_operation == null);
+            $feature->is_transport = !($request->is_transport == null);
+            $feature->is_content = !($request->is_content == null);
+            $feature->is_days = !($request->is_days == null);
+
+
+
             $feature->save();
         }
 

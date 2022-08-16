@@ -9,7 +9,7 @@
                 @endforeach
             </select>
             <label class="check-label">
-                {{ Form::checkbox('hide_material_id','true',true,['class'=>'ed']) }}
+                {{ Form::checkbox('is_material_id','true',true,['class'=>'ed']) }}
             </label>
         </div>
     </div>
@@ -18,7 +18,7 @@
         <div class="d-flex">
             {{ Form::number('weight', null) }}
             <label class="check-label">
-                {{ Form::checkbox('hide_weight','true',true,['class'=>'ed']) }}
+                {{ Form::checkbox('is_weight','true',true,['class'=>'ed']) }}
             </label>
         </div>
     </div>
@@ -27,7 +27,7 @@
         <div class="d-flex">
             {{ Form::number('numberin', null) }}
             <label class="check-label">
-                {{ Form::checkbox('hide_numberin','true',true,['class'=>'ed']) }}
+                {{ Form::checkbox('is_numberin','true',true,['class'=>'ed']) }}
             </label>
         </div>
     </div>
@@ -36,7 +36,7 @@
         <div class="d-flex">
             {{ Form::date('expire_at', null) }}
             <label class="check-label">
-                {{ Form::checkbox('hide_expire_at','true',true,['class'=>'ed']) }}
+                {{ Form::checkbox('is_expire_at','true',true,['class'=>'ed']) }}
             </label>
         </div>
     </div>
@@ -45,7 +45,7 @@
         <div class="d-flex">
             {{ Form::number('days', null) }}
             <label class="check-label">
-                {{ Form::checkbox('hide_days','true',true,['class'=>'ed']) }}
+                {{ Form::checkbox('is_days','true',true,['class'=>'ed']) }}
             </label>
         </div>
     </div>
@@ -54,7 +54,7 @@
         <div class="d-flex">
             {{ Form::number('teamstar', null) }}
             <label class="check-label">
-                {{ Form::checkbox('hide_teamstar','true',true,['class'=>'ed']) }}
+                {{ Form::checkbox('is_teamstar','true',true,['class'=>'ed']) }}
             </label>
         </div>
     </div>
@@ -63,7 +63,7 @@
         <div class="d-flex">
             {{ Form::number('length', null) }}
             <label class="check-label">
-                {{ Form::checkbox('hide_length','true',true,['class'=>'ed']) }}
+                {{ Form::checkbox('is_length','true',true,['class'=>'ed']) }}
             </label>
         </div>
     </div>
@@ -72,7 +72,7 @@
         <div class="d-flex">
             {{ Form::number('width', null) }}
             <label class="check-label">
-                {{ Form::checkbox('hide_width','true',true,['class'=>'ed']) }}
+                {{ Form::checkbox('is_width','true',true,['class'=>'ed']) }}
             </label>
         </div>
     </div>
@@ -81,7 +81,7 @@
         <div class="d-flex">
             {{ Form::number('height', null) }}
             <label class="check-label">
-                {{ Form::checkbox('hide_height','true',true,['class'=>'ed']) }}
+                {{ Form::checkbox('is_height','true',true,['class'=>'ed']) }}
             </label>
         </div>
     </div>
@@ -90,7 +90,7 @@
         <div class="d-flex">
             {{ Form::number('diameter', null) }}
             <label class="check-label">
-                {{ Form::checkbox('hide_diameter','true',true,['class'=>'ed']) }}
+                {{ Form::checkbox('is_diameter','true',true,['class'=>'ed']) }}
             </label>
         </div>
     </div>
@@ -99,7 +99,7 @@
         <div class="d-flex">
             {{ Form::number('volume', null) }}
             <label class="check-label">
-                {{ Form::checkbox('hide_volume','true',true,['class'=>'ed']) }}
+                {{ Form::checkbox('is_volume','true',true,['class'=>'ed']) }}
             </label>
         </div>
     </div>
@@ -108,7 +108,7 @@
         <div class="d-flex">
             {{ Form::number('purity', null) }}
             <label class="check-label">
-                {{ Form::checkbox('hide_purity','true',true,['class'=>'ed']) }}
+                {{ Form::checkbox('is_purity','true',true,['class'=>'ed']) }}
             </label>
         </div>
     </div>
@@ -117,7 +117,7 @@
         <div class="d-flex">
             {{ Form::number('density', null) }}
             <label class="check-label">
-                {{ Form::checkbox('hide_density','true',true,['class'=>'ed']) }}
+                {{ Form::checkbox('is_density','true',true,['class'=>'ed']) }}
             </label>
         </div>
     </div>
@@ -131,7 +131,7 @@
                 @endforeach
             </select>
             <label class="check-label">
-                {{ Form::checkbox('hide_company_id','true',true,['class'=>'ed']) }}
+                {{ Form::checkbox('is_company_id','true',true,['class'=>'ed']) }}
             </label>
         </div>
     </div>
@@ -140,7 +140,7 @@
         <div class="d-flex">
             {{ Form::number('guarantee', null) }}
             <label class="check-label">
-                {{ Form::checkbox('hide_guarantee','true',true,['class'=>'ed']) }}
+                {{ Form::checkbox('is_guarantee','true',true,['class'=>'ed']) }}
             </label>
         </div>
     </div>
@@ -149,7 +149,7 @@
         <div class="d-flex">
             {{ Form::number('warranty', null) }}
             <label class="check-label">
-                {{ Form::checkbox('hide_warranty','true',true,['class'=>'ed']) }}
+                {{ Form::checkbox('is_warranty','true',true,['class'=>'ed']) }}
             </label>
         </div>
     </div>
@@ -158,7 +158,7 @@
         <div class="d-flex">
             {{ Form::select('kind', ['sterile' => 'استریل', 'nonsterile' => 'غیر استریل'], null, ['placeholder' => 'یک گزینه را انتخاب کنید']) }}
             <label class="check-label">
-                {{ Form::checkbox('hide_kind','true',true,['class'=>'ed']) }}
+                {{ Form::checkbox('is_kind','true',true,['class'=>'ed']) }}
             </label>
         </div>
     </div>
@@ -167,7 +167,7 @@
         <div class="d-flex">
             {{ Form::select('mechanism', ['mechanical' => 'مکانیکی', 'electrical' => 'برقی', 'charging' => 'شارژی', 'battery' => 'باتری', 'elec-batt' => 'برق/باتری'], null, ['placeholder' => 'یک گزینه را انتخاب کنید']) }}
             <label class="check-label">
-                {{ Form::checkbox('hide_mechanism','true',true,['class'=>'ed']) }}
+                {{ Form::checkbox('is_mechanism','true',true,['class'=>'ed']) }}
             </label>
         </div>
     </div>
@@ -176,7 +176,7 @@
         <div class="d-flex">
             {{ Form::select('operation', ['automatic' => 'اتوماتیک', 'semiauto' => 'نیمه اتوماتیک', 'nonautomatic' => 'غیراتوماتیک'], null, ['placeholder' => 'یک گزینه را انتخاب کنید']) }}
             <label class="check-label">
-                {{ Form::checkbox('hide_operation','true',true,['class'=>'ed']) }}
+                {{ Form::checkbox('is_operation','true',true,['class'=>'ed']) }}
             </label>
         </div>
     </div>
@@ -185,7 +185,7 @@
         <div class="d-flex">
             {{ Form::select('transport', ['huge' => 'خیلی بزرگ', 'big' => 'بزرگ', 'medium' => 'متوسط', 'small' => 'کوچک'], null, ['placeholder' => 'یک گزینه را انتخاب کنید']) }}
             <label class="check-label">
-                {{ Form::checkbox('hide_transport','true',true,['class'=>'ed']) }}
+                {{ Form::checkbox('is_transport','true',true,['class'=>'ed']) }}
             </label>
         </div>
     </div>
