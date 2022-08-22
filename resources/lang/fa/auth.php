@@ -14,7 +14,7 @@ return [
     */
 
     'failed' => 'ایمیل و یا رمز عبور نادرست است.',
-    'password' => 'The provided password is incorrect.',
+    'password' => 'پسورد را وادر کنید.',
     'throttle' => 'لطفا :seconds ثانیه دیگر امتحان کنید.',
     'LoginTitle' => 'ورود',
     'RegisterTitle' => 'عضویت',

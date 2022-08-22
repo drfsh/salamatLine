@@ -29,3 +29,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
  * allows your team to easily build robust real-time web applications.
  */
 
+
+let meta = $('meta[name=csrf-token]').attr('content')
+window.csrf_token = meta;

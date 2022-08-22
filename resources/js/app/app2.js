@@ -1,4 +1,3 @@
-
 require('./bootstrap')
 require('jquery-confirm')
 window.moment = require('jalali-moment');
@@ -9,6 +8,7 @@ import * as Vue from 'vue'
 
 import address from "./components/address/address";
 import tickets from "./components/ticket/tickets";
+import login from "./components/auth/login";
 
 
 setApp([
@@ -19,6 +19,10 @@ setApp([
     {
         name: 'ticket-list',
         component: tickets
+    },
+    {
+        name: 'auth-login',
+        component: login
     },
 ])
 

@@ -30,9 +30,11 @@ class PageController extends Controller
     }
 
     public function main($slug){
+
         $page = Page::where('slug', $slug)->where('active', true)->first();
 
         $Des = strip_tags(Str::limit($page->content, 250));
+
         SEOTools::setTitle($page->title);
         if($page->image){
 			OpenGraph::addImage($page->image);
