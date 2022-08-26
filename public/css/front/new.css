@@ -723,6 +723,8 @@ body.auth,.auth #app, .auth .grid-container,.auth .grid-x.align-middle.align-cen
     align-items: center;
     height: 79%;
     border-right: 1px solid #80808075;
+    justify-content: space-evenly;
+    padding-right: 8px;
 }
 .input-login .icon{
     padding-right: 9px;

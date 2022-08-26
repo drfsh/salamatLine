@@ -7,9 +7,19 @@
                 <input v-model="mobile" type="text" id="number">
             </div>
             <div class="select-code">
-                <img src="#">
-                <span>(+98)</span>
-                <i class="fas fa-chevron-down"></i>
+                <img v-if="country.length!==0" :src="country[countryV].image">
+                <span v-if="country.length!==0">({{ country[countryV].content }})</span>
+                <i v-if="country.length!==0" class="fas fa-chevron-down"></i>
+                <div v-if="false" class="list-country">
+                    <ul>
+                        <li v-for="(v,i) in country">
+                            <div>
+                                <img :src="v.image"  :alt="v.title">
+                                <span >({{ v.content }})</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div v-if="showName" class="input-login rtl">
@@ -42,11 +52,13 @@ export default {
     data() {
         return {
             mobile: '09',
+            countryV:0,
             name: '',
             showName: false,
             loading: false,
             alert: null,
-            EnterCode:false
+            EnterCode:false,
+            country:[],
         }
     },
     methods: {
@@ -70,9 +82,14 @@ export default {
             }
             this.loading = false
             input.disabled = ''
+        },
+        async getCountry() {
+            let {data} = await window.axios.get('/api/country')
+            this.country = data;
         }
     },
     mounted() {
+        this.getCountry()
         this.mobile =this.$parent.mobile
     }
 }
