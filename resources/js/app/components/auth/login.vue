@@ -1,6 +1,6 @@
 <template>
 <div class="auth-box">
-    <h4>ورود یا ثبت نام</h4>
+    <h4>ورود </h4>
 
     <div class="body-login text-center">
         <auth-phone v-if="page===1"></auth-phone>

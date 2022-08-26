@@ -1,3 +1,5 @@
+import register from "./components/auth/register";
+
 require('./bootstrap')
 require('jquery-confirm')
 window.moment = require('jalali-moment');
@@ -23,6 +25,10 @@ setApp([
     {
         name: 'auth-login',
         component: login
+    },
+    {
+        name: 'auth-register',
+        component: register
     },
 ])
 

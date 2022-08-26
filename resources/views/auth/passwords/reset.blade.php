@@ -1,12 +1,10 @@
 @extends('layouts.auth')
 
 @section('content')
-
-    <div class="auth-box"> 
-        <div class="title"><h1>{{ __('Reset Password') }}</h1></div>
-        <div class="body pa2">
+    <div class="auth-box">
+        <h4>{{ __('تغییر پسورد') }}</h4>
+        <div class="body-login text-center">
             @include('auth.passwords.reset.form')
         </div>
     </div>
-
 @endsection

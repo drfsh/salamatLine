@@ -13,7 +13,7 @@
             </div>
         </div>
         <div v-if="showName" class="input-login rtl">
-            <div>
+            <div class="hw100">
                 <input v-model="name" type="text" placeholder="نام" required>
             </div>
             <div class="icon">

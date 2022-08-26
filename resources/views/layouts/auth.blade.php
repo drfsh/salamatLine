@@ -10,11 +10,11 @@
                     <div class="cell medium-5 large-3">
                         <a class="logo" href="{{ route('home') }}">
                             @include('front.global.logo')
-                        </a> 
-                        <div class="double-gap"></div>
+                        </a>
+{{--                        <div class="double-gap"></div>--}}
                     </div>
                     <div class="cell"></div>
-                    <div class="cell medium-6 large-4">               
+                    <div class="cell medium-6 large-4">
                         @yield('content')
                         <div class="back-to-home text-center"><a href="{{ route('home') }}">بازگشت به سلامت لاین</a></div>
                     </div>
