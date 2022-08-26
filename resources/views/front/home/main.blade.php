@@ -7,6 +7,6 @@
 	@include('front.home.box.main')
 	@include('front.home.banner.section2')
 	@include('front.home.cat')
-	@include('front.home.latest')
+{{--	@include('front.home.latest')--}}
 	@include('front.home.country.main')
 @endsection

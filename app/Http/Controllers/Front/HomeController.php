@@ -59,9 +59,10 @@ class HomeController extends Controller
 				$count = Product::published()->where('active',1)->withAnyCategories($sub_cat_id)->count();
 				if($count > 5){
 					$data['category'][$key] = Category::find($item);
-					$data['category'][$key]['product'] = Product::published()->where('active',1)->withAnyCategories($sub_cat_id)->limit(8)->get();					
+					$data['category'][$key]['product'] = Product::published()->where('active',1)->withAnyCategories($sub_cat_id)->limit(8)->get();
 				}
 			}
-		return view('front.home.main',compact('data'));
+
+        return view('front.home.main',compact('data'));
 	}
 }

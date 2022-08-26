@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/products', [App\Http\Controllers\API\Products::class, 'main']);
+Route::get('/country', [App\Http\Controllers\API\Products::class, 'main']);
 
 
 
