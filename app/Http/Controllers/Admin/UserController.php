@@ -75,7 +75,7 @@ class UserController extends Controller {
         $roles = $request['roles'];
         $user->fill($input)->save();
 
-        if (isset($roles)) {        
+        if (isset($roles)) {
             $user->roles()->sync($roles);
         }        
         else {

@@ -32,3 +32,20 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 let meta = $('meta[name=csrf-token]').attr('content')
 window.csrf_token = meta;
+
+
+const root = document.documentElement;
+
+$('.bg-l').on('mousemove',function (e){
+
+    const rect = e.target.getBoundingClientRect();
+
+
+    let width = rect.left + window.scrollX
+    let x = e.clientX - width;
+    let y = (e.clientY - rect.top);
+
+    root.style.setProperty('--mouse-x', x+'px');
+    root.style.setProperty('--mouse-y', y+'px');
+});
+

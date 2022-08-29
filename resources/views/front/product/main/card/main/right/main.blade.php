@@ -1,5 +1,5 @@
 @if(!$data['product']->photos->isEmpty())
-<div class="product-slider">
+<div class="bbox">
 	<div class="slider-wrapper">
 		<div class="swiper product-slider-main">
 			<div class="swiper-wrapper">
@@ -13,7 +13,7 @@
 			</div>
 		</div>
 	</div>
-
+	<hr>
 	<div class="slider-wrapper">
 		<div class="swiper product-slider-thumb">
 			<div class="swiper-wrapper">

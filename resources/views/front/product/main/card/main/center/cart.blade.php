@@ -1,5 +1,10 @@
 @if($data['product']->active)
-<add-cart 
+	<product-add-cart
+		price="{{$data['product']->showing_price}}"
+		:id="{{$data['product']->id}}">
+	</product-add-cart>
+
+	<add-cart v-show="false"
 :pid="{{$data['product']->id}}" 
 :multiprice="{{$data['product']['multiprice']}}" 
 :multifeature="{{$data['product']['multifeature']}}" 

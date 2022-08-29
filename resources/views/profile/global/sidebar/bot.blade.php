@@ -2,7 +2,7 @@
     <ul class="pside">
 
         <li class="{{checkRoute('profile')}}">
-            <a href="{{ route('profile')}}">
+            <a class="bg-l" href="{{ route('profile')}}">
                 <i>
                     @include('icons.settings')
                 </i>
@@ -10,7 +10,7 @@
             </a>
         </li>
         <li class="{{checkRoute('ProfileOrders')}}">
-            <a href="{{ route('ProfileOrders')}}">
+            <a class="bg-l" href="{{ route('ProfileOrders')}}">
                 <i>
                     @include('icons.clipboard')
                 </i>
@@ -18,7 +18,7 @@
             </a>
         </li>
         <li class="{{checkRoute('MyFavorites')}}">
-            <a href="{{ route('MyFavorites')}}">
+            <a class="bg-l" href="{{ route('MyFavorites')}}">
                 <i>
                     @include('icons.heart')
                 </i>
@@ -27,7 +27,7 @@
         </li>
 
         <li class="{{checkRoute('ProfileAddress')}}">
-            <a href="{{ route('ProfileAddress')}}">
+            <a class="bg-l" href="{{ route('ProfileAddress')}}">
                 <i class="">
                     @include('icons.location')
                 </i>
@@ -35,7 +35,7 @@
             </a>
         </li>
         <li class="{{checkRoute('ProfileEdit')}}">
-            <a href="{{ route('ProfileEdit')}}">
+            <a class="bg-l" href="{{ route('ProfileEdit')}}">
                 <i>
                     @include('icons.user-edit')
                 </i>
@@ -43,7 +43,7 @@
             </a>
         </li>
         <li class="{{checkRoute('OrdersTracking')}}">
-            <a href="{{ route('OrdersTracking')}}">
+            <a class="bg-l" href="{{ route('OrdersTracking')}}">
                 <i>
                     @include('icons.search-more')
                 </i>
@@ -51,7 +51,7 @@
             </a>
         </li>
         <li class="{{checkRoute('Tickets')}}">
-            <a href="{{ route('Tickets')}}">
+            <a class="bg-l" class="bg-l" href="{{ route('Tickets')}}">
                 <i>
                     @include('icons.headphones')
                 </i>
@@ -74,7 +74,7 @@
     </ul>
     <div style="position: absolute;bottom: 5px;width: 100%;">
         <hr style="margin-top: 10px">
-        <a class="sidebar-exit"  href="{{ route('logout')}}"
+        <a  class="sidebar-exit"  href="{{ route('logout')}}"
            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
             <i>
                 @include('icons.exit')

@@ -15,7 +15,7 @@
                         <li v-for="(v,i) in country">
                             <div>
                                 <img :src="v.image"  :alt="v.title">
-                                <span >({{ v.content }})</span>
+                                <span >({{ v.content+'+98' }})</span>
                             </div>
                         </li>
                     </ul>

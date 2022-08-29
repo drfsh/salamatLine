@@ -11,6 +11,8 @@ import * as Vue from 'vue'
 import address from "./components/address/address";
 import tickets from "./components/ticket/tickets";
 import login from "./components/auth/login";
+import star from "./components/product/star/star";
+import addCard from "./components/product/add-card";
 
 
 setApp([
@@ -29,6 +31,14 @@ setApp([
     {
         name: 'auth-register',
         component: register
+    },
+    {
+        name: 'range-star',
+        component: star
+    },
+    {
+        name: 'product-add-cart',
+        component: addCard
     },
 ])
 
