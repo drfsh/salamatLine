@@ -20588,8 +20588,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     disableProduct: function disableProduct(id, name) {
       $.confirm({
-        title: 'فعال سازی',
-        content: 'تمامی محصولات این برند فعال شوند؟',
+        title: 'غیر فعال سازی',
+        content: 'تمامی محصولات این برند غیر فعال شوند؟',
         buttons: {
           ok: {
             text: 'فعال سازی',
@@ -20604,14 +20604,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                       case 0:
                         _context4.next = 2;
                         return window.axios.put('./brand/change/product', {
-                          type: 1,
+                          type: 0,
                           id: id
                         });
 
                       case 2:
                         _yield$window$axios$p2 = _context4.sent;
                         data = _yield$window$axios$p2.data;
-                        $.alert('تمام محصولات برند ' + name + ' غیر فعال شدند!');
+                        $.alert(' تمام محصولات برند ' + name + ' غیر فعال شدند! ');
 
                       case 5:
                       case "end":
@@ -21837,7 +21837,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       onClick: function onClick($event) {
         return $options.disableProduct(item.id, item.title);
       },
-      "class": "btn-edit-blue",
+      "class": "btn-edit-danger",
       title: "غیرفعال کردن تمام محصولات"
     }, _hoisted_23, 8
     /* PROPS */
@@ -21845,7 +21845,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       onClick: function onClick($event) {
         return $options.enableProduct(item.id, item.title);
       },
-      "class": "btn-edit-danger",
+      "class": "btn-edit-blue",
       title: "فعال کردن تمام محصولات"
     }, _hoisted_26, 8
     /* PROPS */

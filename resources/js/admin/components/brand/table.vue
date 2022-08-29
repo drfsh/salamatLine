@@ -28,10 +28,10 @@
             </td>
             <td>
                 <div class="pp">
-                    <div @click="disableProduct(item.id,item.title)" class="btn-edit-blue" title="غیرفعال کردن تمام محصولات">
+                    <div @click="disableProduct(item.id,item.title)" class="btn-edit-danger" title="غیرفعال کردن تمام محصولات">
                         <i class="fas fa-times"></i>
                     </div>
-                    <div @click="enableProduct(item.id,item.title)" class="btn-edit-danger" title="فعال کردن تمام محصولات">
+                    <div @click="enableProduct(item.id,item.title)" class="btn-edit-blue" title="فعال کردن تمام محصولات">
                         <i class="fas fa-check"></i>
                     </div>
                 </div>
@@ -91,15 +91,15 @@ export default {
         },
         disableProduct(id,name){
             $.confirm({
-                title:'فعال سازی',
-                content:'تمامی محصولات این برند فعال شوند؟',
+                title:'غیر فعال سازی',
+                content:'تمامی محصولات این برند غیر فعال شوند؟',
                 buttons:{
                     ok:{
                         text:'فعال سازی',
                         btnClass:'btn-blue',
                         action: async function () {
-                            let {data} = await window.axios.put('./brand/change/product',{type:1,id:id})
-                            $.alert('تمام محصولات برند '+name+' غیر فعال شدند!')
+                            let {data} = await window.axios.put('./brand/change/product',{type:0,id:id})
+                            $.alert(' تمام محصولات برند '+name+' غیر فعال شدند! ')
                         }
                     },
                     cancel:{

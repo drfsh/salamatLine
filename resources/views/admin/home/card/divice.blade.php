@@ -1,4 +1,5 @@
-<div class="card-3-part">
+@if(sizeof($data['pages'])>0)
+    <div class="card-3-part">
     <div class="c1">صفحات برتر</div>
     <div class="n2 p b-l-none">
         <a href="{{$data['pages'][0]['url']}}" target="_blank">
@@ -19,3 +20,4 @@
         <div> {{$data['pages'][2]['pageViews']}} بازدید </div>
     </div>
 </div>
+@endif

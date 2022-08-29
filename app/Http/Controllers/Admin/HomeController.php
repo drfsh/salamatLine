@@ -129,6 +129,7 @@ class HomeController extends Controller
         $data['mvb'] = $this->mvb($report);
 
 
+
         return view('admin.home.main', compact('data', 'days'));
     }
 
