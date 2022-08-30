@@ -13,6 +13,7 @@ import tickets from "./components/ticket/tickets";
 import login from "./components/auth/login";
 import star from "./components/product/star/star";
 import addCard from "./components/product/add-card";
+import tabs from "./components/product/tabs/tabs";
 
 
 setApp([
@@ -39,6 +40,10 @@ setApp([
     {
         name: 'product-add-cart',
         component: addCard
+    },
+    {
+        name: 'product-tabs',
+        component: tabs
     },
 ])
 

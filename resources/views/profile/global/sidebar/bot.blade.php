@@ -2,7 +2,7 @@
     <ul class="pside">
 
         <li class="{{checkRoute('profile')}}">
-            <a class="bg-l" href="{{ route('profile')}}">
+            <a class="win-btn" href="{{ route('profile')}}">
                 <i>
                     @include('icons.settings')
                 </i>

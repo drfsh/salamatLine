@@ -82,6 +82,9 @@ ul.pside li a{
 ul.pside li a:hover span ,ul.pside li.active a span ,ul.pside li.active a i {
     color: #094873;
 }
+ul.pside li a:hover{
+    background: unset;
+}
 ul.pside li.active:before{
     content: "";
     display: block;
@@ -356,6 +359,12 @@ ul.pside li.active:before{
 
 .m-0{
     margin: 0!important;
+}
+ul.pside li a{
+    transition: all .0s ease-in-out;
+}
+ul.pside li a span{
+    transition: all .3s ease-in-out;
 }
 /*loading*/
 @keyframes loading-dot {
@@ -1143,8 +1152,9 @@ body.auth #salamat-logo{
 }
 .bg-l:hover:before {
     opacity: 1;
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
 }
 .simple-item .cover ul.badge li.s{
     padding: 0;
@@ -1509,6 +1519,10 @@ body.auth #salamat-logo{
     background: #2ca4e1;
     color: white;
 }
+.product-box .send-day{
+    display: flex;
+    align-items: center;
+}
 .product-box .send-day .icon {
     display: flex;
     flex-direction: column;
@@ -1520,6 +1534,85 @@ body.auth #salamat-logo{
     justify-content: center;
     margin: 19px 0 13px 15px;
 }
-.product-box .send-day .text{
+.product-page .product-icons{
+    padding: 40px;
 
+}
+.product-page .product-icons ul{
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.product-page .product-icons ul li {
+    margin: 0;
+    list-style-type: none;
+}
+
+.product-page .product-icons ul li .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.product-page .product-icons ul li .item .icon svg{
+    width: 50px;
+    height: 50px;
+}
+.product-page .product-tabs .title-tabs{
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.product-page .product-tabs .title-tabs li > div {
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 23px;
+    border-radius: 10px;
+    box-shadow: 0 1px 20px -4px #0000001a;
+    margin: 10px;
+}
+.product-page .product-tabs .title-tabs li > div .icon svg{
+    width: 28px;
+    height: 28px;
+}
+.product-page .product-tabs .title-tabs li > div.active,.product-page .product-tabs .title-tabs li > div:hover{
+    background: #094873;
+    color: white;
+}
+.product-page .product-info{
+    padding: 15px 15px 23px;
+}
+
+.product-page .product-info p{
+    line-height: 28px;
+    font-size: 15px;
+}
+.product-page .product-info .title{
+    font-size: 21px;
+    font-weight: 700;
+    padding-right: 25px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+.product-page .product-info .title:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 6px;
+    background: #094873;
+    border-radius: 45px;
+    right: 0;
 }

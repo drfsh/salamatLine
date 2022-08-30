@@ -1,4 +1,6 @@
 <div class="double-gap"></div>
+<product-tabs text="{{$data['product']->feature->content}}"></product-tabs>
+<div class="double-gap"></div>
 
 	<ul class="tabs" data-tabs id="example-tabs">
 		<li class="tabs-title @if(!Session::has('reviewsuccess')) is-active @endif"><a href="#panel1" aria-selected="true">توضیحات</a></li>
