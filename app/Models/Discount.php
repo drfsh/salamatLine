@@ -12,7 +12,7 @@ class Discount extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $fillable = ['title', 'price' , 'max_uses', 'active', 'content', 'product_id', 'price_id', 'feature_id'];
+    protected $fillable = ['title', 'price' , 'max_uses', 'active', 'content', 'product_id', 'price_id', 'feature_id','start_date','end_date'];
 
     protected $appends = ['percent'];
 

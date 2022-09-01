@@ -6,7 +6,8 @@
     <div class="double-gap"></div>
     <div class="grid-x grid-padding-x">
         <div class="cell">
-            <discount-edit :discount="{{$discount}}" />
+            <edit-discount discount="{{$discount}}" ></edit-discount>
+{{--            <discount-edit :discount="{{$discount}}" ></discount-edit>--}}
         </div>
     </div>
 	<div class="double-gap"></div>

@@ -23,12 +23,16 @@
             </div>
         </a>
     </div>
-    <div class="send-day">
+    @if($data['product']->discount->isEmpty())
+        <div class="send-day">
         <span class="icon">
             @include('icons.car')
         </span>
-        <span class="text">
+            <span class="text">
             ارسال تا 6 روزکاری
         </span>
-    </div>
+        </div>
+    @else
+        <product-timer time="{{$data['product']->discount[0]->end_date}}"></product-timer>
+    @endif
 </div>

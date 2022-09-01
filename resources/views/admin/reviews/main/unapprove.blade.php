@@ -24,7 +24,7 @@
             <tbody>
                 @foreach ($ratings as $item)
                     <tr>
-                        <td><a target="_blank" href="{{ route('product', $item->reviewrateable->slug) }}">{{ $item->reviewrateable->title }}</a></td>
+                        <td><a target="_blank" href="{{ route('product', $item->reviewrateable2->slug) }}">{{ $item->reviewrateable2->title }}</a></td>
                         <td>{{ $item->author->name }}</td>
                         <td>{{ $item->body }}</td>
                         <td>{{ $item->rating }}</td>

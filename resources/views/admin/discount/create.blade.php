@@ -6,7 +6,8 @@
     <div class="double-gap"></div>
     <div class="grid-x grid-padding-x">
         <div class="cell">
-            <discount-create />
+            <created-discount></created-discount>
+{{--            <discount-create></discount-create>--}}
         </div>
     </div>
 	<div class="double-gap"></div>

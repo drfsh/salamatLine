@@ -27,13 +27,14 @@
     },
     "dependencies": {
         "@handcrafted-market/vue3-numeric": "^1.0.4",
+        "j-date": "^0.0.5",
         "jalali-moment": "^3.3.10",
         "jquery-confirm": "^3.3.4",
         "js-table2excel": "^1.0.3",
         "vue-excel-xlsx": "^1.2.2",
         "vue-moment-jalaali": "^2.0.0",
         "vue-owl-carousel": "^2.0.3",
-        "vue-persian-datetime-picker": "^2.10.3",
+        "vue3-persian-datetime-picker": "^1.2.2",
         "vue3-webcomponent-wrapper": "^0.1.4",
         "vuejs-paginate-next": "^1.0.2"
     }

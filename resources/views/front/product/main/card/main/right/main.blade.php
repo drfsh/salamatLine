@@ -33,8 +33,3 @@
 		<img src="{{$data['product']->large}}" alt="">
 	</div>
 @endif
-
-@if(Auth::check() && Auth::user()->hasRole('Admin'))
-	<a href="{{ route('product.edit', $data['product']->id) }}" class="button expanded small" target="_blank">بروزسانی در پنل مدیریت</a>
-	<div class="gap"></div>
-@endif

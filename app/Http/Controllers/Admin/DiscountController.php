@@ -41,6 +41,8 @@ class DiscountController extends Controller
         $discount->product_id = $request->product_id;
         $discount->feature_id = $request->feature_id;
         $discount->price_id = $request->price_id;
+        $discount->start_date = $request->start_date;
+        $discount->end_date = $request->end_date;
         $discount->uses = 0;
         if ($request->is_fixed) {
             $discount->is_fixed = 1;
@@ -77,6 +79,8 @@ class DiscountController extends Controller
         $discount->product_id = $request->input('product_id');
         $discount->feature_id = $request->input('feature_id');
         $discount->price_id = $request->input('price_id');
+        $discount->start_date = $request->input('start_date');
+        $discount->end_date = $request->input('end_date');
         if ($request->active) {
             $discount->active = 1;
         }else{

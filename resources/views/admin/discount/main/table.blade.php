@@ -22,6 +22,8 @@
                     <th width="20" class="text-center">حداکثر تعداد استفاده</th>
                     <th width="20" class="text-center">تعداد استفاده شده</th>
                     <th width="30" class="text-center">تاریخ ایجاد</th>
+                    <th width="30" class="text-center">تاریخ شروع</th>
+                    <th width="30" class="text-center">تاریخ پایان</th>
                     <th width="20" class="text-center">عملیات</th>
                 </tr>
             </thead>
@@ -75,6 +77,9 @@
                             <b>{{$item->uses}}</b>
                         </td>
                         <td><small>{{$item->created_at}}</small></td>
+
+                        <td><span>{{$item->start_date}}</span></td>
+                        <td><span>{{$item->end_date}}</span></td>
                         <td>
                             <ul class="modify">
                                 @if ($item->deleted_at)

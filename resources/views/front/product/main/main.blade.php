@@ -34,7 +34,7 @@
 			<div class="cell">
 				@include('front.product.main.tabs.main')
 				@include('front.product.main.suggest.main')
-				@include('front.product.main.suggest.collection')
+{{--				@include('front.product.main.suggest.collection')--}}
 
 			</div>
 		</div>

@@ -1,4 +1,4 @@
-@include('front.product.main.left.feature')
+@include('front.product.main.tabs.feature.feature')
 
 @if($data['product']->feature->teamstar)
 	<x-product.star title="امتیاز سلامت‌لاین" percent="{{($data['product']->feature->teamstar*10)}}" />

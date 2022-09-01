@@ -13,10 +13,34 @@ import tickets from "./components/ticket/tickets";
 import login from "./components/auth/login";
 import star from "./components/product/star/star";
 import addCard from "./components/product/add-card";
-import tabs from "./components/product/tabs/tabs";
-
+import infoItem from "./components/product/tabs/item/info-item";
+import inputStar from "./components/product/star/inputStar";
+import deactive from "./components/product/deactive";
+import product_timer from "./components/product/timer/product_timer";
 
 setApp([
+    {
+        name: 'app-feature-item',
+        component: {},
+        components:[
+            {
+                name: 'feature-item',
+                component: infoItem
+            },
+        ]
+    },
+    {
+        name: 'product-add-cart',
+        component: {},
+        components: [
+            {
+                name: 'product-add-cart',
+                component: addCard
+            },
+        ]
+    },
+])
+setElement([
     {
         name: 'address-page',
         component: address
@@ -38,18 +62,32 @@ setApp([
         component: star
     },
     {
-        name: 'product-add-cart',
-        component: addCard
+        name: 'input-star',
+        component: inputStar
     },
     {
-        name: 'product-tabs',
-        component: tabs
+        name: 'product-diactive',
+        component: deactive
+    },
+    {
+        name: 'product-timer',
+        component: product_timer
     },
 ])
 
-function setApp(list) {
+function setElement(list) {
     for (const i in list) {
         const ticketList = wrapper(list[i].component, Vue.createApp, Vue.h);
         customElements.define(list[i].name, ticketList)
+    }
+}
+function setApp(list) {
+    for (const i in list) {
+        let app = Vue.createApp(list[i].component)
+        let components = list[i].components
+        for (const x in components) {
+            app.component(components[x].name,components[x].component)
+        }
+        app.mount('#'+list[i].name)
     }
 }

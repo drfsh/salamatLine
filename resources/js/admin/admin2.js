@@ -8,6 +8,8 @@ window.axios = require('axios')
 import wrapper from "vue3-webcomponent-wrapper";
 import * as Vue from 'vue'
 import product from "./components/product/product";
+import create_discount from "./components/discount/create_discount";
+import edit_discount from "./components/discount/edit_discount";
 
 
 
@@ -20,6 +22,14 @@ setApp([
     {
         name: 'product-admin',
         component: product
+    },
+    {
+        name: 'created-discount',
+        component: create_discount
+    },
+    {
+        name: 'edit-discount',
+        component: edit_discount
     },
 ])
 

@@ -18,7 +18,7 @@
     </div>
     <range-star value="{{($data['product']->feature->teamstar*10)}}"></range-star>
 
-    <div class="mt50 @if(!$data['product']->active)out-of-stock @endif">
+    <div class="mt50">
         @include('front.product.main.card.main.center.cart')
     </div>
 
