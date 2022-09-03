@@ -21,10 +21,14 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
 	Route::get('category/down/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'down'])->name('DownCategory');
 	Route::get('category/hide/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'hide_show'])->name('hideCategory');
 	Route::get('category/hidePrice/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'hide_price'])->name('hideCategoryPrice');
+	Route::get('category/showPrice/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'show_price'])->name('showCategoryPrice');
 //1365 product
     Route::put('brand/change/product', [App\Http\Controllers\Admin\BrandController::class, 'productStatus']);
     Route::resource('brand', App\Http\Controllers\Admin\BrandController::class, ['except' => ['show']]);
     Route::get('brand/api', [App\Http\Controllers\Admin\BrandController::class, 'api']);
+    Route::get('brand/hidePrice/{id}', [App\Http\Controllers\Admin\BrandController::class, 'hide_price']);
+    Route::get('brand/showPrice/{id}', [App\Http\Controllers\Admin\BrandController::class, 'show_price']);
+    Route::get('brand/hide/{id}', [App\Http\Controllers\Admin\BrandController::class, 'showhide']);
 
 	Route::resource('company', App\Http\Controllers\Admin\CompanyController::class, ['except' => ['show']]);
 	Route::resource('country', App\Http\Controllers\Admin\CountryController::class, ['except' => ['show']]);

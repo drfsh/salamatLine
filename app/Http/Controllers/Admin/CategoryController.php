@@ -19,7 +19,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::defaultOrder()->get()->toTree();
-        
+
         // return $categories;
         return view('admin.categories.category.index',compact('categories'));
     }
@@ -27,7 +27,7 @@ class CategoryController extends Controller
     public function create()
     {
         $list = Category::get()->toFlatTree();
-        return view('admin.categories.category.create',compact('list')); 
+        return view('admin.categories.category.create',compact('list'));
     }
 
     public function store(Request $request)
@@ -72,7 +72,7 @@ class CategoryController extends Controller
             'slug' => $request->input('slug'),
             'description' => $request->input('description')
          ];
-        
+
          if ($parent_id) {
             $parent = Category::find($parent_id);
             $category->appendToNode($parent)->save();
@@ -119,8 +119,29 @@ class CategoryController extends Controller
 
     public function hide_price($id)
     {
-        $category = Product::where('category_id',$id)->get();
-        dd($category);
+        $products =
+            Product::published()
+                ->withAnyCategories($id)->get();
+
+        foreach ($products as $value){
+            $value->price_hide = true;
+            $value->save();
+        }
+
+        return redirect()->route('category.index');
+    }
+
+    public function show_price($id)
+    {
+        $products =
+            Product::published()
+                ->withAnyCategories($id)->get();
+
+        foreach ($products as $value){
+            $value->price_hide = false;
+            $value->save();
+        }
+
         return redirect()->route('category.index');
     }
 

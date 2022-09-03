@@ -443,3 +443,23 @@ body::-webkit-scrollbar-thumb {
         transform: translateY(0);
     }
 }
+.hide_price{
+    background: #ffe3e3;
+    font-size: 11px;
+    margin: 7px 0;
+    border-radius: 10px;
+    padding: 5px;
+}
+.show_price{
+    background: aliceblue;
+    font-size: 11px;
+    margin: 7px 0;
+    border-radius: 10px;
+    padding: 5px;
+}
+.show_price:hover{
+    background: #cbdeef;
+}
+.hide_price:hover{
+    background: #f3cccc;
+}

@@ -12,8 +12,8 @@
 						<span>پنهان کردن</span>
 					@endif
 				</a>
-				<a class="item" href="{{ route('hideCategory',$item2->id) }}"><span>مخفی کردن قیمت محصولات</span></a>
-				<a class="item" href="{{ route('hideCategory',$item2->id) }}"><span>نمایش قیمت محصولات</span></a>
+				<a class="item" href="{{ route('hideCategoryPrice',$item2->id) }}"><span>مخفی کردن قیمت محصولات</span></a>
+				<a class="item" href="{{ route('showCategoryPrice',$item2->id) }}"><span>نمایش قیمت محصولات</span></a>
 			</div>
 			<a href="{{ route('category', $item2->slug) }}" target="_blank"><i class="fas fa-eye"></i></a>
 			<a href="{{ route('category.edit', $item2->id) }}"><i class="fas fa-edit"></i></a>

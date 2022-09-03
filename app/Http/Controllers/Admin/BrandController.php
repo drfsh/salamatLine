@@ -146,4 +146,40 @@ class BrandController extends Controller
         }
 
     }
+
+
+    public function hide_price($id)
+    {
+        $products =Product::published()->where('brand_id',$id)->get();
+
+        foreach ($products as $value){
+            $value->price_hide = true;
+            $value->save();
+        }
+
+        return redirect()->route('brand.index');
+    }
+
+    public function show_price($id)
+    {
+        $products =Product::published()->where('brand_id',$id)->get();
+
+        foreach ($products as $value){
+            $value->price_hide = false;
+            $value->save();
+        }
+
+        return redirect()->route('brand.index');
+    }
+
+    public function showhide($id)
+    {
+        $brand =Brand::find($id);
+
+        $brand->hide = !$brand->hide;
+        $brand->save();
+        return redirect()->route('brand.index');
+    }
+
+
 }

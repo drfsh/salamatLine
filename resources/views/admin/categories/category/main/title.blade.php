@@ -12,7 +12,7 @@
                 @endif
             </a>
             <a class="item" href="{{ route('hideCategoryPrice',$item->id) }}"><span>مخفی کردن قیمت محصولات</span></a>
-            <a class="item" href="{{ route('hideCategory',$item->id) }}"><span>نمایش قیمت محصولات</span></a>
+            <a class="item" href="{{ route('showCategoryPrice',$item->id) }}"><span>نمایش قیمت محصولات</span></a>
         </div>
         <a href="{{ route('category', $item->slug) }}" target="_blank"><i class="fas fa-eye"></i></a>
         <a href="{{ route('category.edit', $item->id) }}"><i class="fas fa-edit"></i></a>

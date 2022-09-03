@@ -58,10 +58,19 @@ export default {
                 return '<span><a href="../brands/' + this.item.country.slug + '" target="_blank">' + this.item.country.title + '</a></span>'
         },
         status() {
-            if (this.item.active == 0) {
-                return '<span class="label alert">غیرفعال</span>'
-            } else
-                return '<span class="label success">فعال</span>'
+
+            if (this.item.price_hide==1){
+                if (this.item.active == 0) {
+                    return '<span class="label alert">غیرفعال</span> <span class="label alert">قیمت پنهان</span>'
+                } else
+                    return '<span class="label success">فعال</span> <span class="label alert">قیمت پنهان</span>'
+
+            }else{
+                if (this.item.active == 0) {
+                    return '<span class="label alert">غیرفعال</span>'
+                } else
+                    return '<span class="label success">فعال</span>'
+            }
         }
     },
     props: ['item', 'i'],

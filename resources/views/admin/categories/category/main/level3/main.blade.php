@@ -13,8 +13,8 @@
 						<span>پنهان کردن</span>
 					@endif
 				</a>
-				<a class="item" href="{{ route('hideCategory',$item3->id) }}"><span>مخفی کردن قیمت محصولات</span></a>
-				<a class="item" href="{{ route('hideCategory',$item3->id) }}"><span>نمایش قیمت محصولات</span></a>
+				<a class="item" href="{{ route('hideCategoryPrice',$item3->id) }}"><span>مخفی کردن قیمت محصولات</span></a>
+				<a class="item" href="{{ route('showCategoryPrice',$item3->id) }}"><span>نمایش قیمت محصولات</span></a>
 			</div>
 				<a href="{{ route('category', $item3->slug) }}" target="_blank"><i class="fas fa-eye"></i></a>
 				<a href="{{ route('category.edit', $item3->id) }}"><i class="fas fa-edit"></i></a>
@@ -23,7 +23,7 @@
 				<button type="submit" class="red" value="Delete">
 					<i class="fas fa-trash"></i>
 				</button>
-			{!! Form::close() !!}                                        
+			{!! Form::close() !!}
 		</li>
 	@endforeach
 </ul>
