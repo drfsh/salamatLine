@@ -116,7 +116,7 @@ class HomeController extends Controller
         $data['total_yesterday'] = Invoice::where('situation', '!=', 'unpaid')->whereDate('pay_date', '=', $yesterday)->sum("grand_total") / 10;
 
         $data['browser'] = Analytics::fetchTopBrowsers(Period::days(30), 3);
-        $data['pages'] = Analytics::fetchMostVisitedPages(Period::days(30), 3);
+        $data['pages'] = Analytics::fetchMostVisitedPages(Period::days(30), 6);
         $data['userTypes'] = Analytics::fetchUserTypes(Period::days(0));
 
         if (sizeof($data['userTypes']) == 0) {

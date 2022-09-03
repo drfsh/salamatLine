@@ -93,4 +93,9 @@ class UserController extends Controller {
             ->with('flash_message',
              'User successfully deleted.');
     }
+
+    public function admin(){
+        $users = User::role('Admin')->latest()->paginate(10);
+        return view('admin.security.users.admin.admin')->with('users', $users);
+    }
 }

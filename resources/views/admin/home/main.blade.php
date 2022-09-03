@@ -9,10 +9,10 @@
         <div class="cell medium-4">
             @include('admin.home.card.users')
         </div>
-        <div class="cell medium-4">
-            @include('admin.home.card.browsers')
-        </div>
-        <div class="cell medium-4">
+{{--        <div class="cell medium-4">--}}
+{{--            @include('admin.home.card.browsers')--}}
+{{--        </div>--}}
+        <div class="cell medium-8">
             @include('admin.home.card.divice')
         </div>
 

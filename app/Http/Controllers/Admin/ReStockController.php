@@ -17,7 +17,8 @@ class ReStockController extends Controller
     	$data['total'] = Restock::count();
     	$data['total_notified'] = Restock::onlyTrashed()->count();
     	$data['list'] = Restock::with('user','product')->paginate(10);
-    	// return $list;
+
+        return response()->json($data);
         return view('admin.restock.main.main',compact('data'));
     }    
 

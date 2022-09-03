@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Requests\CategoryCreate;
 use App\Http\Requests\CategoryUpdate;
@@ -104,6 +105,22 @@ class CategoryController extends Controller
     {
         $category = Category::find($id);
         $bool = $category->down();
+        return redirect()->route('category.index');
+    }
+
+
+    public function hide_show($id)
+    {
+        $category = Category::find($id);
+        $category->hide = !$category->hide;
+        $category->save();
+        return redirect()->route('category.index');
+    }
+
+    public function hide_price($id)
+    {
+        $category = Product::where('category_id',$id)->get();
+        dd($category);
         return redirect()->route('category.index');
     }
 

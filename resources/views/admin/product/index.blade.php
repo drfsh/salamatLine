@@ -19,7 +19,11 @@
 	{{-- 		<div class="box rounded">
 				@include('admin.product.main.table')
 			</div> --}}
-			<a class="button success" href="{{ route('product.create') }}"><i class="fas fa-plus"></i> ایجاد محصول</a>
+
+				<div class="title_b">محصولات
+
+					<a class="button success" href="{{ route('product.create') }}"><i class="fas fa-plus"></i> ایجاد محصول</a>
+				</div>
 			<div class="double-gap"></div>
 				<product-admin></product-admin>
 {{--				<product-holder></product-holder>--}}

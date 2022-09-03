@@ -7,14 +7,20 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
 	Route::get('/test', [App\Http\Controllers\Admin\HomeController::class, 'test'])->name('g');
 	Route::get('components', [App\Http\Controllers\Admin\HomeController::class, 'components'])->name('ComponentAdmin');
 
-	Route::resource('users', App\Http\Controllers\Admin\UserController::class);
-	Route::resource('roles', App\Http\Controllers\Admin\RoleController::class);
+    Route::resource('users', App\Http\Controllers\Admin\UserController::class);
+    Route::get('admins', [App\Http\Controllers\Admin\UserController::class,'admin'])->name('admins');
+    Route::resource('person', App\Http\Controllers\Admin\PersonUserController::class);
+    Route::resource('colleague', App\Http\Controllers\Admin\ColleagueController::class);
+
+    Route::resource('roles', App\Http\Controllers\Admin\RoleController::class);
 	Route::resource('permissions', App\Http\Controllers\Admin\PermissionController::class);
 	Route::resource('mobile', App\Http\Controllers\Admin\UsermobileController::class)->only(['create', 'store']);
 
 	Route::resource('category', App\Http\Controllers\Admin\CategoryController::class, ['except' => ['show']]);
 	Route::get('category/up/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'up'])->name('UpCategory');
 	Route::get('category/down/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'down'])->name('DownCategory');
+	Route::get('category/hide/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'hide_show'])->name('hideCategory');
+	Route::get('category/hidePrice/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'hide_price'])->name('hideCategoryPrice');
 //1365 product
     Route::put('brand/change/product', [App\Http\Controllers\Admin\BrandController::class, 'productStatus']);
     Route::resource('brand', App\Http\Controllers\Admin\BrandController::class, ['except' => ['show']]);

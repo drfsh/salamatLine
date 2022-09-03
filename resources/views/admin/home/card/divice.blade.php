@@ -1,23 +1,15 @@
 @if(sizeof($data['pages'])>0)
-    <div class="card-3-part">
+    <div class="card-3-part b">
     <div class="c1">صفحات برتر</div>
-    <div class="n2 p b-l-none">
-        <a href="{{$data['pages'][0]['url']}}" target="_blank">
-            <div class="text-l">{{$data['pages'][0]['pageTitle']}}</div>
-        </a>
-        <div>{{$data['pages'][0]['pageViews']}} بازدید </div>
-    </div>
-    <div class="n2 p">
-        <a href="{{$data['pages'][1]['url']}}" target="_blank">
-            <div class="text-l">{{$data['pages'][1]['pageTitle']}}</div>
-        </a>
-        <div>{{$data['pages'][1]['pageViews']}} بازدید </div>
-    </div>
-    <div class="n2 p b-r-none">
-        <a href="{{$data['pages'][2]['url']}}" target="_blank">
-            <div class="text-l">{{$data['pages'][2]['pageTitle']}}</div>
-        </a>
-        <div> {{$data['pages'][2]['pageViews']}} بازدید </div>
-    </div>
+
+        @foreach($data['pages'] as $item)
+            <div class="n2 p b-l-none">
+                <a href="{{$item['url']}}" target="_blank">
+                    <div class="text-l">{{$item['pageTitle']}}</div>
+                </a>
+                <div>{{$item['pageViews']}} بازدید </div>
+            </div>
+        @endforeach
+
 </div>
 @endif

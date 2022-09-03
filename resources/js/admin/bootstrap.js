@@ -29,3 +29,23 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
  * allows your team to easily build robust real-time web applications.
  */
 
+$('body').click(function (e) {
+    let vm = $(e.target)
+    if (vm.hasClass('ellipsis')){
+        let id = vm.attr('data')
+        $('#'+id).addClass('active')
+    }else{
+        $('.option.body').removeClass('active')
+    }
+})
+
+$('.accordion2').click(function (e) {
+    let vm = $(e.target)
+
+    let m = $('#'+vm.attr('data'))
+    if (m.hasClass('active')){
+        m.removeClass('active')
+    }else{
+        m.addClass('active')
+    }
+})

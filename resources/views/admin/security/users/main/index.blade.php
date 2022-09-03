@@ -14,6 +14,7 @@
 			<div class="double-gap"></div>
 		@endif
 		<div class="cell medium-10 medium-offset-1">
+			<div class="title">کاربران سایت</div>
 			<div class="box rounded">
 				@include('admin.security.users.main.table')
 			</div>
