@@ -63,8 +63,11 @@ class ProductController extends Controller
 
         $product = new Product;
         $product->title = $request->title;
+        $product->title_en = $request->title_en;
         $product->subtitle = $request->subtitle;
         $product->slug = $request->slug;
+
+        $request->price = $request->price*10;
         if($request->price == 0){
             $product->price =  Null;
         }else{
@@ -160,6 +163,8 @@ class ProductController extends Controller
             'transport' => $request->transport,
             'days' => $request->days,
             'content' => $request->content,
+            'more' => $request->more,
+            'day' => $request->day,
 
             'is_material_id' => !($request->is_material_id == null),
             'is_weight' => !($request->is_weight == null),
@@ -260,8 +265,10 @@ class ProductController extends Controller
 
 
         $product->title = $request->input('title');
+        $product->title_en = $request->input('title_en');
         $product->subtitle = $request->input('subtitle');
         $product->slug = $request->input('slug');
+        $request->price = $request->price*10;
         if($request->price == 0){
             $product->price =  Null;
         }else{
@@ -364,6 +371,8 @@ class ProductController extends Controller
             $feature->transport = $request->input('transport');
             $feature->content = $request->input('content');
             $feature->days = $request->input('days');
+            $feature->more = $request->input('more');
+            $feature->day = $request->input('day');
 
             $feature->is_material_id = !($request->is_material_id == null);
             $feature->is_weight = !($request->is_weight == null);

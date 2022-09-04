@@ -9,7 +9,16 @@
         @endif
     </div>
     <div class="cell medium-4">
-        {{ Form::label('subtitle', 'ادامه نام محصول') }}
+        {{ Form::label('title_en', 'نام انگلیسی') }}
+        {{ Form::text('title_en', null) }}
+        @if ($errors->has('title_en'))
+            <span class="label warning">
+                <strong>{{ $errors->first('title_en') }}</strong>
+            </span>
+        @endif
+    </div>
+    <div class="cell medium-4">
+        {{ Form::label('subtitle', 'مدل') }}
         {{ Form::text('subtitle', null) }}
     </div>
     <div class="cell medium-4">

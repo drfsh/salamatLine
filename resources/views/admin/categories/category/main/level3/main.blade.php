@@ -2,7 +2,7 @@
 <ul class="sub">
 	@foreach($item2->children as $item3)
 		<li>
-			<a href="" class=" @if($item3->hide) bg-ani  @endif">{{$item3->name}}</a>
+			<a href="{{route('category', $item3->slug)}}" class=" @if($item3->hide) bg-ani  @endif">{{$item3->name}}</a>
 			{{ Form::open(['route' => ['category.destroy', $item3->id],'class' => 'edit', 'method' => 'DELETE','onsubmit' => 'return confirm("از حذف این دسته بندی به صورت برگشت‌ناپذیر اطمینان دارید؟")']) }}
 			<a data="show_option{{$item3->id}}" class="option ellipsis"><i data="show_option{{$item3->id}}" class="fas fa-ellipsis-v ellipsis"></i></a>
 			<div class="option body" id="show_option{{$item3->id}}">

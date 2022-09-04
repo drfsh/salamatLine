@@ -19,6 +19,12 @@
                         {{ Form::label('phone3', 'تلفن سه') }}
                         {{ Form::text('phone3', null) }}
 
+                        {{ Form::label('whatsapp', 'واتساپ') }}
+                        {{ Form::text('whatsapp', null) }}
+
+                        {{ Form::label('telegram', 'تلگرام') }}
+                        {{ Form::text('telegram', null) }}
+
                         {{ Form::label('fax', 'فکس') }}
                         {{ Form::text('fax', null) }}
 
@@ -51,7 +57,7 @@
 
                         {{ Form::label('keywords', 'کلمات کلیدی') }}
                         {{ Form::textarea('keywords', null, ['rows' => 3]) }}
-                        
+
                         <div class="double-gap"></div>
                         {{ Form::submit('ذخیره', array('class' => 'button success')) }}
                         <a href="{{ route('contactinfo.index') }}" class="button alert">بازگشت</a>

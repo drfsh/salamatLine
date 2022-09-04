@@ -10,7 +10,7 @@
         {{ Form::label('price', 'قیمت') }}
         <div class="input-group">
             {{ Form::text('price', null, ['class' => 'number input-group-field']) }}
-            <span class="input-group-label">ريال</span>
+            <span class="input-group-label">تومان</span>
         </div>
         @if ($errors->has('price'))
             <span class="label warning">

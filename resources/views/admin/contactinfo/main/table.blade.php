@@ -3,8 +3,8 @@
         <div class="heading">
             <div class="grid-x">
                 <div class="cell medium-6"><h4>اطلاعات تماس</h4></div>
-                <div class="cell medium-6 date"> 
-                    @if($contactcount < 1)  
+                <div class="cell medium-6 date">
+                    @if($contactcount < 1)
                         <div class="float-left">
                             <a class="button success tiny" href="{{ route('contactinfo.create') }}"><i class="fas fa-plus"></i></a>
                         </div>
@@ -34,6 +34,16 @@
                     <tr>
                         <td>تلفن سوم</td>
                         <td>{{ $contact->phone2 }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>واتساپ</td>
+                        <td>{{ $contact->whatsapp }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>تلگرام</td>
+                        <td>{{ $contact->telegram }}</td>
                     </tr>
 
                     <tr>
@@ -79,7 +89,7 @@
                         <td>تصویر</td>
                         <td><img width="50" src="{{ $contact->image }}"></td>
                     </tr>
-                    
+
                     <tr>
                         <td><a href="{{ route('contactinfo.edit', $contact->id) }}" class="button warning">ویرایش</a></td>
                     </tr>

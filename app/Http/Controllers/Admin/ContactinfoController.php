@@ -47,6 +47,8 @@ class ContactinfoController extends Controller
         $contact->lat = $request->lat;
         $contact->long = $request->long;
         $contact->zoom = $request->zoom;
+        $contact->whatsapp = $request->whatsapp;
+        $contact->telegram = $request->telegram;
 
         if ($request->hasFile('featured_image')) {
             $image = $request->file('featured_image');
@@ -110,6 +112,8 @@ class ContactinfoController extends Controller
         $contact->lat = $request->input('lat');
         $contact->long = $request->input('long');
         $contact->zoom = $request->input('zoom');
+        $contact->whatsapp = $request->input('whatsapp');
+        $contact->telegram = $request->input('telegram');
 
         if($request->hasFile('featured_image')) {
             $image = $request->file('featured_image');
