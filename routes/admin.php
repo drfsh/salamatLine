@@ -87,6 +87,7 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
 	Route::get('api/category', [App\Http\Controllers\Admin\ApiController::class, 'category']);
 
 	Route::resource('contactinfo', App\Http\Controllers\Admin\ContactinfoController::class, ['except' => ['show', 'destroy']]);
+	Route::resource('newsletter', App\Http\Controllers\Admin\NewLetterController::class);
 
 	Route::get('invoices',[App\Http\Controllers\Admin\Invoice\Main::class, 'index'])->name('AdminInvoice');
 	Route::get('invoices/api',[App\Http\Controllers\Admin\Invoice\Main::class, 'GetInvoice']);

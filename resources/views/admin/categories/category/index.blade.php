@@ -13,7 +13,9 @@
 				</div>
 				<div class="double-gap"></div>
 			@endif
-    		<a class="button success" href="{{ route('category.create') }}"><i class="fas fa-plus"></i> افزودن دسته‌بندی</a>
+                <div class="title_b">دسته بندی ها
+                    <a class="button success" href="{{ route('category.create') }}"><i class="fas fa-plus"></i> افزودن دسته‌بندی</a>
+                </div>
     		<div class="double-gap"></div>
 			<div class="grid-x">
 				@foreach ($categories as $item)
@@ -22,7 +24,7 @@
 					</div>
 				@endforeach
 			</div>
-			
+
 		</div>
 	</div>
 @endsection

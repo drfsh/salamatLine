@@ -2,7 +2,9 @@
     <div class="gap"></div>
     <ul class="vertical">
         <li>
-            <span>پنل مدیریت سلامت لاین</span>
+            <a href="{{route('admin')}}">
+                <span>پنل مدیریت سلامت لاین</span>
+            </a>
         </li>
         <hr>
         <li>
@@ -101,7 +103,7 @@
             </a>
         </li>
         <li>
-            <a class="{{\App\Traits\CheckRoute::check('AdminRestock')}}" href="{{ route('AdminRestock') }}">
+            <a class="{{\App\Traits\CheckRoute::check('newsletter.index')}}" href="{{ route('newsletter.index') }}">
                 <i class="fas fa-bell"></i>
                 <span>خبرنامه</span>
             </a>

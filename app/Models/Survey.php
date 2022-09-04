@@ -9,7 +9,7 @@ class Survey extends Model
 {
     use HasFactory;
     protected $connection = 'mysql';
-    protected $table = 'cp44578_official.surveys';
+    protected $table = 'twinmoti_official.surveys';
     public $incrementing = false;
     protected $primaryKey = 'invoice_id';
 
