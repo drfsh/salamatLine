@@ -1,42 +1,34 @@
 <div class="double-gap"></div>
 
-<div class="box3 product-icons mt-2">
-    <ul>
-        <li>
-            <div class="item">
-                <span class="icon">@include('icons.track-fast')</span>
-                <span class="text">دسترسی سریع</span>
-            </div>
-        </li>
-        <li>
-            <div class="item">
-                <span class="icon">@include('icons.clock')</span>
-                <span class="text">پشتیبانی 24 ساعت</span>
-            </div>
-        </li>
-        <li>
-            <div class="item">
-                <span class="icon">@include('icons.verify')</span>
-                <span class="text">تضمین اصالت کالا</span>
-            </div>
-        </li>
-        <li>
-            <div class="item">
-                <span class="icon">@include('icons.card-tick')</span>
-                <span class="text">پرداخت سیستم شاپرک</span>
-            </div>
-        </li>
-        <li>
-            <div class="item">
-                <span class="icon">@include('icons.like-shapes')</span>
-                <span class="text">تضمین کیفیت کالا</span>
-            </div>
-        </li>
-        <li>
-            <div class="item">
-                <span class="icon">@include('icons.star-fast')</span>
-                <span class="text">ارسال رایگان</span>
-            </div>
-        </li>
-    </ul>
+<div class="first-sepid-product-box aksmoba" style="padding: 40px;box-sizing: border-box;">
+    <div class="meta-sepid-new-1">
+        <img src="/img/page/free-delivery-pnnu4szqopxe282ge84ffk0de659fzk1r2izyd8upg.png">
+        <h6>دسترسی سریع</h6>
+
+    </div>
+    <div class="meta-sepid-new-1">
+        <img src="/img/page/24-hours-pnntw9milw8mlqgx919fa7kn5688iyntkt780vwl84.png">
+        <h6>پشتیبان ۲۴ ساعت</h6>
+
+    </div>
+    <div class="meta-sepid-new-1">
+        <img src="/img/page/checked-pnnu7aaepzbmp6gqwspzifh5trx4r8ejrci4jnkgac.png">
+        <h6>تضمین اصالت کالا</h6>
+
+    </div>
+    <div class="meta-sepid-new-1">
+        <img src="/img/page/secure-payment-pnnuf9x0ta9dduuy991tpew7lojg6m4euw4pebpzec.png">
+        <h6>پرداخت سیستم شاپرک</h6>
+
+    </div>
+    <div class="meta-sepid-new-1">
+        <img src="/img/page/search-pnnueewcjr2wqq40adn4x4pzzysc4lp9qmlok6zz3o.png">
+        <h6>تضمین کیفیت کالا</h6>
+
+    </div>
+    <div class="meta-sepid-new-1">
+        <img src="/img/page/free-delivery-pnnu4szqopxe282ge84ffk0de659fzk1r2izyd8upg.png">
+        <h6>ارسال رایگان</h6>
+
+    </div>
 </div>

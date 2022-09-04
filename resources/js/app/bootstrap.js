@@ -79,3 +79,5 @@ document.querySelectorAll(".win-btn:not(i,span)").forEach((b) => {
         });
 
 });
+
+window.newCardAdd = false

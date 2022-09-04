@@ -1,6 +1,6 @@
 @unless ($breadcrumbs->isEmpty())
     <div class="router box2">
-        <i class="fas fa-home"></i>
+        @include('icons.home')
         <ul class="breadcrumbs">
             @foreach ($breadcrumbs as $breadcrumb)
                 @if (!is_null($breadcrumb->url) && !$loop->last)

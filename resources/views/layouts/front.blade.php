@@ -10,7 +10,9 @@
 		<!-- End Google Tag Manager (noscript) -->
 		<div class="off-canvas-wrapper" id="app">
 			<div class="content">
+
 				@include('front.global.topbar.main')
+
 				<div class="off-canvas-content" data-off-canvas-content>
 					@yield('content')
 					<cart-noti />

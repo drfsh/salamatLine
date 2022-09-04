@@ -31,10 +31,10 @@
             </span>
             @endif
 
-            {{ Form::label('price_AED', 'قیمت به درهم (اختیاری)') }}
+            {{ Form::label('price_AED', 'قیمت به دینار (اختیاری)') }}
             <div class="input-group">
                 {{ Form::text('price_AED', null, ['class' => 'number input-group-field']) }}
-                <span class="input-group-label">درهم</span>
+                <span class="input-group-label">دینار</span>
             </div>
             @if ($errors->has('price_AED'))
                 <span class="label warning">

@@ -1,5 +1,5 @@
 body {
-    background: #f3f6fd !important;
+    background: #f2f6fc !important;
 }
 
 body::-webkit-scrollbar {
@@ -140,8 +140,12 @@ ul.pside li.active:before {
     box-shadow: 0 5px 20px -12px rgba(0, 26, 102, .4);
 }
 
+.router svg {
+    margin-bottom: 8px;
+}
+
 .router {
-    background: white;
+    background: transparent;
     margin-bottom: 26px;
     margin-top: 8px;
     height: 43px;
@@ -353,9 +357,10 @@ ul.pside li.active:before {
 }
 
 .breadcrumbs li, .breadcrumbs a {
-    color: #a2a2a2;
+    color: #3b4359;
     font-size: 15px;
     user-select: none;
+    font-weight: 400;;
 }
 
 .product-item-h {
@@ -1490,7 +1495,7 @@ body.auth #salamat-logo {
 
 .product-box .buttons span {
     width: 30px;
-    /*height: 30px;*/
+    color: #555555;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1511,18 +1516,25 @@ body.auth #salamat-logo {
 }
 
 .product-box .name h1 {
-    font-size: 18px;
-    color: #3c425a;
-    font-weight: 500;
+    font-size: 20px;
+    color: #3b4359;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .product-box .name-en .zm {
-    user-select: none;
+    float: right;
     background: #275f84;
-    color: white;
-    border-radius: 20px;
-    padding: 5px 13px;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 90px;
     font-size: 14px;
+    font-weight: 400;
+    width: unset;
+    text-align: center;
+    box-sizing: border-box;
+    margin-left: 10px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1531,18 +1543,16 @@ body.auth #salamat-logo {
 }
 
 .product-box .name-en .nm {
-    direction: ltr;
-    font-size: 15px;
-    color: #707070;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    margin-right: 9px;
+    float: right;
+    width: unset;
+    margin-top: 8px;
+    font-size: 16px;
+    color: #474747;
 }
 
 .product-box .name-en .zm svg {
     margin-left: 6px;
-    width: 21px;
+    width: 17px;
 }
 
 .product-box .name-en {
@@ -1563,7 +1573,6 @@ body.auth #salamat-logo {
     justify-content: center;
     position: relative;
     box-shadow: 3px 1px 20px -7px #00000036;
-    margin-top: 20px;
     max-width: 100%;
     width: auto;
 }
@@ -1601,7 +1610,7 @@ body.auth #salamat-logo {
 }
 
 .product-box .price span {
-    margin-right: 14px;
+    margin-right: 3px;
     font-weight: 400;
     font-size: 18px;
 }
@@ -1669,7 +1678,7 @@ body.auth #salamat-logo {
     color: white;
     padding: 12px;
     margin-right: 13px;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 17px;
     height: 50px;
     width: 197px;
@@ -1685,7 +1694,9 @@ body.auth #salamat-logo {
     align-items: center;
     justify-content: space-between;
 }
-
+.product-box .d-add-shop .add:hover{
+    background: #919191;
+}
 .info-orng {
     width: 100%;
     user-select: none;
@@ -1711,6 +1722,7 @@ body.auth #salamat-logo {
     align-items: center;
     margin-bottom: 12px;
     flex-wrap: wrap;
+    font-size: 14px;
 }
 
 .product-page .meta-box ul li span {
@@ -1737,7 +1749,6 @@ body.auth #salamat-logo {
     background: #f3f6fd;
     padding: 15px;
     border-radius: 16px;
-    margin-top: 70px;
 }
 
 .product-page .more-features ul {
@@ -1776,8 +1787,8 @@ body.auth #salamat-logo {
     display: block;
     position: absolute;
     right: -22px;
-    width: 6px;
-    height: 6px;
+    width: 7px;
+    height: 7px;
     background: #c3c9d7;
     border-radius: 14px;
 }
@@ -1803,24 +1814,29 @@ body.auth #salamat-logo {
     margin-top: 20px;
 }
 
-.product-box .contact .whatsapp, .product-box .contact .telegram {
+.product-box .contact .whatsapp, .product-box .contact .telegram, .product-box .contact .call {
     border: 1px solid;
     border-radius: 10px;
     padding: 10px 8px;
-    font-size: 12px;
+    font-size: 13px;
     color: #2eba40;
     display: flex;
     align-items: center;
     word-spacing: -1px;
     transition: 0.2s;
     margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.product-box .contact .call {
+    color: #4e6ab0;
 }
 
 .product-box .contact .telegram {
     color: #2ca4e1;
 }
 
-.product-box .contact .whatsapp svg, .product-box .contact .telegram svg {
+.product-box .contact .whatsapp svg, .product-box .contact .telegram svg, .product-box .contact .call svg {
     margin-left: 8px;
 }
 
@@ -1831,6 +1847,11 @@ body.auth #salamat-logo {
 
 .product-box .contact .telegram:hover {
     background: #2ca4e1;
+    color: white;
+}
+
+.product-box .contact .call:hover {
+    background: #4e6ab0;
     color: white;
 }
 
@@ -1928,7 +1949,7 @@ body.auth #salamat-logo {
     font-size: 15px;
 }
 
-.product-page .product-info .title {
+.product-page .product-info > .title {
     font-size: 21px;
     font-weight: 700;
     padding-right: 25px;
@@ -1939,7 +1960,7 @@ body.auth #salamat-logo {
 
 }
 
-.product-page .product-info .title:before {
+.product-page .product-info > .title:before {
     content: "";
     display: block;
     position: absolute;
@@ -1950,7 +1971,7 @@ body.auth #salamat-logo {
     right: 0;
 }
 
-.product-page .product-info.comment-show .title:before {
+.product-page .product-info.comment-show > .title:before {
     background: #2962ff;
 }
 
@@ -1998,12 +2019,14 @@ body.auth #salamat-logo {
 }
 
 .product-page .comment-info .product-info .title2 {
-    font-size: 13px;
+    font-size: 15px;
     text-align: center;
+    margin: 10px 0px 7px;
+    font-weight: 400;
 }
 
 .product-page .comment-info .product-info {
-    padding: 25px 20px;
+    padding: 11px 20px;
     background: #ffffff;
     border-radius: 10px;
 }
@@ -2044,7 +2067,8 @@ body.auth #salamat-logo {
 }
 
 .back-stars {
-    color: #acacac;
+    color: #d3ced2;
+    font-size: 14px;
 }
 
 .m0 {
@@ -2223,7 +2247,7 @@ body.auth #salamat-logo {
 }
 
 .product-page .timer .item span:first-child div.hid {
-    animation: timer 0.2s ;
+    animation: timer 0.2s;
 }
 
 @keyframes timer {
@@ -2235,15 +2259,17 @@ body.auth #salamat-logo {
         transform: translateY(10px);
         opacity: 0;
     }
-    51%{
+    51% {
         transform: translateY(-10px);
     }
-    100%{
+    100% {
         transform: translateY(0px);
         opacity: 1;
     }
 }
-.multi-price .item{
+
+.multi-price .item {
+    user-select: none;
     position: relative;
     border: 1px solid #dbe2ea;
     border-radius: 10px;
@@ -2254,14 +2280,27 @@ body.auth #salamat-logo {
     justify-content: space-between;
     margin-bottom: 10px;
 }
-.multi-price .item span{
+
+.multi-price .item span {
     z-index: 1;
 }
-.multi-price .item .name{
+
+.multi-price .item .name {
     margin-right: 15px;
 }
+
+.multi-price .item .per {
+    background: #f3a600;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0px 7px 0px 14px;
+    margin-right: 8px;
+    font-size: 12px;
+}
+
 .multi-price .item:before {
-    transition: 0.2s;
+    transition: 0.3s;
     content: "";
     display: block;
     position: absolute;
@@ -2272,9 +2311,11 @@ body.auth #salamat-logo {
     right: 15px;
     margin-top: -3px;
 }
-.multi-price .item.active span{
+
+.multi-price .item.active span {
     color: white;
 }
+
 .multi-price .item.active:before {
     background: #275f84;
     border: none;
@@ -2284,4 +2325,394 @@ body.auth #salamat-logo {
     left: 0;
     right: 0;
     z-index: 0;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.w100px {
+    width: 100px;
+}
+
+.breadcrumbs li:not(:last-child):after {
+    margin: 0 10px;
+    color: #3b4159;
+}
+
+.text-red {
+    color: red !important;
+}
+
+
+.share-link-pop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dismiss {
+    background: #2626268c;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1
+}
+
+.card-share-link {
+    z-index: 2;
+    background: white;
+    padding: 27px 19px;
+    position: relative;
+    border-radius: 10px;
+    min-width: 600px;
+}
+
+.card-share-link .fa-times {
+    font-size: 11px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #0a4773;
+    color: white;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-share-link .t {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 16px 40px 30px;
+}
+
+.product-aspk {
+    float: right;
+    width: 50px;
+    background: #fff;
+    padding: 7px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 6px #e2e5eaf2;
+    height: 50px;
+    border-radius: 150px;
+    margin-top: -15px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ .product-aspk img {
+    height: auto;
+    max-width: 100%;
+}
+.card-share-link .s {
+    float: right;
+    width: auto !important;
+    text-align: right;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.card-share-link .n {
+    font-size: 17px;
+    color: #3b4359;
+    width: auto !important;
+    background: #f2f6fc;
+    border-radius: 10px;
+    padding: 2px 16px;
+}
+
+.card-share-link .t:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #0a4773;
+    width: 15px;
+    height: 5px;
+    border-radius: 13px;
+    top: 43%;
+    right: -22px;
+}
+
+.co, .copy {
+    display: flex;
+    justify-content: space-between;
+}
+
+.co .copy .link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    margin-left: 11px;
+    font-size: 14px;
+    color: #898989;
+}
+
+.co .copy .btn-copy {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffdc00;
+    height: 35px;
+    width: 35px;
+    border-radius: 10px;
+}
+
+.co .copy .btn-copy svg {
+    width: 17px;
+}
+
+.co {
+    padding: 0 15px;
+}
+
+.co .so {
+    display: flex;
+}
+
+.co .so svg {
+    width: 17px;
+}
+
+.co .so span {
+    transition: 0.2s;
+    width: 35px;
+    height: 35px;
+    color: white;
+    border-radius: 10px;
+    margin-left: 3px;
+}
+
+.co .so span:hover {
+    filter: opacity(0.7);
+}
+
+.co .so .telegram {
+    background: #2ca5e0;
+}
+
+.co .so .whatsapp {
+    background: #1bd741;
+}
+
+.product-page .woocommerce-message {
+    background: #fff;
+    padding-top: 32px;
+    padding-bottom: 27px;
+}
+
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+    padding: 1em 3.5em 1em 2em;
+    margin: 0 0 2em;
+    position: relative;
+    background-color: #f7f6f7;
+    color: #515151;
+    border-top: 3px solid #a46497;
+    list-style: none outside;
+    width: auto;
+    word-wrap: break-word;
+}
+
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+    border: unset;
+    background: #f2f6fc;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 15px !important;
+    color: #3b4359;
+}
+
+.woocommerce-error::before, .woocommerce-info::before, .woocommerce-message::before {
+    font-family: WooCommerce;
+    content: "" !important;
+    display: inline-block;
+    position: relative;
+    top: unset;
+    right: unset;
+    float: right;
+    width: 15px;
+    height: 5px;
+    background: #094873;
+    border-radius: 90px;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+    font-size: 100%;
+    margin: 0;
+    line-height: 1;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    overflow: visible;
+    padding: .618em 1em;
+    font-weight: 700;
+    border-radius: 3px;
+    right: auto;
+    color: #515151;
+    background-color: #ebe9eb;
+    border: 0;
+    display: inline-block;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.button.wc-forward {
+    margin-top: -14px;
+    box-shadow: unset;
+    background: #094873;
+    color: #fff;
+    padding: 15px 20px;
+    font-weight: 400;
+    border-radius: 7px;
+    float: left;
+}
+
+.tooltip-meta-v-sepid {
+    position: absolute;
+    background: #fff;
+    box-shadow: 0px 2px 7px #33343933;
+    min-width: 120px;
+    font-size: 15px;
+    padding: 7px;
+    box-sizing: border-box;
+    border-radius: 90px;
+    margin-left: -173px !important;
+    margin-top: 10px !important;
+    font-weight: 400;
+    display: none;
+    font-family: iranyekan;
+    color: #3b4359;
+    z-index: 100;
+    text-align: center;
+}
+
+.circle-hover:hover .tooltip-meta-v-sepid {
+    display: block;
+}
+
+.left-sepoid-product {
+    float: right;
+    width: 70%;
+    padding-right: 30px;
+}
+
+.sepid-offer-403 {
+    float: right;
+    width: 100%;
+    border-bottom: 1px solid #F2F6FC;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.right-new-123-1 {
+    float: right;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.left-two-p-sepid {
+    float: right;
+    width: 60%;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.right-two-p-sepid-asli {
+    float: left;
+    width: 40%;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.first-sepid-product-box {
+    float: right;
+    width: 100%;
+    padding: 25px;
+    background: #fff;
+    box-shadow: 0px 2px 35px #3b43590f !important;
+    border-radius: 15px;
+    /*margin-bottom: 25px;*/
+    box-sizing: border-box;
+}
+
+.meta-sepid-new-1 {
+    float: right;
+    width: 16.6%;
+    text-align: center;
+    display: block;
+}
+
+.woocommerce img, .woocommerce-page img {
+    height: auto;
+    max-width: 100%;
+}
+
+.meta-sepid-new-1 h6 {
+    margin: 0px;
+    font-size: 15px;
+    color: #3b4359;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.sgare-sepid-box {
+    float: right;
+    width: 100%;
+    border: 1px solid #f2f6fc;
+    margin-top: 35px;
+    text-align: center;
+    font-size: 20px;
+    padding: 16px 9px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .right-new-123-1 {
+        width: 35%;
+    }
+    .left-sepoid-product {
+        width: 65%;
+    }
+    .left-two-p-sepid {
+        width: 55%;
+        padding-left: 10px;
+    }
+    .right-two-p-sepid-asli {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .right-new-123-1 {
+        width: 100%;
+    }
+    .left-sepoid-product {
+        width: 100%;
+        padding-right: 0px;
+        margin-top: 30px;
+    }
+    .left-two-p-sepid {
+        width: 60%;
+        padding-left: 20px;
+    }
+    .right-two-p-sepid-asli {
+        width: 40%;
+    }
 }

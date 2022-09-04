@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
 // use App\Filters\ProductFilter;
+use Illuminate\Support\Facades\View;
 use Redirect;
 use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
 use Artesaos\SEOTools\Facades\SEOTools;
@@ -19,7 +20,8 @@ class CategoryController extends Controller
 	public function holder()
 	{
 		SEOTools::setTitle('دسته‌بندی‌ها');
-		$categories = Category::defaultOrder()->get()->toTree();
+		$categories = Category::defaultOrder()->toTree()->get();
+//        return response()->json($categories);
 		return view('front.category.holder.main',compact('categories'));
 	}
 
@@ -29,8 +31,8 @@ class CategoryController extends Controller
 	public function main($slug,Request $request)
 	{
 
+		$data['category'] = Category::where('slug', $slug)->hide()->first();
 
-		$data['category'] = Category::where('slug', $slug)->first();
 		// $rootId = $data['category'];
 
 		if (!$data['category']) {
@@ -42,7 +44,7 @@ class CategoryController extends Controller
 		$cat_id = $data['category']->id;
 		// $data['sub_cats'] = $data['category']->descendants()->where('parent_id',$cat_id)->get();
 
-		$data['sub_cats'] = $data['category']->descendants()->get()->toTree();
+		$data['sub_cats'] = $data['category']->descendants()->hide()->get()->toTree();
 
 		$sub_cat_id  = Category::descendantsAndSelf($cat_id)->pluck('id')->toArray();
 

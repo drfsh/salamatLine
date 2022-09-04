@@ -3,16 +3,21 @@
 namespace App\Http\Controllers\Front\Profile;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Product;
 use CyrildeWit\EloquentViewable\Support\Period;
 use Illuminate\Http\Request;
 use Auth;
+use Illuminate\Support\Facades\View;
 use Redirect;
 use File;
 
 class HomeController extends Controller
 {
-    public function __construct(){$this->middleware('auth');}
+    public function __construct(){
+        $this->middleware('auth');
+        View::share('categories',Category::defaultOrder()->toTree()->get());
+    }
 
 	public function main()
 	{

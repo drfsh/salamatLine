@@ -1,24 +1,14 @@
 <div class="g">
-    <div class="name">
-        <h1>{{$data['product']->title}}@if($data['product']->subtitle) ({{$data['product']->subtitle}})@endif</h1>
-    </div>
-    <div class="name-en">
-		<span role="button" class="zm">
-			@include('icons.shield')
-			تضمین اصالت کالا
-		</span>
-        <span class="nm">
-			product english name model D1
-		</span>
-    </div>
+    @if($data['product']->updated_at > verta()->subDay(7)->format('Y/m/d'))
     <div class="last-update text-l">
         @include('icons.calendar')
         <span> آخرین بروزرسانی : </span>
         <span> {{$data['product']->updated_at}} </span>
     </div>
+    @endif
     <range-star value="{{($data['product']->feature->teamstar*10)}}"></range-star>
 
-    <div class="mt50">
+    <div class="mt15">
         @include('front.product.main.card.main.center.cart')
     </div>
 

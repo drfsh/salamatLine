@@ -119,7 +119,7 @@ class AddToCartController extends Controller{
 		    'id' => $id,
 		    'name' => $product->title,
 		    'price' => $price - $discount_price,
-		    'quantity' => 1,
+		    'quantity' => $request->quantity,
 		    'attributes' => array(
 				'pid' => $pid,
 				'mid' => $mid,

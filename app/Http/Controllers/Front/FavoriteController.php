@@ -27,16 +27,16 @@ class FavoriteController extends Controller
 
 
 	public function Favorite($id){
-		if (Auth::check()){
+        if (Auth::check()){
 			$post = Product::published()->find($id);
 			$post->toggleFavorite();
 			if ($post->isFavorited()) {
-				return response()->json(['text' => 'به لیست اضافه شد','css' => 'red active']);
+				return response()->json(['status' => 'true','add' => 'true']);
 			}
-			return response()->json(['text' => 'از لیست حذف شد','css' => 'red']);
+			return response()->json(['status' => 'true','add' => 'false']);
 
 		}else{
-			return response()->json(['text' => 'لطفا وارد شوید','css' => 'red']);
+			return response()->json(['status' => 'false']);
 		}
     }
 

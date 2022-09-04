@@ -17,6 +17,8 @@ import infoItem from "./components/product/tabs/item/info-item";
 import inputStar from "./components/product/star/inputStar";
 import deactive from "./components/product/deactive";
 import product_timer from "./components/product/timer/product_timer";
+import buttons from "./components/product/buttons/buttons";
+import addedCard from "./components/product/alert/added-card";
 
 setApp([
     {
@@ -73,6 +75,15 @@ setElement([
         name: 'product-timer',
         component: product_timer
     },
+    {
+        name: 'product-buttons',
+        component: buttons
+    },
+    {
+        name: 'product-is-add-card',
+        component: addedCard
+    },
+
 ])
 
 function setElement(list) {

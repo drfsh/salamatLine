@@ -25,8 +25,10 @@ class ProductController extends Controller
 	public function main($slug)
 	{
 
+
 		$data['product'] = Product::published()->where('slug',$slug)->with('multiprice','multifeature','feature','photos','brand','country','inventory','discount','collection')->first();
 		$data['collection'] =  [];
+
 
         foreach($data['product']->collection as $item){
 			$data['collection'][$item->id] = $item;

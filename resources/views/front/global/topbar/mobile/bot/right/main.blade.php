@@ -1,6 +1,6 @@
 <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas>
 	<ul class="vertical menu drilldown" data-drilldown data-back-button='<li class="js-drilldown-back"><a href="#" rel="nofollow">بازگشت</a></li>'>
-		@foreach($topbar as $item)
+		@foreach($categories as $item)
 		@if($item->children->isEmpty())
 			<li><a href="{{ route('category', $item->slug) }}">{{$item->name}}</a></li>
 		@else

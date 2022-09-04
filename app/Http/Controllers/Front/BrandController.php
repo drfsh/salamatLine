@@ -16,14 +16,14 @@ class BrandController extends Controller
 	public function holder()
 	{
 		$this->seo()->setTitle('برندها');
-		$data['brand'] = Brand::whereHas('product')->whereNotNull('image')->orderBy('image', 'desc')->paginate(12);
+		$data['brand'] = Brand::whereHas('product')->whereNotNull('image')->where('hide',false)->orderBy('image', 'desc')->paginate(12);
 		return view('front.brand.holder.main',compact('data'));
 	}
 
 	public function main($slug)
 	{
 
-		$data['brand'] = Brand::where('slug',$slug)->first();
+		$data['brand'] = Brand::where('slug',$slug)->where('hide',false)->first();
 		if (!$data['brand']) {return Redirect::route('home');}
 		$this->seo()->setTitle($data['brand']->title);
 		$data['product'] = Product::published()->where('brand_id',$data['brand']->id)->orderBy('featured', 'desc')->orderBy('active', 'desc')->latest()->paginate(12);

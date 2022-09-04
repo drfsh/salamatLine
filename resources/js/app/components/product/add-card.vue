@@ -7,7 +7,11 @@
             <!--multi price-->
             <multi_price v-if="multiprice2.length!==0" :items="multiprice2"></multi_price>
             <!--end multi price-->
+
+            <!--multi fucher-->
+            <feature v-if="multifeature2.length!==0" :items="multifeature2"></feature>
         </div>
+
         <span class="bbox count-box">
             <span class="btn circle-hover" role="button" @click="add"><ic_add></ic_add></span>
             <span class="count">{{ count }}</span>
@@ -39,10 +43,11 @@ import Loading from "../loading/loading";
 import Ic_shield from "../icon/ic_shield";
 import One_price from "./price/one_price";
 import Multi_price from "./price/multi_price";
+import Feature from "./price/feature";
 
 export default {
     name: "add-card",
-    components: {Multi_price, One_price, Ic_shield, Loading, Ic_basket, Ic_minus, Ic_add},
+    components: {Feature, Multi_price, One_price, Ic_shield, Loading, Ic_basket, Ic_minus, Ic_add},
     props: {
         singleprice: {
             default: 0,
@@ -113,10 +118,19 @@ export default {
         },
         async adToCard() {
             this.loading = true
-            let m = {mf: this.mp, mp: this.mp};
+            let m = {mf: this.mf, mp: this.mp,quantity:this.count};
             let {data} = await window.axios.post('/cart/add/' + this.id, m)
             this.status = data.status;
+            if (data['situation']=='success'){
+                window.newCardAdd = true
+                window.scrollTo(0,0)
+                this.getData()
+            }
             this.loading = false
+        },
+        async getData() {
+            let {data} = await window.axios('/cart/detail')
+            $('.shrink .number').html(data.qty+'<span class="text"> مورد </span>')
         }
     },
     mounted() {

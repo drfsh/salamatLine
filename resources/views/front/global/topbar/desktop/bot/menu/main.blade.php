@@ -1,6 +1,6 @@
 <ul class="main">
-	@foreach($topbar as $item)
-		@if(!$item->children->isEmpty())
+	@foreach($categories as $item)
+		@if(!$item->children()->isEmpty())
 		<li class="dropdown">
 			<a href="{{ route('category', $item->slug) }}">
 				<i class="fas fa-chevron-down"></i>
