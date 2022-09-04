@@ -14,7 +14,7 @@
             <div class="double-gap"></div>
         @endif
         <div class="cell medium-10 medium-offset-1">
-            <div class="title">کاربران حضوری
+            <div class="title_b">کاربران حضوری
 
                 <a href="{{route('person.create')}}">
                 <span class="create">
