@@ -2,7 +2,7 @@
     <div class="gap"></div>
     <ul class="vertical">
         <li>
-            <a href="{{route('admin')}}">
+            <a style="padding: 0" href="{{route('admin')}}">
                 <span>پنل مدیریت سلامت لاین</span>
             </a>
         </li>
