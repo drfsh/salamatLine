@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name: "ic_pasket"
+    name: "ic_basket"
 }
 </script>
 

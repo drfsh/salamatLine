@@ -19,6 +19,7 @@ import deactive from "./components/product/deactive";
 import product_timer from "./components/product/timer/product_timer";
 import buttons from "./components/product/buttons/buttons";
 import addedCard from "./components/product/alert/added-card";
+import cart from "./components/cart/cart";
 
 setApp([
     {
@@ -40,6 +41,11 @@ setApp([
                 component: addCard
             },
         ]
+    },
+    {
+        name: 'app-cart',
+        component: cart,
+        components: []
     },
 ])
 setElement([
