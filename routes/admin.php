@@ -35,7 +35,7 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
 	Route::resource('material', App\Http\Controllers\Admin\MaterialController::class, ['except' => ['show']]);
 	Route::resource('product', App\Http\Controllers\Admin\ProductController::class, ['except' => ['show']]);
 	Route::resource('collection', App\Http\Controllers\Admin\CollectionController::class, ['except' => ['show']]);
-	Route::resource('discount', App\Http\Controllers\Admin\DiscountController::class, ['except' => ['show']]);
+	Route::resource('discount', App\Http\Controllers\Admin\DiscountController::class);
 	Route::resource('coupon', App\Http\Controllers\Admin\CouponController::class, ['except' => ['show']]);
 
 	Route::resource('province', App\Http\Controllers\Admin\ProvinceController::class, ['except' => ['show']]);

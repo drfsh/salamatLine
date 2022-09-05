@@ -49,3 +49,5 @@ $('.accordion2').click(function (e) {
         m.addClass('active')
     }
 })
+
+window.token = $("meta[name='csrf-token']").attr('content');

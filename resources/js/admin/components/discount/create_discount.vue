@@ -126,8 +126,9 @@ export default {
                 title: this.title,
                 end_date: this.end_date,
                 start_date: this.start_date,
+                _token:window.token
             }
-            let {data} = await window.axios.post('/admin/discount/', m)
+            let {data} = await window.axios.post('/admin/discount', m)
 
             this.success = data.success
             this.loading = false

@@ -33,6 +33,8 @@ class DiscountController extends Controller
 
     public function store(Request $request)
     {
+
+
         $discount = new Discount;
         $discount->title = $request->title;
         $discount->content = $request->content;
@@ -86,7 +88,7 @@ class DiscountController extends Controller
         }else{
             $discount->active = 0;
         }
-        
+
         $discount->save();
         return response()->json(['success' => 'با موفقیت ویرایش شد.']);
     }
@@ -97,7 +99,7 @@ class DiscountController extends Controller
         $discount->active = 0;
         $discount->save();
         $discount->delete();
-        
+
         Session::flash('success', 'تخفیف حذف شد');
         return redirect()->route('discount.index');
     }
