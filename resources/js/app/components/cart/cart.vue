@@ -1,9 +1,7 @@
 <template>
     <topbar :title="title" v-if="level!=-1"/>
     <loading style="margin-top: 90px;" v-if="level===-1"></loading>
-    <div class="size" v-else-if="level!==0">
-        <route :level="level"></route>
-    </div>
+    <cart_main v-else-if="level!==0"></cart_main>
     <cart_empty v-else></cart_empty>
 </template>
 
@@ -12,24 +10,29 @@ import Topbar from "./topbar/topbar";
 import Route from "./route/route";
 import Loading from "../loading/loading";
 import Cart_empty from "./cart_empty";
+import Cart_main from "./main/cart_main";
 
 export default {
     name: "cart",
-    components: {Cart_empty, Loading, Route, Topbar},
+    components: {Cart_main, Cart_empty, Loading, Route, Topbar},
     data() {
         return {
             title: 'سبد خرید',
             level: -1,
-            loading: false
+            loading: false,
+            detail:[]
         }
     },
     methods: {
         async getData() {
-            let {data} = await window.axios.get('/cart/items')
-            if (data.length == 0) {
+            let {data} = await window.axios.get('/cart/detail')
+            if (data.qty == 0) {
                 this.level = 0
             } else
+            {
                 this.level = 1
+                this.detail = data
+            }
         }
     },
     mounted() {

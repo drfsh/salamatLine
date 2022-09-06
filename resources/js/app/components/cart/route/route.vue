@@ -1,5 +1,5 @@
 <template>
-    <div class="box3 pro-1-2 p50">
+    <div class="pro-1-2 p50">
         <div class="route">
             <div class="item active">
                 <ic_basket></ic_basket>
