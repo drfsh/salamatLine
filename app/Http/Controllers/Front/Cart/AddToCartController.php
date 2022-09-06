@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front\Cart;
 
 use App\Http\Controllers\Controller;
+use App\Models\Discount;
 use Illuminate\Http\Request;
 use Auth;
 use Cart;
@@ -151,6 +152,19 @@ class AddToCartController extends Controller{
 		if (!Auth::check()){
 			return response()->json(['error' => 'please login']);
 		}
+
+        foreach ($CartItems as $item){
+            if ($item){
+                $item->status = ['ok'=>true,'log'=>''];
+                $discount_id = $item->attributes->discount_id;
+                if (!is_null($discount_id))
+                {
+                    $discount = Discount::find($discount_id);
+                    if (!$discount->isAcrice)
+                        $item->status = ['ok'=>false,'log'=>'زمان تخفیف تمام شده است'];
+                }
+            }
+        }
 
 		return $CartItems;
 

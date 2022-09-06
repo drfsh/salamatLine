@@ -1,7 +1,7 @@
 <template>
     <div class="size" >
-        <route :level="level"></route>
-        <cart_level1 v-if="level===1"></cart_level1>
+        <route :level="step"></route>
+        <cart_level1 v-if="step===1"></cart_level1>
     </div>
 </template>
 
@@ -13,13 +13,12 @@ export default {
     components: {Cart_level1, Route},
     data(){
       return{
-          allPrice:0,
           products:[]
       }
     },
     computed:{
-        level(){
-            return this.$parent.level
+        step(){
+            return this.$parent.step
         },
         detail(){
             return this.$parent.detail
@@ -41,17 +40,16 @@ export default {
         async getData() {
             let {data} = await window.axios.get('/cart/items')
             if (data.length == 0) {
-                this.level = 0
+                this.step = 0
             } else
             {
-                this.level = 1
+                this.step = 1
                 this.products = data
             }
         }
     },
     mounted() {
         this.getData()
-        this.allPrice = this.detail.total
     }
 }
 </script>

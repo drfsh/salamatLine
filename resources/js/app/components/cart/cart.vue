@@ -1,7 +1,7 @@
 <template>
-    <topbar :title="title" v-if="level!=-1"/>
-    <loading style="margin-top: 90px;" v-if="level===-1"></loading>
-    <cart_main v-else-if="level!==0"></cart_main>
+    <topbar :title="title" v-if="step!=-1"/>
+    <loading style="margin-top: 90px;" v-if="step===-1"></loading>
+    <cart_main v-else-if="step!==0"></cart_main>
     <cart_empty v-else></cart_empty>
 </template>
 
@@ -18,7 +18,7 @@ export default {
     data() {
         return {
             title: 'سبد خرید',
-            level: -1,
+            step: -1,
             loading: false,
             detail:[]
         }
@@ -27,10 +27,10 @@ export default {
         async getData() {
             let {data} = await window.axios.get('/cart/detail')
             if (data.qty == 0) {
-                this.level = 0
+                this.step = 0
             } else
             {
-                this.level = 1
+                this.step = 1
                 this.detail = data
             }
         }
