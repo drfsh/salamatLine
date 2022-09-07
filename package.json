@@ -10,6 +10,7 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@vue-leaflet/vue-leaflet": "^0.6.1",
         "axios": "^0.27.2",
         "bootstrap": "^4.6.0",
         "jquery": "^3.6",
@@ -31,6 +32,7 @@
         "jalali-moment": "^3.3.10",
         "jquery-confirm": "^3.3.4",
         "js-table2excel": "^1.0.3",
+        "leaflet": "^1.8.0",
         "vue-excel-xlsx": "^1.2.2",
         "vue-moment-jalaali": "^2.0.0",
         "vue-owl-carousel": "^2.0.3",

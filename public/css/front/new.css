@@ -2590,7 +2590,25 @@ body.auth #salamat-logo {
     cursor: not-allowed;
 
 }
-
+.fullLoading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1b1b1b8c;
+    z-index: 1020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fullLoading .loading-dot{
+    width: 120px;
+    background: #ffffff;
+    border-radius: 12px;
+    height: 100px;
+    padding-top: 16px;
+}
 .tooltip-meta-v-sepid {
     position: absolute;
     background: #fff;
@@ -3173,16 +3191,15 @@ body.auth #salamat-logo {
     padding-left: 40px;
     box-sizing: border-box;
 }
-
-.checkout.woocommerce-checkout #order_review_heading {
-    float: right;
-    width: 30%;
-}
-
-.checkout.woocommerce-checkout #order_review {
+.cell-30-left {
     float: left;
     width: 30%;
-    background: #2962ff;
+}
+.nextstep{
+    margin-top: 20px;
+}
+.checkout.woocommerce-checkout #order_review {
+    background: #d7e2f2;
     padding: 10px;
     box-sizing: border-box;
     border-radius: 10px;
@@ -3277,10 +3294,12 @@ body.auth #salamat-logo {
     margin-top: 7px;
     font-size: 13px;
     color: #434140;
+    max-width: 85%;
+    flex-wrap: wrap;
 }
 
 .woocommerce-info.address .content .item {
-    margin-right: 15px;
+    margin-left: 15px;
     display: flex;
     align-items: center;
     margin-top: 8px;
@@ -3344,12 +3363,12 @@ body.auth #salamat-logo {
     height: 100%;
     left: 0;
 }
-.checkout.woocommerce-checkout #order_review_heading{
+.checkout.woocommerce-checkout .order_review_heading{
     font-size: 17px;
     margin-block-start: 1em;
     margin-block-end: 1em;
 }
-.checkout.woocommerce-checkout #order_review_heading::before {
+.checkout.woocommerce-checkout .order_review_heading::before {
     content: "";
     float: right;
     width: 10px;
@@ -3365,12 +3384,46 @@ body.auth #salamat-logo {
     padding: 20px;
     box-sizing: border-box;
     margin-bottom: 10px!important;
-    border-radius: 10px;
+    border-radius: 15px;
+    margin-top: 15px!important;
 }
 .checkout.woocommerce-checkout #payment {
     background: #fff;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 6px;
+    border-radius: 15px;
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+}
+.leaflet-touch .leaflet-control-attribution{
+    display: none;
+}
+.map{
+    width: 100%!important;
+    height: 270px!important;
+    position: relative;
+    border-radius: 0 0 10px 10px;
+}
+.info-map{
+    font-size: 13px;
+    padding: 12px 17px;
+    font-weight: 600;
+    color: #51586b;
+}
+.leaflet-left{
+    bottom: 6px;
+    top: unset!important;
+}
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar{
+    border: none!important;
+}
+.leaflet-touch .leaflet-bar a {
+    border-radius: 35px !important;
+    color: #ff1c7b;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 4px 0 #0000004d;
+    width: 27px;
+    height: 27px;
+    line-height: 27px;
 }
 .nice-select ul{
     max-height: 250px;
@@ -3416,6 +3469,18 @@ body.auth #salamat-logo {
 
     .woocommerce-cart-holder #coupon_code {
         max-width: 180px;
+    }
+}
+
+@media only screen and (max-width: 1050px){
+    .checkout.woocommerce-checkout #customer_details {
+        width: 100%;
+        padding-left: 0px;
+        box-sizing: border-box;
+    }
+    .cell-30-left {
+        float: right;
+        width: 100%;
     }
 }
 
