@@ -1694,9 +1694,11 @@ body.auth #salamat-logo {
     align-items: center;
     justify-content: space-between;
 }
-.product-box .d-add-shop .add:hover{
+
+.product-box .d-add-shop .add:hover {
     background: #919191;
 }
+
 .info-orng {
     width: 100%;
     user-select: none;
@@ -2411,10 +2413,12 @@ body.auth #salamat-logo {
     align-items: center;
     justify-content: center;
 }
- .product-aspk img {
+
+.product-aspk img {
     height: auto;
     max-width: 100%;
 }
+
 .card-share-link .s {
     float: right;
     width: auto !important;
@@ -2581,6 +2585,7 @@ body.auth #salamat-logo {
     border-radius: 7px;
     float: left;
 }
+
 .button.wc-forward.disabled {
     cursor: not-allowed;
 
@@ -2675,6 +2680,7 @@ body.auth #salamat-logo {
     font-weight: 400;
     margin-top: 10px;
 }
+
 .sgare-sepid-box {
     float: right;
     width: 100%;
@@ -2693,7 +2699,8 @@ body.auth #salamat-logo {
     position: relative;
     padding: 15px 0px;
 }
-.head-page h1{
+
+.head-page h1 {
     display: block;
     color: #fff;
     font-size: 28px;
@@ -2703,10 +2710,12 @@ body.auth #salamat-logo {
     margin-inline-end: 0px;
     font-weight: bold;
 }
+
 .size {
     width: 1300px;
     margin: auto;
 }
+
 .pro-1-2 {
     box-shadow: 0 5px 19px -5px #00000017 !important;
     background: #fff;
@@ -2717,36 +2726,43 @@ body.auth #salamat-logo {
     width: 100%;
     box-sizing: border-box;
 }
-.p50{
+
+.p50 {
     padding: 50px;
 }
-.mt-0{
+
+.mt-0 {
     margin-top: 0;
 }
-#app-cart .route{
+
+#app-cart .route {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
 }
-#app-cart .route .item{
+
+#app-cart .route .item {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 10px;
     color: #e2e3e5;
 }
-#app-cart .route .item svg{
+
+#app-cart .route .item svg {
     width: 30px;
     height: 30px;
     color: #d2d2d2;
 }
-#app-cart .route .item span{
+
+#app-cart .route .item span {
     font-size: 12px;
     margin-top: 10px;
     color: #999999;
     font-weight: 600;
 }
+
 #app-cart .route .line {
     position: relative;
     width: 28%;
@@ -2754,12 +2770,15 @@ body.auth #salamat-logo {
     background: #e2e3e5;
     overflow: hidden;
 }
-#app-cart .route .item.active svg{
+
+#app-cart .route .item.active svg {
     color: #292d32;
 }
-#app-cart .route .item.active span{
+
+#app-cart .route .item.active span {
     color: #4d4f52;
 }
+
 #app-cart .route .line .bg {
     transition: 0.5s;
     background: #094873;
@@ -2776,14 +2795,16 @@ body.auth #salamat-logo {
     flex-direction: column;
     align-items: center;
 }
-#app-cart .empty .links .line{
+
+#app-cart .empty .links .line {
     width: 1px;
     height: 15px;
     background: #c4c4c4;
     display: inline-block;
     margin: 0px 11px;
 }
-#app-cart .empty .links{
+
+#app-cart .empty .links {
     font-size: 17px;
     font-weight: 600;
     margin-top: 22px;
@@ -2792,14 +2813,17 @@ body.auth #salamat-logo {
     justify-content: center;
     align-items: center;
 }
-#app-cart .empty img{
+
+#app-cart .empty img {
     width: 267px;
     margin-left: 14px;
 }
-#app-cart .empty .title-empty{
+
+#app-cart .empty .title-empty {
     margin-top: 22px;
 }
-#app-cart .empty .sub-title-empty{
+
+#app-cart .empty .sub-title-empty {
     font-size: 13px;
     margin-top: 22px;
     color: #5e5e5e;
@@ -2836,7 +2860,7 @@ body.auth #salamat-logo {
 }
 
 .woocommerce table.shop_table {
-    border: 1px solid rgba(0,0,0,.1);
+    border: 1px solid rgba(0, 0, 0, .1);
     margin: 0 0 24px -1px;
     text-align: right;
     width: 100%;
@@ -2849,7 +2873,7 @@ body.auth #salamat-logo {
     padding: 9px 12px;
     line-height: 1.5em;
     background: white;
-    border: none!important;
+    border: none !important;
 }
 
 #add_payment_method table.cart .product-thumbnail, .woocommerce-cart table.cart .product-thumbnail, .woocommerce-checkout table.cart .product-thumbnail {
@@ -2867,10 +2891,11 @@ body.auth #salamat-logo {
     margin-left: 8px;
 }
 
-#mySidenav .dmega .sub-menu:hover li:first-child a, .menu-header.sepid-menu-asli .dmega .sub-menu li:hover a, .dmega .sub-menu li.lins:first-child a, .seconds.time1.mini-1-time, .woocommerce-cart-holder  .coupon button, .woocommerce-cart-holder  .product-subtotal::before {
-    background: #094873!important;
+#mySidenav .dmega .sub-menu:hover li:first-child a, .menu-header.sepid-menu-asli .dmega .sub-menu li:hover a, .dmega .sub-menu li.lins:first-child a, .seconds.time1.mini-1-time, .woocommerce-cart-holder .coupon button, .woocommerce-cart-holder .product-subtotal::before {
+    background: #094873 !important;
 }
-.woocommerce-cart-holder .product-subtotal{
+
+.woocommerce-cart-holder .product-subtotal {
     color: #094873
 }
 
@@ -2878,12 +2903,14 @@ body.auth #salamat-logo {
     padding: 15px;
     font-size: 15px;
     background: white;
-    border: none!important;
-    border-top: 1px solid #e8eff9!important;
+    border: none !important;
+    border-top: 1px solid #e8eff9 !important;
 }
+
 .woocommerce table.shop_table td {
     text-align: right;
 }
+
 .woocommerce a.remove {
     display: block;
     font-size: 1.5em;
@@ -2892,11 +2919,12 @@ body.auth #salamat-logo {
     text-align: center;
     line-height: 1;
     border-radius: 100%;
-    color: red!important;
+    color: red !important;
     text-decoration: none;
     font-weight: 700;
     border: 0;
 }
+
 .woocommerce a.remove {
     color: #fff !important;
     background: #555;
@@ -2906,6 +2934,7 @@ body.auth #salamat-logo {
     width: 20px;
     font-size: 20px;
 }
+
 .woocommerce-cart-holder .product-thumbnail img {
     background: #fff;
     box-shadow: 0px 2px 10px #33354024 !important;
@@ -2914,13 +2943,16 @@ body.auth #salamat-logo {
     padding: 10px;
     box-sizing: border-box;
 }
+
 .woocommerce img, .woocommerce-page img {
     height: auto;
     max-width: 100%;
 }
-.woocommerce-Price-currencySymbol{
+
+.woocommerce-Price-currencySymbol {
     margin-right: 5px;
 }
+
 .woocommerce .quantity .qty {
     width: unset;
     text-align: center;
@@ -2929,32 +2961,38 @@ body.auth #salamat-logo {
     padding: 10px;
     border-radius: 8px;
 }
+
 .woocommerce-cart-holder .product-subtotal span {
     color: #3b4359;
     font-weight: 400;
 }
+
 .woocommerce-cart-holder #coupon_code {
     border: 0px solid !important;
     font-size: 15px;
     padding: 9px 20px;
     width: unset !important;
-    margin-left: 10px!important;
+    margin-left: 10px !important;
     float: right;
     border-radius: 8px;
     height: 44px;
 }
+
 .woocommerce-cart-holder #coupon_code::placeholder {
     color: #7d7d7e;
 }
-.product-price .amount{
+
+.product-price .amount {
     display: flex;
     flex-direction: column;
 }
-.product-price .amount .old{
+
+.product-price .amount .old {
     text-decoration: line-through;
     font-size: 12px;
     color: #939393;
 }
+
 #add_payment_method table.cart td.actions .coupon .input-text, .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text {
     float: right;
     box-sizing: border-box;
@@ -2963,26 +3001,30 @@ body.auth #salamat-logo {
     margin: 0 0 0 4px;
     outline: 0;
 }
+
 .woocommerce-cart-holder .actions {
     background: #ebeff7 !important;
     border: 0px solid !important;
     padding: 20px !important;
     border-radius: 10px;
 }
-.woocommerce-cart-holder   .coupon button {
+
+.woocommerce-cart-holder .coupon button {
     font-size: 15px !important;
     font-weight: 400 !important;
     padding: 15px 20px !important;
     border-radius: 8px !important;
     box-shadow: 0px 6px 15px #ecf0f7b8 !important;
-    background: #094873!important;
+    background: #094873 !important;
     color: #fff !important;
     line-height: 1;
     border: 0;
 }
-.bg-warning{
+
+.bg-warning {
     background: #f4ebeb;
 }
+
 .button.button_update_cart {
     background: #fff !important;
     font-size: 15px !important;
@@ -2994,22 +3036,26 @@ body.auth #salamat-logo {
     opacity: .5;
     cursor: not-allowed;
     float: left;
-    display: flex!important;
+    display: flex !important;
     align-items: center;
 }
-.button_update_cart svg{
+
+.button_update_cart svg {
     color: #f9ab00;
     width: 19px;
     height: 19px;
     margin-left: 10px;
 }
-.button_update_cart.active:hover{
+
+.button_update_cart.active:hover {
     background: #ffdc00 !important;
 }
-.button_update_cart.active:hover svg{
+
+.button_update_cart.active:hover svg {
     color: #094873;
 }
-.p-discount{
+
+.p-discount {
     float: left;
     padding: 12px 12px;
     background: #ffdc00;
@@ -3019,14 +3065,17 @@ body.auth #salamat-logo {
     font-style: italic;
     color: #474747;
 }
-.button.button_update_cart.active{
+
+.button.button_update_cart.active {
     opacity: 1;
     cursor: pointer;
 }
-.newsletter{
+
+.newsletter {
     float: left;
     width: 100%;
 }
+
 .cart-collaterals-inner {
     float: right;
     width: 100%;
@@ -3035,24 +3084,28 @@ body.auth #salamat-logo {
     box-sizing: border-box;
     border-radius: 10px;
 }
+
 .woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
     float: left;
     width: 48%;
 }
- .cart-collaterals-inner h2 {
+
+.cart-collaterals-inner h2 {
     margin: 10px 0px 25px;
     font-size: 20px;
     color: #3b4359;
     font-weight: 400;
 }
+
 .woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
     width: 100%;
 }
-.wc-proceed-to-checkout{
+
+.wc-proceed-to-checkout {
     padding: 1em 0;
 }
 
- .woocommerce a.button.alt {
+.woocommerce a.button.alt {
     background-color: #094873;
     color: #fff;
     font-weight: 400;
@@ -3060,10 +3113,12 @@ body.auth #salamat-logo {
     padding: 1em;
     width: 100%;
 
- }
+}
+
 .woocommerce a.button.alt:hover {
     background-color: #3b4359;
 }
+
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
     font-size: 100%;
     margin: 0;
@@ -3084,20 +3139,281 @@ body.auth #salamat-logo {
     box-shadow: none;
     text-shadow: none;
 }
+
+.checkout.woocommerce-checkout #customer_details .col-1 {
+    width: 100%;
+    float: right;
+    background: #f2f6fc;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.checkout.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields {
+    background: #ffff;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.woocommerce  .form-row .required {
+    color: red;
+    font-weight: 700;
+    border: 0 !important;
+    text-decoration: none;
+}
+
+.woocommerce  .form-row-first, .woocommerce  .form-row-last, .woocommerce-page  .form-row-first, .woocommerce-page  .form-row-last {
+    width: 47%;
+    overflow: visible;
+}
+
+.checkout.woocommerce-checkout #customer_details {
+    float: right;
+    width: 70%;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+
+.checkout.woocommerce-checkout #order_review_heading {
+    float: right;
+    width: 30%;
+}
+
+.checkout.woocommerce-checkout #order_review {
+    float: left;
+    width: 30%;
+    background: #2962ff;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.woocommerce .form-row {
+    padding: 3px;
+    margin: 0 0 6px;
+}
+
+.woocommerce .form-row-first, .woocommerce-page .form-row-first {
+    float: right;
+}
+
+.woocommerce .form-row-last, .woocommerce-page .form-row-last {
+    float: left;
+}
+
+.woocommerce .form-row input.input-text, .woocommerce .form-row textarea {
+    height: 45px !important;
+}
+.address-manager{
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.2s;
+    float: left;
+    margin-top: -30px;
+    padding: 1px 12px;
+    font-size: 13px;
+    border-radius: 6px;
+    color: #979797;
+    position: relative;
+    z-index: 1;
+}
+.address-manager:before{
+    transition: 0.2s;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: #094873;
+}
+.address-manager:hover:before{
+    width: 100%;
+}
+.address-manager:hover{
+    color: white;
+}
+.checkout.woocommerce-checkout #customer_details .col-1 h3::before {
+    float: right;
+    width: 10px;
+    height: 5px;
+    background: #3b4359;
+    content: "";
+    border-radius: 90px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.checkout_coupon {
+    border: 0px solid;
+    background: #f2f6fc;
+    border-radius: 10px;
+}
+
+.woocommerce .checkout_coupon, .woocommerce .login, .woocommerce .register {
+    border: 1px solid #d3ced2;
+    padding: 20px;
+    margin: 2em 0;
+    text-align: right;
+    border-radius: 5px;
+}
+
+.woocommerce-billing-fields .sub-title {
+    font-size: 12px;
+    margin: 6px 18px;
+    color: #5d6771;
+}
+
+.woocommerce-info.address {
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.woocommerce-info.address .content {
+    display: flex;
+    margin-top: 7px;
+    font-size: 13px;
+    color: #434140;
+}
+
+.woocommerce-info.address .content .item {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.woocommerce-info.address .content .item:nth-child(1) {
+    margin-right: 0px;
+}
+
+.woocommerce-info.address .content .icon {
+    display: flex;
+    margin-left: 5px;
+}
+
+.woocommerce-info.address .content .icon svg {
+    width: 17px;
+    height: 17px;
+    margin-bottom: 3px;
+}
+
+.woocommerce-info.address .selecting {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}.woocommerce-info.address .selecting:after {
+    transition: 0.2s;
+     content: "";
+     display: block;
+     position: absolute;
+     width: 27px;
+     height: 27px;
+     border-radius: 10px;
+     border: 2px solid;
+     top: 50%;
+     transform: translateY(-50%);
+     left: 41px;
+     color: #c8d7e4;
+ }
+.woocommerce-info.address .selecting:before {
+    transition: 0.2s;
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 41px;
+    background: #0948730f;
+    width: 27px;
+    height: 27px;
+}
+.woocommerce-info.address .selecting.active:after {
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+.woocommerce-info.address .selecting.active:before {
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+.checkout.woocommerce-checkout #order_review_heading{
+    font-size: 17px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+.checkout.woocommerce-checkout #order_review_heading::before {
+    content: "";
+    float: right;
+    width: 10px;
+    height: 5px;
+    background: #2962ff;
+    border-radius: 90px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.checkout.woocommerce-checkout #order_review .shop_table.woocommerce-checkout-review-order-table {
+    border: 0px solid;
+    background: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 10px!important;
+    border-radius: 10px;
+}
+.checkout.woocommerce-checkout #payment {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+.nice-select ul{
+    max-height: 250px;
+    position: absolute;
+    background: white;
+    border: 1px solid #cfdcea;
+    width: 100%;
+    list-style-type: none;
+    overflow-y: auto;
+    border-radius: 4px;
+    margin: 6px 0 0;
+    z-index: 2;
+}
+.nice-select{
+    position: relative;
+}
+.nice-select ul li{
+    padding: 4px 13px;
+}
+.nice-select ul li:hover{
+    color: white;
+    background: dodgerblue;
+}
+
+
 @media only screen and (max-width: 1100px) {
     .right-new-123-1 {
         width: 35%;
     }
+
     .left-sepoid-product {
         width: 65%;
     }
+
     .left-two-p-sepid {
         width: 55%;
         padding-left: 10px;
     }
+
     .right-two-p-sepid-asli {
         width: 45%;
     }
+
     .woocommerce-cart-holder #coupon_code {
         max-width: 180px;
     }
@@ -3107,29 +3423,34 @@ body.auth #salamat-logo {
     .right-new-123-1 {
         width: 100%;
     }
+
     .left-sepoid-product {
         width: 100%;
         padding-right: 0px;
         margin-top: 30px;
     }
+
     .left-two-p-sepid {
         width: 60%;
         padding-left: 20px;
     }
+
     .right-two-p-sepid-asli {
         width: 40%;
     }
+
     .woocommerce-cart-holder {
         width: 100%;
         padding-left: 0px;
         margin-bottom: 25px;
     }
+
     .cart-collaterals.sticky-sidebar {
         width: 100%;
     }
 }
 
-@media only screen and (max-width: 1320px){
+@media only screen and (max-width: 1320px) {
     .size {
         width: 100%;
         padding: 0 10px;

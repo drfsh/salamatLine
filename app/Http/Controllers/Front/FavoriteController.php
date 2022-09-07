@@ -3,16 +3,22 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use Auth;
+use Illuminate\Support\Facades\View;
 
 class FavoriteController extends Controller
 {
 
 
+    public function __construct()
+    {
+        View::share('categories',Category::defaultOrder()->toTree()->get());
+    }
 
-	public function main()
+    public function main()
 	{
 		if (Auth::check()){
 			$user = Auth::user();

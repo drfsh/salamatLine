@@ -1,11 +1,11 @@
 <template>
 <div class="item-address">
     <div class="w-100">
-        <div class="name">{{value.name}}</div>
+        <div class="name">{{value.title}}</div>
         <div class="align-center d-flex">
             <div class="section cities" style="min-width: 25.5%;">
                 <div class="item bb"><span>استان : </span> {{value.province.title}}</div>
-                <div class="item"><span>شهر محل سکونت : </span> {{value.title}}</div>
+                <div class="item"><span>شهر محل سکونت : </span> {{value.city.title}}</div>
             </div>
             <div class="section cities" style="min-width: 45%;">
                 <div class="item"><span>آدرس : </span> {{value.content}}</div>

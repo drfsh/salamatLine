@@ -3,16 +3,20 @@
 namespace App\Http\Controllers\Front\Profile;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\UpdateProfile;
 use Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\View;
 use Session;
 
 class EditController extends Controller
 {
-	public function __construct(){$this->middleware('auth');}
+	public function __construct(){$this->middleware('auth');
+        View::share('categories',Category::defaultOrder()->toTree()->get());
+    }
 	public function main()
 	{
 		$user = Auth::user();

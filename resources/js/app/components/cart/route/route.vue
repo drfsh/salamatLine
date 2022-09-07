@@ -1,7 +1,7 @@
 <template>
     <div class="pro-1-2 p50">
         <div class="route">
-            <div class="item active">
+            <div role="button" @click="$parent.$parent.step=1" class="item active">
                 <ic_basket></ic_basket>
                 <span>سبد خرید</span>
             </div>

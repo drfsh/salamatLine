@@ -3,17 +3,21 @@
 namespace App\Http\Controllers\Front\Profile;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Auth;
 use App\Models\Invoice;
 use App\Models\Survey;
 use Carbon\Carbon;
 use App\Traits\Smstrait;
+use Illuminate\Support\Facades\View;
 
 class OrdersController extends Controller
 {
     use Smstrait;
-    public function __construct(){$this->middleware('auth');}
+    public function __construct(){$this->middleware('auth');
+        View::share('categories',Category::defaultOrder()->toTree()->get());
+    }
 
 	public function main()
 	{

@@ -3,15 +3,19 @@
 namespace App\Http\Controllers\Front\Profile;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\SurveyRequest;
 use App\Models\Survey;
 use App\Models\Invoice;
 use Auth;
+use Illuminate\Support\Facades\View;
 
 class SurveyController extends Controller
 {
-    public function __construct(){$this->middleware('auth');}
+    public function __construct(){$this->middleware('auth');
+        View::share('categories',Category::defaultOrder()->toTree()->get());
+    }
 
     public function main($id)
 	{

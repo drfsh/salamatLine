@@ -5,6 +5,6 @@
         <div class="title">آدرس شما</div>
 
         <address-page></address-page>
-{{--        <address-list></address-list>--}}
+        <address-list></address-list>
     </div>
 @endsection

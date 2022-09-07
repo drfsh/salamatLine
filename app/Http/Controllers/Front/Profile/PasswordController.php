@@ -3,15 +3,19 @@
 namespace App\Http\Controllers\Front\Profile;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Auth;
 use App\User;
 use Hash;
+use Illuminate\Support\Facades\View;
 Use Redirect;
 
 class PasswordController extends Controller
 {
-	public function __construct(){$this->middleware('auth');}
+	public function __construct(){$this->middleware('auth');
+        View::share('categories',Category::defaultOrder()->toTree()->get());
+    }
 	public function main()
 	{
 		return view('profile.password.main');

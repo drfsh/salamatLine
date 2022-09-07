@@ -1,16 +1,18 @@
 <template>
     <div class="size" >
         <route :level="step"></route>
-        <cart_level1 v-if="step===1"></cart_level1>
+        <cart_level1 key="123" v-if="step===1"></cart_level1>
+        <cart_level2 key="1234" v-else-if="step===2"></cart_level2>
     </div>
 </template>
 
 <script>
 import Route from "../route/route";
 import Cart_level1 from "./cart_level1";
+import Cart_level2 from "./cart_level2";
 export default {
     name: "cart_main",
-    components: {Cart_level1, Route},
+    components: {Cart_level2, Cart_level1, Route},
     data(){
       return{
           products:[]

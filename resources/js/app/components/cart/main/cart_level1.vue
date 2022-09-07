@@ -148,7 +148,6 @@ export default {
             return this.$parent.products
         },
         detail() {
-
             return this.$parent.detail
         },
         original_total(){
