@@ -31,16 +31,16 @@ export default {
         LTileLayer,
         LMarker
     },
-    computed:{
-      address(){
-          return this.$parent.address
-      }
+    computed: {
+        address() {
+            return this.$parent.address
+        }
     },
     data() {
         return {
             lat: 35.757552763570196,
             lng: 51.41000747680664,
-            marked:true,
+            marked: true,
             mapLoading: true,
             defaultIcon: L.icon({
                 iconUrl: '/img/map/mark2.png',
@@ -51,7 +51,7 @@ export default {
             }),
         }
     },
-    methods:{
+    methods: {
         addMarker(event) {
             if (!event.latlng) {
                 return;
@@ -61,14 +61,18 @@ export default {
             this.address.lng = this.lng
             this.address.lat = this.lat
             this.marked = true
-        },
+        }
     },
     mounted() {
-        if (this.address.lat==null)
+        let vm = this
+        if (this.address.lat == null)
             this.marked = false
         else {
-            this.lng = this.address.lng
-            this.lat = this.address.lat
+            setTimeout(function (){
+                vm.lng = vm.address.lng
+                vm.lat = vm.address.lat
+                vm.marked = true
+            },500)
         }
     }
 }

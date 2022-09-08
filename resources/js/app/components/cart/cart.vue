@@ -37,6 +37,19 @@ export default {
     },
     mounted() {
         this.getData()
+    },
+    watch:{
+        step(v){
+            if (v===2){
+                this.title = 'جزییات پرداخت'
+            } else if (v===3){
+                this.title = 'تکمیل سفارش'
+            } else if (v===4){
+                this.title = 'انتخاب درگاه پرداخت'
+            }else{
+                this.title = 'سبد خرید'
+            }
+        }
     }
 }
 </script>

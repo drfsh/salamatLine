@@ -170,7 +170,8 @@ export default {
             this.situation = data.situation
             this.status = data.status
             this.setupLoading = false
-            window.scrollTo(0,0)
+
+            $('html ,body').stop().animate({scrollTop:0},500)
         },
         async addCoupon() {
             if (this.couponLoading) return''

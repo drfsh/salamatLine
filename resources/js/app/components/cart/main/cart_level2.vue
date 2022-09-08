@@ -58,7 +58,8 @@
 
                             </div>
                             <div class="nextstep">
-                                <a @click="nextStep" :class="{'disabled':!isContinue}" class="checkout-button button alt wc-forward"><span>ثبت سفارش</span></a>
+                                <a @click="nextStep" :class="{'disabled':!isContinue}"
+                                   class="checkout-button button alt wc-forward"><span>ثبت سفارش</span></a>
                             </div>
                         </div>
                     </div>
@@ -103,9 +104,23 @@ export default {
             auth: false,
             addresses: null,
             address_id: null,
-            address: null,
-            isContinue:false,
-            fullLoading:false
+            address: {
+                city_id: null,
+                company: null,
+                content: null,
+                district_id: null,
+                email: null,
+                lat: null,
+                lname: null,
+                lng: null,
+                mobile: null,
+                name: null,
+                province_id: null,
+                title: null,
+                zipcode: null
+            },
+            isContinue: false,
+            fullLoading: false
         }
     },
     methods: {
@@ -116,6 +131,7 @@ export default {
                 vm.address_id = vm.address.id
                 vm.status = ''
                 vm.isContinue = true
+                $('html ,body').stop().animate({scrollTop:0},500)
             }, 200)
         },
         async getAddress() {
@@ -132,13 +148,17 @@ export default {
             if (!this.isContinue) return ''
             this.fullLoading = true
 
-            let m = {step: this.$parent.step, address: this.address_id, delivery: null,
-
+            let m = {
+                step: this.$parent.step, address: this.address_id, delivery: null,
+                address_model: this.address
             }
-            let {data} = await window.axios.post('/cart/check-step',m)
+            let {data} = await window.axios.post('/cart/check-step', m)
 
+            this.$parent.$parent.step = data.step
+            this.status = data.status
+            this.$parent.address_id = data.address
             this.fullLoading = false
-            window.scrollTo(0, 0)
+            $('html ,body').stop().animate({scrollTop:0},500)
         }
     },
     mounted() {

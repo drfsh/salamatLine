@@ -4,7 +4,7 @@
             <div class="woocommerce-billing-fields">
                 <h3 style="font-size: 16px;font-weight: 400;color: #3b4359;">جزئیات صورتحساب</h3>
                 <div v-if="address_id===null || addresses.length>0" class="address-manager"
-                     @click="$parent.address_id=null;$parent.address=null;">
+                     @click="backSelect()">
                     انتخاب مجدد ادرس
                 </div>
                 <a v-else target="_blank" href="/profile/address">
@@ -113,6 +113,27 @@ export default {
         },
         address() {
             return this.$parent.address
+        }
+    },
+    methods:{
+        backSelect(){
+            this.$parent.address_id=null;
+            this.$parent.address=
+                {
+                    city_id: null,
+                    company: null,
+                    content: null,
+                    district_id: null,
+                    email: null,
+                    lat: null,
+                    lname: null,
+                    lng: null,
+                    mobile: null,
+                    name: null,
+                    province_id: null,
+                    title: null,
+                    zipcode: null
+                }
         }
     }
 }

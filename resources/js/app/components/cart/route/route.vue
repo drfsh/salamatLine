@@ -1,21 +1,21 @@
 <template>
     <div class="pro-1-2 p50">
         <div class="route">
-            <div role="button" @click="$parent.$parent.step=1" class="item active">
+            <div role="button"  @click="back(1)" class="item active">
                 <ic_basket></ic_basket>
                 <span>سبد خرید</span>
             </div>
             <span class="line">
                 <span class="bg" :style="'width: '+w1+'%;'"></span>
             </span>
-            <div class="item" :class="{'active':level>1}">
+            <div class="item" @click="back(2)" :class="{'active':level>1}">
                 <ic_clipboard></ic_clipboard>
                 <span>جزییات پرداخت</span>
             </div>
             <span class="line">
                 <span class="bg" :style="'width: '+w2+'%;'"></span>
             </span>
-            <div class="item" :class="{'active':level>2}">
+            <div class="item" @click="back(3)" :class="{'active':level>3}">
                 <ic_verify></ic_verify>
                 <span>تکمیل سفارش</span>
             </div>
@@ -43,6 +43,14 @@ export default {
                 return 0
             else if( this.level>2)
                 return 100
+        }
+    },
+    methods:{
+        back(i){
+            if (this.level===1) return
+            else if (i<this.level){
+                this.$parent.$parent.step=i
+            }
         }
     }
 }

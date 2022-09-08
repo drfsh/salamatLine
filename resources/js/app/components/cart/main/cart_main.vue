@@ -3,6 +3,8 @@
         <route :level="step"></route>
         <cart_level1 key="123" v-if="step===1"></cart_level1>
         <cart_level2 key="1234" v-else-if="step===2"></cart_level2>
+        <cart_level3 key="123456" v-else-if="step===3"></cart_level3>
+        <cart_level4 v-else-if="step===4"></cart_level4>
     </div>
 </template>
 
@@ -10,12 +12,17 @@
 import Route from "../route/route";
 import Cart_level1 from "./cart_level1";
 import Cart_level2 from "./cart_level2";
+import Cart_level3 from "./cart_level3";
+import Cart_level4 from "./cart_level4";
 export default {
     name: "cart_main",
-    components: {Cart_level2, Cart_level1, Route},
+    components: {Cart_level4, Cart_level3, Cart_level2, Cart_level1, Route},
     data(){
       return{
-          products:[]
+          products:[],
+          address_id:0,
+          delivery:'',
+          typeSend:'',
       }
     },
     computed:{

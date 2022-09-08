@@ -1,7 +1,7 @@
 <template>
-    <div class="pro-1-2">
+    <div class="">
         <div class="size">
-            <div class="box3">
+            <div class="pro-1-2">
                 <div class="empty">
                     <img src="/img/page/empty-cart.svg" alt="سبد خرید">
                     <h2 class="title-empty">سبد خرید شما خالی است!</h2>

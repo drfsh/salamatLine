@@ -2590,6 +2590,7 @@ body.auth #salamat-logo {
     cursor: not-allowed;
 
 }
+
 .fullLoading {
     position: fixed;
     top: 0;
@@ -2602,13 +2603,15 @@ body.auth #salamat-logo {
     align-items: center;
     justify-content: center;
 }
-.fullLoading .loading-dot{
+
+.fullLoading .loading-dot {
     width: 120px;
     background: #ffffff;
     border-radius: 12px;
     height: 100px;
     padding-top: 16px;
 }
+
 .tooltip-meta-v-sepid {
     position: absolute;
     background: #fff;
@@ -3173,14 +3176,14 @@ body.auth #salamat-logo {
     border-radius: 10px;
 }
 
-.woocommerce  .form-row .required {
+.woocommerce .form-row .required {
     color: red;
     font-weight: 700;
     border: 0 !important;
     text-decoration: none;
 }
 
-.woocommerce  .form-row-first, .woocommerce  .form-row-last, .woocommerce-page  .form-row-first, .woocommerce-page  .form-row-last {
+.woocommerce .form-row-first, .woocommerce .form-row-last, .woocommerce-page .form-row-first, .woocommerce-page .form-row-last {
     width: 47%;
     overflow: visible;
 }
@@ -3191,13 +3194,16 @@ body.auth #salamat-logo {
     padding-left: 40px;
     box-sizing: border-box;
 }
+
 .cell-30-left {
     float: left;
     width: 30%;
 }
-.nextstep{
+
+.nextstep {
     margin-top: 20px;
 }
+
 .checkout.woocommerce-checkout #order_review {
     background: #d7e2f2;
     padding: 10px;
@@ -3221,7 +3227,8 @@ body.auth #salamat-logo {
 .woocommerce .form-row input.input-text, .woocommerce .form-row textarea {
     height: 45px !important;
 }
-.address-manager{
+
+.address-manager {
     cursor: pointer;
     overflow: hidden;
     transition: 0.2s;
@@ -3234,7 +3241,8 @@ body.auth #salamat-logo {
     position: relative;
     z-index: 1;
 }
-.address-manager:before{
+
+.address-manager:before {
     transition: 0.2s;
     z-index: -1;
     content: "";
@@ -3246,13 +3254,16 @@ body.auth #salamat-logo {
     height: 100%;
     background: #094873;
 }
-.address-manager:hover:before{
+
+.address-manager:hover:before {
     width: 100%;
 }
-.address-manager:hover{
+
+.address-manager:hover {
     color: white;
 }
-.checkout.woocommerce-checkout #customer_details .col-1 h3::before {
+
+.checkout.woocommerce-checkout h3::before {
     float: right;
     width: 10px;
     height: 5px;
@@ -3326,20 +3337,23 @@ body.auth #salamat-logo {
     width: 100%;
     top: 0;
     left: 0;
-}.woocommerce-info.address .selecting:after {
+}
+
+.woocommerce-info.address .selecting:after {
     transition: 0.2s;
-     content: "";
-     display: block;
-     position: absolute;
-     width: 27px;
-     height: 27px;
-     border-radius: 10px;
-     border: 2px solid;
-     top: 50%;
-     transform: translateY(-50%);
-     left: 41px;
-     color: #c8d7e4;
- }
+    content: "";
+    display: block;
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    border-radius: 10px;
+    border: 2px solid;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 41px;
+    color: #c8d7e4;
+}
+
 .woocommerce-info.address .selecting:before {
     transition: 0.2s;
     content: "";
@@ -3353,21 +3367,25 @@ body.auth #salamat-logo {
     width: 27px;
     height: 27px;
 }
+
 .woocommerce-info.address .selecting.active:after {
     width: 100%;
     height: 100%;
     left: 0;
 }
+
 .woocommerce-info.address .selecting.active:before {
     width: 100%;
     height: 100%;
     left: 0;
 }
-.checkout.woocommerce-checkout .order_review_heading{
+
+.checkout.woocommerce-checkout .order_review_heading {
     font-size: 17px;
     margin-block-start: 1em;
     margin-block-end: 1em;
 }
+
 .checkout.woocommerce-checkout .order_review_heading::before {
     content: "";
     float: right;
@@ -3378,15 +3396,17 @@ body.auth #salamat-logo {
     margin-top: 10px;
     margin-left: 10px;
 }
+
 .checkout.woocommerce-checkout #order_review .shop_table.woocommerce-checkout-review-order-table {
     border: 0px solid;
     background: #fff;
     padding: 20px;
     box-sizing: border-box;
-    margin-bottom: 10px!important;
+    margin-bottom: 10px !important;
     border-radius: 15px;
-    margin-top: 15px!important;
+    margin-top: 15px !important;
 }
+
 .checkout.woocommerce-checkout #payment {
     background: #fff;
     padding: 6px;
@@ -3394,28 +3414,34 @@ body.auth #salamat-logo {
     margin-top: 30px !important;
     margin-bottom: 20px !important;
 }
-.leaflet-touch .leaflet-control-attribution{
+
+.leaflet-touch .leaflet-control-attribution {
     display: none;
 }
-.map{
-    width: 100%!important;
-    height: 270px!important;
+
+.map {
+    width: 100% !important;
+    height: 270px !important;
     position: relative;
     border-radius: 0 0 10px 10px;
 }
-.info-map{
+
+.info-map {
     font-size: 13px;
     padding: 12px 17px;
     font-weight: 600;
     color: #51586b;
 }
-.leaflet-left{
+
+.leaflet-left {
     bottom: 6px;
-    top: unset!important;
+    top: unset !important;
 }
-.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar{
-    border: none!important;
+
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+    border: none !important;
 }
+
 .leaflet-touch .leaflet-bar a {
     border-radius: 35px !important;
     color: #ff1c7b;
@@ -3425,7 +3451,8 @@ body.auth #salamat-logo {
     height: 27px;
     line-height: 27px;
 }
-.nice-select ul{
+
+.nice-select ul {
     max-height: 250px;
     position: absolute;
     background: white;
@@ -3437,19 +3464,195 @@ body.auth #salamat-logo {
     margin: 6px 0 0;
     z-index: 2;
 }
-.nice-select{
+
+.nice-select {
     position: relative;
 }
-.nice-select ul li{
+
+.nice-select ul li {
     padding: 4px 13px;
 }
-.nice-select ul li:hover{
+
+.nice-select ul li:hover {
     color: white;
     background: dodgerblue;
 }
 
+.cart-date .items, .cart-send .items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 22px;
+}
 
+.cart-date .items .item, .cart-send .items .item {
+    transition: 0.2s;
+    padding: 15px 20px;
+    border: 1px solid #b8b8b8;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    width: 31.33%;
+    position: relative;
+}
+
+.cart-send .items .item {
+    padding: 22px 20px;
+}
+
+.cart-date .items .item:before, .cart-send .items .item:before {
+    transition: 0.5s;
+    content: "";
+    display: block;
+    width: 17px;
+    height: 17px;
+    border-radius: 50px;
+    box-shadow: inset 0 0 0 1px #094873;
+}
+
+.cart-send .items .item:before {
+    box-shadow: inset 0 0 0 1px #989898;
+}
+
+.cart-date .items .item .text {
+    font-size: 19px;
+    color: #094873;
+    margin-right: 14px;
+}
+
+.cart-send .items .item .text {
+    font-size: 16px;
+    color: #b1b1b1;
+    margin-right: 13px;
+}
+.cart-send .items .item.active .text{
+    color: #5d5d5d;
+}
+.cart-date .items .item .content {
+    padding-right: 15px;
+    border-right: 2px solid #1d73ae;
+    font-size: 14px;
+    margin-right: 16px;
+}
+
+.cart-send .items .item .icon {
+    float: left;
+    position: absolute;
+    left: 15px;
+    border: 0;
+    display: flex;
+    color: #c6c6c6;
+}
+
+.cart-send .items .item .icon svg {
+
+    width: 54px;
+    height: 54px;
+}
+
+.cart-date .items .item.active {
+    background: #ebeef9;
+}
+
+.cart-date .items .item.active:before {
+    box-shadow: inset 0 0 0 20px #094873;
+}
+
+.cart-send .items .item.active {
+    background: #ebeef9;
+}
+
+.cart-send .items .item.active:before {
+    box-shadow: inset 0 0 0 20px #094873;
+}
+
+.cart-send .items .item.active .icon {
+    color: #094873;
+}
+
+.cart-new-address {
+    transition: 0.2s;
+    border-radius: 10px;
+    border: 3px solid #e5ecf5;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    color: #a0a9b7;
+    justify-content: center;
+}
+
+.cart-new-address .icon {
+    display: flex;
+}
+
+.cart-new-address .icon svg {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.cart-new-address .text {
+    font-size: 18px;
+}
+
+.cart-new-address:hover {
+    background: #e5ecf5;
+    color: #8b8b8b;
+}
+
+.cart-finish {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.cart-finish .info .item a {
+    margin: 0 3px;
+    color: #1a669a;
+}
+
+.cart-finish .info .item svg {
+    width: 17px;
+    height: 17px;
+    margin-left: 7px;
+}
+
+.cart-finish .info .item {
+    margin: 17px 0;
+    display: flex;
+    align-items: center;
+    white-space: normal;
+    flex-wrap: wrap;
+}
+
+.cart-finish .info {
+    width: 70%;
+}
+
+.cart-finish .nextstep {
+    width: 30%;
+    padding-left: 60px;
+}
+.bank .item{
+    width: auto!important;
+    padding: 12px 22px!important;
+}
+.bank .item .icon {
+    float: none !important;
+    position: unset !important;
+    margin-right: 22px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 6px;
+}
 @media only screen and (max-width: 1100px) {
+    .cart-send .items .item {
+        width: 48.33%;
+    }
+
     .right-new-123-1 {
         width: 35%;
     }
@@ -3472,12 +3675,13 @@ body.auth #salamat-logo {
     }
 }
 
-@media only screen and (max-width: 1050px){
+@media only screen and (max-width: 1050px) {
     .checkout.woocommerce-checkout #customer_details {
         width: 100%;
         padding-left: 0px;
         box-sizing: border-box;
     }
+
     .cell-30-left {
         float: right;
         width: 100%;
@@ -3513,6 +3717,21 @@ body.auth #salamat-logo {
     .cart-collaterals.sticky-sidebar {
         width: 100%;
     }
+
+
+}
+
+@media only screen and (max-width: 900px) {
+    .cart-date .items .item {
+        width: 48.33%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .cart-date .items .item, .cart-send .items .item, .cart-finish .nextstep, .cart-finish .info {
+        width: 100%;
+    }
+
 }
 
 @media only screen and (max-width: 1320px) {

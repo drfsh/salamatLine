@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front\Payment;
 
 use App\Http\Controllers\Controller;
 use App\Bank\Pasargad\Pasargad;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Auth;
 use App\Models\Invoice;
@@ -16,6 +17,7 @@ use App\Traits\InvoiceGenerator;
 use App\Traits\CheckAddress;
 use Carbon\Carbon;
 use Cart;
+use Illuminate\Support\Facades\View;
 use Log;
 
 class MainController extends Controller
@@ -26,12 +28,14 @@ class MainController extends Controller
 	public function __construct(Pasargad $bank)
 	{
 		$this->bank = $bank;
-	}
+        View::share('categories',Category::defaultOrder()->toTree()->get());
+
+    }
 
 	public function main(Request $request){
 
 		// return response()->json(['state' => 'alert','text' => 'در حال حاضر درگاه پرداخت غیر فعال می‌باشد.']);
-		
+
 		$userId = Auth::id();
 		$address_id = $request->address;
 		$delivery_time = $request->delivery;
@@ -73,7 +77,7 @@ class MainController extends Controller
 				}
 			}
 		}
-		
+
 		$invoice->due_date = $request->due_date;
 		$invoice->save();
 
@@ -126,7 +130,7 @@ class MainController extends Controller
 						$mp = null;
 						$mf = null;
 					}
-		
+
 					$inventory = Inventory::where('product_id',$item->product_id)->where('price_id',$mp)->where('feature_id',$mf)->first();
 					if($inventory){
 					$available = $inventory->qty - $item->qty;

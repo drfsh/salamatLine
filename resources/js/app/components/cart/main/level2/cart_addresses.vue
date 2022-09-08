@@ -7,7 +7,7 @@
                     <div class="address-manager">مدیریت آدرس</div>
                 </a>
                 <loading v-if="addresses===null"></loading>
-                <div v-else>
+                <div style="margin-top: 20px;" v-else>
                     <div role="button" v-for="(v,i) in addresses" :key="'adddres'+i"
                          @click="$parent.selectAddress(v)"
                          class="woocommerce-info address">
@@ -35,6 +35,14 @@
                         </div>
                         <div class="selecting" :class="{'active':address!==null && v.id===address.id}"></div>
                     </div>
+                    <div role="button" @click="newAddress()" class="cart-new-address">
+                        <span class="icon">
+                            <ic_add></ic_add>
+                        </span>
+                        <span class="text">
+                            ادرس جدید
+                        </span>
+                    </div>
                 </div>
             </div>
 
@@ -47,10 +55,11 @@ import Ic_mobile2 from "../../../icon/ic_mobile2";
 import Ic_user1 from "../../../icon/ic_user1";
 import Ic_location from "../../../icon/ic_location";
 import Loading from "../../../loading/loading";
+import Ic_add from "../../../icon/ic_add";
 
 export default {
     name: "cart_addresses",
-    components: {Loading, Ic_location, Ic_user1, Ic_mobile2},
+    components: {Ic_add, Loading, Ic_location, Ic_user1, Ic_mobile2},
     computed: {
         address_id() {
             return this.$parent.address_id
@@ -60,6 +69,13 @@ export default {
         },
         address() {
             return this.$parent.address
+        }
+    },
+    methods: {
+        newAddress() {
+            this.$parent.address_id = 0
+            this.$parent.status = ''
+            this.$parent.isContinue = true
         }
     }
 }

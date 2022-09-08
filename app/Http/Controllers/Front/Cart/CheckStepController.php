@@ -115,40 +115,74 @@ class CheckStepController extends Controller
 
         if ($data['step'] == 2) {
 
-            if (!$addressID) {
 
-                $data['step'] = 2;
-                $data['text'] = 'لطفا آدرس را مشخص نمایید';
-                $data['class'] = 'warning';
+            if ($addressID!=0){
 
-                return response()->json($data);
-            }
+                $address = Address::find($addressID);
 
-            $address = Address::find($addressID);
+                if (!$address) {
 
-            if (!$address) {
+                    $data['step'] = 2;
+                    $data['text'] = 'آدرسی با این مشخصات یافت نشد';
+                    $data['class'] = 'alert';
 
-                $data['step'] = 2;
-                $data['text'] = 'آدرسی با این مشخصات یافت نشد';
+                    return response()->json($data);
+                }
+
+                if ($address->user_id != $userId) {
+                    $data['step'] = 2;
+                    $data['text'] = 'این آدرس متعلق به شما نیست';
+                    $data['class'] = 'alert';
+
+                    return response()->json($data);
+                }
+
+                $address->update([
+                    'name'=>$request->address_model['name'],
+                    'lname'=>$request->address_model['lname'],
+                    'province_id'=>$request->address_model['province_id'],
+                    'city_id'=>$request->address_model['city_id'],
+                    'district_id'=>$request->address_model['district_id'],
+                    'zipcode'=>$request->address_model['zipcode'],
+                    'mobile'=>$request->address_model['mobile'],
+                    'lat'=>$request->address_model['lat'],
+                    'lng'=>$request->address_model['lng'],
+                    'company'=>$request->address_model['company'],
+                    'email'=>$request->address_model['email'],
+                    'content'=>$request->address_model['content'],
+                ]);
+
+
+                $data['step'] = 3;
+                $data['text'] = 'انتخاب زمان تحویل';
                 $data['class'] = 'alert';
-
+                $data['address'] = $address->id;
                 return response()->json($data);
-            }
 
+            }else{
+                $address = Address::create([
+                    'title'=>'آدرس',
+                    'user_id'=>$userId,
+                    'name'=>$request->address_model['name'],
+                    'lname'=>$request->address_model['lname'],
+                    'province_id'=>$request->address_model['province_id'],
+                    'city_id'=>$request->address_model['city_id'],
+                    'district_id'=>$request->address_model['district_id'],
+                    'zipcode'=>$request->address_model['zipcode'],
+                    'mobile'=>$request->address_model['mobile'],
+                    'lat'=>$request->address_model['lat'],
+                    'lng'=>$request->address_model['lng'],
+                    'company'=>$request->address_model['company'],
+                    'email'=>$request->address_model['email'],
+                    'content'=>$request->address_model['content'],
+                ]);
 
-            if ($address->user_id != $userId) {
-                $data['step'] = 2;
-                $data['text'] = 'این آدرس متعلق به شما نیست';
+                $data['step'] = 3;
+                $data['text'] = 'انتخاب زمان تحویل';
                 $data['class'] = 'alert';
-
+                $data['address'] = $address->id;
                 return response()->json($data);
             }
-
-
-
-            $data['step'] = 3;
-            $data['text'] = 'انتخاب زمان تحویل';
-            $data['class'] = 'alert';
 
         }
 
@@ -165,7 +199,9 @@ class CheckStepController extends Controller
 
 
             $data['step'] = 4;
-            $data['text'] = 'لطفا یکی از تاریخ‌ها را انتخاب نمایید.';
+            $data['typeSend'] = $request->typeSend;
+            $data['delivery'] = $delivery;
+            $data['text'] = 'درگاه پرداخت را انتخاب کنید.';
             $data['class'] = 'alert';
 
             return response()->json($data);

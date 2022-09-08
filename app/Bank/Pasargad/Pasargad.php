@@ -39,7 +39,6 @@ class Pasargad {
         ];
         return $params;
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_REFERER, 'https://prowall.ir/');
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             'Sign:' .$signedData,
             'Content-Type: Application/json'

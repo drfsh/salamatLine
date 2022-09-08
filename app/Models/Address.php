@@ -15,7 +15,7 @@ class Address extends Model
     protected $table = 'twinmoti_official.addresses';
     // config('database.connections.mysql.database')
 
-    protected $fillable = ['title','name','user_id','province_id','city_id','district_id','content','zipcode','mobile','lat','lng'];
+    protected $fillable = ['title','name','lname','email','company','user_id','province_id','city_id','district_id','content','zipcode','mobile','lat','lng'];
 
 
 
