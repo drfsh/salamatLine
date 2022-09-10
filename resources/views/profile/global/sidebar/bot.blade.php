@@ -10,7 +10,7 @@
             </a>
         </li>
         <li class="{{checkRoute('ProfileOrders')}}">
-            <a class="bg-l" href="{{ route('ProfileOrders')}}">
+            <a class="win-btn" href="{{ route('ProfileOrders')}}">
                 <i>
                     @include('icons.clipboard')
                 </i>
@@ -18,7 +18,7 @@
             </a>
         </li>
         <li class="{{checkRoute('MyFavorites')}}">
-            <a class="bg-l" href="{{ route('MyFavorites')}}">
+            <a class="win-btn" href="{{ route('MyFavorites')}}">
                 <i>
                     @include('icons.heart')
                 </i>
@@ -27,7 +27,7 @@
         </li>
 
         <li class="{{checkRoute('ProfileAddress')}}">
-            <a class="bg-l" href="{{ route('ProfileAddress')}}">
+            <a class="win-btn" href="{{ route('ProfileAddress')}}">
                 <i class="">
                     @include('icons.location')
                 </i>
@@ -35,7 +35,7 @@
             </a>
         </li>
         <li class="{{checkRoute('ProfileEdit')}}">
-            <a class="bg-l" href="{{ route('ProfileEdit')}}">
+            <a class="win-btn" href="{{ route('ProfileEdit')}}">
                 <i>
                     @include('icons.user-edit')
                 </i>
@@ -43,7 +43,7 @@
             </a>
         </li>
         <li class="{{checkRoute('OrdersTracking')}}">
-            <a class="bg-l" href="{{ route('OrdersTracking')}}">
+            <a class="win-btn" href="{{ route('OrdersTracking')}}">
                 <i>
                     @include('icons.search-more')
                 </i>
@@ -51,7 +51,7 @@
             </a>
         </li>
         <li class="{{checkRoute('Tickets')}}">
-            <a class="bg-l" class="bg-l" href="{{ route('Tickets')}}">
+            <a class="win-btn" class="win-btn" href="{{ route('Tickets')}}">
                 <i>
                     @include('icons.headphones')
                 </i>

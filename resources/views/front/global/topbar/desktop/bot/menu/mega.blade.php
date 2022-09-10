@@ -1,4 +1,4 @@
-<div class="mega dropdown-menu">
+<div class="mega " id="main-c-{{$item->id}}">
 	<ul>
 		@foreach($item->children() as $item2)
 		@if($item2->children()->isEmpty())

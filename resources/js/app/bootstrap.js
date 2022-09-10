@@ -81,3 +81,29 @@ document.querySelectorAll(".win-btn:not(i,span)").forEach((b) => {
 });
 
 window.newCardAdd = false
+
+
+$("#menu-category").on({
+    mouseenter: function () {
+        $('.menu-category').addClass('active')
+        $('#menu-item-category').show()
+    },
+    mouseleave: function () {
+        $('.menu-category').removeClass('active')
+        $('#menu-item-category').hide()
+    }
+});
+
+$(".main-item-category").on({
+    mouseenter: function () {
+        $('.main-item-category').removeClass('active')
+        $(this).addClass('active')
+        let id = $(this).attr('data-id')
+        $('.mega').hide()
+        $('#'+id).show()
+    },
+});
+
+$('.to-up').click(function () {
+    $('html ,body').stop().animate({scrollTop:0},500)
+})

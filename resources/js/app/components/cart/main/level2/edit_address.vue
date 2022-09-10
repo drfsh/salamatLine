@@ -100,7 +100,7 @@
 </template>
 
 <script>
-import Select_city from "../../../../inputs/select_city";
+import Select_city from "../../../inputs/select_city";
 export default {
     name: "edit_address",
     components: {Select_city},

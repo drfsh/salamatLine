@@ -20,6 +20,8 @@ import product_timer from "./components/product/timer/product_timer";
 import buttons from "./components/product/buttons/buttons";
 import addedCard from "./components/product/alert/added-card";
 import cart from "./components/cart/cart";
+import cart_num from "./components/cart/cart_num";
+import newsletter from "./components/newsletter/newsletter";
 
 setApp([
     {
@@ -89,7 +91,14 @@ setElement([
         name: 'product-is-add-card',
         component: addedCard
     },
-
+    {
+        name: 'cart-num',
+        component: cart_num,
+    },
+    {
+        name: 'news-letter',
+        component: newsletter,
+    },
 ])
 
 function setElement(list) {

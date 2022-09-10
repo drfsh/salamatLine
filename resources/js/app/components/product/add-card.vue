@@ -133,7 +133,7 @@ export default {
         },
         async getData() {
             let {data} = await window.axios('/cart/detail')
-            $('.shrink .number').html(data.qty+'<span class="text"> مورد </span>')
+            $('#header-num-cart').text(data.qty)
         }
     },
     mounted() {

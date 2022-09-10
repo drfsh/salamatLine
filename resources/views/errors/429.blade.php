@@ -1,14 +1,36 @@
-@extends('layouts.front')
+@extends('layouts.error')
 @section('content')
-<div class="double-gap"></div>
-<div class="double-gap"></div>
-<div class="grid-container">
-  <div class="grid-x grid-padding-x">
-    <div class="cell small-4 large-offset-4 text-center">
-        <h1>خطای 429</h1>
-        <div class="double-gap"></div>
-        <a href="{{route('home')}}" class="button primary">بازگشت به صفحه خانه</a>
+
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="cell text-center error" style="margin: auto;">
+                <h1>خطا 429</h1>
+                <p class="ppp">صفحه مورد نظر در دسترس نمی‌باشد!</p>
+
+                <form style="width: 290px;" action="{{ route('search') }}" method="get" class="search-menu">
+                    <input type="text" name="query" placeholder="جستجو در محصولات" />
+                    <button type="submit" aria-label="Search">
+                        @include('icons.search')
+                    </button>
+                </form>
+                <img src="{{asset('img/page/404.png')}}"/>
+                <div class="double-gap"></div>
+                <div class="back">
+                    <a href="{{route('home')}}">
+                        @include('icons.home')
+                        سلامت لاین
+                    </a>
+                    <a href="{{route('home')}}">
+                        @include('icons.basket2')
+                        فروشگاه
+                    </a>
+                    <a href="/blog">
+                        @include('icons.document_text')
+                        بلاگ
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+
 @endsection

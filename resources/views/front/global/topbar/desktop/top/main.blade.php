@@ -4,7 +4,7 @@
 			<div class="cell shrink">
 				@include('front.global.topbar.desktop.top.logo')
 			</div>
-			<div class="cell medium-5 large-4">
+			<div class="cell shrink search-cell">
  				@include('front.global.topbar.desktop.top.search')
 			</div>
 			<div class="cell auto"></div>
