@@ -1,4 +1,4 @@
-<div class="grid-container">
+<div class="grid-container" style="margin-top: 30px;">
 	<div class="grid-x">
 		<div class="cell">
 			<div class="owl-box">

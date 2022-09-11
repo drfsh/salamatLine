@@ -1,10 +1,4 @@
 import register from "./components/auth/register";
-
-require('./bootstrap')
-require('jquery-confirm')
-window.moment = require('jalali-moment');
-window.axios = require('axios')
-
 import wrapper from "vue3-webcomponent-wrapper";
 import * as Vue from 'vue'
 
@@ -22,10 +16,11 @@ import addedCard from "./components/product/alert/added-card";
 import cart from "./components/cart/cart";
 import cart_num from "./components/cart/cart_num";
 import newsletter from "./components/newsletter/newsletter";
-import slider from "./components/slider/slider";
-import 'vue3-carousel/dist/carousel.css';
 
-import {Carousel, Navigation, Slide} from 'vue3-carousel';
+require('./bootstrap')
+require('jquery-confirm')
+window.moment = require('jalali-moment');
+window.axios = require('axios')
 
 setApp([
     {
@@ -53,20 +48,7 @@ setApp([
         component: cart,
         components: []
     },
-    {
-        name: 'cart-slider',
-        component: {},
-        components: [{
-            name: 'Carousel',
-            component: Carousel
-        }, {
-            name: 'Slide',
-            component: Slide
-        }, {
-            name: 'Navigation',
-            component: Navigation
-        }]
-    },
+
 ])
 setElement([
     {

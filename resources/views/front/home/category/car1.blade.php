@@ -9,17 +9,18 @@
             @endforeach
         </div>
 
-        <div id="cart-slider">
-            <Carousel :settings=" {itemsToShow: 1,snapAlign: 'center'}"
-                      :breakpoints="{700: {itemsToShow: 3.5,snapAlign: 'center',},1024: {itemsToShow: 5,snapAlign: 'start',},}">
-                <Slide v-for="slide in 10" :key="slide">
-                    <div class="carousel__item">123</div>
-                </Slide>
-                <template #addons>
-                    <Navigation/>
-                </template>
-            </Carousel>
-            123456789
-        </div>
+        @foreach($data['category'] as $key => $item)
+            <div style="@if($key!=0) display:none @endif" class="cell home-product-item" id="product-{{$item->id}}">
+                <div class="owl-box">
+                    <div class="swiper owl-5" dir="rtl">
+                        <div class="swiper-wrapper">
+                            @foreach($item->product as $item)
+                                <div class="swiper-slide"><div class="cell">@include('front.product.holder.item.main')</div></div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endforeach
     </div>
 @endif

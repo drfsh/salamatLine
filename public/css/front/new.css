@@ -1177,13 +1177,79 @@ body.auth #salamat-logo {
 }
 
 .simple-item {
-    box-shadow: 0 4px 31px 0px rgb(0 0 0 / 9%);
+    box-shadow: 0 4px 23px -13px rgb(0 0 0 / 9%);
+    border-radius: 15px;
 }
 
 .simple-item .cover {
     min-height: unset;
 }
-
+.home-list .box{
+    box-shadow: none;
+    border-radius: 15px;
+}
+.home-list .horizontal img{
+    box-shadow: 0 3px 18px -1px #9999992e;
+}
+.home-list .center-title h3{
+    width: unset;
+    font-size: 15px !important;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background: #f2f6fc;
+    padding: 6px 14px;
+    color: #555555;
+    display: inline-block;
+}
+.home-banner2{
+    margin-top: 20px;
+    background: white;
+    padding-top: 42px;
+    padding-bottom: 42px;
+}
+.brand .center-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-right: 24px;
+    font-size: 20px;
+}
+.brand .center-title:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 5px;
+    background: #094873;
+    border-radius: 45px;
+    right: 0;
+}
+.g-item{
+    height: 105px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px -10px rgb(0 0 0 / 15%);
+}
+.g-item .cover {
+    padding: .625rem .625rem;
+}
+.g-item .cover img {
+    max-width: 105px;
+}
+.home-list .horizontal{
+    border-bottom: 3px dotted #b0b0b0;
+    padding-bottom: 15px;
+}
+.home-list .box .cell:last-child .horizontal{
+    border: none ;
+}
+.home-list .basket{
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+}
 .simple-item .add-shop- {
     opacity: 0;
     border-radius: 100px;
@@ -1255,7 +1321,7 @@ body.auth #salamat-logo {
 
 .simple-item .body .title {
     padding: 0;
-    font-size: 13px;
+    font-size: 15px;
     text-align: right;
     margin: 0;
     color: black;
@@ -4076,6 +4142,7 @@ footer .to-up{
     align-items: center;
     justify-content: center;
     color: #7f7f7f;
+    background: white;
 }
 footer .swiper-wrapper img{
     max-height: 93px;
@@ -4198,14 +4265,17 @@ footer .sub{
     padding: 0px 7px;
 }
 .home-icons .item .meta-sepid-new-1 img{
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
 }
 .home-icons .item .meta-sepid-new-1 h6{
     margin: 0;
 }
 .home-section{
-    margin-top: 40px;
+    margin-top: 45px;
+}
+.home-product-item{
+    margin-top: 30px;
 }
 .home-icons .item .meta-sepid-new-1{
     float: none;
@@ -4214,7 +4284,7 @@ footer .sub{
     width: 100%;
     background: white;
     border-radius: 10px;
-    padding:24px 17px;
+    padding: 24px 20px 24px 0;
 }
 .home-icons .item .meta-sepid-new-1 .text span  {
     font-size: 11px;
@@ -4260,7 +4330,7 @@ footer .sub{
     display: flex;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0 0 14px -3px #00000012;
+    box-shadow: none;
     border-radius: 10px;
     margin-bottom: 10px;
 }
@@ -4273,7 +4343,7 @@ footer .sub{
 .home-products .titles .item{
     cursor: pointer;
     margin: 0 4px;
-    padding: 5px 14px;
+    padding: 7px 14px;
     border-radius: 10px;
     background: white;
     transition: 0.2s
