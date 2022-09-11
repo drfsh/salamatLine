@@ -4188,6 +4188,113 @@ footer .sub{
 .home-slider .item{
     border-radius: 15px;
 }
+.home-icons{
+    display: flex;
+    margin-top: 30px;
+}
+.home-icons .item{
+    float: none;
+    width: 20%;
+    padding: 0px 7px;
+}
+.home-icons .item .meta-sepid-new-1 img{
+    width: 40px;
+    height: 40px;
+}
+.home-icons .item .meta-sepid-new-1 h6{
+    margin: 0;
+}
+.home-section{
+    margin-top: 40px;
+}
+.home-icons .item .meta-sepid-new-1{
+    float: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    padding:24px 17px;
+}
+.home-icons .item .meta-sepid-new-1 .text span  {
+    font-size: 11px;
+    color: #6b6b6b;
+    margin-top: 4px;
+}
+.home-icons .item .meta-sepid-new-1 .text  {
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.s-slid{
+    display: flex;
+    flex-direction: row;
+}
+.s-slid .co a{
+    display: block;
+    height: 180px;
+    background: #7555b6;
+    border-radius: 15px;
+    width: 100%;
+}
+.s-slid .co{
+    width: 50%;
+    padding: 0;
+}
+.s-slid .co:nth-child(1){
+    padding-left: 10px;
+}
+.s-slid .co:nth-child(2){
+    padding-right: 10px;
+}
+.home-category-top{
+    max-width: 82rem;
+}
+.home-category-top .item{
+    padding: 0px 16px;
+}
+.home-category-top .box{
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 14px -3px #00000012;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.home-products .titles {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-products .titles .item{
+    cursor: pointer;
+    margin: 0 4px;
+    padding: 5px 14px;
+    border-radius: 10px;
+    background: white;
+    transition: 0.2s
+}
+.home-products .titles .item.active{
+    background: #094873;
+    color: white;
+}
+.home-products .titles .item:hover{
+    background: rgba(9, 72, 115, 0.45);
+    color: white;
+ }
+.home-category-top .box span{
+    color: #094873;
+}
+.home-category-top .box img{
+    margin-bottom: 28px;
+    margin-top: 15px;
+    width: 109px;
+    height: 110px;
+}
 @media only screen and (max-width: 1130px) {
     .search-cell {
         width: 40% !important;

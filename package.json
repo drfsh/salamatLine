@@ -36,6 +36,7 @@
         "vue-excel-xlsx": "^1.2.2",
         "vue-moment-jalaali": "^2.0.0",
         "vue-owl-carousel": "^2.0.3",
+        "vue3-carousel": "^0.1.46",
         "vue3-persian-datetime-picker": "^1.2.2",
         "vue3-webcomponent-wrapper": "^0.1.4",
         "vuejs-paginate-next": "^1.0.2"

@@ -104,6 +104,14 @@ $(".main-item-category").on({
     },
 });
 
+$(".home-title-product-item").click(function () {
+    $('.home-title-product-item').removeClass('active')
+    $(this).addClass('active')
+    let id = $(this).attr('data-id')
+    $('.home-product-item').hide()
+    $('#'+id).show()
+});
+
 $('.to-up').click(function () {
     $('html ,body').stop().animate({scrollTop:0},500)
 })
