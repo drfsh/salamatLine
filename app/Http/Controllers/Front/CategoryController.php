@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Front;
 
+use App\Filters\ProductFilter;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
@@ -30,6 +31,20 @@ class CategoryController extends Controller
     public function main($slug, Request $request)
     {
 
+        $order_by = $request->order_by;
+        $p1 = $request->p1;
+        if ($p1 == null)
+            $p1 = 0;
+        $p2 = $request->p2;
+        if ($p2 == null)
+            $p2 = 10000000000;
+
+        $f = $request->f;
+        if ($order_by == null)
+            $order_by = 'active';
+        if ($f == null)
+            $f = 'desc';
+
         $data['category'] = Category::where('slug', $slug)->hide()->first();
 
         // $rootId = $data['category'];
@@ -49,13 +64,22 @@ class CategoryController extends Controller
 
         // if ($request->page == null) {$filters = app(ProductFilter::class)->parameters(['page' => 1]);}
         // $data['products'] = Product::published()->withAnyCategories($sub_cat_id)->filter($filters);
-        $data['products'] = Product::published()
-            // ->orderBy('featured', 'desc')
-            ->orderBy('active', 'desc')
-            ->withAnyCategories($sub_cat_id)
-            ->paginate(12);
-
-
+        if ($request->active == null || $request->active == 'false')
+            $data['products'] = Product::published()->with('feature')
+                // ->orderBy('featured', 'desc')
+                ->where([['price', '>=', $p1*10], ['price', '<=', $p2*10]])
+                ->orderBy('active', 'desc')
+                ->orderBy($order_by, $f)
+                ->withAnyCategories($sub_cat_id)
+                ->paginate(12);
+        else if ($request->active == 'true')
+            $data['products'] = Product::published()->with('feature')
+                // ->orderBy('featured', 'desc')
+                ->where('active', true)
+                ->where([['price', '>=', $p1*10], ['price', '<=', $p2*10]])
+                ->orderBy($order_by, $f)
+                ->withAnyCategories($sub_cat_id)
+                ->paginate(12);
 
         $data['show'] = ['in' => (($data['products']->currentPage() - 1) * $data['products']->perPage()) + 1,
             'to' => (($data['products']->currentPage()) * $data['products']->perPage())];

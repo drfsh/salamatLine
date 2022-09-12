@@ -92,13 +92,13 @@ ul.pside li a i {
     font-size: 14px;
 }
 .products-items .feacher .item{
+    cursor: pointer;
     padding: 3px 8px;
     background: white;
     border-radius: 10px;
 }
 .products-items .feacher .item:hover,.products-items .feacher .item.active{
     background: #f2f6fc;
-    font-weight: 600;
     color: #565656;
 }
 ul.pside li a i svg {
@@ -1197,6 +1197,8 @@ body.auth #salamat-logo {
 .simple-item {
     box-shadow:0 5px 19px -5px #00000017;
     border-radius: 15px;
+    margin: 30px 15px;
+    margin-top: 10px;
 }
 
 .simple-item .cover {
@@ -4706,4 +4708,11 @@ footer .sub{
         padding: 0 10px;
         box-sizing: border-box;
     }
+}
+.disableT *{
+    transform: none!important;
+}
+
+.disableT .top-bar{
+    z-index: 1;
 }

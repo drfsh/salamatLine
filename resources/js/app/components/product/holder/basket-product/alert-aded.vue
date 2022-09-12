@@ -18,12 +18,12 @@
                     </div>
                     <div style="display: flex;flex-direction: column;align-items: flex-start;">
                         <span class="n">{{ name }} </span>
-                        <span style="font-size: 11px;width: 100%;margin-right: 9px;margin-top: 8px;">مدل : {{ model }}</span>
+                        <span style="    text-align: right;font-size: 11px;width: 100%;margin-right: 9px;margin-top: 8px;">مدل : {{ model }}</span>
 
                     </div>
                 </div>
             </div>
-            <div style="display: flex;float: left;width: 100%;padding: 14px 11px 0;justify-content: space-between;">
+            <div style="display: flex;padding: 14px 11px 0;justify-content: space-between;">
                 <div role="button" style="color: #0a4773;border-bottom: 1px dashed;padding-bottom: 8px;" @click="$parent.status.text=''">ادامه خرید</div>
                 <a style="background: #40c340;color: white;border-radius: 10px;padding: 3px 8px;" href="/cart">مشاهده سبد خرید </a>
             </div>
@@ -54,6 +54,12 @@ export default {
             tools.copyText(this.link, this)
             this.isCopy = true;
         }
+    },
+    mounted() {
+        $('body').addClass('disableT')
+    },
+    unmounted() {
+        $('body').removeClass('disableT')
     }
 }
 </script>

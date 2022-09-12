@@ -28,7 +28,7 @@
 										<span>{{$item->name}}</span>
 									</a>
 								</li>
-							@endforeach		
+							@endforeach
 						</ul>
 					</li>
 					@endif
@@ -41,14 +41,27 @@
 <div class="cat side-bar box3">
 	<div class="title">نمایش محصولات</div>
 	<div class="body">
-		<check-box></check-box>
+		<check-box
+            f="{{request()->f}}"
+            order_by="{{request()->order_by}}"
+            active="{{request()->active}}"
+            p1="{{request()->p1}}"
+            p2="{{request()->p2}}"
+
+        ></check-box>
 	</div>
 </div>
 
 <div class="cat side-bar box3">
 	<div class="title">قیمت <span>(تومان)</span></div>
 	<div class="body">
-		<price-range-box></price-range-box>
+		<price-range-box
+            f="{{request()->f}}"
+            order_by="{{request()->order_by}}"
+            active="{{request()->active}}"
+            p1="{{request()->p1}}"
+            p2="{{request()->p2}}"
+        ></price-range-box>
 	</div>
 </div>
 

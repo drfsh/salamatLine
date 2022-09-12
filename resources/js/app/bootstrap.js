@@ -108,7 +108,8 @@ $(".home-title-product-item").click(function () {
     $('.home-title-product-item').removeClass('active')
     $(this).addClass('active')
     let id = $(this).attr('data-id')
-    $('.home-product-item').hide()
+    let classs = $(this).attr('data-c')
+    $('.'+classs).hide()
     $('#'+id).show()
 });
 

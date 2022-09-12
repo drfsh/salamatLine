@@ -117,6 +117,10 @@ export default {
     },
     mounted() {
         this.getData()
+        $('body').addClass('disableT')
+    },
+    unmounted() {
+        $('body').removeClass('disableT')
     }
 }
 </script>

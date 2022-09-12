@@ -1,27 +1,18 @@
 
+<cat-filter
+ show_in="{{$data['show']['in']}}"
+ show_to="{{$data['show']['to']}}"
+ total="{{$data['products']->total()}}"
+ name="{{$data['category']->name}}"
+ f1="{{request()->f}}"
+ order_by="{{request()->order_by}}"
+ active="{{request()->active}}"
 
-<div class="box2 box3">
-	<div class="title" style="font-size: 16px">{{$data['category']->name}}</div>
-	<div class="products-items">
-		<div style="font-size: 13px;">
-			<span>نمایش</span>
-			{{$data['show']['in']}}
-			<span>-</span>
-			{{$data['show']['to']}}
-			از
-			{{$data['products']->total()}}
-			نتیجه
-		</div>
-		<div class="feacher">
-			<span>مرتب سازی بر اساس : </span>
-			<span class="item">محبوبیت</span>
-			<span class="item">امتیاز</span>
-			<span class="item">جدیدترین</span>
-			<span class="item">ارزان ترین</span>
-			<span class="item">گران ترین</span>
-		</div>
-	</div>
-</div>
+ p1="{{request()->p1}}"
+ p2="{{request()->p2}}"
+>
+</cat-filter>
+
 <div class="double-gap"></div>
 
 <div class="grid-x">

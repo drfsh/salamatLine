@@ -20,6 +20,7 @@ import checkBox from "./components/inputs/check-box";
 import filterPrice from "./components/product/filter/filterPrice";
 import basketProduct from "./components/product/holder/basket-product/basket-product";
 import itemProductBtns from "./components/product/holder/buttons/item-product-btns";
+import cat_filter from "./components/categoty/filter";
 
 require('./bootstrap')
 require('jquery-confirm')
@@ -55,6 +56,10 @@ setApp([
 
 ])
 setElement([
+    {
+        name: 'cat-filter',
+        component: cat_filter
+    },
     {
         name: 'product-btns',
         component: itemProductBtns
