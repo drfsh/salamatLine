@@ -1,6 +1,19 @@
 @guest
-	<menu-cart :auth="false" ></menu-cart>
+	<ul class="header-left-btns">
+		<li>
+			<a href="{{route('cart')}}">
+				@include('icons.basket2')
+				<cart-num></cart-num>
+			</a>
+		</li>
 
+		<li>
+			<a class="login" href="{{route('login')}}">
+				@include('icons.user')
+				<span>ورود / ثبت نام</span>
+			</a>
+		</li>
+	</ul>
 @else
 {{--	<menu-cart :auth="true" ></menu-cart>--}}
 	<ul class="header-left-btns">
@@ -16,9 +29,9 @@
 			</a>
 		</li>
 		<li>
-			<a class="login" href="{{route('login')}}">
+			<a class="login" href="{{route('profile')}}">
 				@include('icons.user')
-				<span>ورود / ثبت نام</span>
+				<span>پروفایل</span>
 			</a>
 		</li>
 	</ul>

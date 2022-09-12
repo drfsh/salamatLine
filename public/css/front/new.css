@@ -82,7 +82,25 @@ ul.pside li a i {
     margin-top: -1px;
     color: #727378;
 }
-
+.products-items{
+    padding: 0 21px 27px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.products-items .feacher{
+    font-size: 14px;
+}
+.products-items .feacher .item{
+    padding: 3px 8px;
+    background: white;
+    border-radius: 10px;
+}
+.products-items .feacher .item:hover,.products-items .feacher .item.active{
+    background: #f2f6fc;
+    font-weight: 600;
+    color: #565656;
+}
 ul.pside li a i svg {
     width: 19px;
     height: 19px;
@@ -1177,12 +1195,92 @@ body.auth #salamat-logo {
 }
 
 .simple-item {
-    box-shadow: 0 4px 23px -13px rgb(0 0 0 / 9%);
+    box-shadow:0 5px 19px -5px #00000017;
     border-radius: 15px;
 }
 
 .simple-item .cover {
     min-height: unset;
+}
+.checkbox{
+    border-radius: 10px;
+    margin: 8px;
+    border: 1px solid #959595;
+    position: relative;
+    font-size: 13px;
+    padding: 13px 57px 13px 13px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.checkbox.active {
+    color: #094873;
+    border-color: #094873;
+}
+.checkbox:before {
+    display: block;
+    content: "";
+    width: 35px;
+    height: 19px;
+    border-radius: 50px;
+    border: 1px solid #6f6a6a;
+    position: absolute;
+    right: 15px;
+}
+.checkbox.active:before {
+    border-color: #094873;
+}
+.checkbox:after {
+    transition: 0.2s;
+    display: block;
+    content: "";
+    width: 13px;
+    height: 13px;
+    border-radius: 50px;
+    background: #959595;
+    position: absolute;
+    right: 34px;
+}
+.checkbox.active:after {
+    background: #094873;
+    right: 19px;
+    animation: checkbox-active 0.5s;
+}
+.checkbox:hover:before{
+    animation: scale-wow 0.5s;
+}
+@keyframes scale-wow {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    70%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes checkbox-active {
+    0%{
+        width: 13px;
+        right: 34px;
+    }
+    50%{
+        width: 24px;
+        right: 23px;
+    }
+    70%{
+        width: 10px;
+        right: 19px;
+    }
+    100%{
+        width: 13px;
+        right: 19px;
+    }
 }
 .home-list .box{
     box-shadow: none;
@@ -1239,7 +1337,7 @@ body.auth #salamat-logo {
     max-width: 105px;
 }
 .home-list .horizontal{
-    border-bottom: 3px dotted #b0b0b0;
+    border-bottom: 2px dotted #b0b0b0;
     padding-bottom: 15px;
 }
 .home-list .box .cell:last-child .horizontal{
@@ -1252,7 +1350,7 @@ body.auth #salamat-logo {
 }
 .simple-item .add-shop- {
     opacity: 0;
-    border-radius: 100px;
+    border-radius: 50px;
     position: absolute;
     background: #00123463;
     display: flex;
@@ -1260,17 +1358,18 @@ body.auth #salamat-logo {
     align-items: center;
     color: white;
     font-size: 24px;
-    width: 90%;
+    width: 100%;
     height: 90%;
 }
-
 .simple-item:hover .add-shop- {
     opacity: 1;
-    width: 100%;
     height: 100%;
     border-radius: 0;
 }
-
+.simple-item:hover{
+    transform: none;
+    box-shadow: 0 5px 20px -2px #00000029;
+}
 .simple-item .meta li {
     border-radius: 8px;
     font-size: 12px;
@@ -1290,7 +1389,7 @@ body.auth #salamat-logo {
 }
 
 .simple-item .body {
-    padding: 17px;
+    padding: 17px 25px;
 }
 
 .simple-item .body .model {
@@ -1298,7 +1397,39 @@ body.auth #salamat-logo {
     color: #666666;
     margin: 6px 0;
 }
-
+.slider-connect{
+    --slider-connect-bg:#0071e3
+}
+.slider-tooltip{
+    --slider-tooltip-bg:#0071e3
+}
+.range-price-f .price{
+    margin: 0 8px;
+    color: #0071e3;
+}
+.range-price-f{
+    padding: 28px 0px 7px;
+    text-align: center;
+}
+.change-filter{
+    cursor: pointer;
+    background: #0071e3;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    margin-top: 16px;
+    transition: 0.2s;
+}
+.change-filter svg{
+    position: absolute;
+    right: 15px;
+}
+.change-filter:hover{
+    transform: translateY(-2px);
+}
 .simple-item .price {
     margin-top: 5px;
     color: #3b4359;
@@ -1306,7 +1437,7 @@ body.auth #salamat-logo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    font-size: 14px;
+    font-size: 17px;
 }
 
 .price .old {
@@ -1330,8 +1461,8 @@ body.auth #salamat-logo {
 
 .simple-item .body .basket {
     transition: 0.2s;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: #094873;
     color: white;
     border-radius: 10px;
@@ -1339,7 +1470,13 @@ body.auth #salamat-logo {
     align-items: center;
     justify-content: center;
 }
-
+.simple-item .body .basket svg{
+    width: 24px;
+    height: 24px;
+}
+.simple-item .body .basket:hover svg.b {
+    animation: scale-wow 0.5s;
+}
 .simple-item .body .basket:hover {
     background: #8ed557;
     box-shadow: 1px 4px 8px 1px #0000002e;
@@ -1367,9 +1504,9 @@ body.auth #salamat-logo {
     margin: 13px 6px 0;
 }
 
-.simple-item .buttons span:hover {
+.simple-item .buttons span:not(.l):hover {
     color: #346284;
-    transform: translateY(-3px);
+    animation: scale-wow 0.5s;
 }
 
 .circle-hover:before {
@@ -1379,7 +1516,7 @@ body.auth #salamat-logo {
     height: 0px;
     position: absolute;
     background: #004b7e2e;
-    z-index: -1;
+    z-index: 0;
     transition: 0.2s;
     border-radius: 25px;
 }
@@ -1387,17 +1524,18 @@ body.auth #salamat-logo {
 .circle-hover:hover:before {
     content: "";
     display: block;
-    width: 27px;
-    height: 27px;
+    width: 33px;
+    height: 33px;
     position: absolute;
     background: #004b7e2e;
-    z-index: -1;
+    z-index: 0;
     border-radius: 25px;
 }
 
 .simple-item .buttons span svg {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
+    color: #4d4d4d;
 }
 
 .simple-item .meta li {
@@ -1587,6 +1725,7 @@ body.auth #salamat-logo {
     font-weight: 400;
     margin-top: 0;
     margin-bottom: 10px;
+    white-space: nowrap;
 }
 
 .product-box .name-en .zm {
@@ -2408,7 +2547,7 @@ body.auth #salamat-logo {
     color: #3b4159;
 }
 
-.text-red {
+.text-red,.text-red svg {
     color: red !important;
 }
 
@@ -3794,7 +3933,9 @@ form.search-menu {
     width: 25px;
     height: 25px;
 }
-
+.header-left-btns li a:hover svg{
+    animation: scale-wow 0.5s;
+}
 .header-left-btns li a.login {
     width: auto;
     padding: 0 15px;
@@ -4364,6 +4505,70 @@ footer .sub{
     margin-top: 15px;
     width: 109px;
     height: 110px;
+}
+
+.side-bar{
+    box-shadow: 0 0 18px -1px #74747424;
+    border: none;
+}
+.side-bar a >svg {
+    width: 17px;
+    height: 17px;
+    margin-left: 10px;
+    color: #a1a1a1;
+}
+.side-bar .first-level>li{
+    border: none;
+}
+.side-bar .body{
+    padding-bottom: 5px;
+}
+.side-bar a {
+    color: #413f3e;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+}
+.side-bar .title {
+    font-size: 15px;
+    font-weight: 400;
+    padding: 11px 0;
+}
+.side-bar .title::before {
+    content: "";
+    float: right;
+    width: 10px;
+    height: 5px;
+    background: #ffdc00;
+    border-radius: 90px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.mini-show .product-aspk{
+    min-width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+.mini-show .card-share-link{
+    min-width: 735px;
+    padding-bottom: 0;
+}
+.mini-show .btn{
+    background: #094873;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    padding: 10px 17px;
+    margin-top: 9px;
+}
+.mini-show .btn:hover {
+    background: #9e9e9e;
+}
+.mini-show .price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 @media only screen and (max-width: 1130px) {
     .search-cell {

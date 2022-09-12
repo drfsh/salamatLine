@@ -16,6 +16,10 @@ import addedCard from "./components/product/alert/added-card";
 import cart from "./components/cart/cart";
 import cart_num from "./components/cart/cart_num";
 import newsletter from "./components/newsletter/newsletter";
+import checkBox from "./components/inputs/check-box";
+import filterPrice from "./components/product/filter/filterPrice";
+import basketProduct from "./components/product/holder/basket-product/basket-product";
+import itemProductBtns from "./components/product/holder/buttons/item-product-btns";
 
 require('./bootstrap')
 require('jquery-confirm')
@@ -51,6 +55,22 @@ setApp([
 
 ])
 setElement([
+    {
+        name: 'product-btns',
+        component: itemProductBtns
+    },
+    {
+        name: 'basket-product',
+        component: basketProduct
+    },
+    {
+        name: 'price-range-box',
+        component: filterPrice
+    },
+    {
+        name: 'check-box',
+        component: checkBox
+    },
     {
         name: 'address-page',
         component: address

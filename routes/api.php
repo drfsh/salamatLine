@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/products', [App\Http\Controllers\API\Products::class, 'main']);
+Route::get('/product/{id}', [App\Http\Controllers\API\Products::class, 'getId']);
 Route::get('/country', [App\Http\Controllers\API\MoreController::class, 'country']);
 Route::get('/test', [App\Http\Controllers\API\MoreController::class, 'test']);
 

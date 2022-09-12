@@ -34,9 +34,6 @@ export default {
                 this.$parent.mp = id
             }
         }
-    },
-    mounted() {
-        console.log(this.$parent.discount2)
     }
 }
 </script>

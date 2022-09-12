@@ -3,7 +3,7 @@
         <div role="button" style="margin: 5px 3px;" @click="thisSelect(i,v.id)" class="item" v-for="(v,i) in items"
              :class="{'active':i==select}">
             <span class="name">{{ v.title }}</span>
-            <span class="per" v-for="b in $parent.discount2">
+            <span class="per" v-for="b in $parent.discount">
                 <span v-if="b.feature_id==v.id">
                 {{ b.percent }}
                 </span>
@@ -30,9 +30,6 @@ export default {
                 this.$parent.mf = id
             }
         }
-    },
-    mounted() {
-        console.log(this.$parent.discount2)
     }
 }
 </script>

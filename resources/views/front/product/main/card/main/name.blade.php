@@ -6,7 +6,9 @@
 			@include('icons.shield')
 			تضمین اصالت کالا
 		</span>
-    <span class="nm">
-			product english name model D1
+    @if($data['product']->title_en!==null)
+        <span class="nm">
+			{{$data['product']->title_en}}
 		</span>
+    @endif
 </div>

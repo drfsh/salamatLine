@@ -17,9 +17,11 @@
     @else
         <div class="price text-center">موجود نیست</div>
     @endif
-    <div>
-        <div class="basket">
-            @include('icons.basket')
-        </div>
-    </div>
+    <basket-product
+            id="{{$item->id}}"
+            name="{{$item->title}}"
+            model="{{$item->subtitle}}"
+            img="{{$item->tiny}}"
+    >
+    </basket-product>
 </div>

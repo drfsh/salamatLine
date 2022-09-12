@@ -10,17 +10,16 @@ class Products extends Controller
 {
 
 
-
     public function main()
     {
         $per_page = 100;
-        $products = Product::published()->with('multiprice')->with('multiprice')->where('active',1)->latest()->paginate($per_page);
+        $products = Product::published()->with('multiprice')->with('multiprice')->where('active', 1)->latest()->paginate($per_page);
 
 
         // return $products;
 
         $data = [];
-        $url = url('/').'/products/';
+        $url = url('/') . '/products/';
         $availability = 'instock';
         $price = 0;
         // $data['per_page'] = $per_page;
@@ -29,20 +28,22 @@ class Products extends Controller
         // $data['count'] = $products->total();
         // $data['next_page_url'] = $products->nextPageUrl();
         // $data['prev_page_url'] = $products->previousPageUrl();
-        
+
         $n = 0;
-        foreach($products as $item){
+        foreach ($products as $item) {
             $cat_name = null;
             $category = $item->categories()->get()->toFlatTree()->last();
 
             if ($category) {
                 $cat_name = $category->name;
             }
-            if (!$item->active) {$availability = 'outofstock';}  
+            if (!$item->active) {
+                $availability = 'outofstock';
+            }
             if ($item['multiprice']->isEmpty()) {
-                $price = $item->price/10;
-            }else{
-                $price = $item['multiprice'][0]['price']/10;
+                $price = $item->price / 10;
+            } else {
+                $price = $item['multiprice'][0]['price'] / 10;
             }
             $data['products'][$n]['product_id'] = $item->id;
             $data['products'][$n]['title'] = $item->title;
@@ -50,7 +51,7 @@ class Products extends Controller
             $data['products'][$n]['category_name'] = $cat_name;
             $data['products'][$n]['price'] = $price;
             $data['products'][$n]['image_link'] = $item->tiny;
-            $data['products'][$n]['page_url'] = $url.$item->slug;
+            $data['products'][$n]['page_url'] = $url . $item->slug;
             $data['products'][$n]['price'] = $price;
             $data['products'][$n]['old_price'] = $price;
             $data['products'][$n]['availability'] = $availability;
@@ -58,6 +59,12 @@ class Products extends Controller
         }
 
         return response()->json($data);
+    }
+
+    public function getId($id)
+    {
+        $product = Product::published()->where('id',$id)->with('multiprice','multifeature','feature','photos','brand','country','inventory','discount','collection')->first();
+        return response()->json($product);
     }
 }
 
