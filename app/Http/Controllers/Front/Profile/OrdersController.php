@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front\Profile;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Auth;
 use App\Models\Invoice;
@@ -74,16 +75,38 @@ class OrdersController extends Controller
         }
     }
 
-    public function get(){
+    public function get(): JsonResponse
+    {
         $userId = Auth::id();
-        $invoices =Invoice::with('orders.product','orders.detail')->where('user_id', $userId);
 
-        $data['invoice_unpain'] = $invoices->where('situation','unpaid')->get();
-        $data['invoice_pain'] = $invoices->where('situation','paid')->get();
-        $data['invoice_finish'] = $invoices->where('situation','finish')->get();
-        $data['invoice_current'] = $invoices->where('situation','production')
+        $data['invoice_unpaid'] = Invoice::with('orders.product','orders.detail','address')->where('user_id', $userId)
+            ->where('situation','unpaid')->get();
+        $data['invoice_paid'] = Invoice::with('orders.product','orders.detail','address')->where('user_id', $userId)
+            ->where('situation','paid')->get();
+        $data['invoice_finish'] = Invoice::with('orders.product','orders.detail','address')->where('user_id', $userId)
+            ->where('situation','finish')->get();
+        $data['invoice_current'] = Invoice::with('orders.product','orders.detail','address')->where('user_id', $userId)
+            ->where('situation','production')
             ->orWhere([['situation','sending'],['user_id', $userId]])
             ->orWhere([['situation','arrived'],['user_id', $userId]])
             ->get();
+
+        return response()->json($data);
+    }
+
+    public function show(){
+
+    }
+
+
+    public function factor($id){
+        $userId = Auth::id();
+        $invoice = Invoice::find($id)->with('orders.product','orders.detail','address')->where('user_id', $userId)->first();
+        if (is_null($invoice)){
+            return Redirect::route('ProfileOrders');
+        }
+
+
+        return view('profile.orders.invoice.main',compact('invoice'));
     }
 }

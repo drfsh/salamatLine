@@ -10,6 +10,12 @@ class Invoice extends Model
 
     protected $fillable = ['pay_num','situation','user_id','creator_id','address_id','client_address','shipping','sub_total','grand_total','due_date','pay_date','production_date','getready_date','send_date','finish_date'];
 
+
+    protected $appends = [
+        'date',
+        'date_n',
+    ];
+
     public function orders()
     {
         return $this->hasMany('App\Models\Order');
@@ -53,11 +59,18 @@ class Invoice extends Model
     public function getPayDateAttribute($value){
         if (!$value) {return null;}
         return Verta($value)->format('l d F Y ساعت H:i');
-    } 
+    }
+
+    public function getDateAttribute(){
+        return Verta($this->attributes['created_at'])->format('d F Y');
+    }
+
+    public function getDateNAttribute(){
+        return Verta($this->attributes['created_at'])->format('Y/m/d');
+    }
 
     public function getCreatedAtAttribute($value){
         return Verta($value)->format('l d F Y ساعت H:i');
-    } 
-
+    }
 
 }

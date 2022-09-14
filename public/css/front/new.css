@@ -12,9 +12,9 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #094873;
+    background: #c0c2c5;
     border-radius: 15px;
-    border: 2px solid white;
+    border: 1px solid white;
 }
 
 .ProfileName .pic .hupload {
@@ -313,12 +313,13 @@ ul.pside li.active:before {
     padding: 11px 0;
     position: relative;
     display: flex;
+    font-size: 13px;
 }
 
 .btns-viewpager li {
     display: inline-block;
     list-style-type: none;
-    padding: 0 ;
+    padding: 0 7px;
 }
 
 .btns-viewpager li span.name {
@@ -4745,24 +4746,135 @@ footer .sub {
 .order-item .status .go{
 
 }
-.order-item .val{
+.order-item .val,.invoice .val{
     font-size: 14px;
     padding: 0 24px;
+    display: flex;
+    align-items: center
 }
 .order-item .val .date{
     color: #81858b;
 }
-.order-item .val .t{
+.order-item .val .t,.invoice .val .t{
     font-size: 12px;
     color: #a1a3a8;
     margin-right: 15px;
 }
-.order-item .val .d{
+.order-item .val .icon{
+    display: inline-flex;
+    align-items: center;
+}
+.order-item .val .icon svg{
+    width: 17px;
+    height: 17px;
+    color: #dbbd00;
+}
+.order-item .val .d ,.invoice .val .d{
 
     color: #424750;
     font-size: 13px;
     margin-right: 4px;
     font-weight: 600;
+}
+
+.order-item .products{
+    display: grid;
+    grid-template-columns: repeat(8,minmax(0,1fr));
+    padding: 10px 24px;
+    border-bottom: 1px solid #e0e0e2;
+    border-top: 1px solid #e0e0e2;
+    margin-top: 16px;
+}
+.order-item .products .item{
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 11px;
+    color: #686868;
+
+}
+
+.order-item .btns{
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.order-item .btns .btn-f{
+    display: flex;
+    font-size: 14px;
+    align-items: center
+}
+.order-item .btns .icon svg{
+    width: 18px;
+    height: 18px;
+}
+.order-item .btns .icon{
+    height: 18px;
+    margin-left: 5px;
+}
+
+.invoice {
+    max-width: 29.7cm;
+}
+.invoice >.title{
+    padding: 5px 12px;
+    border-bottom: 1px solid #d6d6d6;
+}
+.invoice .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 23px 10px;
+    margin-top: 15px;
+}
+.invoice .code .t{
+    color: #535458;
+}
+.invoice .sell{
+    border-radius: 4px;
+    border: 1px solid #34495e;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    margin: 9px 0;
+    padding-left: 30px;
+}
+.invoice .sell .title{
+    width: 30px;
+    height: 100%;
+    display: flex;
+    background: #34495e;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+.invoice .sell .title span{
+    transform: rotate(90deg);
+    display: block;
+    font-size: 10px;
+}
+.invoice .sell .text{
+    font-size: 13px;
+    margin: 0 16px;
+}
+.invoice .sell .c{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.invoice .table{
+    border-radius: 4px;
+    overflow: hidden;
+}
+.invoice .table thead tr th{
+    text-align: center;
+    border: none !important;
+    font-size: 12px;
+    color: white;
+    background: #34495e;
 }
 @media only screen and (max-width: 1130px) {
     .search-cell {
