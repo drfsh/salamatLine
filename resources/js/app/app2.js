@@ -21,6 +21,7 @@ import filterPrice from "./components/product/filter/filterPrice";
 import basketProduct from "./components/product/holder/basket-product/basket-product";
 import itemProductBtns from "./components/product/holder/buttons/item-product-btns";
 import cat_filter from "./components/categoty/filter";
+import Orders from "./components/orders/Orders";
 
 require('./bootstrap')
 require('jquery-confirm')
@@ -51,6 +52,11 @@ setApp([
     {
         name: 'app-cart',
         component: cart,
+        components: []
+    },
+    {
+        name: 'cart_orders',
+        component: Orders,
         components: []
     },
 

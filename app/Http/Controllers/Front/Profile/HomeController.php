@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front\Profile;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Invoice;
 use App\Models\Product;
 use CyrildeWit\EloquentViewable\Support\Period;
 use Illuminate\Http\Request;
@@ -21,7 +22,18 @@ class HomeController extends Controller
 
 	public function main()
 	{
+        $userId = Auth::id();
         $data['most_view'] = Product::published()->orderByUniqueViews('desc', Period::pastDays(1))->limit(4)->get();
+
+        $invoices =Invoice::with('orders.product','orders.detail')->where('user_id', $userId);
+        $data['invoice_unpain'] = $invoices->where('situation','unpaid')->count();
+        $data['invoice_pain'] = $invoices->where('situation','paid')->count();
+        $data['invoice_finish'] = $invoices->where('situation','finish')->count();
+
+        $data['invoice_current'] = $invoices->where('situation','production')
+            ->orWhere([['situation','sending'],['user_id', $userId]])
+            ->orWhere([['situation','arrived'],['user_id', $userId]])
+            ->count();
 
         return view('profile.home.main',compact('data'));
 	}

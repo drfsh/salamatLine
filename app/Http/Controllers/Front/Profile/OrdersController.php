@@ -74,4 +74,16 @@ class OrdersController extends Controller
         }
     }
 
+    public function get(){
+        $userId = Auth::id();
+        $invoices =Invoice::with('orders.product','orders.detail')->where('user_id', $userId);
+
+        $data['invoice_unpain'] = $invoices->where('situation','unpaid')->get();
+        $data['invoice_pain'] = $invoices->where('situation','paid')->get();
+        $data['invoice_finish'] = $invoices->where('situation','finish')->get();
+        $data['invoice_current'] = $invoices->where('situation','production')
+            ->orWhere([['situation','sending'],['user_id', $userId]])
+            ->orWhere([['situation','arrived'],['user_id', $userId]])
+            ->get();
+    }
 }

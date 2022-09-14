@@ -3,14 +3,15 @@
 
         <div class="titles">
             @foreach($data['category'] as $key => $item)
+                @if($key==3) @break @endif
+
                 <span class="item home-title-product-item @if($key==0) active @endif"
                       data-id="product-{{$item->id}}" data-c="pp1">{{$item->name}}</span>
-                @if($key==2) @break @endif
             @endforeach
         </div>
 
         @foreach($data['category'] as $key => $item)
-
+            @if($key==3) @break @endif
             <div style="@if($key!=0) display:none @endif" class="cell home-product-item pp1" id="product-{{$item->id}}">
                 <div class="owl-box">
                     <div class="swiper owl-5" dir="rtl">
@@ -22,8 +23,7 @@
                     </div>
                 </div>
             </div>
-            @if($key==2) @break @endif
         @endforeach
     </div>
 @endif
-h
+

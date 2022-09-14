@@ -15,7 +15,7 @@ $categories = App\Models\Category::defaultOrder()->toTree()->get();
             <div class="double-gap"></div>
             <div class="grid-container">
                 {{ Breadcrumbs::render(\Request::route()->getName()) }}
-                <div class="grid-x grid-padding-x">
+                <div class="grid-x grid-padding-x" style="margin-bottom: 30px;">
                     <div class="cell medium-3 large-3">
                         @include('profile.global.sidebar.main')
                     </div>

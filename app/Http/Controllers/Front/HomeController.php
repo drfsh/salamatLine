@@ -53,7 +53,7 @@ class HomeController extends Controller
 		$data['brand'] = Brand::select('id','title','slug','image')->whereNotNull('image')->inRandomOrder()->limit(7)->get();
 		// return $data['brand'];
 		$most_visit_cat_id = Category::orderByUniqueViews('desc', Period::pastDays(1))->limit(6)->get()->pluck('id')->toArray();
-		// if ($most_visit_cat_id) {
+        // if ($most_visit_cat_id) {
 			foreach ($most_visit_cat_id as $key => $item) {
 				$sub_cat_id = Category::descendantsAndSelf($item)->pluck('id')->toArray();
 				$count = Product::published()->where('active',1)->withAnyCategories($sub_cat_id)->count();

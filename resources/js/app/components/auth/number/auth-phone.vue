@@ -8,14 +8,14 @@
             </div>
             <div class="select-code">
                 <img v-if="country.length!==0" :src="country[countryV].image">
-                <span v-if="country.length!==0">({{ country[countryV].content }})</span>
+                <span v-if="country.length!==0">({{ '+98' }})</span>
                 <i v-if="country.length!==0" class="fas fa-chevron-down"></i>
                 <div v-if="false" class="list-country">
                     <ul>
                         <li v-for="(v,i) in country">
                             <div>
                                 <img :src="v.image"  :alt="v.title">
-                                <span >({{ v.content+'+98' }})</span>
+                                <span >({{ v.content }})</span>
                             </div>
                         </li>
                     </ul>

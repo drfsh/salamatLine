@@ -8,6 +8,7 @@ Route::get('/', [App\Http\Controllers\Front\Profile\HomeController::class, 'main
 Route::get('address', [App\Http\Controllers\Front\Profile\AddressController::class, 'main'])->name('ProfileAddress');
 Route::get('edit', [App\Http\Controllers\Front\Profile\EditController::class, 'main'])->name('ProfileEdit');
 Route::get('orders', [App\Http\Controllers\Front\Profile\OrdersController::class, 'main'])->name('ProfileOrders');
+Route::get('/orders/api/get', [App\Http\Controllers\Front\Profile\OrdersController::class, 'main'])->name('ProfileOrders');
 Route::get('orders-tracking', [App\Http\Controllers\Front\Profile\OrdersController::class, 'tracking'])->name('OrdersTracking');
 Route::post('orders-check', [App\Http\Controllers\Front\Profile\OrdersController::class, 'check'])->name('OrdersCheck');
 Route::get('orders/history', [App\Http\Controllers\Front\Profile\OrdersController::class, 'history'])->name('OrderHistory');
