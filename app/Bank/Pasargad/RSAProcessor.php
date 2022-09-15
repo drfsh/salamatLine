@@ -2,7 +2,6 @@
 
 namespace App\Bank\Pasargad;
 
-use App\Bank\Pasargad\RSA;
 use Illuminate\Support\Facades\Storage;
 
 class RSAProcessor

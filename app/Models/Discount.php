@@ -14,7 +14,7 @@ class Discount extends Model
 
     protected $fillable = ['title', 'price', 'max_uses', 'active', 'content', 'product_id', 'price_id', 'feature_id', 'start_date', 'end_date'];
 
-    protected $appends = ['percent'];
+    protected $appends = ['percent','is_active'];
 
 
     public function product()
@@ -34,6 +34,7 @@ class Discount extends Model
 
     public function getIsActiveAttribute()
     {
+
         if ($this->end_date > verta()->format('Y/m/d') && ($this->start_date <= verta()->format('Y/m/d')) && $this->active) {
             return true;
         } else {

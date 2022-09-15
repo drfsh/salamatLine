@@ -95,15 +95,16 @@ export default {
             bank:0
         }
     },
+
     methods: {
         async nextStep() {
             if (!this.isContinue) return ''
             this.fullLoading = true
 
             let m = {
-                address: this.$parent.address_id, delivery: this.delivery,typeSend:this.typeSend
+                address: this.$parent.address_id, delivery: this.$parent.delivery,typeSend:this.$parent.typeSend
             }
-            // let {data} = await window.axios.post('/payment/pasargad', m)
+            let {data} = await window.axios.post('/payment/pasargad', m)
 
 
             this.fullLoading = false

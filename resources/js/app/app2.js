@@ -22,6 +22,7 @@ import basketProduct from "./components/product/holder/basket-product/basket-pro
 import itemProductBtns from "./components/product/holder/buttons/item-product-btns";
 import cat_filter from "./components/categoty/filter";
 import Orders from "./components/orders/Orders";
+import invoice from "./components/orders/invoice/invoice";
 
 require('./bootstrap')
 require('jquery-confirm')
@@ -58,6 +59,16 @@ setApp([
         name: 'cart_orders',
         component: Orders,
         components: []
+    },
+    {
+        name: 'cart_invoice',
+        component: {},
+        components: [
+            {
+                name:'cart_invoice',
+                component:invoice
+            }
+        ]
     },
 
 ])

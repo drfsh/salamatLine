@@ -93,6 +93,14 @@ class OrdersController extends Controller
 
         return response()->json($data);
     }
+    public function getOne($id): JsonResponse
+    {
+        $userId = Auth::id();
+
+        $invoice = Invoice::with('orders.product','orders.detail','address')->where([['user_id', $userId],['id',$id]])->first();
+
+        return response()->json($invoice);
+    }
 
     public function show(){
 
@@ -100,13 +108,6 @@ class OrdersController extends Controller
 
 
     public function factor($id){
-        $userId = Auth::id();
-        $invoice = Invoice::find($id)->with('orders.product','orders.detail','address')->where('user_id', $userId)->first();
-        if (is_null($invoice)){
-            return Redirect::route('ProfileOrders');
-        }
-
-
-        return view('profile.orders.invoice.main',compact('invoice'));
+        return view('profile.orders.invoice.main',compact('id'));
     }
 }

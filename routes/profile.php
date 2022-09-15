@@ -9,6 +9,7 @@ Route::get('address', [App\Http\Controllers\Front\Profile\AddressController::cla
 Route::get('edit', [App\Http\Controllers\Front\Profile\EditController::class, 'main'])->name('ProfileEdit');
 Route::get('orders', [App\Http\Controllers\Front\Profile\OrdersController::class, 'main'])->name('ProfileOrders');
 Route::get('/orders/api/get', [App\Http\Controllers\Front\Profile\OrdersController::class, 'get']);
+Route::get('/orders/api/get/{id}', [App\Http\Controllers\Front\Profile\OrdersController::class, 'getOne']);
 Route::get('/order/{id}', [App\Http\Controllers\Front\Profile\OrdersController::class, 'get'])->name('order');
 Route::get('/orders/invoice/order/{id}', [App\Http\Controllers\Front\Profile\OrdersController::class, 'factor'])->name('factor');
 Route::get('orders-tracking', [App\Http\Controllers\Front\Profile\OrdersController::class, 'tracking'])->name('OrdersTracking');

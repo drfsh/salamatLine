@@ -94,7 +94,7 @@ class CheckStepController extends Controller
                 $discount_id = $item->attributes->discount_id;
                 if (!is_null($discount_id)) {
                     $discount = Discount::find($discount_id);
-                    if (!$discount->isAcrice)
+                    if (!$discount->is_active)
                     {
                         $data['step'] = 1;
                         $data['text'] = 'سبد خود رابروزرسانی کنید';
