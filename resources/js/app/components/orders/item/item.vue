@@ -57,7 +57,7 @@
         </div>
 
         <div class="btns">
-            <a :href="'/profile/orders/invoice/order/'+item.id">
+            <a v-if="item.situation!=='unpaid'" target="_blank" :href="'/profile/orders/invoice/order/'+item.id">
                 <div class="btn-f">
                 <span class="icon">
                     <receipt-list></receipt-list>
@@ -67,6 +67,17 @@
                 </span>
                 </div>
             </a>
+            <a v-else>
+                <div class="btn-f text-red">
+                <span class="icon">
+                    <ic_close_square></ic_close_square>
+                </span>
+                    <span class="text">
+                    لغو
+                </span>
+                </div>
+            </a>
+
         </div>
     </a>
 </template>
@@ -75,11 +86,12 @@
 import Ic_ticke_circle from "../../icon/ic_ticke_circle";
 import Ic_award from "../../icon/ic_award";
 import ReceiptList from "../../icon/receipt-list";
+import Ic_close_square from "../../icon/ic_close_square";
 
 export default {
     name: "item",
     props:['item'],
-    components: {ReceiptList, Ic_award, Ic_ticke_circle},
+    components: {Ic_close_square, ReceiptList, Ic_award, Ic_ticke_circle},
     methods:{
         separate(Number) {
             Number /= 10

@@ -1,8 +1,8 @@
 <template>
-    <div class="share-link-pop mini-show product-box">
-        <div class="dismiss" @click="$parent.show=false"></div>
+    <div v-if="show" class="share-link-pop mini-show product-box">
+        <div class="dismiss" @click="close"></div>
         <div v-if="data!=null" style="z-index: 2" class="card-share-link position-relative">
-            <i class="fas fa-times" @click="$parent.show=false"></i>
+            <i class="fas fa-times" @click="close()"></i>
             <div class="sgare-sepid-box">
                 <div class="product-page" style="display: flex;">
                     <div class="product-aspk">
@@ -95,9 +95,15 @@ export default {
     data() {
         return {
             data: null,
+            show:true
         }
     },
     methods: {
+        close(){
+            this.show = false
+          window.boxAlert.show = false
+          window.boxAlert.type = ''
+        },
         separate(Number) {
             Number /= 10
             Number += '';
@@ -117,10 +123,10 @@ export default {
     },
     mounted() {
         this.getData()
-        $('body').addClass('disableT')
+        // $('body').addClass('disableT')
     },
     unmounted() {
-        $('body').removeClass('disableT')
+        // $('body').removeClass('disableT')
     }
 }
 </script>

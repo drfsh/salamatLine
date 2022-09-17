@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [App\Http\Controllers\Front\Profile\HomeController::class, 'main'])->name('profile');
-Route::get('/', [App\Http\Controllers\Front\Profile\HomeController::class, 'main'])->name('profile');
 Route::get('address', [App\Http\Controllers\Front\Profile\AddressController::class, 'main'])->name('ProfileAddress');
 Route::get('edit', [App\Http\Controllers\Front\Profile\EditController::class, 'main'])->name('ProfileEdit');
 Route::get('orders', [App\Http\Controllers\Front\Profile\OrdersController::class, 'main'])->name('ProfileOrders');

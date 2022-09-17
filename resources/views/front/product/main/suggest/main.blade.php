@@ -1,4 +1,4 @@
-<div class="box3 product-info">
+<div class="box3 product-info" style="padding: 32px;">
 	<div class="title">محصولات مرتبط</div>
 	<div class="swiper owl-5" dir="rtl">
 		<div class="swiper-wrapper">

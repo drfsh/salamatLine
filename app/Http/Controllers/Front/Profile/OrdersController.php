@@ -80,16 +80,16 @@ class OrdersController extends Controller
         $userId = Auth::id();
 
         $data['invoice_unpaid'] = Invoice::with('orders.product','orders.detail','address')->where('user_id', $userId)
-            ->where('situation','unpaid')->get();
+            ->where('situation','unpaid')->orderBy('created_at','desc')->get();
         $data['invoice_paid'] = Invoice::with('orders.product','orders.detail','address')->where('user_id', $userId)
-            ->where('situation','paid')->get();
+            ->where('situation','paid')->orderBy('created_at','desc')->get();
         $data['invoice_finish'] = Invoice::with('orders.product','orders.detail','address')->where('user_id', $userId)
-            ->where('situation','finish')->get();
+            ->where('situation','finish')->orderBy('created_at','desc')->get();
         $data['invoice_current'] = Invoice::with('orders.product','orders.detail','address')->where('user_id', $userId)
             ->where('situation','production')
             ->orWhere([['situation','sending'],['user_id', $userId]])
             ->orWhere([['situation','arrived'],['user_id', $userId]])
-            ->get();
+            ->orderBy('created_at','desc')->get();
 
         return response()->json($data);
     }
@@ -97,7 +97,7 @@ class OrdersController extends Controller
     {
         $userId = Auth::id();
 
-        $invoice = Invoice::with('orders.product','orders.detail','address')->where([['user_id', $userId],['id',$id]])->first();
+        $invoice = Invoice::with('orders.product','orders.detail','address')->where([['user_id', $userId],['id',$id],['situation','!=','unpaid']])->first();
 
         return response()->json($invoice);
     }

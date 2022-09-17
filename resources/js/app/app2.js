@@ -23,6 +23,9 @@ import itemProductBtns from "./components/product/holder/buttons/item-product-bt
 import cat_filter from "./components/categoty/filter";
 import Orders from "./components/orders/Orders";
 import invoice from "./components/orders/invoice/invoice";
+import add_basket_f from "./components/product/holder/basket-product/add_basket_f";
+import removeFavorites from "../../views/front/favorites/remove-favorites";
+import alerts_cart from "./components/alerts/alerts_cart";
 
 require('./bootstrap')
 require('jquery-confirm')
@@ -70,9 +73,27 @@ setApp([
             }
         ]
     },
+    {
+        name: 'address-page',
+        component: address,
+        components:[]
+    },
+    {
+        name: 'alerts-cart',
+        component: alerts_cart,
+        components:[]
+    },
 
 ])
 setElement([
+    {
+        name: 'remove-favorites',
+        component: removeFavorites
+    },
+    {
+        name: 'add-basket-f',
+        component: add_basket_f
+    },
     {
         name: 'cat-filter',
         component: cat_filter
@@ -92,10 +113,6 @@ setElement([
     {
         name: 'check-box',
         component: checkBox
-    },
-    {
-        name: 'address-page',
-        component: address
     },
     {
         name: 'ticket-list',

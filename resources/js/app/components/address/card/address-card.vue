@@ -18,7 +18,7 @@
             </div>
         </div>
     </div>
-    <div class="edit" @click="edit=true">
+    <div class="edit" @click="$parent.edit=value;$parent.page=1">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <g id="vuesax_linear_edit-2" data-name="vuesax/linear/edit-2" transform="translate(-684 -252)">
                 <g id="edit-2">
@@ -31,20 +31,14 @@
         </svg>
     </div>
 </div>
-    <address-edit v-if="edit==true"></address-edit>
 </template>
 
 <script>
-import AddressEdit from "../address-edit";
 export default {
     name: "address-card",
-    components: {AddressEdit},
     props:['value'],
-    data(){
-        return{
-            edit:false
-        }
-    }
+
+
 }
 </script>
 

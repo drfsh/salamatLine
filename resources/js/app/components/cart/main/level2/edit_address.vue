@@ -134,6 +134,8 @@ export default {
                     title: null,
                     zipcode: null
                 }
+            this.$parent.isContinue = false
+            this.$parent.edit = false
         }
     }
 }

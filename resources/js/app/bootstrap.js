@@ -113,6 +113,20 @@ $(".home-title-product-item").click(function () {
     $('#'+id).show()
 });
 
-$('.to-up').click(function () {
+$('.to-up,.swup').click(function () {
     $('html ,body').stop().animate({scrollTop:0},500)
 })
+
+$('.whatsapp-panel-p').click(function () {
+    let b = $(this);
+    if (b.hasClass('active'))
+        b.removeClass('active')
+    else
+        b.addClass('active')
+})
+
+window.boxAlert = {
+    show:false,
+    type:'',
+    value:{},
+}

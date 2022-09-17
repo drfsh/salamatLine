@@ -29,6 +29,7 @@ class AddressController extends Controller
 		// Log::info($form['title']);
 		$address = new Address();
 		$address->title = $request->title;
+		$address->lname = $request->lname;
 		$address->name = $request->name;
 		$address->user_id = $userId;
 		$address->province_id = $request->province_id;
@@ -36,7 +37,12 @@ class AddressController extends Controller
 		$address->district_id = $request->district_id;
 		$address->content = $request->content;
 		$address->zipcode = $request->zipcode;
-		$address->mobile = $request->mobile;
+		$address->mobile = '0'.$request->mobile;
+
+        $address->lng = $request->lng;
+        $address->lat = $request->lat;
+        $address->company = $request->company;
+
 		$address->save();
 
 
@@ -50,13 +56,18 @@ class AddressController extends Controller
 		if($address->user_id == $userId){
 			$address->title = $request->title;
 			$address->name = $request->name;
+			$address->lname = $request->lname;
 			$address->user_id = $userId;
 			$address->province_id = $request->province_id;
 			$address->city_id = $request->city_id;
 			$address->district_id = $request->district_id;
 			$address->content = $request->content;
 			$address->zipcode = $request->zipcode;
-			$address->mobile = $request->mobile;
+			$address->mobile = '0'.$request->mobile;
+			$address->lng = $request->lng;
+			$address->lat = $request->lat;
+			$address->company = $request->company;
+
 			$address->save();
 
 			return response()->json(['success' => 'آدرس ویرایش شد.']);

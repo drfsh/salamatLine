@@ -121,15 +121,16 @@ export default {
             let m = {mf: this.mf, mp: this.mp,quantity:this.count};
             let {data} = await window.axios.post('/cart/add/' + this.id, m)
             this.status = data.status;
+            window.newCardAdd = data.status
             if (data.error=='please login'){
-                this.status = 'برای افزودن به سبد خرید لطفا عضو شوید';
+                window.newCardAdd = 'login'
             }
             if (data['situation']=='success'){
-                window.newCardAdd = true
-                window.scrollTo(0,0)
+                window.newCardAdd = 'added'
                 this.getData()
             }
             this.loading = false
+            $('html ,body').stop().animate({scrollTop:0},500)
         },
         async getData() {
             let {data} = await window.axios('/cart/detail')

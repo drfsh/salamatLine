@@ -10,12 +10,12 @@
             </span>
         </div>
         <div class="input-code">
-            <input type="text" id="code-1" maxlength="1" v-model="code[0]">
-            <input type="text" id="code-2" maxlength="1" v-model="code[1]">
-            <input type="text" id="code-3" v-model="code[2]" maxlength="1">
-            <input type="text" id="code-4" v-model="code[3]" maxlength="1">
+            <input type="number" id="code-1" maxlength="1" v-model="c1">
+            <input type="number" id="code-2" maxlength="1" v-model="c2">
+            <input type="number" id="code-3" v-model="c3" maxlength="1">
+            <input type="number" id="code-4" v-model="c4" maxlength="1">
         </div>
-        <div v-if="!showResend" class="timer">{{timer}}</div>
+        <div v-if="!showResend" class="timer">{{ timer }}</div>
         <div class="resend-code" v-if="showResend" role="button">
             <loading v-if="sendLoading" class="small blue"></loading>
             <span v-else @click="reSend">ارسال مجدد کد</span>
@@ -35,26 +35,37 @@ import Ic_edit from "../../icon/ic_edit";
 
 export default {
     name: "auth-enter-code",
+    props: {
+        fixed: {
+            default: false
+        }
+    },
     components: {Ic_edit, Loading},
     data() {
         return {
             loading: false,
             alert: null,
-            code: ['', '', '', ''],
+            c1: '',
+            c2: '',
+            c3: '',
+            c4: '',
             timeoutHandle: null,
             timer: '00:00:00',
-            showResend:false,
-            sendLoading:false,
+            showResend: false,
+            sendLoading: false,
         }
     },
     methods: {
         async getData() {
             this.loading = true
-            let code = this.code[0]+''+this.code[1]+''+this.code[2]+''+this.code[3]
-            let {data} = await window.axios.post('/approve-code/1', {code:code})
-            if (data['color']=='success'){
-                window.location.href = '/profile'
-            }else if (data['color']=='warning') {
+            let code = this.c1 + '' + this.c2 + '' + this.c3 + '' + this.c4
+            let {data} = await window.axios.post('/approve-code/1', {code: code})
+            if (data['color'] == 'success') {
+                if (!this.fixed)
+                    window.location.href = '/profile'
+                else
+                    window.location.reload()
+            } else if (data['color'] == 'warning') {
                 this.alert = data['alert']
             }
             this.loading = false
@@ -63,7 +74,7 @@ export default {
             let vm = this;
 
             function tick() {
-                vm.timer = "00:0"+min.toString() + ":" + (sec < 10 ? "0" : "") + String(sec);
+                vm.timer = "00:0" + min.toString() + ":" + (sec < 10 ? "0" : "") + String(sec);
                 sec--;
                 if (sec >= 0) {
                     vm.timeoutHandle = setTimeout(tick, 1000)
@@ -72,7 +83,7 @@ export default {
                         setTimeout(function () {
                             vm.setTime(min - 1, 59)
                         }, 1000)
-                    }else {
+                    } else {
                         vm.showResend = true
                     }
                 }
@@ -86,9 +97,9 @@ export default {
             let m = {lname: '', mobile: this.$parent.mobile, name: ''}
             let {data} = await window.axios.post('/request-login/1', m)
             if (data['EnterPhone'] === true) {
-             this.$parent.page = 1
-            }else {
-                this.setTime(2,0)
+                this.$parent.page = 1
+            } else {
+                this.setTime(2, 0)
             }
             this.sendLoading = false
             document.querySelector('.btn-login').disabled = ''
@@ -109,6 +120,24 @@ export default {
                 }
             })
         })
+    },
+    watch: {
+        c1(v) {
+            if (this.c1 && this.c2 && this.c3 && this.c4)
+                this.getData()
+        },
+        c2(v) {
+            if (this.c1 && this.c2 && this.c3 && this.c4)
+                this.getData()
+        },
+        c3(v) {
+            if (this.c1 && this.c2 && this.c3 && this.c4)
+                this.getData()
+        },
+        c4(v) {
+            if (this.c1 && this.c2 && this.c3 && this.c4)
+                this.getData()
+        }
     }
 }
 </script>

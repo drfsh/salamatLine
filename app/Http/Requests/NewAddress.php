@@ -31,7 +31,7 @@ class NewAddress extends FormRequest
             // 'district_id' => 'required',
             'content' => 'required',
             // 'zipcode' => 'required|numeric|digits:10',
-            'mobile' => 'required|numeric|digits:11',
+            'mobile' => 'required|numeric|digits:10',
         ];
     }
 
@@ -51,5 +51,5 @@ class NewAddress extends FormRequest
             'mobile.digits' => 'فرمت ورودی تلفن همراه صحیح نیست. (مثال:09121234567)',
         ];
     }
-    
+
 }

@@ -1,8 +1,38 @@
 <div class="sub">
 	<div class="co">
 		<div class="center">
-			<div class="whatsapp">
+			<div class="whatsapp whatsapp-panel-p">
+                <div class="whatsapp-panel">
+                    <div class="title">
+                        <div class="icon">@include('icons.whatsApp')</div>
+                        <div class="text">
+                            <span>شروع مکالمه</span>
+                            <span>یکی از اعضا را انتخاب و در واتساپ گفتگو کنید</span>
+                        </div>
+                    </div>
+                    <div class="info">پشتیبانان به طور معمول در چند دقیقه پاسخ میدهند</div>
+                    <div class="list">
+                        <a class="item" href="whatsapp://send?phone=+98{{'00000000000'}}&text=">
+                           <div style="display: flex;align-items: center;">
+                               <div class="icon">
+                                   @include('icons.user')
+                               </div>
+                               <div class="text">
+                                   نام پشتیبان
+                               </div>
+                           </div>
+                            <div class="">
+                                <i class="fas fa-chevron-left"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <span class="w">
 				@include('icons.whatsApp')
+                </span>
+                <span class="c">
+                    ×
+                </span>
 			</div>
 		</div>
 	</div>
@@ -12,7 +42,7 @@
     display: flex;
     justify-content: center;">
 		<div class="sub-bg-switch curve">
-			<div class="swup">
+			<div class="swup" role="button">
 				@include('icons.chevron-down')
 				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" height="100" width="100%" viewBox="0 0 90 20" preserveAspectRatio="none">
 					<path d="M0 5 H5 C25 5 25 20 45 20 S65 5 85 5 H90 V-5 H0z" fill="currentColor" stroke="transparent"/>

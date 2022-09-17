@@ -9,7 +9,6 @@
                 <loading v-if="addresses===null"></loading>
                 <div style="margin-top: 20px;" v-else>
                     <div role="button" v-for="(v,i) in addresses" :key="'adddres'+i"
-                         @click="$parent.selectAddress(v)"
                          class="woocommerce-info address">
                         {{ v.title }}
                         <span style="margin-right:9px;font-size: 11px;" v-if="v.province_id!==null">
@@ -33,7 +32,12 @@
                                 <span>{{ v.mobile }}</span>
                             </span>
                         </div>
-                        <div class="selecting" :class="{'active':address!==null && v.id===address.id}"></div>
+                        <div @click="$parent.selectAddress(v)" class="selecting" :class="{'active':address!==null && v.id===address.id}">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <i class="edit" @click="$parent.selectAddress(v,true)">
+                            <ic_edit2></ic_edit2>
+                        </i>
                     </div>
                     <div role="button" @click="newAddress()" class="cart-new-address">
                         <span class="icon">
@@ -56,10 +60,11 @@ import Ic_user1 from "../../../icon/ic_user1";
 import Ic_location from "../../../icon/ic_location";
 import Loading from "../../../loading/loading";
 import Ic_add from "../../../icon/ic_add";
+import Ic_edit2 from "../../../icon/ic_edit2";
 
 export default {
     name: "cart_addresses",
-    components: {Ic_add, Loading, Ic_location, Ic_user1, Ic_mobile2},
+    components: {Ic_edit2, Ic_add, Loading, Ic_location, Ic_user1, Ic_mobile2},
     computed: {
         address_id() {
             return this.$parent.address_id

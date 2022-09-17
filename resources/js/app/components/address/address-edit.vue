@@ -1,90 +1,195 @@
 <template>
-    <div class="modal-holder">
-        <div class="modal">
-            <form>
-                <div class="grid-x grid-padding-x">
-                    <div class="cell"><label>نام مکان
-                        <input type="text"
-                               placeholder="یک عنوان برای آدرس انتخاب کنید (مثلا: خونه، اداره، خونه‌ بابا اینا)">
-                        <!----></label></div>
-                    <div class="cell small-4"><label>استان
-                        <div dir="rtl" class="v-select vs--single vs--searchable">
-                            <div id="vs1__combobox" role="combobox" aria-expanded="false" aria-owns="vs1__listbox"
-                                 aria-label="Search for option" class="vs__dropdown-toggle">
-                                <div class="vs__selected-options"><span class="vs__selected">
-            تهران
-                                    <!----></span> <input aria-autocomplete="list" aria-labelledby="vs1__combobox"
-                                                          aria-controls="vs1__listbox" type="search" autocomplete="off"
-                                                          class="vs__search"></div>
-                                <div class="vs__actions">
-                                    <button type="button" title="Clear Selected" aria-label="Clear Selected"
-                                            class="vs__clear" style="">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
-                                            <path
-                                                d="M6.895455 5l2.842897-2.842898c.348864-.348863.348864-.914488 0-1.263636L9.106534.261648c-.348864-.348864-.914489-.348864-1.263636 0L5 3.104545 2.157102.261648c-.348863-.348864-.914488-.348864-1.263636 0L.261648.893466c-.348864.348864-.348864.914489 0 1.263636L3.104545 5 .261648 7.842898c-.348864.348863-.348864.914488 0 1.263636l.631818.631818c.348864.348864.914773.348864 1.263636 0L5 6.895455l2.842898 2.842897c.348863.348864.914772.348864 1.263636 0l.631818-.631818c.348864-.348864.348864-.914489 0-1.263636L6.895455 5z"></path>
-                                        </svg>
-                                    </button>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" role="presentation"
-                                         class="vs__open-indicator">
-                                        <path
-                                            d="M9.211364 7.59931l4.48338-4.867229c.407008-.441854.407008-1.158247 0-1.60046l-.73712-.80023c-.407008-.441854-1.066904-.441854-1.474243 0L7 5.198617 2.51662.33139c-.407008-.441853-1.066904-.441853-1.474243 0l-.737121.80023c-.407008.441854-.407008 1.158248 0 1.600461l4.48338 4.867228L7 10l2.211364-2.40069z"></path>
-                                    </svg>
-                                    <div class="vs__spinner" style="display: none;">Loading...</div>
-                                </div>
-                            </div>
-                            <ul id="vs1__listbox" role="listbox" style="display: none; visibility: hidden;"></ul>
-                        </div> <!----></label></div>
-                    <div class="cell small-4"><label>شهر
-                        <div dir="rtl" class="v-select vs--single vs--searchable">
-                            <div id="vs2__combobox" role="combobox" aria-expanded="false" aria-owns="vs2__listbox"
-                                 aria-label="Search for option" class="vs__dropdown-toggle">
-                                <div class="vs__selected-options"><input aria-autocomplete="list"
-                                                                         aria-labelledby="vs2__combobox"
-                                                                         aria-controls="vs2__listbox" type="search"
-                                                                         autocomplete="off" class="vs__search"></div>
-                                <div class="vs__actions">
-                                    <button type="button" title="Clear Selected" aria-label="Clear Selected"
-                                            class="vs__clear" style="display: none;">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
-                                            <path
-                                                d="M6.895455 5l2.842897-2.842898c.348864-.348863.348864-.914488 0-1.263636L9.106534.261648c-.348864-.348864-.914489-.348864-1.263636 0L5 3.104545 2.157102.261648c-.348863-.348864-.914488-.348864-1.263636 0L.261648.893466c-.348864.348864-.348864.914489 0 1.263636L3.104545 5 .261648 7.842898c-.348864.348863-.348864.914488 0 1.263636l.631818.631818c.348864.348864.914773.348864 1.263636 0L5 6.895455l2.842898 2.842897c.348863.348864.914772.348864 1.263636 0l.631818-.631818c.348864-.348864.348864-.914489 0-1.263636L6.895455 5z"></path>
-                                        </svg>
-                                    </button>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" role="presentation"
-                                         class="vs__open-indicator">
-                                        <path
-                                            d="M9.211364 7.59931l4.48338-4.867229c.407008-.441854.407008-1.158247 0-1.60046l-.73712-.80023c-.407008-.441854-1.066904-.441854-1.474243 0L7 5.198617 2.51662.33139c-.407008-.441853-1.066904-.441853-1.474243 0l-.737121.80023c-.407008.441854-.407008 1.158248 0 1.600461l4.48338 4.867228L7 10l2.211364-2.40069z"></path>
-                                    </svg>
-                                    <div class="vs__spinner" style="display: none;">Loading...</div>
-                                </div>
-                            </div>
-                            <ul id="vs2__listbox" role="listbox" style="display: none; visibility: hidden;"></ul>
-                        </div> <!----></label></div>
-                    <div class="cell small-4"><!----></div>
-                    <div class="cell medium-4"><label>شخص تحویل گیرنده
-                        <input type="text"> <!----></label></div>
-                    <div class="cell medium-4"><label>تلفن همراه
-                        <input type="number" placeholder="مثال: 09121234567"> <!----></label></div>
-                    <div class="cell medium-4"><label class="nm">کدپستی
-                        <input type="number" placeholder="کد پستی عددی 10 رقمی است"> <!----> <small>دریافت کد پستی از
-                            طریق <a href="https://gnaf.post.ir/portal/#postcodeFinder" target="_blank">نقشه</a> یا از
-                            طریق <a href="http://epostcode.post.ir/postcode" target="_blank">نشانی</a></small></label>
-                    </div>
-                    <div class="cell"><label>آدرس پستی
-                        <textarea rows="4"
-                                  placeholder="اطلاعات تکمیلی آدرس را وارد نمایید(خیابان، کوچه، پلاک، واحد و یا ...)"
-                                  name="content"></textarea> <!----></label></div>
-                    <div class="cell medium-4 medium-offset-3"><a class="button success expanded save">ذخیره</a></div>
-                    <div class="cell medium-2"><a class="button alert hollow expanded" @click="$parent.edit=false">بستن</a></div>
-                </div>
-            </form>
+
+    <div v-if="text!==''" class="woocommerce-notices-wrapper">
+        <ul class="woocommerce-error" role="alert" style="background: #ffa9a982;">
+            <li>
+                {{text}}
+            </li>
+        </ul>
+    </div>
+
+    <div class="box2 woocommerce" style="position:relative;padding-bottom: 20px;">
+        <div class="title" v-if="$parent.page===1">ویرایش آدرس</div>
+        <div class="title" v-else-if="$parent.page===2">ایجاد آدرس</div>
+        <div role="button" @click="$parent.page=0" style="top: 19px;position: absolute;left: 22px;color: #aba9a7;font-size: 13px;">
+            بازگشت
+        </div>
+
+        <div class="woocommerce-billing-fields__field-wrapper" style="padding: 0 32px;">
+            <p class="form-row form-row-wide">
+                <label>عنوان
+                    <abbr class="required" title="ضروری">*</abbr>
+                </label>
+                <span class="woocommerce-input-wrapper">
+                            <input type="text" class="input-text " v-model="address.title">
+                </span>
+            </p>
+
+            <p class="form-row form-row-first validate-required"
+               id="billing_first_name_field" data-priority="10">
+                <label>نام&nbsp;
+                    <abbr class="required" title="ضروری">*</abbr>
+                </label>
+                <span class="woocommerce-input-wrapper">
+                            <input type="text" class="input-text" v-model="address.name">
+                        </span>
+            </p>
+            <p class="form-row form-row-last validate-required">
+                <label>نام خانوادگی&nbsp;
+                    <abbr class="required" title="ضروری">*</abbr>
+                </label>
+                <span class="woocommerce-input-wrapper">
+                            <input type="text" class="input-text " v-model="address.lname">
+                        </span>
+            </p>
+            <p class="form-row form-row-wide">
+                <label>نام شرکت&nbsp;
+                    <span class="optional">(اختیاری)</span>
+                </label>
+                <span class="woocommerce-input-wrapper">
+                            <input type="text" class="input-text " v-model="address.company">
+                        </span>
+            </p>
+
+
+            <p class="form-row form-row-first validate-required">
+                <label class="">تلفن&nbsp;
+                    <abbr class="required" title="ضروری">*</abbr>
+                </label>
+                <span class="woocommerce-input-wrapper">
+                            <input type="number" class="input-text" v-model="address.mobile">
+                        </span>
+            </p>
+            <p class="form-row form-row-last validate-required"
+               data-priority="20">
+                <label>ادرس ایمیل&nbsp;
+                    <abbr class="required" title="ضروری">*</abbr>
+                </label>
+                <span class="woocommerce-input-wrapper">
+                            <input type="email" class="input-text" v-model="address.email">
+                        </span>
+            </p>
+
+            <p class="form-row form-row-first validate-required">
+                <label class="">استان
+                    <abbr class="required" title="ضروری">*</abbr>
+                </label>
+                <span class="woocommerce-input-wrapper">
+                            <select_city v-model:id="address.province_id" key="'adsadasd565'"></select_city>
+                        </span>
+            </p>
+            <p class="form-row form-row-last validate-required"
+               data-priority="20">
+                <label>شهر
+                    <abbr class="required" title="ضروری">*</abbr>
+                </label>
+                <span class="woocommerce-input-wrapper">
+                            <select_city v-model:id="address.city_id" type="city" key="'adsadasd'"
+                                         :p_id="address.province_id"></select_city>
+
+                        </span>
+            </p>
+
+            <p class="form-row form-row-wide" style="float: right;width: 100%;">
+                <label class="">ادرس
+                    <abbr class="required" title="ضروری">*</abbr>
+                </label>
+                <span class="woocommerce-input-wrapper">
+                            <input type="text" class="input-text " v-model="address.content">
+                        </span>
+            </p>
+            <p class="form-row form-row-wide">
+                <label class="">کدپستی(بدون فاصله و با اعداد انگلیسی)
+                    <abbr class="required" title="ضروری">*</abbr>
+                </label>
+                <span class="woocommerce-input-wrapper">
+                            <input type="text" class="input-text" v-model="address.zipcode">
+                        </span>
+            </p>
+
+            <address_map></address_map>
+
+        </div>
+        <div class="nextstep mt-17"
+             style="display: flex;align-items: center;flex-direction: row-reverse;padding: 0 30px;">
+            <a v-if="$parent.page===2" @click="senddata" class="checkout-button button alt wc-forward"><span>ایجاد آدرس</span></a>
+            <a v-if="$parent.page===1" @click="senddata" style="margin-right: 11px;" class="checkout-button button alt wc-forward"><span>ثبت تغییرات</span></a>
+            <a v-if="$parent.page===1" @click="remove" style="background: #e71e1e;width: 165px;"
+               class="checkout-button button alt wc-forward"><span>حذف آدرس</span></a>
         </div>
     </div>
+
+
 </template>
 
 <script>
+import Select_city from "../inputs/select_city";
+import Address_map from "./address_map";
+
 export default {
-    name: "address-edit"
+    name: "address-edit",
+    components: {Address_map, Select_city},
+    props: ['address'],
+    data(){
+        return{
+            text:''
+        }
+    },
+    methods: {
+        async remove() {
+            let {data} = await window.axios.get('/cart/address/delete/' + this.address.id)
+            location.reload()
+        },
+        async senddata() {
+            if (this.address.title == null) {
+                this.alertM('عنوان را وارد کنید')
+                return ''
+            }
+            if (this.address.mobile == null) {
+                this.alertM('نام را وارد کنید')
+                return ''
+            }
+            if (this.address.lname == null) {
+                this.alertM('نام خانوادگی را وارد کنید')
+                return ''
+            }
+            if (this.address.email == null) {
+                this.alertM('ایمیل را وارد کنید')
+                return ''
+            }
+            if (this.address.province_id == null) {
+                this.alertM('استان را انتخاب کنید')
+                return ''
+            }
+            if (this.address.city_id == null) {
+                this.alertM('شهر را انتخاب کنید')
+                return ''
+            }
+            if (this.address.content == null) {
+                this.alertM('آدرس را وارد کنید')
+                return ''
+            }
+            if (this.address.zipcode == null) {
+                this.alertM('کدپستی را وارد کنید')
+                return ''
+            }
+            if (this.address.lat == null) {
+                this.alertM('ادرس را در نقشه مشخص کنید')
+                return ''
+            }
+
+            if (this.$parent.page === 1)
+                await window.axios.put('/cart/address/edit/' + this.address.id, this.address)
+            else if (this.$parent.page === 2)
+                await window.axios.post('/cart/address/new', this.address)
+            location.reload()
+        },
+        alertM(text) {
+            this.text = text
+            $('html ,body').stop().animate({scrollTop: 0}, 500)
+        }
+    },
+
 }
 </script>
 

@@ -14,6 +14,7 @@ class Invoice extends Model
     protected $appends = [
         'date',
         'date_n',
+        'price_fa'
     ];
 
     public function orders()
@@ -34,7 +35,7 @@ class Invoice extends Model
     {
         return $this->belongsTo('App\Models\User')->select('id','name');
     }
-    
+
     public function address()
     {
         return $this->belongsTo('App\Models\Address')->withTrashed();
@@ -45,7 +46,7 @@ class Invoice extends Model
     {
         return $this->hasOne('App\Models\InvoiceDetail', 'invoice_id');
     }
-    
+
     public function survey()
     {
         return $this->hasOne(Survey::class);
@@ -54,7 +55,7 @@ class Invoice extends Model
 
     public function getDueDateAttribute($value){
         return Verta($value)->format('l d F Y');
-    } 
+    }
 
     public function getPayDateAttribute($value){
         if (!$value) {return null;}
@@ -67,6 +68,10 @@ class Invoice extends Model
 
     public function getDateNAttribute(){
         return Verta($this->attributes['created_at'])->format('Y/m/d');
+    }
+
+    public function getPriceFaAttribute(){
+        return notowo($this->sub_total / 10, 'fa')->currency('تومان');
     }
 
     public function getCreatedAtAttribute($value){

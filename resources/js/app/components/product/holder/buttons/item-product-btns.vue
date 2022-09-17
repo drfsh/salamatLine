@@ -1,6 +1,6 @@
 <template>
     <div class="buttons">
-        <span @click="show=true" class="circle-hover">
+        <span @click="showMiniCart()" class="circle-hover">
             <ic_search></ic_search>
         </span>
         <a :href="'/compare/'+slug" target="_blank">
@@ -13,7 +13,6 @@
         <ic_heart v-else></ic_heart>
     </span>
     </div>
-    <mini_show v-if="show" :id="id"></mini_show>
 </template>
 
 <script>
@@ -23,12 +22,11 @@ import Ic_search from "../../../icon/ic_search";
 import Ic_shuffle from "../../../icon/ic_shuffle";
 import Ic_heart from "../../../icon/ic_heart";
 import Ic_status from "../../../icon/ic_status";
-import Mini_show from "./mini_show";
 
 export default {
     name: "item-product-btns",
     props: ['id', 'slug'],
-    components: {Mini_show, Ic_status, Ic_heart, Ic_shuffle, Ic_search, Ic_refresh, Ic_basket},
+    components: { Ic_status, Ic_heart, Ic_shuffle, Ic_search, Ic_refresh, Ic_basket},
     data() {
         return {
             status: {error: false, text: ''},
@@ -39,6 +37,13 @@ export default {
         }
     },
     methods: {
+        showMiniCart(){
+          window.boxAlert.show = true
+          window.boxAlert.type = 'mini_show'
+          window.boxAlert.value = {
+              id:this.id
+          }
+        },
         async addFavorite() {
             this.favoriteLoading = true
             let {data} = await window.axios.post('/profile/add-favorite/' + this.id)

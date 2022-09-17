@@ -5,17 +5,15 @@
             <ic_refresh v-else class="fa-spin"></ic_refresh>
         </div>
     </div>
-    <alert-aded v-if="status.text!==''" :status="status" :img="img" :name="name" :model="model"></alert-aded>
 </template>
 
 <script>
 import Ic_basket from "../../../icon/ic_basket";
-import AlertAded from "./alert-aded";
 import Ic_refresh from "../../../icon/ic_refresh";
 export default {
     name: "basket-product",
     props:['id','name','model','img'],
-    components: {Ic_refresh,  AlertAded, Ic_basket},
+    components: {Ic_refresh, Ic_basket},
     data(){
         return{
             status: {error:false,text:''},
@@ -27,6 +25,8 @@ export default {
             this.loading = true
             let m = {mf: null, mp: null,quantity:1};
             let {data} = await window.axios.post('/cart/add/' + this.id, m)
+            window.boxAlert.show = true
+            window.boxAlert.type = 'add_cart'
             this.status.text = data.status;
             if (data.status==null){
                 this.status.text = 'محصول با موفقیت به سبد خرید شما افزوده شد';
@@ -37,6 +37,10 @@ export default {
             if (data['situation']=='success'){
                 this.getData()
             }
+            window.boxAlert.value.status = this.status
+            window.boxAlert.value.img = this.img
+            window.boxAlert.value.name = this.name
+            window.boxAlert.value.model = this.model
             this.loading = false
         },
         async getData() {

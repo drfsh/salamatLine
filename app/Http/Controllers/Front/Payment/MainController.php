@@ -39,12 +39,13 @@ class MainController extends Controller
 		$userId = Auth::id();
 		$address_id = $request->address;
 		$delivery_time = $request->delivery;
+		$type_send = $request->typeSend;
 
 		$ad = $this->Address($address_id,$userId);
 
 		$shipping = Cart::session($userId)->getCondition('Shipping')->getValue();
 
-		$invoice = $this->CreateInvoice($userId,$ad,$address_id,$delivery_time,$shipping);
+		$invoice = $this->CreateInvoice($userId,$ad,$address_id,$delivery_time,$shipping,$type_send);
 
 		$payment_data = $this->bank->paymentRequest($invoice->grand_total, 'https://salamatline.com/payment/pasargad-callback', $invoice->id);
 		return response()->json(['state' => 'success','payment' => $payment_data,'text' => 'در حال انتقال به درگاه پرداخت']);

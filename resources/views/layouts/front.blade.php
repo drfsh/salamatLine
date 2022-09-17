@@ -19,9 +19,12 @@ $categories = App\Models\Category::defaultOrder()->toTree()->get();
 				<div class="off-canvas-content" data-off-canvas-content>
 					@yield('content')
 				</div>
-				
+
 			</div>
 		</div>
+
+        <div id="alerts-cart"></div>
+
 		@include('front.global.footer.main')
 		@include('front.global.js')
 	</body>

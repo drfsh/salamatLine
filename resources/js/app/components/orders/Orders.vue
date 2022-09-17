@@ -36,7 +36,7 @@
             </ul>
         </div>
         <div style="padding: 0 22px 22px;">
-            <div class="bbox">
+            <div class="bbox" style="border-radius: 0">
                 <div v-if="invoice==null"
                      style="height: 380px;display: flex;align-items: center;justify-content: center;">
                     <loading></loading>

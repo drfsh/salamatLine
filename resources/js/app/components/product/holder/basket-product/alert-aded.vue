@@ -1,8 +1,8 @@
 <template>
-    <div class="share-link-pop">
-        <div class="dismiss" @click="$parent.status.text=''"></div>
+    <div v-if="show" class="share-link-pop">
+        <div class="dismiss" @click="close"></div>
         <div style="z-index: 2;min-width: 452px;" class="card-share-link position-relative">
-            <i class="fas fa-times" @click="$parent.status.text=''"></i>
+            <i class="fas fa-times" @click="close"></i>
             <div style="text-align: center;margin-top: 14px;">
                 {{status.text}}
             </div>
@@ -41,7 +41,8 @@ export default {
     props:['status','name','model','img'],
     data() {
         return {
-            isCopy: false
+            isCopy: false,
+            show:true
         }
     },
     computed: {
@@ -50,17 +51,13 @@ export default {
         }
     },
     methods: {
-        copy() {
-            tools.copyText(this.link, this)
-            this.isCopy = true;
-        }
+        close(){
+            this.show = false
+            window.boxAlert.show = false
+            window.boxAlert.type = ''
+        },
     },
-    mounted() {
-        $('body').addClass('disableT')
-    },
-    unmounted() {
-        $('body').removeClass('disableT')
-    }
+
 }
 </script>
 

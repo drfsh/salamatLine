@@ -6,8 +6,8 @@
                     <cart-message v-if="status!==''" :text="status"></cart-message>
                     <div class="woocommerce-notices-wrapper"></div>
                     <div class="checkout woocommerce-checkout">
-                        <cart_addresses v-if="address_id===null"></cart_addresses>
-                        <edit_address v-else></edit_address>
+                        <edit_address v-if="address_id==0 || edit"></edit_address>
+                        <cart_addresses v-else></cart_addresses>
 
                         <div class="cell-30-left">
                             <h3 class="order_review_heading">سفارش شما</h3>
@@ -52,7 +52,7 @@
                                     </tfoot>
                                 </table>
 
-                                <div v-if="address_id!==null" id="payment" class="woocommerce-checkout-payment">
+                                <div v-if="address_id==0 || edit" id="payment" class="woocommerce-checkout-payment">
                                     <cart_address_map></cart_address_map>
                                 </div>
 
@@ -100,6 +100,7 @@ export default {
     },
     data() {
         return {
+            edit:false,
             status: '',
             auth: false,
             addresses: null,
@@ -124,14 +125,20 @@ export default {
         }
     },
     methods: {
-        selectAddress(v) {
+        selectAddress(v,t=false) {
             this.address = v
+            this.edit = t
             let vm = this
             setTimeout(function () {
                 vm.address_id = vm.address.id
                 vm.status = ''
-                vm.isContinue = true
-                $('html ,body').stop().animate({scrollTop:0},500)
+                if (vm.address_id !== 0)
+                    vm.isContinue = true
+                else
+                {
+                    vm.isContinue = false
+                    $('html ,body').stop().animate({scrollTop: 0}, 500)
+                }
             }, 200)
         },
         async getAddress() {
@@ -158,7 +165,7 @@ export default {
             this.status = data.status
             this.$parent.address_id = data.address
             this.fullLoading = false
-            $('html ,body').stop().animate({scrollTop:0},500)
+            $('html ,body').stop().animate({scrollTop: 0}, 500)
         }
     },
     mounted() {

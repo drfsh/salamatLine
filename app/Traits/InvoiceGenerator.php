@@ -9,7 +9,7 @@ use Cart;
 // use Log;
 
 trait InvoiceGenerator {
-    public function CreateInvoice($userId,$ad,$address_id,$delivery_time,$shipping) {
+    public function CreateInvoice($userId,$ad,$address_id,$delivery_time,$shipping,$type_send) {
 
         // $cartCollection = Cart::session($userId)->getContent();
         // $cart = json_decode( $cartCollection->toJson(), true );
@@ -27,6 +27,10 @@ trait InvoiceGenerator {
         $invoice->sub_total = round($total - $shipping);
         $invoice->grand_total = round($total);
         $invoice->due_date = $delivery_time;
+        $invoice->type_send = $type_send;
+
+        $invoice->situation = 'paid'; ///////////////////////////////////////////////////////////
+
         $invoice->save();
 
         foreach($CartItems as $item){
@@ -54,7 +58,7 @@ trait InvoiceGenerator {
                 if ($item->attributes['fid'] != 0) {
                     $detail->feature_id = $item->attributes['fid'];
                 }
-                
+
                 if ($item->attributes['feature'] && $item->attributes['price_des']) {
                     $detail->content = $item->attributes['feature'].' - '.$item->attributes['price_des'];
                 }elseif ($item->attributes['feature'] && !$item->attributes['price_des']) {
@@ -66,7 +70,7 @@ trait InvoiceGenerator {
                 $order->detail()->save($detail);
             }
         }
-        
+
 
         // $products = collect($cart)->transform(function($product) {
         //     $product['product_id'] = $product['associatedModel']['id'];
