@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Contactinfo extends Model
 {
     use HasFactory;
+    protected $guarded = [];
     protected $appends = [
         'mappin', 'image'
     ];
@@ -17,7 +18,7 @@ class Contactinfo extends Model
             return asset('img/contact/' . $value);
         }else{
             return null;
-        } 
+        }
     }
     public function getMappinAttribute($value)
     {
@@ -25,7 +26,7 @@ class Contactinfo extends Model
             return asset('img/contact/' . $value);
         }else{
             return null;
-        } 
+        }
     }
 
     public function seo()

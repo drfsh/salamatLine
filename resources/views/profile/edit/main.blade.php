@@ -65,7 +65,6 @@
                         <span class="invalid-feedback">{{ $errors->first('email') }}</span>
                     @endif
                 </div>
-                <hr class="hr-2">
                 <div class="cell medium-12">
                     {{ Form::label('password1', 'گذرواژه جدید') }}
                     <span class="info">(درصورتی که قصد تغییر ندارید خالی بگذارید)</span>
@@ -83,7 +82,6 @@
 
                 </div>
 
-                <hr class="hr-2">
                 <div class="cell medium-12">
                     {{ Form::label('mobile', 'شماره تلفن همراه') }}
                     {{ Form::text('mobile', null) }}

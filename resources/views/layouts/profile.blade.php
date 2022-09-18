@@ -29,6 +29,7 @@ $categories = App\Models\Category::defaultOrder()->toTree()->get();
 
     </div>
 </div>
+<div id="alerts-cart"></div>
 @include('front.global.footer.main')
 @include('front.global.js')
 </body>

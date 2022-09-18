@@ -1,7 +1,7 @@
 <template>
     <div class="mini-cart-3">
 
-        <div v-if="products!==null" class="widget_shopping_cart_content">
+        <div v-if="$parent.num!==0" class="widget_shopping_cart_content">
 
             <ul class="woocommerce-mini-cart cart_list product_list_widget ">
                 <li v-for="v in products" class="woocommerce-mini-cart-item mini_cart_item">

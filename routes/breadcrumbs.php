@@ -63,6 +63,10 @@ Breadcrumbs::for('ProfileAddress', function ($trail) {
     $trail->push('مدیریت آدرس‌ها', route('ProfileAddress'));
 });
 
+Breadcrumbs::for('contactus', function ($trail) {
+    $trail->parent('home');
+    $trail->push('تماس با ما', route('contactus'));
+});
 Breadcrumbs::for('Tickets', function ($trail) {
     $trail->parent('profile');
     $trail->push('تیکت ها', route('Tickets'));

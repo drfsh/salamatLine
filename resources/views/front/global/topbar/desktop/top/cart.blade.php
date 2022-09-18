@@ -39,6 +39,14 @@
                                     پنل کاربری
                                 </a>
                             </li>
+                            @if(Auth::user()->hasRole('Admin'))
+                            <li>
+                                <a href="{{route('admin')}}">
+                                    @include('icons.verify')
+                                    پنل مدیریت سایت
+                                </a>
+                            </li>
+                            @endif
                             <li>
                                 <a href="{{route('ProfileEdit')}}">
                                     @include('icons.user-edit')

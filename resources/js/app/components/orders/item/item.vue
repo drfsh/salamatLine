@@ -1,5 +1,5 @@
 <template>
-    <a class="order-item" :href="'/profile/order/'+item.id">
+    <a class="order-item" href="#">
         <div class="status">
 
             <span class="text" v-if="item.situation=='unpaid'">

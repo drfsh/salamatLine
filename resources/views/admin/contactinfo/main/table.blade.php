@@ -33,7 +33,7 @@
 
                     <tr>
                         <td>تلفن سوم</td>
-                        <td>{{ $contact->phone2 }}</td>
+                        <td>{{ $contact->phone3 }}</td>
                     </tr>
 
                     <tr>

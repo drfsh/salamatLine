@@ -13,7 +13,7 @@
             </div>
             <div class="section" style="min-width: 30.5%;">
                 <div class="item bb"><span>شماره تلفن همراه : </span> {{value.mobile}}</div>
-                <div class="item"><span>آدرس ایمیل : </span> ---------</div>
+                <div class="item"><span>آدرس ایمیل : </span> {{value.email}}</div>
 
             </div>
         </div>

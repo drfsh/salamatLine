@@ -3,7 +3,7 @@
         <article id="post-19" class="post-19 page type-page status-publish hentry">
             <div class="entry-content">
                 <div class="woocommerce">
-                    <cart-message v-if="status!==''" :text="status"></cart-message>
+                    <cart-message v-if="status!==''" :situation="error" :text="status"></cart-message>
                     <div class="woocommerce-notices-wrapper"></div>
                     <div class="checkout woocommerce-checkout">
                         <edit_address v-if="address_id==0 || edit"></edit_address>
@@ -100,6 +100,7 @@ export default {
     },
     data() {
         return {
+            error:'',
             edit:false,
             status: '',
             auth: false,
@@ -145,14 +146,58 @@ export default {
             let {data} = await window.axios.get('/cart/address/list')
             this.addresses = data;
             if (data.length > 0)
-                this.status = 'ادرس را انتخاب کنید'
+                this.status = 'آدرس را انتخاب کنید'
             else {
-                this.status = 'یک ادرس ایجاد کنید'
+                this.status = 'یک آدرس ایجاد کنید'
                 this.address_id = 0
             }
         },
+        alertM(text) {
+            this.status = text
+            this.error = 'warning'
+            $('html ,body').stop().animate({scrollTop: 0}, 500)
+        },
         async nextStep() {
             if (!this.isContinue) return ''
+
+
+            if (this.address.title == null) {
+                this.alertM('آدرس را ویرایش و عنوان را وارد کنید')
+                return ''
+            }
+            if (this.address.mobile == null) {
+                this.alertM('آدرس را ویرایش و نام را وارد کنید')
+                return ''
+            }
+            if (this.address.lname == null) {
+                this.alertM('آدرس را ویرایش و نام خانوادگی را وارد کنید')
+                return ''
+            }
+            if (this.address.email == null) {
+                this.alertM('آدرس را ویرایش و ایمیل را وارد کنید')
+                return ''
+            }
+            if (this.address.province_id == null) {
+                this.alertM('آدرس را ویرایش و استان را انتخاب کنید')
+                return ''
+            }
+            if (this.address.city_id == null) {
+                this.alertM('آدرس را ویرایش و شهر را انتخاب کنید')
+                return ''
+            }
+            if (this.address.content == null) {
+                this.alertM('آدرس را ویرایش و آدرس را وارد کنید')
+                return ''
+            }
+            if (this.address.zipcode == null) {
+                this.alertM('آدرس را ویرایش و کدپستی را وارد کنید')
+                return ''
+            }
+            if (this.address.lat == null) {
+                this.alertM('آدرس را ویرایش و ادرس را در نقشه مشخص کنید')
+                return ''
+            }
+
             this.fullLoading = true
 
             let m = {

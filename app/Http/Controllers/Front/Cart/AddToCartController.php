@@ -7,6 +7,7 @@ use App\Models\Discount;
 use Illuminate\Http\Request;
 use Auth;
 use Cart;
+use Illuminate\Support\Facades\Cookie;
 use Response;
 use App\Models\Product;
 use App\Traits\CheckMultiprice;
@@ -24,9 +25,10 @@ class AddToCartController extends Controller{
 
 		if (!Auth::check()){
 			return response()->json(['error' => 'please login']);
-		}
+        }
 
-		$userId = Auth::id();
+        $userId = Auth::id();
+
 		$product = Product::findOrFail($id);
 		$multiprice_id = $request->mp;
 		$multifeature_id = $request->mf;
@@ -90,18 +92,18 @@ class AddToCartController extends Controller{
 					$discount_id = $item->id;
 					$discount_price = $item->price;
 
-				// agar faghat featur dashte bashad	
+				// agar faghat featur dashte bashad
 				}elseif (($mid == 0 && $fid != 0) && ($fid == $item->feature_id)) {
 					$discount_id = $item->id;
 					$discount_price = $item->price;
-				// agar faghat multi price dashtre bashad	
+				// agar faghat multi price dashtre bashad
 				}elseif (($mid != 0 && $fid == 0) && ($mid == $item->price_id)) {
 					$discount_id = $item->id;
 					$discount_price = $item->price;
 				// agar tak gheymati bashad
 				}elseif (($mid == 0 && $fid == 0) && (!$item->price_id && !$item->feature_id)) {
 					$discount_id = $item->id;
-					$discount_price = $item->price;					
+					$discount_price = $item->price;
 				}
 
 				$allowed_number = $item->max_uses - $item->uses;

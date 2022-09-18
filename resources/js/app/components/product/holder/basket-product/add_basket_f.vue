@@ -9,7 +9,7 @@ import Ic_refresh from "../../../icon/ic_refresh";
 
 export default {
     name: "add_basket_f",
-    props: ['id', 'name', 'model', 'img'],
+    props: ['id', 'name', 'model', 'img','active'],
     components: {Ic_refresh, AlertAded, Ic_basket},
     data() {
         return {
@@ -19,6 +19,7 @@ export default {
     },
     methods: {
         async adToCard() {
+            if (this.active=='0') return''
             this.loading = true
             let m = {mf: null, mp: null, quantity: 1};
             let {data} = await window.axios.post('/cart/add/' + this.id, m)
@@ -27,9 +28,11 @@ export default {
             this.status.text = data.status;
             if (data.status == null) {
                 this.status.text = 'محصول با موفقیت به سبد خرید شما افزوده شد';
+                this.status.error = false
             }
             if (data.error == 'please login') {
                 this.status.text = 'برای افزودن به سبد خرید لطفا عضو شوید';
+                this.status.error = true
             }
             if (data['situation'] == 'success') {
                 this.getData()

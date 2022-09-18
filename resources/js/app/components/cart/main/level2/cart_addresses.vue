@@ -2,40 +2,40 @@
     <div class="col2-set" id="customer_details">
         <div class="col-1">
             <div class="woocommerce-billing-fields">
-                <h3 style="font-size: 16px;font-weight: 400;color: #3b4359;">ادرس ها</h3>
-                <a target="_blank" href="/profile/address">
-                    <div class="address-manager">مدیریت آدرس</div>
-                </a>
+                <h3 style="font-size: 16px;font-weight: 400;color: #3b4359;">آدرس ها</h3>
                 <loading v-if="addresses===null"></loading>
                 <div style="margin-top: 20px;" v-else>
-                    <div role="button" v-for="(v,i) in addresses" :key="'adddres'+i"
-                         class="woocommerce-info address">
-                        {{ v.title }}
-                        <span style="margin-right:9px;font-size: 11px;" v-if="v.province_id!==null">
+                    <div class="item-address-cart" v-for="(v,i) in addresses" :key="'adddres'+i"
+                         :class="{'active':address!==null && v.id===address.id}">
+                        <div role="button"
+                             class="woocommerce-info address">
+                            {{ v.title }}
+                            <span style="margin-right:9px;font-size: 11px;" v-if="v.province_id!==null">
                             {{ v.province.title }}
                         </span>
-                        <span style="font-size: 11px;"
-                              v-if="v.city_id!==null"> , {{ v.city.title }} </span>
-                        <span style="font-size: 11px;"
-                              v-if="v.district_id!==null"> , {{ v.district.title }} </span>
-                        <div class="content">
+                            <span style="font-size: 11px;"
+                                  v-if="v.city_id!==null"> , {{ v.city.title }} </span>
+                            <span style="font-size: 11px;"
+                                  v-if="v.district_id!==null"> , {{ v.district.title }} </span>
+                            <div class="content">
                             <span class="item">
                                 <span class="icon"><ic_location></ic_location></span>
                                 <span>{{ v.content }}</span>
                             </span>
-                            <span class="item">
+                                <span class="item">
                                 <span class="icon"><ic_user1></ic_user1></span>
                                 <span>{{ v.name }}</span>
                             </span>
-                            <span class="item">
+                                <span class="item">
                                 <span class="icon"><ic_mobile2></ic_mobile2></span>
                                 <span>{{ v.mobile }}</span>
                             </span>
+                            </div>
                         </div>
-                        <div @click="$parent.selectAddress(v)" class="selecting" :class="{'active':address!==null && v.id===address.id}">
+                        <div @click="$parent.selectAddress(v)" role="button" class="selecting">
                             <i class="fas fa-check"></i>
                         </div>
-                        <i class="edit" @click="$parent.selectAddress(v,true)">
+                        <i class="edit" role="button" @click="$parent.selectAddress(v,true)">
                             <ic_edit2></ic_edit2>
                         </i>
                     </div>
@@ -44,7 +44,7 @@
                             <ic_add></ic_add>
                         </span>
                         <span class="text">
-                            ادرس جدید
+                            آدرس جدید
                         </span>
                     </div>
                 </div>

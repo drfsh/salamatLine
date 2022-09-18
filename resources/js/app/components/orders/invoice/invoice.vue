@@ -1,6 +1,6 @@
 <template>
-    <div v-if="data!==null" class="size invoice" style="max-width: 29.7cm;">
-        <div class="title">
+    <div id="print_contact" v-if="data!==null" class="size invoice" style="max-width: 29.7cm;" :class="{'hA4':printing}">
+        <div class="title" role="button" @click="print">
             <ic_print></ic_print>
         </div>
         <div class="top">
@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="sell" style="height: 70px;">
+            <div class="sell" style="height: 76px;">
                 <div class="title">
                     <span>خریدار</span>
                 </div>
@@ -152,7 +152,8 @@ export default {
     props: ['id'],
     data() {
         return {
-            data: null
+            data: null,
+            printing:false
         }
     },
     computed: {
@@ -196,6 +197,14 @@ export default {
         }
     },
     methods: {
+        print(){
+            let vm = this
+            this.printing = true
+            setTimeout(function () {
+                window.print()
+                vm.printing = false
+            },500)
+        },
         discount(v) {
             if (v === null || v.discount == null)
                 return 0

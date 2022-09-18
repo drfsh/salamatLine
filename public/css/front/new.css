@@ -3568,6 +3568,7 @@ body.auth #salamat-logo {
 }
 
 .woocommerce-info.address {
+    transition: 0.2s;
     margin-bottom: 12px;
     position: relative;
     overflow: hidden;
@@ -3603,23 +3604,33 @@ body.auth #salamat-logo {
     height: 17px;
     margin-bottom: 3px;
 }
-
-.woocommerce-info.address .selecting {
+.item-address-cart{
+    transition: 0.2s;
+    padding-right: 60px;
+    position: relative;
+}
+.item-address-cart.active{
+    padding: 0;
+}
+.item-address-cart.active .woocommerce-info.address{
+    padding-right: 46px;
+}
+.item-address-cart .selecting {
     position: absolute;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
 }
-.woocommerce-info.address .selecting i{
+.item-address-cart .selecting i{
     top: calc(50% - 7px);
     position: absolute;
     font-size: 13px;
     color: #b9b9b9;
-    left: 77px;
+    right: 16px;
 }
-.woocommerce-info.address .selecting:after {
-    transition: 0.2s;
+.item-address-cart .selecting:after {
+    transition: 0.3s;
     content: "";
     display: block;
     position: absolute;
@@ -3629,39 +3640,40 @@ body.auth #salamat-logo {
     border: 2px solid;
     top: 50%;
     transform: translateY(-50%);
-    left: 70px;
+    right: 10px;
     color: #c8d7e4;
 }
 
-.woocommerce-info.address .selecting:before {
-    transition: 0.2s;
+.item-address-cart .selecting:before {
+    transition: 0.3s;
     content: "";
     display: block;
     position: absolute;
     border-radius: 10px;
     top: 50%;
     transform: translateY(-50%);
-    left: 70px;
+    right: 10px;
     background: #0948730f;
     width: 27px;
     height: 27px;
 }
 
-.woocommerce-info.address .selecting.active:after {
+.item-address-cart.active .selecting:after {
     width: 100%;
     height: 100%;
-    left: 0;
+    right: 0;
 }
 
-.woocommerce-info.address .selecting.active:before {
+.item-address-cart.active .selecting:before {
     width: 100%;
     height: 100%;
-    left: 0;
+    right: 0;
 }
-.woocommerce-info.address .selecting.active i{
+.item-address-cart.active .selecting i{
     color: #3eaa3e;
 }
-.woocommerce-info.address .edit {
+.item-address-cart .edit {
+
     position: absolute;
     top: 33px;
     left: 27px;
@@ -3675,9 +3687,13 @@ body.auth #salamat-logo {
     color: #8a8e91;
     border: 2px solid #c8d7e4;
 }
-.woocommerce-info.address .edit svg{
+.item-address-cart .edit svg{
     width: 18px;
     height: 18px;
+}
+footer .bg-swip .box{
+    width: 18%;
+    text-align: center;
 }
 .checkout.woocommerce-checkout .order_review_heading {
     font-size: 17px;
@@ -4342,6 +4358,28 @@ footer .top .contact-us .email {
     text-align: center;
     margin-top: 15px;
     font-size: 13px;
+}
+footer .top .contact-us .mapurl span:nth-child(2){
+    margin-bottom: -6px;
+    font-size: 17px;
+    font-weight: 600;
+    margin-right: 3px;
+}
+footer .top .contact-us .mapurl span:nth-child(3){
+    margin-bottom: -6px;
+    font-size: 17px;
+}
+footer .top .contact-us .mapurl img{
+    width: 25px;
+}
+footer .top .contact-us .mapurl {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: center;
+    direction: ltr;
+    margin-top: 17px;
+    color: #676161;
 }
 
 footer .top .co-12 {
@@ -5056,7 +5094,13 @@ footer .sub {
     align-items: center;
     flex-direction: row;
 }
-
+.hA4{
+    width: 20.5cm!important;
+    height: 28.7cm!important;
+}
+.hA4 * {
+    font-size: 0.66rem !important;
+}
 .invoice .finish .t .titlr {
     padding: 11px;
     display: flex;
@@ -5599,6 +5643,76 @@ footer .sub {
 .whatsapp-panel .list .item .fa-chevron-left{
     font-size: 13px;
     color: #8d8f92;
+}
+
+.box3.contactus{
+    padding: 35px;
+}
+.box3.contactus .title {
+    font-size: 16px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.box3.contactus .title:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #e5e5e5b5;
+    margin-right: 14px;
+}
+.box3.contactus .drow {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.box3.contactus .drow .c-about{
+    width: 40%;
+}
+
+.box3.contactus .drow .c-about .item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+    border-bottom: 0.1rem solid #e5e5e591;
+    font-weight: 600;
+    color: #767676;
+}
+.box3.contactus .drow .c-about .item .name{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    justify-content: flex-start;
+}
+.box3.contactus .drow .c-about .item .name svg{
+
+    width: 20px;
+    height: 20px;
+    color: #094873;
+    margin-left: 8px;
+}
+.box3.contactus .drow .c-about .so{
+    display: flex;
+    align-items: center;
+    padding: 24px 0;
+    padding-bottom: 1px;
+    justify-content: space-between;
+}
+.box3.contactus .drow .c-about .so a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+    color: #6d6f71;
+}
+.box3.contactus .drow .c-about .so a svg{
+    margin-bottom: 6px;
 }
 @media only screen and (max-width: 1130px) {
     .search-cell {

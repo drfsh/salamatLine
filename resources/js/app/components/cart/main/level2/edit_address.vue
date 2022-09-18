@@ -5,7 +5,7 @@
                 <h3 style="font-size: 16px;font-weight: 400;color: #3b4359;">جزئیات صورتحساب</h3>
                 <div v-if="address_id===null || addresses.length>0" class="address-manager"
                      @click="backSelect()">
-                    انتخاب مجدد ادرس
+                    انتخاب مجدد آدرس
                 </div>
                 <a v-else target="_blank" href="/profile/address">
                     <div class="address-manager">مدیریت آدرس</div>

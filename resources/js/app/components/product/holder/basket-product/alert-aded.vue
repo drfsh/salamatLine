@@ -1,12 +1,13 @@
 <template>
     <div v-if="show" class="share-link-pop">
         <div class="dismiss" @click="close"></div>
-        <div style="z-index: 2;min-width: 452px;" class="card-share-link position-relative">
-            <i class="fas fa-times" @click="close"></i>
+        <div style="z-index: 2;min-width: 452px;" class=" card-share-link position-relative bg-w">
+            <i v-if="status.error" style="width: 27px;height: 27px;background: red;" class="fas fa-times" @click="close"></i>
+            <i  class="fas fa-times" v-else @click="close"></i>
             <div style="text-align: center;margin-top: 14px;">
                 {{status.text}}
             </div>
-            <div class="sgare-sepid-box" style="border: 2px dashed rgb(228, 228, 228);margin-top: 23px;">
+            <div v-if="!status.error" class="sgare-sepid-box" style="border: 2px dashed rgb(228, 228, 228);margin-top: 23px;">
                 <div style="margin: 0;display: flex;align-items: center;position: relative;">
                     <div class="product-aspk" style="
     width: 109px;
@@ -23,8 +24,8 @@
                     </div>
                 </div>
             </div>
-            <div style="display: flex;padding: 14px 11px 0;justify-content: space-between;">
-                <div role="button" style="color: #0a4773;border-bottom: 1px dashed;padding-bottom: 8px;" @click="$parent.status.text=''">ادامه خرید</div>
+            <div v-if="!status.error" style="display: flex;padding: 14px 11px 0;justify-content: space-between;">
+                <div role="button" style="color: #0a4773;border-bottom: 1px dashed;padding-bottom: 8px;" @click="close">ادامه خرید</div>
                 <a style="background: #40c340;color: white;border-radius: 10px;padding: 3px 8px;" href="/cart">مشاهده سبد خرید </a>
             </div>
         </div>
@@ -32,9 +33,6 @@
 </template>
 
 <script>
-import tools from "../../../../utils/tools";
-
-
 
 export default {
     name: "alert-aded",

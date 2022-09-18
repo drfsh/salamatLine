@@ -22,6 +22,6 @@
             name="{{$item->title}}"
             model="{{$item->subtitle}}"
             img="{{$item->tiny}}"
-    >
+            active="{{$item->active}}">
     </basket-product>
 </div>

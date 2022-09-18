@@ -101,10 +101,11 @@ class ContactinfoController extends Controller
 
     public function update(Request $request, $id)
     {
+
         $contact = Contactinfo::find($id);
         $contact->phone1 = $request->input('phone1');
         $contact->phone2 = $request->input('phone2');
-        $contact->phone2 = $request->input('phone3');
+        $contact->phone3 = $request->input('phone3');
         $contact->email = $request->input('email');
         $contact->fax = $request->input('fax');
         $contact->address = $request->input('address');

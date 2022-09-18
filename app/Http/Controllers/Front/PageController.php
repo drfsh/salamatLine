@@ -61,8 +61,12 @@ class PageController extends Controller
 			TwitterCard::addValue('description', $Des);
 		}
         TwitterCard::addValue('card', 'Summary');
-        
+
 
         return view('front.page.single', compact('page'));
+    }
+
+    public function contactUs(){
+        return view('front.page.contactus.main');
     }
 }

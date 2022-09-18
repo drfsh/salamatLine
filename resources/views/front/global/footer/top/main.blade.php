@@ -11,34 +11,43 @@
 {{--	</div>--}}
 {{--</div>--}}
 
+
 <div class="top">
 	<div class="co-12" style="padding-right: 0;">
 		<div class="contact-us">
 			@include('front.global.logo')
 			<div class="accounts">
-				<a class="circle-hover">
+				<a class="">
 					@include('icons.instagram')
 				</a>
-				<a  class="circle-hover">
+				<a  class="">
 					@include('icons.telegram')
 				</a>
 			</div>
 			<div class="numbers">
+                <a href="tel:{{$globalcontact[0]->phone1}}">
+                    <div>
+                        <span>021</span>
+                        {{explode('021',$globalcontact[0]->phone1)[1]}}
+                    </div>
+                </a>
+                @if($globalcontact[0]->phone2)
 				<div>
-					<span>021</span>
-					66462985
+                    {{$globalcontact[0]->phone2}}
 				</div>
-				<div>
-					<span>021</span>
-					66462985
-				</div>
+                @endif
 			</div>
 			<div class="email">
-				info@salamatline.com
+                {{$globalcontact[0]->email}}
 			</div>
 			<div class="email">
-				تهران، خیابان ولیعصر، بالاتر از جامی،پلاک ۱۰۷۰
-			</div>
+                {{$globalcontact[0]->address}}
+            </div>
+            <a target="_blank" class="mapurl" href="{{$globalcontact[0]->mapurl}}">
+                <img src="{{asset('img/googlemaps.png')}}"/>
+                <span>GOOGLE </span>
+                <span>MAP</span>
+            </a>
 		</div>
 	</div>
 	<div class="co-12">
