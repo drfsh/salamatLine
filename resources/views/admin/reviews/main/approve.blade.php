@@ -3,10 +3,10 @@
         <div class="heading">
             <div class="grid-x">
                 <div class="cell medium-6"><h4>نظرات تایید نشده</h4></div>
-                <div class="cell medium-6">    
+                <div class="cell medium-6">
                     <div class="float-left">
-                
-                    </div> 
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -24,7 +24,7 @@
             <tbody>
                 @foreach ($ratings as $item)
                     <tr>
-                        <td><a target="_blank" href="{{ route('product', $item->reviewrateable->slug) }}">{{ $item->reviewrateable->title }}</a></td>
+                        <td><a target="_blank" href="{{ route('product', $item->reviewrateable2->slug) }}">{{ $item->reviewrateable2->title }}</a></td>
                         <td>{{ $item->author->name }}</td>
                         <td>{{ $item->body }}</td>
                         <td>{{ $item->rating }}</td>

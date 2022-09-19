@@ -33,7 +33,6 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        dd( $request->input('name'));
         $parent_id = $request->input('parent_id');
         $attributes = [
             'name' => $request->input('name'),

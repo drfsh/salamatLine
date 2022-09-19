@@ -52,7 +52,8 @@ export default {
         async allData() {
             this.loading = true
             let {data} = await window.axios.get('/admin/api/product')
-            data = data.data
+
+
             const column = [
                 {
                     title: '#',
@@ -110,7 +111,7 @@ export default {
         },
         async currentData() {
             this.loading = true
-            data = this.$parent.list
+            let data = this.$parent.list
             const column = [
                 {
                     title: '#',
