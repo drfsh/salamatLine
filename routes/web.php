@@ -73,6 +73,8 @@ Route::group(['middleware' => ['web']], function () {
 	Route::get('page', [App\Http\Controllers\Front\PageController::class, 'index'])->name('indexpage');
 	Route::get('page/{slug}', [App\Http\Controllers\Front\PageController::class, 'main'])->name('singlepage');
 	Route::get('contact-us', [App\Http\Controllers\Front\PageController::class, 'contactUs'])->name('contactus');
+	Route::get('about-us', [App\Http\Controllers\Front\PageController::class, 'about'])->name('about');
+	Route::post('contact-us', [App\Http\Controllers\Front\PageController::class, 'contactUs'])->name('contactus');
 
 	Route::get('brands', [App\Http\Controllers\Front\BrandController::class, 'holder'])->name('brandHolder');
 	Route::get('brands/{slug}', [App\Http\Controllers\Front\BrandController::class, 'main'])->name('brand');

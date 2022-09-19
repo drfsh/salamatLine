@@ -26,6 +26,7 @@ import invoice from "./components/orders/invoice/invoice";
 import add_basket_f from "./components/product/holder/basket-product/add_basket_f";
 import removeFavorites from "../../views/front/favorites/remove-favorites";
 import alerts_cart from "./components/alerts/alerts_cart";
+import map_page from "./components/pages/map_page";
 
 require('./bootstrap')
 require('jquery-confirm')
@@ -157,6 +158,10 @@ setElement([
     {
         name: 'news-letter',
         component: newsletter,
+    },
+    {
+        name: 'map-page',
+        component: map_page,
     },
 ])
 
