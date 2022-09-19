@@ -3,14 +3,22 @@
 @section('content')
 
 
+    <div class="double-gap"></div>
     <div class="grid-container">
         <div class="grid-x grid-padding-x">
             {{ Breadcrumbs::render('contactus') }}
         </div>
     </div>
-    <div class="double-gap"></div>
-    <div class="grid-container">
-            <div class="box3 contactus">
+    <div class="grid-container" style="position:relative;">
+        <div class="contact-popup">
+            <a>
+                @include('icons.phone')
+            </a>
+            <a>
+                @include('icons.comment')
+            </a>
+        </div>
+        <div class="box3 contactus">
                 <div class="title">اطلاعات تماس</div>
                 <div class="drow">
                     <div class="c-about">
@@ -89,5 +97,12 @@
             </div>
     </div>
     <div class="double-gap"></div>
+    <div class="double-gap"></div>
+    <div class="grid-container">
+        <div class="box3 contactus">
+            <div class="title"> فرم تماس با ما</div>
+            @include('front.page.contactus.form.main')
+        </div>
+    </div>
 
 @endsection

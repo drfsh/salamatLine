@@ -69,7 +69,8 @@
 			<ul>
 				@foreach ($globalpages as $item)
 					<li>
-						<a class="point" href="{{ route('singlepage', $item->slug) }}">
+						<a class="point" @if($item->slug!=='about-us' && $item->slug!=='contact-us') href="{{ route('singlepage', $item->slug) }}"
+						@else href="/{{$item->slug}}" @endif>
 							<span>{{$item->title}}</span>
 						</a>
 					</li>

@@ -69,4 +69,7 @@ class PageController extends Controller
     public function contactUs(){
         return view('front.page.contactus.main');
     }
+    public function about(){
+        return view('front.page.about.main');
+    }
 }

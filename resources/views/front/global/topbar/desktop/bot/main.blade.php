@@ -18,10 +18,10 @@
 								<a href="{{route('OrdersTracking')}}">پیگیری سفارش</a>
 							</li>
 							<li>
-								<a href="/page/about-us">درباره ما</a>
+								<a href="/about-us">درباره ما</a>
 							</li>
 							<li>
-								<a href="/page/contact-us">تماس با ما</a>
+								<a href="/contact-us">تماس با ما</a>
 							</li>
 						</ul>
 					</div>
