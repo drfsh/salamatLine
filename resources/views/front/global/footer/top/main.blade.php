@@ -11,7 +11,6 @@
 {{--	</div>--}}
 {{--</div>--}}
 
-
 <div class="top">
 	<div class="co-12" style="padding-right: 0;">
 		<div class="contact-us">
@@ -31,7 +30,7 @@
                         {{explode('021',$globalcontact[0]->phone1)[1]}}
                     </div>
                 </a>
-                @if($globalcontact[0]->phone2)
+				@if($globalcontact[0]->phone2)
 				<div>
                     {{$globalcontact[0]->phone2}}
 				</div>

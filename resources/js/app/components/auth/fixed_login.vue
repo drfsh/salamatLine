@@ -66,6 +66,7 @@ export default {
             vm.show = false
             setTimeout(function () {
                 vm.$parent.showLogin=false
+                window.boxAlert.type = ''
             },200)
         }
     },

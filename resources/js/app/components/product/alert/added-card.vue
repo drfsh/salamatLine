@@ -10,6 +10,8 @@
         </div>
         <div class="woocommerce-message" role="alert" v-else>
             {{text}}
+
+            <a  v-if="text==='جهت ثبت درخواست لطفا وارد شوید'" @click="showLogin=true" tabindex="1" class="button wc-forward">ورود</a>
         </div>
     </div>
     <fixed_login v-if="showLogin"></fixed_login>

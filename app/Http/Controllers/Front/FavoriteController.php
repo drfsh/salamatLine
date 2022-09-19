@@ -25,7 +25,7 @@ class FavoriteController extends Controller
 			$products = $user->favorite(Product::class);
 			return view('profile.favorite.main',compact('products'));
 		}else{
-			return Redirect::route('home');
+			return Redirect('login');
 		}
 	}
 

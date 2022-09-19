@@ -2,10 +2,18 @@
     <div v-if="show" class="share-link-pop">
         <div class="dismiss" @click="close"></div>
         <div style="z-index: 2;min-width: 452px;" class=" card-share-link position-relative bg-w">
-            <i v-if="status.error" style="width: 27px;height: 27px;background: red;" class="fas fa-times" @click="close"></i>
+            <i v-if="status.error" style="    width: 20px;
+    height: 20px;
+    font-size: 11px;
+    color: #bfbfbf;
+    top: 5px;
+    background: transparent;
+    right: 6px;" class="fas fa-times" @click="close"></i>
             <i  class="fas fa-times" v-else @click="close"></i>
-            <div style="text-align: center;margin-top: 14px;">
+            <div style="text-align: center;margin-top: 14px;font-size: 13px;">
                 {{status.text}}
+
+                <a @click="login" style="margin-right: 58px;" class="button wc-forward">ورود</a>
             </div>
             <div v-if="!status.error" class="sgare-sepid-box" style="border: 2px dashed rgb(228, 228, 228);margin-top: 23px;">
                 <div style="margin: 0;display: flex;align-items: center;position: relative;">
@@ -49,6 +57,10 @@ export default {
         }
     },
     methods: {
+        login(){
+            this.show = false
+            window.boxAlert.type = 'login'
+        },
         close(){
             this.show = false
             window.boxAlert.show = false

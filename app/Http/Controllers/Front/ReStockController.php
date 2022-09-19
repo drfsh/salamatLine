@@ -15,7 +15,7 @@ class ReStockController extends Controller
 		$user = Auth::user();
 
 		if(!$user) {
-			return response()->json(['status' => 'جهت ثبت درخواست لطفا وارد شوید','color' => 'warning']);
+			return response()->json(['status' => 'جهت ثبت درخواست لطفا وارد شوید','color' => 'warning','error'=>'true']);
 		}
 		if (!$user->mobile) {
 			return response()->json(['status' => 'شماره موبایل شما ثبت نشده است','color' => 'warning']);

@@ -24,10 +24,6 @@
             </span>
             <loading v-else class="small"></loading>
         </button>
-        <div v-if="status!==null">
-            <div class="gap"></div>
-            <div class="callout warning"><small>{{ status }}</small></div>
-        </div>
         <div class="info-orng">
             <span><ic_shield></ic_shield></span>
             <span>تا ۸ سال ضمانت دارد</span>

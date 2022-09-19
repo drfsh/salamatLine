@@ -3,12 +3,17 @@
 		<li>
 				<cart-num></cart-num>
 		</li>
-
+        <li>
+            <a class="btnh" href="{{route('MyFavorites')}}">
+                @include('icons.heart')
+            </a>
+        </li>
 		<li>
 			<div role="button" class="login btnh" href="{{route('login')}}">
 				@include('icons.user')
 				<span><a href="{{route('login')}}">ورود</a> / <a href="{{route('register')}}">ثبت نام</a>  </span>
-			</div>
+
+            </div>
 		</li>
 	</ul>
 @else

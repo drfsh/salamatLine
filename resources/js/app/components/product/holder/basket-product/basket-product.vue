@@ -34,7 +34,7 @@ export default {
                 this.status.error = false
             }
             if (data.error=='please login'){
-                this.status.text = 'برای افزودن به سبد خرید لطفا عضو شوید';
+                this.status.text = 'برای افزودن به سبد خرید ابتدا وارد حساب کاربری خود شوید';
                 this.status.error = true
             }
             if (data['situation']=='success'){

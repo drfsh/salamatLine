@@ -52,7 +52,7 @@ export default {
     components: {RegisterEmail, AuthEnterCode, Ic_mobile, Ic_email, AuthGoogle, AuthPhone},
     data(){
         return{
-            page:3,
+            page:1,
             mobile:'09',
         }
     }
