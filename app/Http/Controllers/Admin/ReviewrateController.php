@@ -28,6 +28,9 @@ class ReviewrateController extends Controller
     public function approved()
     {
         $ratings = Rating::with('reviewrateable', 'author')->where('approved', '1')->latest()->paginate(25);
+        foreach ($ratings as $item) {
+            $item['reviewrateable2'] = Product::find($item['reviewrateable_id']);
+        }
         return view('admin.reviews.approve', compact('ratings'));
     }
 

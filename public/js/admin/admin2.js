@@ -21228,7 +21228,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 3:
                 _yield$window$axios$g = _context3.sent;
                 data = _yield$window$axios$g.data;
-                data = data.data;
                 column = [{
                   title: '#',
                   key: 'id'
@@ -21276,13 +21275,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 }
 
                 excelName = 'product';
-                _context3.next = 11;
+                _context3.next = 10;
                 return (0,js_table2excel__WEBPACK_IMPORTED_MODULE_0__["default"])(column, data, excelName);
 
-              case 11:
+              case 10:
                 _this.loading = false;
 
-              case 12:
+              case 11:
               case "end":
                 return _context3.stop();
             }
@@ -21294,7 +21293,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       var _this2 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
-        var column, i, excelName;
+        var data, column, i, excelName;
         return _regeneratorRuntime().wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
