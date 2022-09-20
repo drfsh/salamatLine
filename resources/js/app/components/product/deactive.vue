@@ -19,9 +19,17 @@ import Diactive_not from "./diactive_not/diactive_not";
 export default {
     name: "deactive",
     components: {Diactive_not, Loading},
-    props: ['id'],
+    props: {
+        id:{
+            default: 0
+        },
+        number:{
+            default:'',
+        }
+    },
     data() {
         return {
+            mobile:'',
             loading: false,
             status: '',
             show_p:false
@@ -36,6 +44,9 @@ export default {
             this.loading = false
             $('html ,body').stop().animate({scrollTop:0},500)
         }
+    },
+    mounted() {
+        this.mobile = this.number
     }
 }
 </script>

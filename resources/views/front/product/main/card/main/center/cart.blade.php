@@ -21,7 +21,9 @@
 {{--    />--}}
 @elseif($data['product']->price_hide==false)
     <div class="mw-300 diactive">
-        <product-diactive :id="{{$data['product']->id}}"></product-diactive>
+        <product-diactive
+            @if(Auth::check()) number="{{Auth()->user()->mobile}}" @endif
+            :id="{{$data['product']->id}}"></product-diactive>
     </div>
 @else
     <div class="contact">

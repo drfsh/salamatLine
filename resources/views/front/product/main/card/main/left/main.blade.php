@@ -10,13 +10,13 @@
     </div>
 
     <div class="contact">
-        <a href="#">
+        <a href="whatsapp://send?phone=+98{{$globalcontact[0]->whatsapp}}">
             <div class="whatsapp text-l">
                 <span class="d-flex">@include('icons.whatsApp')</span>
                 <span class="text-l">اگر نیاز به راهنمایی دارید با ما در ارتباط باشید</span>
             </div>
         </a>
-        <a href="#">
+        <a href="https://t.me/{{$globalcontact[0]->telegram}}">
             <div class="telegram text-l">
                 <span class="d-flex">@include('icons.telegram')</span>
                 <span class="text-l">اگر سوال داربد؟ در تلگرام با ما گفتگو کنید</span>

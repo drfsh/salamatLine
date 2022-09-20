@@ -1,5 +1,5 @@
 <div class="price-box">
-    @if($item->active)
+    @if($item->active && $item->price_hide==false)
         @if(!$item->discount_price)
             <div class="price ho c">
                 <div class="">{!! $item->showing_price !!}</div>
@@ -14,6 +14,8 @@
                 </div>
             </div>
         @endif
+    @elseif($item->price_hide==true)
+        <div class="price text-center">تماس بگیرید</div>
     @else
         <div class="price text-center">موجود نیست</div>
     @endif
@@ -22,6 +24,6 @@
             name="{{$item->title}}"
             model="{{$item->subtitle}}"
             img="{{$item->tiny}}"
-            active="{{$item->active}}">
+            active="@if($item->active && !$item->price_hide){{1}}@else{{0}}@endif">
     </basket-product>
 </div>

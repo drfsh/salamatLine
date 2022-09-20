@@ -13,7 +13,7 @@
             <div style="text-align: center;margin-top: 14px;font-size: 13px;">
                 {{status.text}}
 
-                <a @click="login" style="margin-right: 58px;" class="button wc-forward">ورود</a>
+                <a v-if="status.error" @click="login" style="margin-right: 58px;" class="button wc-forward">ورود</a>
             </div>
             <div v-if="!status.error" class="sgare-sepid-box" style="border: 2px dashed rgb(228, 228, 228);margin-top: 23px;">
                 <div style="margin: 0;display: flex;align-items: center;position: relative;">

@@ -2,6 +2,7 @@
     <alert-aded v-if="type==='add_cart'" :status="data.status" :img="data.img" :name="data.name" :model="data.model"></alert-aded>
     <mini_show v-else-if="type==='mini_show'" :id="data.id"></mini_show>
     <fixed_login v-else-if="type==='login'" ></fixed_login>
+    <fixed_login v-else-if="type==='call_us'" ></fixed_login>
 </template>
 
 <script>

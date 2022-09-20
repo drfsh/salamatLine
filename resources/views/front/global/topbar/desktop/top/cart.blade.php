@@ -31,7 +31,7 @@
             <div class="item-mini-menu">
                 <a class="login btnh" href="{{route('profile')}}">
                     @include('icons.user')
-                    <span>پروفایل</span>
+                    <span> سلام {{Auth::user()->name}}  </span>
                 </a>
                 <div style="width: 225px;" class="mini-menu-3">
 
@@ -46,7 +46,7 @@
                             </li>
                             @if(Auth::user()->hasRole('Admin'))
                             <li>
-                                <a href="{{route('admin')}}">
+                                <a target="_blank" href="{{route('admin')}}">
                                     @include('icons.verify')
                                     پنل مدیریت سایت
                                 </a>

@@ -42,7 +42,7 @@
                     </li>
                 </ul>
 
-                <input type="number" placeholder="شماره موبایل" >
+                <input type="number" v-model="$parent.mobile" placeholder="شماره موبایل" >
                 <a @click="sendData" style="float: unset;margin-top: 3px;" class="button wc-forward">ثبت</a>
             </div>
         </div>

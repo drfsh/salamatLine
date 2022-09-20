@@ -5370,7 +5370,7 @@ footer .sub {
 .sepid-mini-cart-header .mini-cart-3 .cart-item-content .quantity .woocommerce-Price-currencySymbol {
     float: left;
     margin-right: 5px;
-    font-size: ;
+
 }
 
 .sepid-mini-cart-header .mini-cart-3 .woocommerce-mini-cart__total.total strong {
@@ -5431,19 +5431,24 @@ footer .sub {
 
 .mini-menu-3 .items {
     text-align: right;
-    padding: 0 18px;
+    padding: 0 10px;
 }
 
 .mini-menu-3 .items li {
-    padding: 8px 0;
+    padding: 0px 4px;
     width: 100%;
+    height: 41px;
 }
-
+.mini-menu-3 .items li:hover {
+    background: #f2f6fc;
+    border-radius: 7px;
+}
 .mini-menu-3 .items li > a {
     display: flex;
     align-items: center;
     transition: 0.2s;
     cursor: pointer;
+    height: 100%;
 }
 
 .mini-menu-3 .items li > a:hover {
