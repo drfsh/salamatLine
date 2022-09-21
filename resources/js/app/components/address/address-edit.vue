@@ -100,7 +100,7 @@
             </p>
             <p class="form-row form-row-wide">
                 <label class="">کدپستی(بدون فاصله و با اعداد انگلیسی)
-                    <abbr class="required" title="ضروری">*</abbr>
+                    <abbr v-if="address.city_id!==1 || address.province_id!==1" class="required" title="ضروری">*</abbr>
                 </label>
                 <span class="woocommerce-input-wrapper">
                             <input type="text" class="input-text" v-model="address.zipcode">
@@ -169,14 +169,13 @@ export default {
                 this.alertM('آدرس را وارد کنید')
                 return ''
             }
-            if (this.address.zipcode == null) {
-                this.alertM('کدپستی را وارد کنید')
-                return ''
+            if (address.city_id!==1 || address.province_id!==1){
+                if (this.address.zipcode == null) {
+                    this.alertM('کدپستی را وارد کنید')
+                    return ''
+                }
             }
-            if (this.address.lat == null) {
-                this.alertM('ادرس را در نقشه مشخص کنید')
-                return ''
-            }
+
 
             if (this.$parent.page === 1)
                 await window.axios.put('/cart/address/edit/' + this.address.id, this.address)

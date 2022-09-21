@@ -25,7 +25,8 @@
 		<li>
 			<a class="btnh" href="{{route('MyFavorites')}}">
 				@include('icons.heart')
-			</a>
+                <count-heart></count-heart>
+            </a>
 		</li>
 		<li>
             <div class="item-mini-menu">

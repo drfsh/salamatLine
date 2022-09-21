@@ -120,7 +120,7 @@ export default {
         slug: {default: ''},
         img: {default: ''},
         name: {default: ''},
-        isfavorited: {default: '0'},
+        isfavorited: {default: false},
     },
     data() {
         return {
@@ -131,13 +131,24 @@ export default {
     },
     methods: {
         async addFavorite() {
+            let d = $('#heart-num-cart')
+            let num = d.text()
+
             this.favoriteLoading = true
             let {data} = await window.axios.post('/profile/add-favorite/' + this.id)
             if (data.status == 'true') {
                 if (data.add == 'true')
+                {
                     this.favorited = true
+                    num++
+                    d.text(num)
+                }
                 else
+                {
                     this.favorited = false
+                    num--
+                    d.text(num)
+                }
             }
             this.favoriteLoading = false
         }

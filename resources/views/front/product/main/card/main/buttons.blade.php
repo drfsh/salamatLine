@@ -10,7 +10,7 @@
             slug="{{$data['product']->slug}}"
             img="{{$data['product']->tiny}}"
             name="{{$data['product']->title}}"
-            @if($data['favorited'])isfavorited="1"@endif
+            @if($data['favorited']==true)isfavorited="1"@endif
     >
     </product-buttons>
 </div>

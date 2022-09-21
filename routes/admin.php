@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => ['auth','isAdmin']], function() {
 
+    Route::get('/console', function (){
+        \App\Models\Product::withTrashed()->find(1382)->restore();
+    });
+
 	Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'main'])->name('admin');
 	Route::get('/test', [App\Http\Controllers\Admin\HomeController::class, 'test'])->name('g');
 	Route::get('components', [App\Http\Controllers\Admin\HomeController::class, 'components'])->name('ComponentAdmin');
@@ -64,6 +68,7 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
 	Route::get('reviews/approved',[App\Http\Controllers\Admin\ReviewrateController::class, 'approved'])->name('Reviewrate');
 	Route::get('reviews/approverate/{id}', [App\Http\Controllers\Admin\ReviewrateController::class, 'ApproveRate'])->name('ApproveRate');
 	Route::get('reviews/unapproverate/{id}', [App\Http\Controllers\Admin\ReviewrateController::class, 'UnapproveRate'])->name('UnapproveRate');
+	Route::post('reviews/replay/{id}', [App\Http\Controllers\Admin\ReviewrateController::class, 'set_replay']);
 
 	Route::resource('holiday', App\Http\Controllers\Admin\HolidayController::class, ['except' => ['show', 'create']]);
 

@@ -101,6 +101,7 @@ import Export from "./export/export";
 export default {
     name: "product",
     components: {Export, Loading, product_table,Paginate},
+    props:['id'],
     data() {
         return {
             data: null,

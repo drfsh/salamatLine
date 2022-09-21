@@ -49,7 +49,7 @@
                     </p>
                     <p class="form-row form-row-last validate-required"
                        data-priority="20">
-                        <label>ادرس ایمیل&nbsp;
+                        <label>آدرس ایمیل
                             <abbr class="required" title="ضروری">*</abbr>
                         </label>
                         <span class="woocommerce-input-wrapper">
@@ -76,7 +76,7 @@
                     </p>
 
                     <p class="form-row form-row-wide">
-                        <label class="">ادرس
+                        <label class="">آدرس
                             <abbr class="required" title="ضروری">*</abbr>
                         </label>
                         <span class="woocommerce-input-wrapper">
@@ -85,7 +85,7 @@
                     </p>
                     <p class="form-row form-row-wide">
                         <label class="">کدپستی(بدون فاصله و با اعداد انگلیسی)
-                            <abbr class="required" title="ضروری">*</abbr>
+                            <abbr v-if="address.city_id!==1 || address.province_id!==1" class="required" title="ضروری">*</abbr>
                         </label>
                         <span class="woocommerce-input-wrapper">
                             <input type="text" class="input-text" v-model="address.zipcode">
@@ -96,6 +96,10 @@
             </div>
 
         </div>
+        <a
+            style="width: auto;float: right;margin-top: 20px;" @click="back"
+            class="checkout-button button alt wc-forward"><span>مرحله قبل</span>
+        </a>
     </div>
 </template>
 
@@ -116,6 +120,10 @@ export default {
         }
     },
     methods:{
+        back(){
+            this.$parent.$parent.$parent.step=1
+            $('html ,body').stop().animate({scrollTop: 0}, 500)
+        },
         backSelect(){
             this.$parent.address_id=null;
             this.$parent.address=

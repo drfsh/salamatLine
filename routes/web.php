@@ -17,7 +17,9 @@ Route::get('/', [App\Http\Controllers\Front\HomeController::class, 'main'])->nam
 Route::get('/cart', [App\Http\Controllers\Front\CartController::class, 'main'])->name('cart');
 Route::get('/products', [App\Http\Controllers\Front\ProductHolderController::class, 'main'])->name('productHolder');
 Route::get('/products/{slug}', [App\Http\Controllers\Front\ProductController::class, 'main'])->name('product');
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+ Route::get('/test', function (){
+     return \Illuminate\Support\Facades\Hash::make('12345678');
+ });
 
 
 

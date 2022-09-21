@@ -1,6 +1,7 @@
 <template>
     <div>
-        <div class="info-map">برای دریافت سریع سفارش, آدرس تحویل گیرنده را روی نقشه مشخص کنید</div>
+        <div class="info-map">برای دریافت سریع سفارش, آدرس تحویل گیرنده را روی نقشه مشخص کنید
+        </div>
         <l-map
             class="map map2"
             @click="addMarker"

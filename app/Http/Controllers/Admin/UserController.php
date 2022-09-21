@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Address;
 use Illuminate\Http\Request;
 
 use App\Models\User;
@@ -87,7 +88,7 @@ class UserController extends Controller {
     }
 
     public function destroy($id) {
-        $user = User::findOrFail($id); 
+        $user = User::findOrFail($id);
         $user->delete();
         return redirect()->route('users.index')
             ->with('flash_message',

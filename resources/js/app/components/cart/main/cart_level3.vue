@@ -47,8 +47,14 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="cart-send">
+                            <a
+                                style="width: auto;float: right;margin-top: 20px;" @click="back"
+                                class="checkout-button button alt wc-forward"><span>مرحله قبل</span>
+                            </a>
+                        </div>
 
-                        <div class="cart-finish">
+                        <div class="cart-finish w-100">
                             <div class="info">
                                 <div class="item">
                                     <ic_ticke_circle></ic_ticke_circle>
@@ -76,11 +82,16 @@
                                     <a>مشتری</a>
                                     میباشد
                                 </div>
+                                <div class="item">
+                                    <ic_ticke_circle></ic_ticke_circle>
+                                    ارسال رایگان برای خرید بالای یک میلیون تومان در شهر تهران
+                                </div>
                             </div>
 
-                                <div class="nextstep">
-                                    <a @click="nextStep" class="checkout-button button alt wc-forward" :class="{'disabled':!isContinue}"><span>انتخاب درگاه پرداخت</span></a>
-                                </div>
+                            <div class="nextstep">
+                                <a @click="nextStep" class="checkout-button button alt wc-forward"
+                                   :class="{'disabled':!isContinue}"><span>انتخاب درگاه پرداخت</span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -107,12 +118,16 @@ export default {
             status: '',
             date: [],
             delivery: '',
-            typeSend:0,
-            fullLoading:false,
-            isContinue:false
+            typeSend: 0,
+            fullLoading: false,
+            isContinue: false
         }
     },
     methods: {
+        back() {
+            this.$parent.$parent.step = 2
+            $('html ,body').stop().animate({scrollTop: 0}, 500)
+        },
         async getdate() {
             let {data} = await window.axios.get('/cart/check-date')
             this.date = data;
@@ -122,7 +137,10 @@ export default {
             this.fullLoading = true
 
             let m = {
-                step: this.$parent.step, address: this.$parent.address_id, delivery: this.delivery,typeSend:this.typeSend
+                step: this.$parent.step,
+                address: this.$parent.address_id,
+                delivery: this.delivery,
+                typeSend: this.typeSend
             }
             let {data} = await window.axios.post('/cart/check-step', m)
 
@@ -132,23 +150,23 @@ export default {
             this.$parent.delivery = data.delivery
 
             this.fullLoading = false
-            $('html ,body').stop().animate({scrollTop:0},500)
+            $('html ,body').stop().animate({scrollTop: 0}, 500)
         }
     },
     mounted() {
         this.getdate()
     },
-    watch:{
-        delivery(v){
-            if (v){
-                if (this.typeSend!==0){
+    watch: {
+        delivery(v) {
+            if (v) {
+                if (this.typeSend !== 0) {
                     this.isContinue = true
                 }
             }
         },
-        typeSend(v){
-            if (v!==0){
-                if (this.delivery){
+        typeSend(v) {
+            if (v !== 0) {
+                if (this.delivery) {
                     this.isContinue = true
                 }
             }

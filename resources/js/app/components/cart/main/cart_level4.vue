@@ -34,38 +34,16 @@
                         </div>
 
                         <div class="cart-finish">
-                            <div class="info">
-                                <div class="item">
-                                    <ic_ticke_circle></ic_ticke_circle>
-                                    تحویل به صورت
-                                    <a>حضوری</a>
-                                    دارای امتیاز
-                                    <a>باشگاه هواداری</a>
-                                    میباشد
-                                </div>
-                                <div class="item">
-                                    <ic_ticke_circle></ic_ticke_circle>
-                                    هزینه ارسال به صورت
-                                    <a>پیشتاز</a>
-                                    و
-                                    <a>فوری</a>
-                                    در شهر تهران و حومه بر عهده
-                                    <a href="">مشتری</a>
-                                    میباشد
-                                </div>
-                                <div class="item">
-                                    <ic_ticke_circle></ic_ticke_circle>
-                                    هزینه ارسال کالا برای
-                                    <a>شهرستان ها</a>
-                                    بر عهده
-                                    <a>مشتری</a>
-                                    میباشد
-                                </div>
-                            </div>
+
+                            <a
+                                style="width: auto;float: right;margin-top: 20px;" @click="back"
+                                class="checkout-button button alt wc-forward"><span>مرحله قبل</span>
+                            </a>
 
                                 <div class="nextstep">
                                     <a @click="nextStep" class="checkout-button button alt wc-forward" :class="{'disabled':!isContinue}"><span>انتقال به درگاه پرداخت</span></a>
                                 </div>
+
                         </div>
                     </div>
                 </div>
@@ -97,6 +75,10 @@ export default {
     },
 
     methods: {
+        back(){
+            this.$parent.$parent.step=3
+            $('html ,body').stop().animate({scrollTop: 0}, 500)
+        },
         async nextStep() {
             if (!this.isContinue) return ''
             this.fullLoading = true

@@ -14,7 +14,7 @@
 
         <span class="bbox count-box">
             <span class="btn circle-hover" role="button" @click="add"><ic_add></ic_add></span>
-            <span class="count">{{ count }}</span>
+            <input class="count" v-model="count" type="number">
             <span class="btn circle-hover" role="button" @click="minus"><ic_minus></ic_minus></span>
         </span>
         <button role="button" @click="adToCard" class="btn add">

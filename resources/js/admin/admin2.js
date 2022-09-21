@@ -10,11 +10,16 @@ import * as Vue from 'vue'
 import product from "./components/product/product";
 import create_discount from "./components/discount/create_discount";
 import edit_discount from "./components/discount/edit_discount";
+import replay from "./components/comment/replay";
 
 
 
 
 setApp([
+    {
+        name: 'comment-replay',
+        component: replay
+    },
     {
         name: 'brand-admin',
         component: brand

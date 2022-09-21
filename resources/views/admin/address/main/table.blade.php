@@ -5,8 +5,12 @@
                 <div class="cell medium-6"><h4>آدرس ها</h4></div>
                 <div class="cell medium-6">    
                     <div class="float-left">
-                        
-                    </div> 
+                        <form style="display: flex;align-items: center;flex-direction: row;" method="get">
+                            <input type="text" name="q" placeholder="id,نام,استان,شهر,موبایل,جزئیات"
+                                   style="height: 35px;margin: 0 0 0 8px;font-size: 13px;" value="{{request()->q}}">
+                            <input type="submit" value="جستجو" style="border: none;height: 35px;color: #545454;font-size: 14px;width: 83px;">
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -48,7 +52,6 @@
                         <td>{{$item->content}}</td>
                         <td>{{$item->mobile}}</td>
                         <td>{{$item->created_at}}</td>
-                        </td>
                     </tr>
                 @endforeach
             </tbody>

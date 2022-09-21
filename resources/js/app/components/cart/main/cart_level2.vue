@@ -8,7 +8,6 @@
                     <div class="checkout woocommerce-checkout">
                         <edit_address v-if="address_id==0 || edit"></edit_address>
                         <cart_addresses v-else></cart_addresses>
-
                         <div class="cell-30-left">
                             <h3 class="order_review_heading">سفارش شما</h3>
                             <div id="order_review" class="woocommerce-checkout-review-order">
@@ -25,18 +24,14 @@
                                             {{ v.name }}&nbsp;{{ v.attributes.feature }} <strong
                                             class="product-quantity">×&nbsp;{{ v.quantity }}</strong></td>
                                         <td class="product-total">
-                                        <span class="woocommerce-Price-amount amount"><bdi>{{
-                                                $parent.separate(v.price * v.quantity)
-                                            }}<span
+                                        <span class="woocommerce-Price-amount amount"><bdi>{{$parent.separate(v.price * v.quantity) }}<span
                                                 class="woocommerce-Price-currencySymbol">تومان</span></bdi></span></td>
                                     </tr>
                                     </tbody>
                                     <tfoot v-if="detail.length!==0 && products.length!==0">
                                     <tr class="order-total">
                                         <th style="border-top: 1px solid #e8eff9 !important;">مجموع</th>
-                                        <td><strong><span class="woocommerce-Price-amount amount"><bdi>{{
-                                                $parent.separate(detail.total)
-                                            }}<span
+                                        <td><strong><span class="woocommerce-Price-amount amount"><bdi>{{$parent.separate(detail.total)}}<span
                                                 class="woocommerce-Price-currencySymbol">تومان</span></bdi></span></strong>
                                         </td>
                                     </tr>
@@ -52,7 +47,7 @@
                                     </tfoot>
                                 </table>
 
-                                <div v-if="address_id==0 || edit" id="payment" class="woocommerce-checkout-payment">
+                                <div v-if="address_id==0 || edit " id="payment" class="woocommerce-checkout-payment">
                                     <cart_address_map></cart_address_map>
                                 </div>
 
@@ -189,13 +184,12 @@ export default {
                 this.alertM('آدرس را ویرایش و آدرس را وارد کنید')
                 return ''
             }
-            if (this.address.zipcode == null) {
-                this.alertM('آدرس را ویرایش و کدپستی را وارد کنید')
-                return ''
-            }
-            if (this.address.lat == null) {
-                this.alertM('آدرس را ویرایش و ادرس را در نقشه مشخص کنید')
-                return ''
+
+            if (this.address.city_id!==1 || this.address.province_id!==1){
+                if (this.address.zipcode == null) {
+                    this.alertM('آدرس را ویرایش و کدپستی را وارد کنید')
+                    return ''
+                }
             }
 
             this.fullLoading = true

@@ -27,6 +27,7 @@ import add_basket_f from "./components/product/holder/basket-product/add_basket_
 import removeFavorites from "../../views/front/favorites/remove-favorites";
 import alerts_cart from "./components/alerts/alerts_cart";
 import map_page from "./components/pages/map_page";
+import numHeart from "./components/header/num-heart";
 
 require('./bootstrap')
 require('jquery-confirm')
@@ -87,6 +88,10 @@ setApp([
 
 ])
 setElement([
+    {
+        name: 'count-heart',
+        component: numHeart
+    },
     {
         name: 'remove-favorites',
         component: removeFavorites

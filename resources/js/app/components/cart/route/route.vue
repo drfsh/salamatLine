@@ -8,14 +8,14 @@
             <span class="line">
                 <span class="bg" :style="'width: '+w1+'%;'"></span>
             </span>
-            <div class="item" @click="back(2)" :class="{'active':level>1}">
+            <div role="button" class="item" @click="back(2)" :class="{'active':level>1}">
                 <ic_clipboard></ic_clipboard>
                 <span>جزییات پرداخت</span>
             </div>
             <span class="line">
                 <span class="bg" :style="'width: '+w2+'%;'"></span>
             </span>
-            <div class="item" @click="back(3)" :class="{'active':level>3}">
+            <div role="button" class="item" @click="back(3)" :class="{'active':level>3}">
                 <ic_verify></ic_verify>
                 <span>تکمیل سفارش</span>
             </div>

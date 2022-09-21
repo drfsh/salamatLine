@@ -1915,19 +1915,20 @@ body.auth #salamat-logo {
     user-select: none;
     margin-top: 22px;
 }
-
 .product-box .d-add-shop .count-box .count {
-    width: 29px;
+    width: 43px;
     text-align: center;
     font-size: 23px;
-
+    padding: 0;
+    border: none;
+    margin: 0;
+    display: inline;
 }
-
 .product-box .d-add-shop {
     width: auto;
     display: inline-flex;
     flex-wrap: wrap;
-    max-width: 305px;
+    max-width: 330px;
 }
 
 .product-box .d-add-shop .count-box .btn {

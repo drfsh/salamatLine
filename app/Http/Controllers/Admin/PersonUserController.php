@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\OtherUser;
+use App\Traits\Smstrait;
 use Illuminate\Http\Request;
 use App\Models\Role;
 use Auth;
@@ -11,6 +12,7 @@ use Session;
 
 class PersonUserController extends Controller
 {
+    use Smstrait;
 
     public function __construct() {
         $this->middleware(['auth', 'isAdmin']);
@@ -34,6 +36,7 @@ class PersonUserController extends Controller
 
         $user = OtherUser::create($request->only('email', 'name', 'number','role','type_buy','price_buy'));
 
+        $this->Sendsms($user->number,'Welcome','Salamatline.com',null,null,$user->name);
         return redirect()->route('person.index')
             ->with('flash_message',
                 'User successfully added.');

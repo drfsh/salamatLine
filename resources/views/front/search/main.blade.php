@@ -5,7 +5,11 @@
 	<div class="grid-container">
 		<div class="grid-x">
 			<div class="cell text-center">
-	    		<b>{{ $searchResults->count() }}</b> نتیجه برای جستجوی <u>{{ request('query') }}</u> یافت شد.
+				<div class="gap"></div>
+				<div class="gap"></div>
+				<b>{{ $searchResults->count() }}</b> نتیجه برای جستجوی <u>{{ request('query') }}</u> یافت شد.
+	    		<div class="gap"></div>
+	    		<div class="gap"></div>
 	    		<div class="gap"></div>
 			</div>
 

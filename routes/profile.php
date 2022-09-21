@@ -29,3 +29,4 @@ Route::put('fill-survey/{id}', [App\Http\Controllers\Front\Profile\SurveyControl
 
 Route::post('add-favorite/{id}',[App\Http\Controllers\Front\FavoriteController::class, 'Favorite'])->name('Favorite');
 Route::get('favorites',[App\Http\Controllers\Front\FavoriteController::class, 'main'])->name('MyFavorites');
+Route::get('favorites/count',[App\Http\Controllers\Front\FavoriteController::class, 'count']);

@@ -20,6 +20,7 @@ class ReviewrateController extends Controller
     {
         $ratings = Rating::with('reviewrateable', 'author')->where('approved', '0')->latest()->paginate(25);
         foreach ($ratings as $item) {
+            $item->created_at = Verta($item->created_at)->format('Y/m/d H:i:s');
             $item['reviewrateable2'] = Product::find($item['reviewrateable_id']);
         }
         return view('admin.reviews.unapprove', compact('ratings'));
@@ -29,6 +30,7 @@ class ReviewrateController extends Controller
     {
         $ratings = Rating::with('reviewrateable', 'author')->where('approved', '1')->latest()->paginate(25);
         foreach ($ratings as $item) {
+            $item->created_at = Verta($item->created_at)->format('Y/m/d H:i:s');
             $item['reviewrateable2'] = Product::find($item['reviewrateable_id']);
         }
         return view('admin.reviews.approve', compact('ratings'));
@@ -51,5 +53,14 @@ class ReviewrateController extends Controller
         $rate->save();
         Session::flash('success', 'انتشار امتیاز لغو شد.');
         return redirect()->back();
+    }
+
+    public function set_replay($id){
+        $ratings = Rating::find($id);
+        if ($ratings!==null)
+            $ratings->update([
+                'replay'=>request()->body,
+            ]);
+        return response()->json($ratings);
     }
 }
