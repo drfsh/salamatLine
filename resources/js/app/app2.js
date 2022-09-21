@@ -28,6 +28,7 @@ import removeFavorites from "../../views/front/favorites/remove-favorites";
 import alerts_cart from "./components/alerts/alerts_cart";
 import map_page from "./components/pages/map_page";
 import numHeart from "./components/header/num-heart";
+import test from "./components/test";
 
 require('./bootstrap')
 require('jquery-confirm')
@@ -87,7 +88,12 @@ setApp([
     },
 
 ])
+
 setElement([
+    {
+        name: 'cart-test',
+        component: test
+    },
     {
         name: 'count-heart',
         component: numHeart

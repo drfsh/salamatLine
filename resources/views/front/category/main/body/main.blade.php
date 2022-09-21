@@ -27,6 +27,10 @@
 <div class="double-gap"></div>
 {{ $data['products']->links() }}
 <div class="double-gap"></div>
+
+
+@include('front.category.main.body.content')
+
 @if(!$data['sub_cats']->isEmpty() && $agent->isMobile())
 	<div class="grid-x grid-padding-x align-center">
 		<div class="cell small-11">

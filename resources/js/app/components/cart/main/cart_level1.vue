@@ -202,6 +202,8 @@ export default {
             }
             this.refreshStatus = 'ok'
             this.status = 'بروزرسانی شد'
+
+            window.cart_back2 = true
         }
     },
     mounted() {

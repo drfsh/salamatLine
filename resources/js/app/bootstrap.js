@@ -130,3 +130,6 @@ window.boxAlert = {
     type:'',
     value:{},
 }
+window.cart_empty = false;
+window.cart_back = false;
+window.cart_back2 = false;

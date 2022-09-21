@@ -59,6 +59,24 @@ export default {
     },
     mounted() {
         this.getData()
+        let vm = this
+        setInterval(function (){
+            if (window.cart_back==true)
+            {
+                vm.step = 1
+                window.cart_back=false
+                vm.$parent.getData()
+                vm.getData()
+            }
+
+            if (window.cart_empty==true)
+            {
+                window.cart_empty = false
+                vm.$parent.getData()
+                vm.step = 0
+            }
+        });
+
     }
 }
 </script>

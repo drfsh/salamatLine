@@ -6,5 +6,5 @@
 			{{$errors->first()}}
 		</div>
 	@endif
-	@include('profile.home.detail')
+    @include('profile.home.detail')
 @endsection

@@ -1,9 +1,13 @@
 @extends('layouts.front')
 
 @section('content')
-    {{ Breadcrumbs::render('CategoryHolder') }}
     <div class="double-gap"></div>
+
     <div class="grid-container">
+
+        <div class="size">
+            {{ Breadcrumbs::render('CategoryHolder') }}
+        </div>
         <div class="grid-x grid-padding-x">
             @foreach($categories as $item)
                 <div class="cell">

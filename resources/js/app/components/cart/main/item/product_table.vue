@@ -60,6 +60,7 @@ export default {
           let {data} = await window.axios.get('/cart/remove-cart-item/' + this.v.id);
           this.$parent.$parent.$parent.getData();
           this.$parent.situation = ''
+          window.cart_back2 = true
       }
     },
     watch:{

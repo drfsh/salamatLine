@@ -72,6 +72,11 @@ export default {
             delete this.products[i]
             let {data} = await window.axios.get('/cart/remove-cart-item/' + i);
             this.$parent.getData()
+
+            if (this.products.length==0)
+                window.cart_empty = true
+            else
+                window.cart_back = true
         }
     },
     mounted() {
@@ -83,7 +88,18 @@ export default {
                 await vm.getData()
                 vm.$parent.getData()
             }
-        },1000)
+
+
+            if (window.cart_back2==true)
+            {
+                alert(2)
+                window.cart_back2=false
+                vm.$parent.getData()
+                vm.getData()
+            }
+
+
+        })
     }
 }
 </script>
