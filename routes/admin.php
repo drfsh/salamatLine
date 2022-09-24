@@ -63,6 +63,7 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
 	Route::resource('social', App\Http\Controllers\Admin\SocialController::class, ['except' => ['show']]);
 	Route::resource('page', App\Http\Controllers\Admin\PageController::class, ['except' => ['show']]);
 	Route::resource('banner', App\Http\Controllers\Admin\BannerController::class, ['except' => ['show']]);
+	Route::resource('faq', App\Http\Controllers\Admin\FaqController::class, ['except' => ['show']]);
 
 	Route::get('reviews/unapproved',[App\Http\Controllers\Admin\ReviewrateController::class, 'index'])->name('UnReviewrate');
 	Route::get('reviews/approved',[App\Http\Controllers\Admin\ReviewrateController::class, 'approved'])->name('Reviewrate');
@@ -110,6 +111,7 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
 
 	Route::get('re-stock',[App\Http\Controllers\Admin\ReStockController::class, 'main'])->name('AdminRestock');
 	Route::get('re-stock-notified',[App\Http\Controllers\Admin\ReStockController::class, 'notified'])->name('RestockNotified');
+
 
 
 	Route::get('report',[App\Http\Controllers\Admin\report\main::class, 'index'])->name('AdminReport');

@@ -4,4 +4,5 @@
     <li><a href="{{ route('banner.index') }}">بنر</a></li>
     <li><a href="{{ route('page.index') }}">صفحات</a></li>
     <li><a href="{{ route('social.index') }}">شبکه‌های اجتماعی</a></li>
+    <li><a href="{{ route('faq.index') }}">سوالات متداول</a></li>
 </ul>

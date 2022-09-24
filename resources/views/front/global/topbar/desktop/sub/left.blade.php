@@ -6,7 +6,7 @@
     </li>
     <li class="line"></li>
     <li>
-        <a href="{{ route('login') }}">
+        <a href="{{ route('faq') }}">
 				سوالات متداول
         </a>
     </li>

@@ -19,7 +19,7 @@
                         </div>
                         <div class="cell medium-12">
                             {{ Form::label('number', 'شماره موبایل') }}
-                            {{ Form::text('number', null,['placeholder'=>'شماره موبایلی که هنگام خرید وارد کرده اید']) }}
+                            {{ Form::text('number', auth()->user()->mobile,['placeholder'=>'شماره موبایلی که هنگام خرید وارد کرده اید']) }}
 
                             @if ($errors->has('number'))
                                 <span class="invalid-feedback">{{ $errors->first('number') }}</span>

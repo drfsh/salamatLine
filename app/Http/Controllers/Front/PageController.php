@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Faq;
 use App\Models\Page;
 use Artesaos\SEOTools\Facades\SEOTools;
 use Artesaos\SEOTools\Facades\OpenGraph;
@@ -71,5 +72,9 @@ class PageController extends Controller
     }
     public function about(){
         return view('front.page.about.main');
+    }
+    public function faq(){
+        $list = Faq::latest()->where('active',1)->get();
+        return view('front.page.faq.main',compact('list'));
     }
 }

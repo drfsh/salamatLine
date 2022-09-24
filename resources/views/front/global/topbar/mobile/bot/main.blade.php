@@ -4,18 +4,23 @@
 			@include('front.global.topbar.desktop.top.search')
 		</div>
 		<div class="cell shrink">
-			<ul class="holder">
+			<ul class="holder header-left-btns">
 				@guest
-					<li><a href="{{ route('login') }}" aria-label="Login"><i class="far fa-user"></i></a></li>
-					<li><menu-cart aria-label="Cart" :auth="false" /></li>
+					<li><a href="{{ route('login') }}" class="btnh" aria-label="Login"><i class="far fa-user"></i></a></li>
+					<li><cart-num></cart-num></li>
 				@else
-					<li><a href="{{ route('MyFavorites') }}" aria-label="My Favorites"><i class="fas fa-heart"></i></a></li>
-					<li><a class="cart" href="{{ route('profile') }}" aria-label="My Profile"><i class="fas fa-user"></i>
+					<li>
+						<a href="{{ route('MyFavorites') }}" aria-label="My Favorites" class="btnh">
+							@include('icons.heart')
+						</a>
+					</li>
+					<li><a class="btnh" href="{{ route('profile') }}" aria-label="My Profile">
+							@include('icons.user')
 						@if($unpaidinvoice > 0 && Auth::check())
 							<span class="round noti">{{$unpaidinvoice}}</span>
 						@endif
 					</a></li>
-					<li><menu-cart aria-label="Cart" :auth="true" /></li>
+					<li><cart-num></cart-num></li>
 				@endguest
 			</ul>
 		</div>

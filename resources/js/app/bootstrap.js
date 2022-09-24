@@ -133,3 +133,13 @@ window.boxAlert = {
 window.cart_empty = false;
 window.cart_back = false;
 window.cart_back2 = false;
+
+$('.faq .list .item').click(function () {
+    $('.faq .list .item').removeClass('active');
+    let b = $(this);
+    if (b.hasClass('active'))
+        b.removeClass('active')
+    else
+        b.addClass('active')
+})
+
