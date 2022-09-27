@@ -5283,7 +5283,7 @@ footer .sub {
 .hA4 {
     margin-top: 10px;
     width: 19.5cm !important;
-    height: 28.7cm !important;
+    height: auto;
 }
 
 .hA4 * {
