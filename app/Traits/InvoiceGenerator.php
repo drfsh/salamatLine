@@ -24,8 +24,8 @@ trait InvoiceGenerator {
         $invoice->address_id = $address_id;
         $invoice->client_address = $ad;
         $invoice->shipping = round($shipping);
-        $invoice->sub_total = round($total - $shipping);
-        $invoice->grand_total = round($total);
+        $invoice->sub_total = round($sub);
+        $invoice->grand_total = round($sub);
         $invoice->due_date = $delivery_time;
         $invoice->type_send = $type_send;
 

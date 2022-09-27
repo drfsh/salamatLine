@@ -24,7 +24,7 @@ class CartDetailController extends Controller
 
 
 
-		if ($shipping) {
+		if ($shipping && false) {
 			$shipping_price = $shipping->getValue();
 			$shippinh_att = $shipping->getAttributes();
 		}else{
@@ -33,7 +33,7 @@ class CartDetailController extends Controller
 		}
 
 
-		$shipping_arry = [ 
+		$shipping_arry = [
 			'price' => $shipping_price,
 			'attributes' => $shippinh_att
 
@@ -48,11 +48,11 @@ class CartDetailController extends Controller
 
 
 		$data['sub_total'] = Cart::session($userId)->getSubTotal();
-		$data['total'] = Cart::session($userId)->getTotal();
+		$data['total'] = Cart::session($userId)->getSubTotal();
 		$data['qty'] = Cart::session($userId)->getTotalQuantity();
 		$data['coupon'] = $coupon_price;
 		$data['shipping'] = $shipping_arry;
-		
+
 		// Log::info($product);
 		return $data;
 	}
