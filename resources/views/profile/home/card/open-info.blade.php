@@ -1,4 +1,5 @@
-@if(auth()->user()->mobile==null || auth()->user()->email==null ||  auth()->user()->code_m==null )
+@if(auth()->user()->mobile==null || auth()->user()->email==null ||  auth()->user()->code_m==null ||
+auth()->user()->mobile=='' || auth()->user()->email=='' ||  auth()->user()->code_m=='' )
 <div class="bbox flex-row font-16">
     <div class="color-info flex-center">
         <i class="fas fa-info-circle ml-2"></i>

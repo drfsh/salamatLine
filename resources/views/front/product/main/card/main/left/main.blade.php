@@ -2,10 +2,11 @@
     <div class="more-features">
         <ul>
             <li class="title">برخی از ویژگی ها</li>
-            <li>سیستم یهینه</li>
-            <li>مکس قوی</li>
-            <li>ظاهر زیبا</li>
-            <li>وزن سبک</li>
+            @foreach(explode('#',$data['product']->feature->more) as $v)
+                @if(trim($v)!=='')
+                    <li>{{$v}}</li>
+                @endif
+            @endforeach
         </ul>
     </div>
 
@@ -24,12 +25,17 @@
         </a>
     </div>
     @if($data['product']->discount->isEmpty())
+
         <div class="send-day">
         <span class="icon">
             @include('icons.car')
         </span>
             <span class="text">
-            ارسال تا 6 روزکاری
+                @if($data['product']->feature->day!=null)
+            ارسال تا {{$data['product']->feature->day}} روزکاری
+                @else
+                    ارسال تا 2 روزکاری
+                @endif
         </span>
         </div>
     @else

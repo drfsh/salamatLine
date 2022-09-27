@@ -1,5 +1,12 @@
 <div class="grid-x grid-padding-x checkbox-non-m">
     <div class="cell medium-3">
+        {{ Form::label('day', 'زمان ارسال(روز کاری)') }}
+        <div class="d-flex">
+            {{ Form::number('day', $product->feature->getAttributes()['day']) }}
+        </div>
+    </div>
+
+    <div class="cell medium-3">
         {{ Form::label('material', 'جنس') }}
         <div class="d-flex">
 
@@ -174,9 +181,9 @@
 
     </div>
     <div class="cell medium-3">
-        {{ Form::label('warranty', 'مدت وارانتی') }}
+        {{ Form::label('warranty', 'توضیحات گارانتی') }}
         <div class="d-flex">
-            {{ Form::number('warranty', $product->feature->getAttributes()['warranty']) }}
+            {{ Form::text('warranty', $product->feature->getAttributes()['warranty']) }}
 
             <label class="check-label">
                 {{ Form::checkbox('is_warranty','true',$product->feature->getAttributes()['is_warranty'],['class'=>'ed']) }}
@@ -224,4 +231,12 @@
         </div>
 
     </div>
+
+    <div class="cell medium-12">
+        {{ Form::label('more', 'سایر ویژگی ها') }}
+        <div class="d-flex">
+            <textarea name="more">{{$product->feature->getAttributes()['more']}}</textarea>
+        </div>
+    </div>
+
 </div>

@@ -37,7 +37,6 @@ export default {
     },
     mounted() {
         this.getData()
-        let vm = this
     },
     watch:{
         step(v){

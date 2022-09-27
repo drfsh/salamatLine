@@ -56,7 +56,7 @@
 
                         <div class="cart-finish w-100">
                             <div class="info">
-                                <div class="item">
+                                <div :class="{'active':typeSend==1}" class="item">
                                     <ic_ticke_circle></ic_ticke_circle>
                                     تحویل به صورت
                                     <a>حضوری</a>
@@ -64,7 +64,7 @@
                                     <a>باشگاه هواداری</a>
                                     میباشد
                                 </div>
-                                <div class="item">
+                                <div :class="{'active':typeSend==2}" class="item">
                                     <ic_ticke_circle></ic_ticke_circle>
                                     هزینه ارسال به صورت
                                     <a>پیشتاز</a>

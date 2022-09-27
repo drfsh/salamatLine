@@ -17,6 +17,11 @@
                         </div>
                         <div class="double-gap"></div>
                     </div>
+                    <script>
+                        setTimeout(function () {
+                            location.href = '/profile'
+                        },2000)
+                    </script>
                 @endif
                 @if (Session::has('passwordT'))
                     <div class="cell">

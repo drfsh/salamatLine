@@ -28,15 +28,14 @@
                         <div class="more-features" style="margin-top: 15px;text-align: right">
                             <ul>
                                 <li class="title">برخی از ویژگی ها</li>
-                                <li>سیستم یهینه</li>
-                                <li>مکس قوی</li>
-                                <li>ظاهر زیبا</li>
+                                <li v-for="v in more_feature">{{v}}</li>
                             </ul>
                             <div class="info-orng" style="width: auto;display: inline-flex;">
                                 <span>
                                     <ic_clock></ic_clock>
                                 </span>
-                                <span>حداکثر تا ۷ روز تحویل داده میشود</span>
+                                <span>حداکثر تا {{data.feature.day}} روز تحویل داده میشود</span>
+                                <span>حداکثر تا 7 روز تحویل داده میشود</span>
                             </div>
                         </div>
 
@@ -78,6 +77,13 @@ export default {
     components: {One_price, Multi_price, Feature, Ic_clock, Ic_shield, Loading, Full_loading},
     props: ['id'],
     computed:{
+        more_feature(){
+            if (this.data.feature.more!=null){
+                return  this.data.feature.more.split('#')
+            }else{
+                return []
+            }
+        },
         isDiscount(){
             return this.data.discount.length>0
         },

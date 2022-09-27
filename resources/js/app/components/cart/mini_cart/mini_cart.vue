@@ -92,7 +92,6 @@ export default {
 
             if (window.cart_back2==true)
             {
-                alert(2)
                 window.cart_back2=false
                 vm.$parent.getData()
                 vm.getData()

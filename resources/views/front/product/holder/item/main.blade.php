@@ -1,5 +1,4 @@
 <div class="simple-item @if(!$item->active)out-of-stock @endif" title="{{$item->title}}">
-    <a href="{{ route('product', $item->slug) }}">
         <div class="cover">
             <img src="{{$item->tiny}}" alt="{{$item->title}}">
             <span class="add-shop-">
@@ -25,7 +24,6 @@
             @include('front.product.holder.item.assets.label')
             {{--		@if($item->subtitle)<div class="sub sl">{{$item->subtitle}}</div>@endif--}}
         </div>
-    </a>
     <div class="body">
         <a href="{{ route('product', $item->slug) }}">
             <div class="title sl">{{$item->title}}</div>

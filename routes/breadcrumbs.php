@@ -27,8 +27,14 @@ Breadcrumbs::for('CategoryHolder', function ($trail) {
 
 // Category
 Breadcrumbs::for('category', function ($trail, $data) {
-    $trail->parent('CategoryHolder');
-    $trail->push($data->name ,route('category', $data->slug));
+    if (is_array($data) or $data instanceof Traversable)
+    {
+        $trail->parent('home');
+        $trail->push($data[sizeof($data)-1]->name ,route('category', $data[sizeof($data)-1]->slug));
+    }else{
+        $trail->parent('CategoryHolder');
+        $trail->push($data->name ,route('category', $data->slug));
+    }
 });
 
 // ProductHolder
@@ -39,7 +45,7 @@ Breadcrumbs::for('ProductHolder', function ($trail) {
 
 
 Breadcrumbs::for('product', function ($trail,$data) {
-    $trail->parent('ProductHolder');
+    $trail->parent('category',$data->categories);
     $trail->push($data->title ,route('product', $data->slug));
 });
 

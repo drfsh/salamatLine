@@ -2,10 +2,12 @@
     <div id="print_contact" v-if="data!==null" class="size invoice" style="max-width: 29.7cm;" :class="{'hA4':printing}">
         <div class="title" role="button" @click="print">
             <ic_print></ic_print>
+            شرکت تجاری سلامت لاین هومان
         </div>
         <div class="top">
             <div class="logo">
                 <logo></logo>
+                به پشتوانه ۵ دهه مشتری مداری
             </div>
             <div class="code val">
                 <span class="t">شماره فاکتور : </span>
@@ -53,11 +55,12 @@
                         <div class="c">
                             <div class="text">
                                 <span>نام:</span>
-                                <span>{{ data['address']['name'] + ' ' + data['address']['lname'] }}</span>
+                                <span v-if="data['user']['full_name']!==null && data['user']['full_name']!=='' ">{{ data['user']['full_name']}}</span>
+                                <span v-else>{{ data['user']['name'] + ' ' + data['address']['lname'] }}</span>
                             </div>
                             <div class="text">
-                                <span>شرکت:</span>
-                                <span>{{ data['address']['company'] }}</span>
+                                <span>کد ملی:</span>
+                                <span>{{ data['user']['code_m'] }}</span>
                             </div>
                         </div>
                         <div style="margin-top: 8px;" class="text">
@@ -68,11 +71,11 @@
                     <div class="c">
                         <div class="text">
                             <span>شماره تماس:</span>
-                            <span>{{ data['address']['mobile'] }}</span>
+                            <span>{{ data['user']['mobile'] }}</span>
                         </div>
                         <div class="text">
                             <span>ایمیل:</span>
-                            <span>{{ data['address']['email'] }}</span>
+                            <span>{{ data['user']['email'] }}</span>
                         </div>
                     </div>
                 </div>
@@ -116,13 +119,13 @@
                     </div>
                     <div class="titlr">
                         <div>جمع محصولات :</div>
-                        <div>هزینه ارسال :</div>
+                        <div>ارزش افزوده :</div>
                         <div>جمع کل :</div>
                     </div>
                 </div>
                 <div class="val">
-                    <div>{{riyalToman(data.sub_total)}} تومان</div>
-                    <div>{{riyalToman(data.shipping)}} تومان</div>
+                    <div>{{riyalToman(total_product)}} تومان</div>
+                    <div>{{riyalToman(value_added)}} تومان</div>
                     <div>{{riyalToman(data.grand_total)}} تومان</div>
                 </div>
             </div>
@@ -134,6 +137,11 @@
 
             <div class="alert">
                 لطفا در هنگام دریافت سفارش اقلام را بدقت چک کنید
+            </div>
+
+            <div class="veryf">
+                <span>امضاء مسئول فروش</span>
+                <img src="/img/page/سلامت لاین.webp" alt="">
             </div>
         </div>
     </div>
@@ -157,6 +165,12 @@ export default {
         }
     },
     computed: {
+        value_added(){
+            return (parseInt(this.data.sub_total) / 100) * 9
+        },
+        total_product(){
+            return parseInt(this.data.sub_total) - this.value_added
+        },
         type_send() {
             if (this.data.type_send == 1) {
                 return 'تحویل حضوری'
@@ -226,6 +240,7 @@ export default {
     },
     mounted() {
         this.getData()
+        $('.h-100').removeClass('h-100')
     }
 }
 </script>

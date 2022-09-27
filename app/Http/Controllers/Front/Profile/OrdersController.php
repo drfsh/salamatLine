@@ -168,8 +168,7 @@ class OrdersController extends Controller
     {
         $userId = Auth::id();
 
-        $invoice = Invoice::with('orders.product', 'orders.detail', 'address')->where([['user_id', $userId], ['id', $id], ['situation', '!=', 'unpaid']])->first();
-
+        $invoice = Invoice::with('orders.product', 'orders.detail', 'user', 'address')->where([['user_id', $userId], ['id', $id], ['situation', '!=', 'unpaid']])->first();
         return response()->json($invoice);
     }
 

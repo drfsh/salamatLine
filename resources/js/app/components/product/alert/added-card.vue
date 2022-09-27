@@ -1,8 +1,10 @@
 <template>
     <div v-if="show" class="woocommerce-notices-wrapper">
         <div class="woocommerce-message" role="alert" v-if="text==='added'">
-            <a href="/cart" tabindex="1" class="button wc-forward">مشاهده سبد خرید</a>
                 “{{ name }}” به سبد خرید شما افزوده شد.
+
+            <a href="/cart" tabindex="1" class="button wc-forward">مشاهده سبد خرید</a>
+
         </div>
         <div class="woocommerce-message" role="alert" v-else-if="text==='login'">
             <a @click="showLogin=true" tabindex="1" class="button wc-forward">ورود</a>
