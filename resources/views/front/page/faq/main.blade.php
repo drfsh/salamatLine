@@ -16,7 +16,7 @@
                                 <div class="title" role="button">{{$item->title}}
                                 <i class="fas fa-plus"></i>
                                 </div>
-                                <p>{{$item->body}}</p>
+                                <p class="answer">{{$item->body}}</p>
                             </div>
                         @endforeach
                     </div>

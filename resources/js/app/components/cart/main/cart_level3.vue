@@ -10,7 +10,7 @@
                         <div class="cart-date">
                             <h3 style="font-size: 18px;font-weight: 400;color: #3b4359;">زمان تحویل کالا</h3>
                             <div class="items">
-                                <cart_date_item v-for="(v,i) in date" :key="'item_date'+i" :v="v"></cart_date_item>
+                                <cart_date_item  v-for="(v,i) in date" :key="'item_date'+i" :v="v"></cart_date_item>
                             </div>
                         </div>
                         <div class="cart-send" style="margin-top: 39px;">
@@ -47,13 +47,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cart-send">
-                            <a
-                                style="width: auto;float: right;margin-top: 20px;" @click="back"
-                                class="checkout-button button alt wc-forward"><span>مرحله قبل</span>
-                            </a>
-                        </div>
-
                         <div class="cart-finish w-100">
                             <div class="info">
                                 <div :class="{'active':typeSend==1}" class="item">
@@ -89,6 +82,9 @@
                             </div>
 
                             <div class="nextstep">
+                                <a @click="back"
+                                    class="checkout-button button alt wc-forward back"><span>مرحله قبل</span>
+                                </a>
                                 <a @click="nextStep" class="checkout-button button alt wc-forward"
                                    :class="{'disabled':!isContinue}"><span>انتخاب درگاه پرداخت</span></a>
                             </div>

@@ -12,7 +12,7 @@
                     </div>
                     <div class="info">پشتیبانان به طور معمول در چند دقیقه پاسخ میدهند</div>
                     <div class="list">
-                        <a class="item" href="whatsapp://send?phone=+982166462985&text=">
+                        <a class="item" href="whatsapp://send?phone=+98{{$globalcontact[0]->whatsapp}}&text=">
                            <div style="display: flex;align-items: center;">
                                <div class="icon">
                                    @include('icons.user')

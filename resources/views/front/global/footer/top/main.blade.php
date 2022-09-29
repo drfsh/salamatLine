@@ -77,12 +77,12 @@
                     </li>
                 @endforeach
                 <li>
-                    <a class="point" href="/faq">
+                    <a class="point" href="/help">
                         <span>آموزش خرید</span>
                     </a>
                 </li>
                 <li>
-                    <a class="point" href="/shopping-traning">
+                    <a class="point" href="/faq">
                         <span>سوالات متداول</span>
                     </a>
                 </li>

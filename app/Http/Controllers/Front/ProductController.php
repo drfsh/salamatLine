@@ -26,7 +26,10 @@ class ProductController extends Controller
 	{
 
 
-		$data['product'] = Product::published()->where('slug',$slug)->with('multiprice','multifeature','feature','photos','brand','country','inventory','discount','collection')->first();
+        $data['product'] = Product::published()->where('id',$slug)->with('multiprice','multifeature','feature','photos','brand','country','inventory','discount','collection')->first();
+
+        if ($data['product']===null)
+        $data['product'] = Product::published()->where('slug',$slug)->with('multiprice','multifeature','feature','photos','brand','country','inventory','discount','collection')->first();
 		$data['collection'] =  [];
 
 

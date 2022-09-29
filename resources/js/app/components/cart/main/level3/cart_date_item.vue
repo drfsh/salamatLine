@@ -1,5 +1,5 @@
 <template>
-<div role="button" class="item" @click="select(v.gregorian)" :class="{'active':$parent.delivery===v.gregorian}">
+<div role="button" class="item" @click="select(v.gregorian,v.active)"  :class="{'active':$parent.delivery===v.gregorian,'disable':!v.active}">
     <span class="text">
         {{v.title}}
     </span>
@@ -14,7 +14,8 @@ export default {
     name: "cart_date_item",
     props:['v'],
     methods:{
-        select(g){
+        select(g,active){
+            if (active)
             this.$parent.delivery = g;
         }
     }

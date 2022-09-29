@@ -10,6 +10,7 @@ use App\Models\Company;
 use App\Models\Country;
 use App\Models\Invoice;
 use App\Models\Material;
+use App\Traits\Smstrait;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\User;
@@ -138,10 +139,11 @@ class HomeController extends Controller
     {
         return view('admin.components.main');
     }
+    use Smstrait;
 
     public function test(ProductFilter $filters, Request $request)
     {
-        $data['userTypes'] = Analytics::fetchUserTypes(Period::days(0));
-        dd($data['userTypes']);
+        dd(route('home').'/products/محلول-الکلی-ضد-عفونی-کننده-محل-تزریق-و-پوست-درموسپت-آی-ان-جی-سایز-100میلی-لیتر');
+//        $this->Sendsms('09164324749', 'ReStock', 'http://localhost/product/محلول-الکلی-ضد-عفونی-کننده-محل-تزریق-و-پوست-درموسپت-آی-ان-جی-سایز-100میلی-لیتر',null,null,'مهدی');
     }
 }

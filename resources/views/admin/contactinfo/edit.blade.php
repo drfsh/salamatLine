@@ -10,15 +10,11 @@
                 </div>
                 <div class="content">
                     {!! Form::model($contact, ['route' => ['contactinfo.update', $contact->id], 'method' => 'PUT', 'files' => true]) !!}
-                    {{ Form::label('phone1', 'تلفن یک') }}
+                    {{ Form::label('phone1', 'تلفن ثابت تایم اداری') }}
                     {{ Form::text('phone1', null) }}
 
-                    {{ Form::label('phone2', 'تلفن دو') }}
+                    {{ Form::label('phone2', 'شماره تماس تایم غیر اداری') }}
                     {{ Form::text('phone2', null) }}
-
-                    {{ Form::label('phone3', 'تلفن سه') }}
-                    {{ Form::text('phone3', null) }}
-
 
                     {{ Form::label('whatsapp', 'واتساپ') }}
                     {{ Form::text('whatsapp', null) }}
@@ -26,6 +22,13 @@
                     {{ Form::label('telegram', 'تلگرام') }}
                     {{ Form::text('telegram', null) }}
 
+                    {{ Form::label('twitter', 'توویتر') }}
+                    {{ Form::text('twitter', null) }}
+
+                    {{ Form::label('instagram', 'اینستاگرام') }}
+                    {{ Form::text('instagram', null) }}
+                    {{ Form::label('facebook', 'فیسبوک') }}
+                    {{ Form::text('facebook', null) }}
 
                     {{ Form::label('fax', 'فکس') }}
                     {{ Form::text('fax', null) }}

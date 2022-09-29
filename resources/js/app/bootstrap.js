@@ -143,3 +143,37 @@ $('.faq .list .item').click(function () {
         b.addClass('active')
 })
 
+
+$(window).on('scroll',function () {
+
+    let p = $('#app').scrollTop()
+
+    console.log(p)
+
+})
+$(document).ready(function () {
+
+    let w = ((window.innerWidth-$('.box3').width())/2)-97
+
+    $('.contact-popup').attr('style','right:'+w+'px;')
+
+    $(window).resize(function () {
+
+        let w = ((window.innerWidth-$('.box3').width())/2)-97
+
+        $('.contact-popup').attr('style','right:'+w+'px;')
+
+    })
+    $('.to_p1').click(function () {
+
+        $([document.documentElement,document.body]).animate({
+            scrollTop:0
+        },200)
+    })
+    $('.to_p2').click(function () {
+
+        $([document.documentElement,document.body]).animate({
+            scrollTop:$('#p2').offset().top-200
+        },200)
+    })
+})

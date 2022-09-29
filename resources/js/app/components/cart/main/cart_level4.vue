@@ -7,7 +7,7 @@
                     <div class="woocommerce-notices-wrapper"></div>
                     <div class="checkout woocommerce-checkout">
 
-                        <div class="cart-send bank" style="margin-top: 39px;">
+                        <div class="cart-send bank">
                             <h3 style="font-size: 18px;font-weight: 400;color: #3b4359;">انتخاب درگاه پرداخت</h3>
                             <div class="items">
                                 <div @click="bank=1" role="button" class="item"
@@ -34,16 +34,9 @@
                         </div>
 
                         <div class="cart-finish">
-
-                            <a
-                                style="width: auto;float: right;margin-top: 20px;" @click="back"
-                                class="checkout-button button alt wc-forward"><span>مرحله قبل</span>
-                            </a>
-
                                 <div class="nextstep">
                                     <a @click="nextStep" class="checkout-button button alt wc-forward" :class="{'disabled':!isContinue}"><span>انتقال به درگاه پرداخت</span></a>
                                 </div>
-
                         </div>
                     </div>
                 </div>

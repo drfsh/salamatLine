@@ -112,6 +112,7 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
 	Route::get('re-stock',[App\Http\Controllers\Admin\ReStockController::class, 'main'])->name('AdminRestock');
 	Route::get('re-stock-notified',[App\Http\Controllers\Admin\ReStockController::class, 'notified'])->name('RestockNotified');
 
+    Route::get('request-contact',[App\Http\Controllers\Admin\RequestContactController::class, 'index'])->name('requestContact');
 
 
 	Route::get('report',[App\Http\Controllers\Admin\report\main::class, 'index'])->name('AdminReport');

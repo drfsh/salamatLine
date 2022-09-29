@@ -1,6 +1,6 @@
 <ul>
     <li>
-        <a href="{{ route('login') }}">
+        <a href="{{ route('help') }}">
 				آموزش خرید
         </a>
     </li>

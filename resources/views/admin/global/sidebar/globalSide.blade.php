@@ -97,6 +97,12 @@
             </a>
         </li>
         <li>
+            <a class="{{\App\Traits\CheckRoute::check('requestContact')}}" href="{{ route('requestContact') }}">
+                <i class="fas fa-list"></i>
+                <span>درخواست های تماس</span>
+            </a>
+        </li>
+        <li>
             <a class="{{\App\Traits\CheckRoute::check('AdminRestock')}}" href="{{ route('AdminRestock') }}">
                 <i class="fas fa-bell"></i>
                 <span>موجود شد خبر بده!</span>

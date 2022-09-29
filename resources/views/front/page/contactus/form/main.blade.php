@@ -1,4 +1,4 @@
-{{ Form::model( array('route' => array('contactus'), 'method' => 'post')) }}
+{{ Form::model( array('route' => array('faq_new'), 'method' => 'post')) }}
 
 <div class="grid-x grid-padding-x" style="margin-top: 25px;">
     @if (Session::has('success'))
@@ -37,8 +37,8 @@
         @endif
     </div>
     <div class="cell medium-12">
-        {{ Form::textarea('text', null,['style'=>'height: 335px;']) }}
-        @if ($errors->has('text'))
+        {{ Form::textarea('body', null,['style'=>'height: 335px;']) }}
+        @if ($errors->has('body'))
             <span class="invalid-feedback">{{ $errors->first('text') }}</span>
         @endif
     </div>

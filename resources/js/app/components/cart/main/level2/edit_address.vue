@@ -96,10 +96,6 @@
             </div>
 
         </div>
-        <a
-            style="width: auto;float: right;margin-top: 20px;" @click="back"
-            class="checkout-button button alt wc-forward"><span>مرحله قبل</span>
-        </a>
     </div>
 </template>
 
@@ -120,10 +116,6 @@ export default {
         }
     },
     methods:{
-        back(){
-            this.$parent.$parent.$parent.step=1
-            $('html ,body').stop().animate({scrollTop: 0}, 500)
-        },
         backSelect(){
             this.$parent.address_id=null;
             this.$parent.address=

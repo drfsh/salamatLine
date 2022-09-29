@@ -22,18 +22,13 @@
             <tbody>
                 @foreach ($contacts as $contact)
                     <tr>
-                        <td>تلفن اول</td>
+                        <td>تلفن ثابت تایم اداری</td>
                         <td>{{ $contact->phone1 }}</td>
                     </tr>
 
                     <tr>
-                        <td>تلفن دوم</td>
+                        <td>شماره تماس تایم غیر اداری</td>
                         <td>{{ $contact->phone2 }}</td>
-                    </tr>
-
-                    <tr>
-                        <td>تلفن سوم</td>
-                        <td>{{ $contact->phone3 }}</td>
                     </tr>
 
                     <tr>
@@ -44,6 +39,23 @@
                     <tr>
                         <td>تلگرام</td>
                         <td>{{ $contact->telegram }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>توویتر</td>
+                        <td>{{ $contact->twitter }}</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>اینستاگرام</td>
+                        <td>{{ $contact->instagram }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>                                فیسبوک
+                        </td>
+                        <td>{{ $contact->facebook }}</td>
                     </tr>
 
                     <tr>

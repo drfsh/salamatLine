@@ -1,9 +1,9 @@
-{{ Form::model( array('route' => array('faq'), 'method' => 'post')) }}
+{{ Form::model( array('route' => array('faq_new'), 'method' => 'post')) }}
 
-<div class="grid-x grid-padding-x" style="margin-top: 25px;">
+<div class="grid-x grid-padding-x forms" style="margin-top: 25px;">
     @if (Session::has('success'))
         <div class="cell">
-            <div class="cell callout success">
+            <div class="cell callout success" style="text-align: center;border: 0;background: #03B700;color: white;padding: 11px;">
                 {{ Session::get('success') }}
             </div>
             <div class="double-gap"></div>

@@ -3,13 +3,17 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ContactRequest;
 use App\Models\Faq;
 use App\Models\Page;
+use App\Models\RequestContact;
 use Artesaos\SEOTools\Facades\SEOTools;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\TwitterCard;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Session;
 
 class PageController extends Controller
 {
@@ -76,5 +80,30 @@ class PageController extends Controller
     public function faq(){
         $list = Faq::latest()->where('active',1)->get();
         return view('front.page.faq.main',compact('list'));
+    }
+    public function faq_new(ContactRequest $request){
+        $name = $request->name;
+        $mobile = $request->mobile;
+        $email = $request->email;
+        $title = $request->title;
+        $body = $request->body;
+
+
+        RequestContact::create([
+            'name'=>$name,
+            'mobile'=>$mobile,
+            'email'=>$email,
+            'title'=>$title,
+            'body'=>$body,
+        ]);
+
+        Session::flash('success', 'پیام شما با موفقیت ارسال شد!');
+
+        return redirect()->back();
+    }
+
+    public function help(){
+        $list = Faq::latest()->where('active',1)->get();
+        return view('front.page.help.main',compact('list'));
     }
 }

@@ -53,6 +53,10 @@
 
                             </div>
                             <div class="nextstep">
+                                <a
+                                    style="" @click="back"
+                                    class="checkout-button button alt wc-forward back"><span>مرحله قبل</span>
+                                </a>
                                 <a @click="nextStep" :class="{'disabled':!isContinue}"
                                    class="checkout-button button alt wc-forward"><span>ثبت سفارش</span></a>
                             </div>
@@ -121,6 +125,10 @@ export default {
         }
     },
     methods: {
+        back(){
+            this.$parent.$parent.step=1
+            $('html ,body').stop().animate({scrollTop: 0}, 500)
+        },
         selectAddress(v,t=false) {
             this.address = v
             this.edit = t

@@ -115,6 +115,9 @@ class ContactinfoController extends Controller
         $contact->zoom = $request->input('zoom');
         $contact->whatsapp = $request->input('whatsapp');
         $contact->telegram = $request->input('telegram');
+        $contact->twitter = $request->input('twitter');
+        $contact->facebook = $request->input('facebook');
+        $contact->instagram = $request->input('instagram');
 
         if($request->hasFile('featured_image')) {
             $image = $request->file('featured_image');

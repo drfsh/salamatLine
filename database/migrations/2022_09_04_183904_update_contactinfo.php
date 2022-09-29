@@ -16,6 +16,10 @@ class UpdateContactinfo extends Migration
         Schema::table('contactinfos', function (Blueprint $table) {
             $table->string('whatsapp')->nullable();
             $table->string('telegram')->nullable();
+
+            $table->string('twitter')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('facebook')->nullable();
         });
     }
 

@@ -260,7 +260,7 @@ class ProductController extends Controller
         $product = Product::findOrFail($id);
 
         if ($product->active == 0 && $request->active == 'on') {
-            $this->NotiStock($product->id,$product->title,$product->slug);
+            $this->NotiStock($product->id,$product->title,$product->id);
         }
 
 
