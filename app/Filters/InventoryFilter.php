@@ -31,7 +31,7 @@ class InventoryFilter extends AbstractQueryFilter
         //
     ];
 
-    public function serachwords($name)
+    public function searchwords($name)
     {
         return $this->builder->whereHas('product', function ($query) use ($name) {
             $query->where('title','LIKE','%'.$name.'%');

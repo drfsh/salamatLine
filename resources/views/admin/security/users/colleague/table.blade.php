@@ -2,7 +2,6 @@
     <thead>
         <tr>
             <th class="text-center">کد</th>
-            <th>نقش</th>
             <th class="text-center">نام</th>
             <th class="text-center">موبایل</th>
             <th>ایمیل</th>
@@ -14,7 +13,6 @@
         @foreach ($users as $user)
         <tr>
             <td class="text-center">{{ $user->id }}</td>
-            <td>{{  $user['role'] }}</td>
             <td class="text-center">{{ $user->name }}</td>
             <td class="text-center">{{ $user->number }}</td>
             <td>{{ $user->email }}</td>

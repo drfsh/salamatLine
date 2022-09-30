@@ -26,19 +26,22 @@
                     {{ Form::email('email', null, array('class' => '')) }}
 
 
-                    {{ Form::label('role', 'نقش') }}
-                    <select name="role">
-                        <option value="1" @if($user['role']=='ادمین') selected @endif>ادمین</option>
-                        <option value="2" @if($user['role']=='همکار') selected @endif>همکار</option>
-                        <option value="3" @if($user['role']=='خریدار') selected @endif>خریدار</option>
-                    </select>
+                    {{ Form::label('role', 'شماره فاکتور') }}
+                    {{ Form::text('role', null, array('class' => '')) }}
 
-                    {{ Form::label('type_buy', 'نوع خرید') }}
-                    <select name="type_buy">
-                        <option value="1" @if($user['type_buy']=='خرید آنلاین') selected @endif>خرید آنلاین</option>
-                        <option value="2" @if($user['type_buy']=='خرید حضوری') selected @endif>خرید حضوری</option>
-                        <option value="3" @if($user['type_buy']=='خرید همکار') selected @endif>خرید همکار</option>
-                    </select>
+{{--                    {{ Form::label('role', 'نقش') }}--}}
+{{--                    <select name="role">--}}
+{{--                        <option value="1" @if($user['role']=='ادمین') selected @endif>ادمین</option>--}}
+{{--                        <option value="2" @if($user['role']=='همکار') selected @endif>همکار</option>--}}
+{{--                        <option value="3" @if($user['role']=='خریدار') selected @endif>خریدار</option>--}}
+{{--                    </select>--}}
+
+{{--                    {{ Form::label('type_buy', 'نوع خرید') }}--}}
+{{--                    <select name="type_buy">--}}
+{{--                        <option value="1" @if($user['type_buy']=='خرید آنلاین') selected @endif>خرید آنلاین</option>--}}
+{{--                        <option value="2" @if($user['type_buy']=='خرید حضوری') selected @endif>خرید حضوری</option>--}}
+{{--                        <option value="3" @if($user['type_buy']=='خرید همکار') selected @endif>خرید همکار</option>--}}
+{{--                    </select>--}}
 
                     {{ Form::label('price_buy', 'مقدار خرید') }}
                     <div class="input-group">

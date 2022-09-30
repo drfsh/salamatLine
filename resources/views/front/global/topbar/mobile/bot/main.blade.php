@@ -6,9 +6,15 @@
 		<div class="cell shrink">
 			<ul class="holder header-left-btns">
 				@guest
-					<li><a href="{{ route('login') }}" class="btnh" aria-label="Login"><i class="far fa-user"></i></a></li>
 					<li><cart-num></cart-num></li>
+					<li>
+						<a href="{{ route('MyFavorites') }}" aria-label="My Favorites" class="btnh">
+							@include('icons.heart')
+						</a>
+					</li>
+					<li><a href="{{ route('login') }}" class="btnh" aria-label="Login"><i class="far fa-user"></i></a></li>
 				@else
+					<li><cart-num></cart-num></li>
 					<li>
 						<a href="{{ route('MyFavorites') }}" aria-label="My Favorites" class="btnh">
 							@include('icons.heart')
@@ -20,7 +26,6 @@
 							<span class="round noti">{{$unpaidinvoice}}</span>
 						@endif
 					</a></li>
-					<li><cart-num></cart-num></li>
 				@endguest
 			</ul>
 		</div>

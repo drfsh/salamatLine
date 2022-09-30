@@ -35,4 +35,8 @@ class NewLetterController extends Controller
                 'User successfully added.');
     }
 
+    public function emails(){
+        $emails = Newsletter::latest()->get();
+        return response()->json($emails);
+    }
 }

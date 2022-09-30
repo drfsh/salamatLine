@@ -7,7 +7,7 @@
 	<div class="grid-x">
 		<div class="cell">	
 			<div class="large-table">
-				<table class="hover table-bordered">
+				<table class="hover table-bordered" style="min-width: unset;">
 					@include('admin.invoice.factor.body.tableheading')
 					@foreach($invoice->orders as $order)
 						@include('admin.invoice.factor.body.Item')

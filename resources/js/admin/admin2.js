@@ -11,6 +11,7 @@ import product from "./components/product/product";
 import create_discount from "./components/discount/create_discount";
 import edit_discount from "./components/discount/edit_discount";
 import replay from "./components/comment/replay";
+import newslatest_export from "./components/newslatest/newslatest_export";
 
 
 
@@ -19,6 +20,10 @@ setApp([
     {
         name: 'comment-replay',
         component: replay
+    },
+    {
+        name: 'newslatest-export',
+        component: newslatest_export
     },
     {
         name: 'brand-admin',

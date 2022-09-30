@@ -7,7 +7,7 @@
         <div class="disable" @click="show=false"></div>
         <div class="body">
             <div class="title">پاسخ</div>
-            <textarea v-model="body" placeholder="متن پاسخ"></textarea>
+            <textarea style="width: 467px;height: 204px;" v-model="body" placeholder="متن پاسخ"></textarea>
             <button role="button" @click="set" class="ok">ثبت</button>
         </div>
     </div>

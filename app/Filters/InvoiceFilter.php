@@ -44,7 +44,9 @@ class InvoiceFilter extends AbstractQueryFilter
         //     $query->where('code','LIKE','%'.$name.'%');
         // })->orWhereHas('address', function ($query) use ($name) {
         //     $query->where('content','LIKE','%'.$name.'%');
-        // });        
+        // });
+
+        return $this->builder->find($name);
 
     }
 

@@ -6,7 +6,6 @@
             <th class="text-center">موبایل</th>
             <th>ایمیل</th>
             <th>تاریخ عضویت</th>
-            <th>نقش</th>
             <th width="50">عملیات</th>
         </tr>
     </thead>
@@ -18,7 +17,6 @@
             <td class="text-center">{{ $user->mobile }}</td>
             <td>{{ $user->email }}</td>
             <td>{{Verta($user->created_at)->format('l %d %B %Y - H:i')}}</td>
-            <td>{{  $user->roles()->pluck('name')->implode(' ') }}</td>
             <td>
                 <ul class="modify">
                     <li class="edit">

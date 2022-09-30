@@ -25,8 +25,6 @@
                     {{ Form::label('email', 'ایمیل') }}
                     {{ Form::email('email', null, array('class' => '')) }}
 
-                    {{ Form::label('role', 'نقش (سِمت)') }}
-                    {{ Form::text('role', null, array('class' => '')) }}
 
                     <input type="hidden" name="type_buy" value="0">
                     <input type="hidden" name="price_buy" value="0">

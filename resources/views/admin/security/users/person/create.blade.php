@@ -27,19 +27,22 @@
 
 
 
-                    {{ Form::label('role', 'نقش') }}
-                    <select name="role">
-                        <option value="1">ادمین</option>
-                        <option value="2">همکار</option>
-                        <option value="3">خریدار</option>
-                    </select>
 
-                    {{ Form::label('type_buy', 'نوع خرید') }}
-                    <select name="type_buy">
-                        <option value="1">خریدار آنلاین</option>
-                        <option value="2">خریدار حضوری</option>
-                        <option value="3">خریدار همکار</option>
-                    </select>
+                    {{ Form::label('role', 'شماره فاکتور') }}
+                    {{ Form::text('role', null, array('class' => '')) }}
+{{--                    {{ Form::label('role', 'نقش') }}--}}
+{{--                    <select name="role">--}}
+{{--                        <option value="1">ادمین</option>--}}
+{{--                        <option value="2">همکار</option>--}}
+{{--                        <option value="3">خریدار</option>--}}
+{{--                    </select>--}}
+
+{{--                    {{ Form::label('type_buy', 'نوع خرید') }}--}}
+{{--                    <select name="type_buy">--}}
+{{--                        <option value="1">خریدار آنلاین</option>--}}
+{{--                        <option value="2">خریدار حضوری</option>--}}
+{{--                        <option value="3">خریدار همکار</option>--}}
+{{--                    </select>--}}
 
 
                     {{ Form::label('price_buy', 'مقدار خرید') }}

@@ -12,12 +12,17 @@
         <div class="cell medium-10 medium-offset-1">
             <div class="title_b">خبرنامه
 
-                <a href="{{route('newsletter.create')}}">
-                <span class="create">
-                    <i class="fas fa-plus"></i>
-                    ارسال
-                </span>
-                </a>
+                <div style="display: flex">
+                    <a style="margin-left: 8px;">
+                       <newslatest-export></newslatest-export>
+                    </a>
+                    <a href="{{route('newsletter.create')}}">
+                        <span class="create">
+                            <i class="fas fa-plus"></i>
+                            ارسال
+                        </span>
+                    </a>
+                </div>
             </div>
             <div class="box rounded">
                 @include('admin.newsletter.table')

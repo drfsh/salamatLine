@@ -4958,8 +4958,8 @@ footer .sub {
 .home-category-top .box img {
     margin-bottom: 28px;
     margin-top: 15px;
-    width: 109px;
-    height: 110px;
+    width: 140px;
+    height: 140px;
 }
 
 .side-bar {
@@ -5080,7 +5080,9 @@ footer .sub {
     display: flex;
     align-items: center
 }
-
+.leaflet-top, .leaflet-bottom{
+    z-index: 100;
+}
 .order-item .val .date {
     color: #81858b;
 }

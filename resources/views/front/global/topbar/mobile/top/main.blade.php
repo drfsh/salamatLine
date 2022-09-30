@@ -4,7 +4,7 @@
 		<div class="cell small-5 text-center">
 			@include('front.global.topbar.desktop.top.logo')
 		</div>
-        <div class="cell small-5" style="font-size: 9px;text-align: center;margin-top: -20px;">به پشتوانه ۵ دهه مشتری مداری</div>
+        <div class="cell small-5" style="font-size: 9px;text-align: center;margin-top: 0px;">به پشتوانه ۵ دهه مشتری مداری</div>
 		<div class="cell small-2"></div>
 	</div>
 </div>
