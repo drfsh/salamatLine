@@ -91,6 +91,7 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
 	Route::get('api/company', [App\Http\Controllers\Admin\ApiController::class, 'company']);
 	Route::get('api/country', [App\Http\Controllers\Admin\ApiController::class, 'country']);
 	Route::get('api/category', [App\Http\Controllers\Admin\ApiController::class, 'category']);
+	Route::get('api/emails', [App\Http\Controllers\Admin\NewLetterController::class, 'emails']);
 
 	Route::resource('contactinfo', App\Http\Controllers\Admin\ContactinfoController::class, ['except' => ['show', 'destroy']]);
 	Route::resource('newsletter', App\Http\Controllers\Admin\NewLetterController::class);
