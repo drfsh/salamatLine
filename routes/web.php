@@ -18,7 +18,7 @@ Route::post('request-login/{id}', [App\Http\Controllers\Auth\SmsLoginController:
 Route::post('approve-code/{id}', [App\Http\Controllers\Auth\SmsLoginController::class, 'CheckForLogin']);
 
 
-Route::group(['middleware' => ['isAdmin']], function() {
+Route::group(['middleware' => ['auth','isAdmin']], function() {
 
     Route::get('/', [App\Http\Controllers\Front\HomeController::class, 'main'])->name('home');
     Route::get('/cart', [App\Http\Controllers\Front\CartController::class, 'main'])->name('cart');
