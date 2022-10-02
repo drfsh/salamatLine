@@ -81,7 +81,7 @@ Route::group(['middleware' => ['isAdmin']], function() {
         Route::get('about-us', [App\Http\Controllers\Front\PageController::class, 'about'])->name('about');
         Route::get('faq', [App\Http\Controllers\Front\PageController::class, 'faq'])->name('faq');
         Route::post('faq', [App\Http\Controllers\Front\PageController::class, 'faq_new'])->name('faq_new');
-        Route::post('contact-us', [App\Http\Controllers\Front\PageController::class, 'contactUs'])->name('contactus');
+        Route::post('contact-us', [App\Http\Controllers\Front\PageController::class, 'contact_new']);
         Route::get('help', [App\Http\Controllers\Front\PageController::class, 'help'])->name('help');
 
         Route::get('brands', [App\Http\Controllers\Front\BrandController::class, 'holder'])->name('brandHolder');

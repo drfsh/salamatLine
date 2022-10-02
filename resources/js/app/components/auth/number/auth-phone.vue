@@ -4,7 +4,7 @@
     <div class="">
         <div class="input-phone">
             <div>
-                <input v-model="mobile" type="text" id="number">
+                <input v-model="mobile" type="number" id="number">
             </div>
             <div class="select-code">
                 <img v-if="country.length!==0" :src="country[countryV].image">

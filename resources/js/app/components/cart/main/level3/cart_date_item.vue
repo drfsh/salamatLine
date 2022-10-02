@@ -6,6 +6,9 @@
     <span class="content">
         {{v.full}}
     </span>
+    <span class="content" v-if="!v.active">
+        {{v.holiday}}
+    </span>
 </div>
 </template>
 

@@ -43,5 +43,5 @@
     </ul>
 </div>
 <div class="c-60" style="margin-top: 75px;padding-top: 0;">
-    <img src="#" alt="img" style="height: 100%;">
+    <img src="/img/page/{{$data['img2']}}" alt="img" style="height: 100%;">
 </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Front;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactRequest;
 use App\Models\Faq;
+use App\Models\InfoPage;
 use App\Models\Page;
 use App\Models\RequestContact;
 use Artesaos\SEOTools\Facades\SEOTools;
@@ -75,13 +76,54 @@ class PageController extends Controller
         return view('front.page.contactus.main');
     }
     public function about(){
-        return view('front.page.about.main');
+
+        $img1 = InfoPage::find(1);
+        $img2 = InfoPage::find(2);
+        $b1 = InfoPage::find(3);
+        $b2 = InfoPage::find(4);
+        $b3 = InfoPage::find(5);
+        $b4 = InfoPage::find(6);
+        $b5 = InfoPage::find(7);
+        $users = InfoPage::where([['id','!=', 1], ['id','!=', 2], ['id','!=', 3], ['id', '!=',4],
+            ['id','!=', 5], ['id','!=', 6], ['id', '!=',7]])->get();
+
+        $data['img1'] = $img1->img;
+        $data['img2'] = $img2->img;
+        $data['b1'] = $b1;
+        $data['b2'] = $b2;
+        $data['b3'] = $b3;
+        $data['b4'] = $b4;
+        $data['b5'] = $b5;
+        $data['users'] = $users;
+
+        return view('front.page.about.main',compact('data'));
     }
     public function faq(){
         $list = Faq::latest()->where('active',1)->get();
         return view('front.page.faq.main',compact('list'));
     }
     public function faq_new(ContactRequest $request){
+        $name = $request->name;
+        $mobile = $request->mobile;
+        $email = $request->email;
+        $title = $request->title;
+        $body = $request->body;
+
+
+        RequestContact::create([
+            'name'=>$name,
+            'mobile'=>$mobile,
+            'email'=>$email,
+            'title'=>$title,
+            'body'=>$body,
+            'type'=>'faq'
+        ]);
+
+        Session::flash('success', 'پیام شما با موفقیت ارسال شد!');
+
+        return redirect()->back();
+    }
+    public function contact_new(ContactRequest $request){
         $name = $request->name;
         $mobile = $request->mobile;
         $email = $request->email;

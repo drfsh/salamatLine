@@ -1,5 +1,5 @@
 <div class="c-40">
-    <img src="#" alt="img">
+    <img src="/img/page/{{$data['img1']}}" alt="img">
 </div>
 <div class="c-60">
     <div class="p-title">

@@ -64,6 +64,13 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
 	Route::resource('page', App\Http\Controllers\Admin\PageController::class, ['except' => ['show']]);
 	Route::resource('banner', App\Http\Controllers\Admin\BannerController::class, ['except' => ['show']]);
 	Route::resource('faq', App\Http\Controllers\Admin\FaqController::class, ['except' => ['show']]);
+	Route::resource('info', App\Http\Controllers\Admin\InfoController::class, ['except' => ['show']]);
+	Route::get('api/info', [App\Http\Controllers\Admin\InfoController::class,'getData']);
+	Route::post('api/info/updateimg', [App\Http\Controllers\Admin\InfoController::class,'updateImg']);
+	Route::post('api/info/uodateicon', [App\Http\Controllers\Admin\InfoController::class,'uodateicon']);
+	Route::post('api/info/newUser', [App\Http\Controllers\Admin\InfoController::class,'newUser']);
+	Route::post('api/info/editUser', [App\Http\Controllers\Admin\InfoController::class,'editUser']);
+	Route::delete('api/info/deleteUser/{id}', [App\Http\Controllers\Admin\InfoController::class,'deleteUser']);
 
 	Route::get('reviews/unapproved',[App\Http\Controllers\Admin\ReviewrateController::class, 'index'])->name('UnReviewrate');
 	Route::get('reviews/approved',[App\Http\Controllers\Admin\ReviewrateController::class, 'approved'])->name('Reviewrate');

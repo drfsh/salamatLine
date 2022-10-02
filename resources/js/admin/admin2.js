@@ -12,11 +12,16 @@ import create_discount from "./components/discount/create_discount";
 import edit_discount from "./components/discount/edit_discount";
 import replay from "./components/comment/replay";
 import newslatest_export from "./components/newslatest/newslatest_export";
+import infoSettings from "./components/info/infoSettings";
 
 
 
 
 setApp([
+    {
+        name: 'page-info-settings',
+        component: infoSettings
+    },
     {
         name: 'comment-replay',
         component: replay

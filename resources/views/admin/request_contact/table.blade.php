@@ -6,6 +6,7 @@
         <th>متن</th>
         <th>موبایل</th>
         <th>ایمیل</th>
+        <th>برای..</th>
         <th>تاریخ</th>
 
     </tr>
@@ -18,6 +19,7 @@
             <td>{{ $v->body }}</td>
             <td>{{ $v->mobile }}</td>
             <td>{{ $v->email }}</td>
+            <td>@if($v->type=='contact') تماس با ما @else  سوالات متداول @endif</td>
             <td>{{ $v->created_at }}</td>
         </tr>
     @endforeach

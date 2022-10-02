@@ -498,3 +498,42 @@ body::-webkit-scrollbar-thumb {
     background: #094873;
     color: white;
 }
+.box.info  .img img{
+    width: 100%;
+    height: 100%;
+    background: aliceblue;
+}
+.box.info  .img{
+    width: 50%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 27px;
+    padding: 15px;
+}
+.box.info .save{
+    padding: 11px;
+    margin: 10px 23px;
+    background: #094873;
+    color: white;
+}
+.box.info > .title{
+    padding: 13px;
+}
+.box-info{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 17px;
+}
+.box-info .item input{
+    width: 80%;
+}
+.box-info .item img{
+    height: 100px;
+    width: 80%;
+}
+.box-info .item{
+    width: 50%;
+}
+button{
+    cursor: pointer;
+}

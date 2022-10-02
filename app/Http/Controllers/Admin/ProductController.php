@@ -67,11 +67,10 @@ class ProductController extends Controller
         $product->subtitle = $request->subtitle;
         $product->slug = $request->slug;
 
-        $request->price = $request->price*10;
         if($request->price == 0){
             $product->price =  Null;
         }else{
-            $product->price = (float) str_replace(',', '', $request->price);
+            $product->price = ((float) str_replace(',', '', $request->price))*10;
         }
 
         if($request->price_usd == 0){
@@ -244,6 +243,7 @@ class ProductController extends Controller
     public function edit($id)
     {
         $product = Product::with('feature', 'brand', 'country', 'multiprice', 'seo')->findOrFail($id);
+        $product->price = $product->price/10;
         $brand = Brand::all();
         $country = Country::all();
         $material = Material::all();
@@ -268,11 +268,10 @@ class ProductController extends Controller
         $product->title_en = $request->input('title_en');
         $product->subtitle = $request->input('subtitle');
         $product->slug = $request->input('slug');
-        $request->price = $request->price*10;
         if($request->price == 0){
             $product->price =  Null;
         }else{
-            $product->price = (float) str_replace(',', '', $request->input('price'));
+            $product->price = ((float) str_replace(',', '', $request->input('price')))*10;
         }
 
         if($request->price_usd == 0){
