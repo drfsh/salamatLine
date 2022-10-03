@@ -68,7 +68,7 @@ export default {
             let input = document.getElementById('number')
             this.loading = true
             input.disabled = 'disabled'
-            let m = {lname: '', mobile: this.mobile, name: this.name}
+            let m = {lname: '', mobile: "0"+this.mobile, name: this.name}
             let {data} = await window.axios.post('/request-login/1', m)
 
             if (data['EnterPhone'] === true) {
