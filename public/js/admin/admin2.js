@@ -24276,7 +24276,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     target: "_blank"
   }, _hoisted_26, 8
   /* PROPS */
-  , _hoisted_24)]), _ctx.$parent.$parent.id == 4 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  , _hoisted_24)]), _ctx.$parent.$parent.id == 4 || _ctx.$parent.$parent.id == 1192 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[4] || (_cache[4] = function ($event) {
       return $options.delete_();
     }),

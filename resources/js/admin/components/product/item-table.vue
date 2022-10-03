@@ -28,7 +28,7 @@
                 </li>
                 <li class="edit"><a class="btn-edit-blue m-0" :href="'./product/'+item.id+'/edit'" target="_blank"><i class="fas fa-edit"></i></a>
                 </li>
-                <li v-if="$parent.$parent.id==4" style="margin-right: 2px;margin-top: 2px;" class="delete">
+                <li v-if="$parent.$parent.id==4 || $parent.$parent.id==1192" style="margin-right: 2px;margin-top: 2px;" class="delete">
                     <button @click="delete_()" class="btn-edit-danger m-0" type="submit" value="Delete"><i
                         class="fas fa-trash"></i></button>
                 </li>

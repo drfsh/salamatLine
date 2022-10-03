@@ -44,7 +44,7 @@ class SmsLoginController extends Controller
         $current = Carbon::now();
 
         $user = User::where('mobile', $phone)->first();
-        
+
         if (!$phone) {
             return response()->json(['EnterPhone' => true, 'color' => 'warning', 'alert' => 'شماره موبایل را وارد کنید.', 'show_name' => false]);
         }
