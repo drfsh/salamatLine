@@ -48,14 +48,14 @@ class SmsLoginController extends Controller
        if (!$phone) {
             return response()->json(['EnterPhone' => true,'color' => 'warning','alert' => 'شماره موبایل را وارد کنید.','show_name' => false]);
         }
-       if (strlen($phone) != 11 ) {
-            return response()->json(['EnterPhone' => true,'color' => 'warning','alert' => 'شماره موبایل عددی یازده رقمی است.','show_name' => false]);
+       if (strlen($phone) != 11 && strlen($phone) != 10) {
+            return response()->json(['EnterPhone' => true,'color' => 'warning','alert' => 'شماره موبایل عددی یازده یا ده رقمی است.','show_name' => false]);
         }
 
         if ( !is_numeric($phone)) {
             return response()->json(['EnterPhone' => true,'color' => 'warning','alert' => 'شماره موبایل را با فرمت صحیح وارد نمایید.','show_name' => false]);
-        }        
-       
+        }
+
        if (!$user) {
             if ($name == null) {
                  return response()->json([
@@ -66,9 +66,9 @@ class SmsLoginController extends Controller
                 ]);
             }
         }
-        
+
         // Log::info($number);
-        
+
 		$authUser = $this->findOrCreateUser($phone);
 
         if (!$user) {
@@ -92,7 +92,7 @@ class SmsLoginController extends Controller
         }
 
         $authUser->save();
-        
+
         if ($phone && $number) {
             $this->Sendsms($phone, 'AuthUser', $number,$number,null,$authUser->name);
         }
@@ -110,7 +110,7 @@ class SmsLoginController extends Controller
         {
             return response()->json(['color' => 'warning','alert' => 'قبلا وارد شدی!']);
         }
-        
+
         $code = $this->convert2english($id);
         $mobile = $this->convert2english($request->mobile);
         // Log::info($code);
@@ -132,7 +132,7 @@ class SmsLoginController extends Controller
             return response()->json(['color' => 'warning','alert' => 'هیچ کاربری با این مشخصات پیدا نکردیم.']);
         }
 
-        
+
         $now = Carbon::now();
         $active = Carbon::parse($entry->expire);
         if ($now > $active) {
