@@ -2947,12 +2947,29 @@ body.auth #salamat-logo {
     padding-left: 20px;
     box-sizing: border-box;
 }
-
+.right-new-123-1 .slider-wrapper._1{
+    margin: 16px;
+    border-radius: 10px !important;
+    overflow: hidden;
+}
+.right-new-123-1 .slider-wrapper._2{
+    margin: 5px 7px;
+}
+.right-new-123-1 .slider-wrapper._2{
+    border-radius: 10px;
+    overflow: hidden;
+}
 .right-two-p-sepid-asli {
     float: left;
     width: 40%;
 }
-
+.zoom{
+    background-position: 50% 50% ;
+    cursor: zoom-in;
+}
+.zoom img:hover{
+    opacity: 0;
+}
 .mt15 {
     margin-top: 15px;
 }
@@ -3419,9 +3436,8 @@ body.auth #salamat-logo {
     color: #fff;
     font-weight: 400;
     border-radius: 8px;
-    padding: 1em;
+    padding: 1em 0;
     width: 100%;
-
 }
 
 .woocommerce a.button.alt:hover {
@@ -4305,9 +4321,22 @@ input[type=number] {
 }
 
 .utb {
-    height: 200px;
+    height: 153px;
 }
-
+.top-bar .top .logo span{
+    color: white;
+    font-size: 9px;
+    margin-top: 4px;
+    margin-bottom: -7px;
+    background: #094873;
+    border-radius: 10px;
+    padding: 1px 14px;
+}
+.top-bar .top .logo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 .menu-category span:nth-child(3) {
     transition: 0.2s;
     transform: rotate(180deg);
@@ -4488,6 +4517,7 @@ footer .top .contact-us {
     background: white;
     padding: 55px;
     border-radius: 10px 0 0 10px;
+    z-index: 2;
 }
 
 footer .top .contact-us .accounts svg {
@@ -4969,7 +4999,25 @@ footer .sub {
     box-shadow: 0 0 18px -1px #74747424;
     border: none;
 }
-
+.top-bar .bot .relative{
+    display: flex;
+    justify-content: space-between;
+}
+.icon-btns .header-left-btns li .btnh svg{
+    width: 20px;
+    height: 20px;
+}
+.icon-btns .header-left-btns li .btnh{
+    width: 35px;
+    height: 35px;
+}
+.icon-btns .header-left-btns li .btnh .num{
+    height: 15px;
+    display: flex;
+    padding: 2px 5px;
+    border-radius: 19px;
+    font-size: 8px;
+}
 .side-bar a > svg {
     width: 17px;
     height: 17px;
@@ -6144,9 +6192,8 @@ footer .sub {
     position: fixed;
     display: flex;
     flex-direction: column;
-    right: -45px;
-    top: 30%;
-    right: 13px;
+    top: 250px;
+
 }
 
 .about .title {
@@ -6628,8 +6675,49 @@ footer .sub {
         width: 30% !important;
     }
 }
-
-@media only screen and (max-width: 700px) {
+.edit-profile{
+    margin:25px;padding: 30px
+}
+@media only screen and (max-width: 700px)
+{
+    .sidebar-exit{
+        padding: 10px 6px !important;
+    }
+    .sidebar-exit i{
+         position: unset;
+    }
+    .box2 > .title{
+        font-size: 14px;
+    }
+    .menu-bl-p img{
+        width: 35px;
+    }
+    .menu-bl-p .text{
+        font-size: 10px;
+        text-align: center;
+    }
+    .menu-bl-p {
+        padding: 10px 15px;
+    }
+    .ProfileName {
+        padding: 12px 10px 0;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .ProfileName .title {
+        font-size: 12px;
+        padding: 12px 0.625rem;
+        color: #202636;
+    }
+    .edit-profile{
+        margin: 10px;
+        padding: 19px;
+    }
+    .edit-profile .add-shop{
+        padding: 12px;
+        font-size: 11px;
+    }
     .s-slid {
         flex-direction: column;
     }
@@ -6993,9 +7081,12 @@ footer .sub {
         font-size: 12px;
     }
     .menu-bl-p > div{
-        height: 135px;
+        height: 94px;
         justify-content: center !important;
         flex-direction: column !important;
+    }
+    .bbox .title2{
+        font-size: 13px;
     }
     .menu-bl {
          border-left: none;
@@ -7062,6 +7153,103 @@ footer .sub {
         height: 70px;
         font-size: 32px;
     }
+    .mini-cart-3{
+        display: none!important;
+    }
+    #salamat-logo + span{
+        display: none;
+    }
+    #app-cart .empty{
+        padding: 0;
+    }
+    #app-cart .empty .title-empty{
+        font-size: 15px;
+    }
+    #app-cart .empty .sub-title-empty{
+        font-size: 10px;
+    }
+    #app-cart .empty .links{
+        font-size: 10px;
+    }
+    .menu-profile-i{
+        padding: 7px 15px;
+    }
+    .ProfileName .pic .hupload{
+        height: 40px;
+        width: 40px;
+    }
+    .hupload .upload{
+        height: 16px;
+        width: 16px;
+        left: -4px;
+        top: 3px;
+    }
+    .product-item-h .infos i{
+        padding: 0;
+    }
+    .product-item-h img{
+        margin: 8px;
+        width: 50px;
+        height: 44px;
+    }
+    .product-item-h .infos .texts span{
+        font-size: 11px;
+    }
+    .product-item-h .infos .texts span{
+        font-size: 10px;
+    }
+    .product-item-h .infos i {
+        padding: 0;
+        margin-right: 9px;
+        font-size: 12px;
+    }
+    .add-shop{
+
+        padding: 9px;
+        font-size: 10px;
+        display: inline-block;
+        text-align: center;
+        margin: 0 0 0 12px;
+    }
+    .btn-new-ticket {
+        border: none;
+        padding: 9px 2px;
+        background: #dce4eb;
+        box-shadow: 0 2px 20px -5px #97979763;
+        border-radius: 5px;
+        transition: 0.2s;
+        font-size: 10px;
+        margin: 6px 9px;
+        cursor: pointer;
+    }
+    .sub-title .info {
+        font-size: 10px;
+        color: #a2a2a2;
+    }
+    .product-item-h .infos {
+        width: 70%;
+    }
+    .item-address .name {
+        padding: 5px 9px;
+        font-size: 13px;
+    }
+    .item-address .section .item {
+        padding: 6px 9px;
+        font-size: 12px;
+    }
+    .item-address .section .item span{
+        font-size: 12px;
+    }
+    .more-a{
+        flex-direction: column;
+        border-left: 1px solid #bdbdbd;
+    }
+    .item-address .section{
+        padding: 0;
+    }
+    .item-address .cities{
+        border-left: none;
+    }
 }
 
 @media only screen and (max-width: 1320px) {
@@ -7085,4 +7273,24 @@ footer .sub {
 
 #cart_invoice {
     overflow: auto;
+}
+.callout.success{
+    background: rgb(3, 183, 0);
+    color: white;
+}
+.callout {
+    background-color: #fff;
+    border: 1px solid rgba(43,42,41,.25);
+    border-radius: 6px;
+    color: #413f3e;
+    margin: 0 0 1rem;
+    padding: 1rem;
+    position: fixed;
+    text-align: center;
+    border: 0px;
+    color: white;
+    padding: 11px;
+    width: auto;
+    left: 20px;
+    bottom: 15px;
 }

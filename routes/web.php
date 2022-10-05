@@ -1,5 +1,7 @@
 <?php
 
+use App\Mail\ForAdmin;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,7 +25,16 @@ Route::get('/cart', [App\Http\Controllers\Front\CartController::class, 'main'])-
 Route::get('/products', [App\Http\Controllers\Front\ProductHolderController::class, 'main'])->name('productHolder');
 Route::get('/products/{slug}', [App\Http\Controllers\Front\ProductController::class, 'main'])->name('product');
 Route::get('/test', function () {
-    abort(404);
+
+
+    $allView = 0;
+    $buy = 0;
+    $newUser = 0;
+    $newProduct = 0;
+    $newComment = 0;
+    Mail::to("mahdidera63@gmail.com")->queue(new ForAdmin($allView,$buy,$newUser,$newProduct,$newComment));
+
+    return view('email.forAdmin');
 });
 
 

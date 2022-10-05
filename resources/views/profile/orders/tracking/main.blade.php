@@ -39,7 +39,7 @@
                                     <img src="{{asset('img/profile/status-delivered.svg')}}">
                                 </div>
                                 <div>
-                                    <div>درصف بررسی</div>
+                                    <div class="text">درصف بررسی</div>
                                 </div>
                             </div>
                             <div class="flex-center w-100 p-status" >
@@ -47,7 +47,7 @@
                                     <img src="{{asset('img/profile/status-processing.svg')}}">
                                 </div>
                                 <div>
-                                    <div>تایید سفارش</div>
+                                    <div class="text">تایید سفارش</div>
                                 </div>
                             </div>
                             <div class="flex-center w-100 p-status">
@@ -55,7 +55,7 @@
                                     <img src="{{asset('img/profile/status-returned.svg')}}">
                                 </div>
                                 <div>
-                                    <div>سفارش تکمیل شده</div>
+                                    <div class="text">سفارش تکمیل شده</div>
                                 </div>
                             </div>
                         </div>

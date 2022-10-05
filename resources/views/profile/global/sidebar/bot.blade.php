@@ -1,6 +1,6 @@
-<div>
-    <ul class="pside">
 
+<div class="menu-profile" @if ($agent->isMobile()) style="display: none" @endif>
+    <ul class="pside">
         <li class="{{checkRoute('profile')}}">
             <a class="win-btn" href="{{ route('profile')}}">
                 <i>
@@ -72,7 +72,7 @@
         {{--            </a>--}}
         {{--        </li>--}}
     </ul>
-    <div style="position: absolute;bottom: 5px;width: 100%;">
+    <div style="@if (!$agent->isMobile()) position: absolute; @endif bottom: 5px;width: 100%;">
         <hr style="margin-top: 10px">
         <a  class="sidebar-exit"  href="{{ route('logout')}}"
            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

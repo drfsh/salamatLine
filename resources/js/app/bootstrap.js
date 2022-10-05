@@ -11,7 +11,8 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
-} catch (e) {}
+} catch (e) {
+}
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -36,7 +37,7 @@ window.csrf_token = meta;
 
 const root = document.documentElement;
 
-$('.bg-l').on('mousemove',function (e){
+$('.bg-l').on('mousemove', function (e) {
 
     const rect = e.target.getBoundingClientRect();
 
@@ -45,8 +46,8 @@ $('.bg-l').on('mousemove',function (e){
     let x = e.clientX - width;
     let y = (e.clientY - rect.top);
 
-    root.style.setProperty('--mouse-x', x+'px');
-    root.style.setProperty('--mouse-y', y+'px');
+    root.style.setProperty('--mouse-x', x + 'px');
+    root.style.setProperty('--mouse-y', y + 'px');
 });
 
 /**
@@ -59,24 +60,24 @@ document.querySelectorAll(".win-btn:not(i,span)").forEach((b) => {
     };
 
 
-        b.addEventListener("mousemove", (e) => {
-            if (!$(e.target).hasClass('win-btn')) {
-                let cm = e
-                e = e.target.parentElement
-                const rect = e.getBoundingClientRect();
-                const x = cm.clientX - rect.left; //x position within the element.
-                const y = cm.clientY - rect.top; //y position within the element.
-                e.style.background = `radial-gradient(circle at ${x}px ${y}px , #dfdfdf,#dfdfdf3b)`;
-                e.style.borderImage = `radial-gradient(20% 75% at ${x}px ${y}px ,#dfdfdf,#dfdfdf3b) 1 / 1px / 0px stretch `;
-                return false;
-            }else {
-                const rect = e.target.getBoundingClientRect();
-                const x = e.clientX - rect.left; //x position within the element.
-                const y = e.clientY - rect.top; //y position within the element.
-                e.target.style.background = `radial-gradient(circle at ${x}px ${y}px , #dfdfdf,#dfdfdf3b)`;
-                e.target.style.borderImage = `radial-gradient(20% 75% at ${x}px ${y}px ,#dfdfdf,#dfdfdf3b) 1 / 1px / 0px stretch `;
-            }
-        });
+    b.addEventListener("mousemove", (e) => {
+        if (!$(e.target).hasClass('win-btn')) {
+            let cm = e
+            e = e.target.parentElement
+            const rect = e.getBoundingClientRect();
+            const x = cm.clientX - rect.left; //x position within the element.
+            const y = cm.clientY - rect.top; //y position within the element.
+            e.style.background = `radial-gradient(circle at ${x}px ${y}px , #dfdfdf,#dfdfdf3b)`;
+            e.style.borderImage = `radial-gradient(20% 75% at ${x}px ${y}px ,#dfdfdf,#dfdfdf3b) 1 / 1px / 0px stretch `;
+            return false;
+        } else {
+            const rect = e.target.getBoundingClientRect();
+            const x = e.clientX - rect.left; //x position within the element.
+            const y = e.clientY - rect.top; //y position within the element.
+            e.target.style.background = `radial-gradient(circle at ${x}px ${y}px , #dfdfdf,#dfdfdf3b)`;
+            e.target.style.borderImage = `radial-gradient(20% 75% at ${x}px ${y}px ,#dfdfdf,#dfdfdf3b) 1 / 1px / 0px stretch `;
+        }
+    });
 
 });
 
@@ -100,7 +101,7 @@ $(".main-item-category").on({
         $(this).addClass('active')
         let id = $(this).attr('data-id')
         $('.mega').hide()
-        $('#'+id).show()
+        $('#' + id).show()
     },
 });
 
@@ -109,12 +110,12 @@ $(".home-title-product-item").click(function () {
     $(this).addClass('active')
     let id = $(this).attr('data-id')
     let classs = $(this).attr('data-c')
-    $('.'+classs).hide()
-    $('#'+id).show()
+    $('.' + classs).hide()
+    $('#' + id).show()
 });
 
 $('.to-up,.swup').click(function () {
-    $('html ,body').stop().animate({scrollTop:0},500)
+    $('html ,body').stop().animate({scrollTop: 0}, 500)
 })
 
 $('.whatsapp-panel-p').click(function () {
@@ -126,9 +127,9 @@ $('.whatsapp-panel-p').click(function () {
 })
 
 window.boxAlert = {
-    show:false,
-    type:'',
-    value:{},
+    show: false,
+    type: '',
+    value: {},
 }
 window.cart_empty = false;
 window.cart_back = false;
@@ -137,43 +138,74 @@ window.cart_back2 = false;
 $('.faq .list .item').click(function () {
     $('.faq .list .item').removeClass('active');
     let b = $(this);
-    if (b.hasClass('active'))
+    if (b.attr('active')==='true')
+    {
         b.removeClass('active')
+        b.attr('active','false')
+    }
     else
+    {
         b.addClass('active')
+        b.attr('active','true')
+    }
 })
 
-
-$(window).on('scroll',function () {
-
-    let p = $('#app').scrollTop()
-
-    console.log(p)
-
-})
 $(document).ready(function () {
 
-    let w = ((window.innerWidth-$('.box3').width())/2)-97
+    let w = ((window.innerWidth - $('.box3').width()) / 2) - 97
 
-    $('.contact-popup').attr('style','right:'+w+'px;')
+    $('.contact-popup').attr('style', 'right:' + w + 'px;')
 
     $(window).resize(function () {
 
-        let w = ((window.innerWidth-$('.box3').width())/2)-97
+        let w = ((window.innerWidth - $('.box3').width()) / 2) - 97
 
-        $('.contact-popup').attr('style','right:'+w+'px;')
+        $('.contact-popup').attr('style', 'right:' + w + 'px;')
 
     })
     $('.to_p1').click(function () {
 
-        $([document.documentElement,document.body]).animate({
-            scrollTop:0
-        },200)
+        $([document.documentElement, document.body]).animate({
+            scrollTop: 0
+        }, 200)
     })
     $('.to_p2').click(function () {
 
-        $([document.documentElement,document.body]).animate({
-            scrollTop:$('#p2').offset().top-200
-        },200)
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $('#p2').offset().top - 200
+        }, 200)
     })
+})
+
+
+let t = 0;
+$(window).scroll((function () {
+    var e = $(this), n = $(this).scrollTop();
+        e.scrollTop() >= 100 && e.scrollTop() < 200 &&
+        t > n ? $(".top-bar").removeClass("shadow") : e.scrollTop() >= 70 &&
+        n > t ? ($(".top-bar .top").slideUp(),
+                $('.top-bar .bot .icon-btns').slideDown()) :
+            t > n ? ($(".top-bar .top").slideDown(),
+                    $('.top-bar .bot .icon-btns').slideUp()) :
+                ($(".top-bar .top").slideDown(),
+                    $('.top-bar .bot .icon-btns').slideUp() ,
+                    $(".top-bar").removeClass("shadow")),
+        t = n
+
+    if (e.scrollTop()>1000){
+        $('.contact-popup').slideUp()
+    }else {
+        $('.contact-popup').slideDown()
+    }
+}))
+var menu = false
+$('.menu-profile-i').click(function () {
+    if (menu)
+    {
+        $('.menu-profile').slideUp()
+        menu = false
+    }else {
+        $('.menu-profile').slideDown()
+        menu = true
+    }
 })

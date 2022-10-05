@@ -1,16 +1,16 @@
 <table class="hover">
     <thead>
-        <tr>
-            <th class="text-center">کد</th>
-            <th class="text-center">نام</th>
-            <th class="text-center">موبایل</th>
-            <th>ایمیل</th>
-            <th>تاریخ عضویت</th>
-            <th width="50">عملیات</th>
-        </tr>
+    <tr>
+        <th class="text-center">کد</th>
+        <th class="text-center">نام</th>
+        <th class="text-center">موبایل</th>
+        <th>ایمیل</th>
+        <th>تاریخ عضویت</th>
+        <th width="50">عملیات</th>
+    </tr>
     </thead>
     <tbody>
-        @foreach ($users as $user)
+    @foreach ($users as $user)
         <tr>
             <td class="text-center">{{ $user->id }}</td>
             <td class="text-center">{{ $user->name }}</td>
@@ -24,16 +24,18 @@
                             <i class="fas fa-edit"></i>
                         </a>
                     </li>
-                    <li class="delete">
-                        {!! Form::open(['method' => 'DELETE', 'route' => ['colleague.destroy', $user->id] ]) !!}
+                    @if(auth()->id()==4 || auth()->id()==1192 )
+                        <li class="delete">
+                            {!! Form::open(['method' => 'DELETE', 'route' => ['colleague.destroy', $user->id] ]) !!}
                             <button type="submit" value="Delete" class="delete">
                                 <i class="fas fa-trash"></i>
                             </button>
-                        {!! Form::close() !!}
-                    </li>
+                            {!! Form::close() !!}
+                        </li>
+                    @endif
                 </ul>
             </td>
         </tr>
-        @endforeach
+    @endforeach
     </tbody>
 </table>

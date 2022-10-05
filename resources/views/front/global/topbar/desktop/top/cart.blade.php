@@ -9,11 +9,10 @@
             </a>
         </li>
 		<li>
-			<div role="button" class="login btnh" href="{{route('login')}}">
+			<a href="{{route('login')}}" role="button" class="login btnh" href="{{route('login')}}">
 				@include('icons.user')
 				<span><a href="{{route('login')}}">ورود</a> / <a href="{{route('register')}}">ثبت نام</a>  </span>
-
-            </div>
+            </a>
 		</li>
 	</ul>
 @else

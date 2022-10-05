@@ -6,7 +6,7 @@
         <div class="title">
             جزییات حساب شما
         </div>
-        <div class="bbox" style="margin:25px;padding: 30px">
+        <div class="bbox edit-profile">
             {{ Form::model($user, array('route' => array('UpdateProfile', $user->id), 'method' => 'PUT')) }}
 
             <div class="grid-x grid-padding-x">

@@ -102,7 +102,7 @@ class InfoController extends Controller
             $filenameWithExt = $image->getClientOriginalName();
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $image->getClientOriginalExtension();
-            $fileNameToStore = $request->title . '_' . time() . '.' . $extension;
+            $fileNameToStore = $request->title . '_2' . time() . '.' . $extension;
             $location = public_path('img/page/' . $fileNameToStore);
             Image::make($image)->save($location);
             $img2->img = $fileNameToStore;
@@ -112,7 +112,7 @@ class InfoController extends Controller
             $filenameWithExt = $image->getClientOriginalName();
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $image->getClientOriginalExtension();
-            $fileNameToStore = $request->title . '_' . time() . '.' . $extension;
+            $fileNameToStore = $request->title . '_3' . time() . '.' . $extension;
             $location = public_path('img/page/' . $fileNameToStore);
             Image::make($image)->save($location);
             $img3->img = $fileNameToStore;
@@ -122,7 +122,7 @@ class InfoController extends Controller
             $filenameWithExt = $image->getClientOriginalName();
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $image->getClientOriginalExtension();
-            $fileNameToStore = $request->title . '_' . time() . '.' . $extension;
+            $fileNameToStore = $request->title . '_4' . time() . '.' . $extension;
             $location = public_path('img/page/' . $fileNameToStore);
             Image::make($image)->save($location);
             $img4->img = $fileNameToStore;
@@ -132,7 +132,7 @@ class InfoController extends Controller
             $filenameWithExt = $image->getClientOriginalName();
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $image->getClientOriginalExtension();
-            $fileNameToStore = $request->title . '_' . time() . '.' . $extension;
+            $fileNameToStore = $request->title . '_5' . time() . '.' . $extension;
             $location = public_path('img/page/' . $fileNameToStore);
             Image::make($image)->save($location);
             $img5->img = $fileNameToStore;

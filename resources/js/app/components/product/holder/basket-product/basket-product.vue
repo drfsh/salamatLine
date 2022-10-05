@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div role="button" @click="adToCard()" class="basket">
+        <div role="button" class="basket">
             <ic_basket class="b" v-if="!loading"></ic_basket>
             <ic_refresh v-else class="fa-spin"></ic_refresh>
         </div>

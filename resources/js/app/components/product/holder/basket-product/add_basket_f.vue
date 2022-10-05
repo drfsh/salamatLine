@@ -1,5 +1,5 @@
 <template>
-    <span @click="adToCard()" class="add-shop">اضافه شدن به سبد خرید</span>
+    <span class="add-shop">اضافه شدن به سبد خرید</span>
 </template>
 
 <script>
