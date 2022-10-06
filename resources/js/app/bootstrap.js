@@ -209,3 +209,11 @@ $('.menu-profile-i').click(function () {
         menu = true
     }
 })
+
+$('.item-mini-menu').click(function () {
+    if ($(this).hasClass('active')){
+        $(this).removeClass('active')
+    }else {
+        $(this).addClass('active')
+    }
+})

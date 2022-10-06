@@ -5619,7 +5619,7 @@ footer .sub {
     left: 0;
 }
 
-.item-mini-menu:hover .mini-menu-3 {
+.item-mini-menu:hover .mini-menu-3,.item-mini-menu.active .mini-menu-3 {
     opacity: 1;
     transition: 0.3s;
     height: unset;
@@ -6067,10 +6067,11 @@ footer .sub {
     padding: 0px;
     justify-content: space-between;
     align-items: center;
-    width: calc(25% - 15px);
+    width: calc(100% - 15px);
     overflow: hidden;
     max-width: unset;
     height: 253px;
+    margin: 0;
 }
 .box-info-user .item .text {
     position: absolute;
@@ -6081,7 +6082,7 @@ footer .sub {
     padding: 13px;
     flex-direction: column;
     bottom: 0;
-    width: calc(100% - 31px);
+    width: calc(100% - 59px);
     z-index: 11;
     backdrop-filter: blur(5px);
 }
@@ -6818,12 +6819,17 @@ footer .sub {
     .mobile-menu ul.holder li a {
         margin: 0;
         position: unset;
+        font-size: 96%;
     }
-
+    .mini-menu-3 .items{
+        margin: 0 6px;
+    }
     .header-left-btns li .btnh {
         margin: 0;
     }
-
+    .item-mini-menu.active .mini-menu-{
+        padding-bottom: 0;
+    }
     .off-canvas li a, .drilldown .is-drilldown-submenu a {
         padding: 18px 16px;
     }
