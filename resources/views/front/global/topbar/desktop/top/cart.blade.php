@@ -11,7 +11,7 @@
 		<li>
 			<a href="{{route('login')}}" role="button" class="login btnh" href="{{route('login')}}">
 				@include('icons.user')
-				<span><a href="{{route('login')}}">ورود</a> / <a href="{{route('register')}}">ثبت نام</a>  </span>
+				<span><span href="{{route('login')}}">ورود</span> / <span href="{{route('register')}}">ثبت نام</span>  </span>
             </a>
 		</li>
 	</ul>
