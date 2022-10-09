@@ -1,3 +1,4 @@
+<?php $data =  App\Models\Log::getAdminLog();?>
 <div class="GlobalSide">
     <div class="gap"></div>
     <ul class="vertical">
@@ -11,6 +12,7 @@
             <a  class="{{\App\Traits\CheckRoute::check('users.index')}}" href="{{ route('users.index') }}">
                 <i class="fas fa-user"></i>
                 <span>کاربران و مدیران </span>
+                @if($data[0]!=0)<span class="num">{{$data[0]}}</span>@endif
             </a>
         </li>
 
@@ -31,6 +33,7 @@
             <a  class="{{\App\Traits\CheckRoute::check('AdminInvoice')}}" href="{{ route('AdminInvoice') }}">
                 <i class="fas fa-file-invoice-dollar"></i>
                 <span>سفارشات</span>
+                @if($data[1]!=0)<span class="num">{{$data[1]}}</span>@endif
             </a>
         </li>
         <li>
@@ -62,6 +65,7 @@
             <a class="{{\App\Traits\CheckRoute::check('ShowSurvey')}}" href="{{ route('ShowSurvey') }}">
                 <i class="fas fa-poll-h"></i>
                 <span>نظرسنجی سفارشات</span>
+                @if($data[2]!=0)<span class="num">{{$data[2]}}</span>@endif
             </a>
         </li>
 
@@ -69,6 +73,7 @@
             <a class="{{\App\Traits\CheckRoute::check('UnReviewrate')}}" href="{{ route('UnReviewrate') }}">
                 <i class="fas fa-star-half-alt"></i>
                 <span>نظرات و امتیازات</span>
+                @if($data[3]!=0)<span class="num">{{$data[3]}}</span>@endif
             </a>
         </li>
         <li>
@@ -100,6 +105,7 @@
             <a class="{{\App\Traits\CheckRoute::check('requestContact')}}" href="{{ route('requestContact') }}">
                 <i class="fas fa-list"></i>
                 <span>درخواست های تماس</span>
+                @if($data[4]!=0)<span class="num">{{$data[4]}}</span>@endif
             </a>
         </li>
         <li>
@@ -112,6 +118,7 @@
             <a class="{{\App\Traits\CheckRoute::check('newsletter.index')}}" href="{{ route('newsletter.index') }}">
                 <i class="fas fa-bell"></i>
                 <span>خبرنامه</span>
+                @if($data[5]!=0)<span class="num">{{$data[5]}}</span>@endif
             </a>
         </li>
     </ul>

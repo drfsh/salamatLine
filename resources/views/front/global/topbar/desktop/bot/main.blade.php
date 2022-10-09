@@ -2,12 +2,12 @@
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x">
 			<div class="cell relative" >
-				<div class="grid-x grid-padding-x">
+				<div class="desk-list grid-x grid-padding-x">
 					<div class="cell shrink">
 						@include('front.global.topbar.desktop.bot.menu.main')
 					</div>
-					<div class="cell shrink">
-						<ul class="static-menu">
+					<div class="cell shrink" style="width: 72%;">
+						<ul class="static-menu text-l">
 							<li>
 								<a href="/">صفحه اصلی</a>
 							</li>

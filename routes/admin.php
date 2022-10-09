@@ -53,6 +53,7 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
 	Route::get('product/pricedelete/{id}', [App\Http\Controllers\Admin\ProductController::class, 'Pricedelete'])->name('Pricedelete');
 	Route::post('product/featureupdate/{id}', [App\Http\Controllers\Admin\ProductController::class, 'Featureupdate'])->name('Featureupdate');
 	Route::get('product/featuredelete/{id}', [App\Http\Controllers\Admin\ProductController::class, 'Featuredelete'])->name('Featuredelete');
+	Route::post('product/import', [App\Http\Controllers\Admin\ProductController::class, 'import']);
 
 	Route::post('product/inline-update/{id}', [App\Http\Controllers\Admin\ProductController::class, 'InlineUpdate']);
 	Route::post('product/active/{id}', [App\Http\Controllers\Admin\ProductController::class, 'Active']);

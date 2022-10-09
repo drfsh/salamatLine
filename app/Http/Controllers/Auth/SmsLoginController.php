@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Log;
+use App\Traits\ImportCart;
 use Illuminate\Http\Request;
 use App\Http\Requests\PhoneValidate;
 use App\Http\Requests\LoginCodeValidate;
@@ -20,6 +22,7 @@ class SmsLoginController extends Controller
 {
     use Smstrait;
     use UnicodeNumber;
+    use ImportCart;
 
     public function findOrCreateUser($phone)
     {
@@ -74,6 +77,8 @@ class SmsLoginController extends Controller
         if (!$user) {
             $authUser->name = $name;
             $authUser->lname = $lname;
+            $log = Log::where([['name','users'],['for','admin']])->first();
+            $log->add();
         }
 
 
@@ -140,6 +145,7 @@ class SmsLoginController extends Controller
         Auth::login($user);
         $entry->delete();
         if (Auth::user()) {
+            $this->import();
             return response()->json(['color' => 'success', 'alert' => 'در حال انتقال به صفحه اصلی!']);
         }
 

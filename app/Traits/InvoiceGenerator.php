@@ -2,6 +2,7 @@
 
 namespace App\Traits;
 use App\Models\Invoice;
+use App\Models\Log;
 use App\Models\Order;
 use App\Models\OrderDetail;
 
@@ -93,6 +94,9 @@ trait InvoiceGenerator {
         // $invoice = Invoice::create($data);
         // $invoice->orders()->saveMany($products);
 
+
+        $log = Log::where([['name','invoice'],['for','admin']])->first();
+        $log->add();
         return $invoice;
     }
 }

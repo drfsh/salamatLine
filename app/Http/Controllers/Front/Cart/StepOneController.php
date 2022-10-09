@@ -8,6 +8,7 @@ use App\Traits\CheckInventory;
 use App\Traits\Shipping;
 use Auth;
 use Cart;
+use Illuminate\Support\Facades\Cookie;
 
 
 class StepOneController extends Controller
@@ -15,11 +16,13 @@ class StepOneController extends Controller
 	use CheckInventory,Shipping;
 	public function Update(Request $request,$id)
 	{
-		$userId = Auth::id();
-		if (!Auth::check()){
-			return response()->json(['error' => 'please login']);
-		}
-		$number = $request->number;
+
+        if (!Auth::check()) {
+            $userId = Cookie::get("guest_id");
+        } else
+            $userId = Auth::id();
+
+        $number = $request->number;
 		
 		if($number == 1){
 			$item = Cart::session($userId)->get($id);
@@ -49,10 +52,13 @@ class StepOneController extends Controller
 
 	public function Updaterow(Request $request,$id)
 	{
-		$userId = Auth::id();
-		if (!Auth::check()){
-			return response()->json(['error' => 'please login']);
-		}
+
+        if (!Auth::check()) {
+            $userId = Cookie::get("guest_id");
+        } else
+            $userId = Auth::id();
+
+
 		$number = $request->number;
 
 		$item = Cart::session($userId)->get($id);
@@ -90,11 +96,13 @@ class StepOneController extends Controller
 
 	public function RemoveItem($id)
 	{
-		$userId = Auth::id();
-		if (!Auth::check()){
-			return response()->json(['error' => 'please login']);
-		}
-		Cart::session($userId)->remove($id);
+
+        if (!Auth::check()) {
+            $userId = Cookie::get("guest_id");
+        } else
+            $userId = Auth::id();
+
+        Cart::session($userId)->remove($id);
 		$this->Shipping();
 
 		$data['step'] = 1;

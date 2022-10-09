@@ -10,10 +10,10 @@
             </span>
         </div>
         <div class="input-code">
-            <input type="number" id="code-1" maxlength="1" v-model="c1">
-            <input type="number" id="code-2" maxlength="1" v-model="c2">
-            <input type="number" id="code-3" v-model="c3" maxlength="1">
-            <input type="number" id="code-4" v-model="c4" maxlength="1">
+            <input type="number" id="code-1" min="0" max="9" maxlength="1" v-model="c1">
+            <input type="number" id="code-2" min="0" max="9" maxlength="1" v-model="c2">
+            <input type="number" id="code-3" min="0" max="9" v-model="c3" maxlength="1">
+            <input type="number" id="code-4" min="0" max="9" v-model="c4" maxlength="1">
         </div>
         <div v-if="!showResend" class="timer">{{ timer }}</div>
         <div class="resend-code" v-if="showResend" role="button">
@@ -113,28 +113,56 @@ export default {
                 if (e.which === 8) {
                     num = inputs.index(this) - 1
                 }
-                let nextInput = inputs.get(num)
-                if (nextInput) {
-                    nextInput.focus();
-                    nextInput.select();
-                }
+                // let nextInput = inputs.get(num)
+                // if (nextInput) {
+                //     nextInput.focus();
+                //     nextInput.select();
+                // }
             })
         })
     },
     watch: {
         c1(v) {
+            if (v.toString().length > 1)
+                this.c1 = this.c1.toString()[0]
+
+            let inputs = $('.input-code input')
+            let nextInput = inputs.get(1)
+            nextInput.focus();
+            nextInput.select();
+
             if (this.c1 && this.c2 && this.c3 && this.c4)
                 this.getData()
         },
         c2(v) {
+            if (v.toString().length > 1)
+                this.c2 = this.c2.toString()[0]
+
+            let inputs = $('.input-code input')
+            let nextInput = inputs.get(2)
+            nextInput.focus();
+            nextInput.select();
+
             if (this.c1 && this.c2 && this.c3 && this.c4)
                 this.getData()
         },
         c3(v) {
+            if (v.toString().length > 1)
+                this.c3 = this.c3.toString()[0]
+
+            let inputs = $('.input-code input')
+            let nextInput = inputs.get(3)
+            nextInput.focus();
+            nextInput.select();
+
             if (this.c1 && this.c2 && this.c3 && this.c4)
                 this.getData()
         },
         c4(v) {
+            if (v.toString().length > 1)
+                this.c4 = this.c4.toString()[0]
+
+
             if (this.c1 && this.c2 && this.c3 && this.c4)
                 this.getData()
         }

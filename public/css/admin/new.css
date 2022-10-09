@@ -238,6 +238,12 @@ body::-webkit-scrollbar-thumb {
 .jconfirm-buttons{
     width: 100%;
 }
+.f-loading span{
+    background: white;
+    padding: 3px 17px;
+    border-radius: 12px;
+    margin-top: -26px;
+}
 .f-loading{
     position: fixed;
     width: 100%;
@@ -248,6 +254,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 .check-label{
     cursor: pointer;
@@ -536,4 +543,18 @@ body::-webkit-scrollbar-thumb {
 }
 button{
     cursor: pointer;
+}
+.GlobalSide .num {
+    position: absolute;
+    background: #b7dff9;
+    width: 25px;
+    height: 25px;
+    opacity: 1;
+    left: 8px;
+    top: 8px;
+    border-radius: 19px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #252525;
 }

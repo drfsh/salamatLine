@@ -170,6 +170,7 @@ export default {
             this.situation = data.situation
             this.status = data.status
             this.setupLoading = false
+            window.auth = data.auth
 
             $('html ,body').stop().animate({scrollTop:0},500)
         },

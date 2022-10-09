@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front\Profile;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Log;
 use Illuminate\Http\Request;
 use App\Http\Requests\SurveyRequest;
 use App\Models\Survey;
@@ -50,6 +51,8 @@ class SurveyController extends Controller
         $survey->content = $request->input('content');
 
         $survey->save();
+        $log = Log::where([['name','surveys'],['for','admin']])->first();
+        $log->add();
         return redirect()->route('OrderHistory')->withErrors(['با تشکر از شما']);
 
     }

@@ -1,5 +1,5 @@
 <template>
-    <a class="order-item" href="#">
+    <div class="order-item">
         <div class="status">
 
             <span class="text" v-if="item.situation=='unpaid'">
@@ -27,7 +27,7 @@
                 تحویل شده
             </span>
 
-            <div class="go">
+            <div class="go" v-if="false">
                 <i class="fas fa-chevron-left"></i>
             </div>
         </div>
@@ -79,7 +79,7 @@
             </a>
 
         </div>
-    </a>
+    </div>
 </template>
 
 <script>

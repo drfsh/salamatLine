@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use App\Models\Coupon;
 use Auth;
 use Cart;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Log;
 
 
@@ -17,7 +18,12 @@ class CouponController extends Controller
     {
     	$name = $request->name;
     	$now = Carbon::now();
-    	$userId = Auth::id();
+
+        if (!Auth::check()) {
+            $userId = Cookie::get("guest_id");
+        } else
+            $userId = Auth::id();
+
         $coupon = Coupon::where('code' , '=', $name)->first();
         $usedcoupon = Cart::session($userId)->getCondition('coupon');
 

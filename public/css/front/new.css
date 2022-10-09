@@ -1922,6 +1922,7 @@ body.auth #salamat-logo {
     padding: 7px;
     user-select: none;
     margin-top: 22px;
+    width: 30%;
 }
 
 .product-box .d-add-shop .count-box .count {
@@ -1967,6 +1968,7 @@ body.auth #salamat-logo {
     width: 197px;
     margin-top: 22px;
     transition: 0.2s;
+    width: 66%;
 }
 
 .product-box .d-add-shop .add svg {
@@ -2812,7 +2814,39 @@ body.auth #salamat-logo {
     width: auto;
     word-wrap: break-word;
 }
-
+.link-login{
+    font-size: 14px;
+    color: #757575;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.e-g-a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+    margin-top: 32px;
+}
+.e-g-a img{
+    width: 260px;
+}
+.e-g-a span{
+    font-size: 11px;
+    max-width: 219px;
+    text-align: center;
+    line-height: 2;
+    color: #6a6a6a;
+}
+.link-login:hover{
+    color: #2196f3;
+    text-decoration: underline;
+}
+.woocommerce-error .wc-forward{
+    background-color: #094873!important;
+    color: white!important;
+    border-radius: 6px!important;
+    margin-top: -4px!important;
+}
 .woocommerce-error, .woocommerce-info, .woocommerce-message {
     border: unset;
     background: #f2f6fc;
@@ -4321,7 +4355,14 @@ input[type=number] {
 }
 
 .utb {
-    height: 153px;
+    height: 148px;
+}
+.desk-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 72%;
 }
 .top-bar .top .logo span{
     color: white;
@@ -7256,6 +7297,40 @@ footer .sub {
     .item-address .cities{
         border-left: none;
     }
+    .product-page .product-tabs .title-tabs li > a > div{
+        text-align: center;
+        font-size: 14px;
+    }
+    .home-icons-mobile .item{
+        padding: 20px;
+    }
+    .home-icons-mobile{
+        height: 134px;
+    }
+    .home-icons-mobile .item .meta-sepid-new-1 {
+        float: none;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background: white;
+        border-radius: 10px;
+        padding: 24px 20px 24px 0;
+        align-items: center;
+        margin: 0;
+    }
+    .meta-sepid-new-1 .text{
+        text-align: right;
+
+    }
+    .meta-sepid-new-1 img{
+        width: 50px;
+        height: 50px;
+        margin-left: 11px;
+    }
+    .meta-sepid-new-1{
+        font-size: 13px;
+    }
+
 }
 
 @media only screen and (max-width: 1320px) {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Log;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Feature;
@@ -156,6 +157,8 @@ class ProductController extends Controller
 					'recommend' => $request->recommend,
 					'approved' => false,
 				], $user);
+                $log = Log::where([['name','review'],['for','admin']])->first();
+                $log->add();
 				Session::flash('reviewsuccess', 'با تشکر از شما، دیدگاه شما پس از بررسی منتشر خواهد شد.');
 				return redirect()->back();
 			}

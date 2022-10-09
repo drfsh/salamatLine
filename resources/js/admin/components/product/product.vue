@@ -88,6 +88,7 @@
         </div>
     </div>
     <export></export>
+    <import></import>
     <product_table :items="list"></product_table>
     <loading v-if="data==null"></loading>
 </template>
@@ -97,10 +98,11 @@ import product_table from './table'
 import Paginate from "vuejs-paginate-next";
 import Loading from "../../../app/components/loading/loading";
 import Export from "./export/export";
+import Import from "./import/import";
 
 export default {
     name: "product",
-    components: {Export, Loading, product_table,Paginate},
+    components: {Import, Export, Loading, product_table,Paginate},
     props:['id'],
     data() {
         return {

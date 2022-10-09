@@ -3,7 +3,11 @@
         <div class="col-1">
             <div class="woocommerce-billing-fields">
                 <h3 style="font-size: 16px;font-weight: 400;color: #3b4359;">آدرس ها</h3>
-                <loading v-if="addresses===null"></loading>
+                <loading v-if="addresses===null && $parent.auth"></loading>
+                <div v-else-if="!$parent.auth" class="e-g-a">
+                    <img src="/img/profile/order-empty.svg">
+                    <span>لطفا برای اعتبارسنجی و دسترسی به آدرس ها  وارد حساب کاربری خود شوید!</span>
+                </div>
                 <div style="margin-top: 20px;" v-else>
                     <div class="item-address-cart" v-for="(v,i) in addresses" :key="'adddres'+i"
                          :class="{'active':address!==null && v.id===address.id}">

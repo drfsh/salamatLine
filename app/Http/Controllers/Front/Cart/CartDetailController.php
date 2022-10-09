@@ -6,16 +6,18 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Auth;
 use Cart;
+use Illuminate\Support\Facades\Cookie;
 use Response;
 
 class CartDetailController extends Controller
 {
 	public function main()
 	{
-		$userId = Auth::id();
-		if (!Auth::check()){
-			return response()->json(['error' => 'please login']);
-		}
+        if (!Auth::check()) {
+            $userId = Cookie::get("guest_id");
+        } else
+            $userId = Auth::id();
+
 
 		$shipping = Cart::session($userId)->getCondition('Shipping');
 		$coupon = Cart::session($userId)->getCondition('coupon');

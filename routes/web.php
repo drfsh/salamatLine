@@ -1,6 +1,8 @@
 <?php
 
 use App\Mail\ForAdmin;
+use App\Models\Log;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Auth::routes();
 //Sms Login
 Route::post('request-login/{id}', [App\Http\Controllers\Auth\SmsLoginController::class, 'main']);
@@ -26,15 +29,11 @@ Route::get('/products', [App\Http\Controllers\Front\ProductHolderController::cla
 Route::get('/products/{slug}', [App\Http\Controllers\Front\ProductController::class, 'main'])->name('product');
 Route::get('/test', function () {
 
+    $id = Cookie::get("guest_id");
 
-    $allView = 0;
-    $buy = 0;
-    $newUser = 0;
-    $newProduct = 0;
-    $newComment = 0;
-    Mail::to("mahdidera63@gmail.com")->queue(new ForAdmin($allView,$buy,$newUser,$newProduct,$newComment));
+   $data =  Log::getAdminLog();
 
-    return view('email.forAdmin');
+   dd($data);
 });
 
 

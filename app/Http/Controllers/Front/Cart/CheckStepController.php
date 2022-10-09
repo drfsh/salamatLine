@@ -10,6 +10,7 @@ use App\Models\Inventory;
 use App\Models\Product;
 use App\Models\Multiprice;
 use Auth;
+use Illuminate\Support\Facades\Cookie;
 use Log;
 use Cart;
 
@@ -20,7 +21,11 @@ class CheckStepController extends Controller
 
         $data = [];
 
-        $userId = Auth::id();
+        if (!Auth::check()) {
+            $userId = Cookie::get("guest_id");
+        } else
+            $userId = Auth::id();
+
         $data['step'] = $request->step;
         $addressID = $request->address;
         $delivery = $request->delivery;
@@ -109,6 +114,7 @@ class CheckStepController extends Controller
             $data['step'] = 2;
             $data['text'] = 'لطفا یک آدرس را انتخاب کنید';
             $data['class'] = 'alert';
+            $data['auth'] = Auth::check();
 
             return response()->json($data);
         }

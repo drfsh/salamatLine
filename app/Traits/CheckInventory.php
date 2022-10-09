@@ -4,6 +4,7 @@ namespace App\Traits;
 use App\Models\Inventory;
 use Cart;
 use Auth;
+use Illuminate\Support\Facades\Cookie;
 
 trait CheckInventory {
     public function CheckInventory($product_id, $multifeature_id, $multiprice_id, $cart_id, $number) {
@@ -17,7 +18,10 @@ trait CheckInventory {
         }elseif($multiprice_id != 0 && $multifeature_id != 0){
             $inventory = Inventory::where('product_id', $product_id)->where('price_id', $multiprice_id)->where('feature_id', $multifeature_id)->first();
         }
-        $userId = Auth::id();
+        if (!Auth::check()) {
+            $userId = Cookie::get("guest_id");
+        } else
+            $userId = Auth::id();
         $item = Cart::session($userId)->get($cart_id);
 
         if($item == null){

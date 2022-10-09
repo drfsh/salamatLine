@@ -85,6 +85,7 @@ export default {
         setInterval(async function () {
             let x = $('#header-num-cart').text()
             if (x != vm.$parent.num) {
+                vm.$parent.num = x
                 await vm.getData()
                 vm.$parent.getData()
             }

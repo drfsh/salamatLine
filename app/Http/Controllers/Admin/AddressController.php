@@ -33,7 +33,8 @@ class AddressController extends Controller
 
         if ($q != null && trim($q) !== '')
             $address = Address::withTrashed()->where('id', $q)
-                ->orderBy('id', 'desc')->paginate(30);
+                ->orderBy('id', 'desc')
+                ->orWhere('name', 'like', "%$q%")->paginate(30);
         else
             $address = Address::withTrashed()->where('id', 'like', "%$q%")
                 ->orWhere('name', 'like', "%$q%")

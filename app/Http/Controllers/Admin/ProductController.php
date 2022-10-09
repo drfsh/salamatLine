@@ -582,6 +582,21 @@ class ProductController extends Controller
         return 'okey';
     }
 
+    public function import(Request $request){
+        $data = $request->get('data');
+        $c = 0;
+        foreach ($data as $item){
+            $product = Product::find($item['id']);
+            if (is_null($product)) continue;
 
+            $product->title = $item['title'];
+            $product->subtitle = $item['model'];
+            $product->price = $item['price'];
+            $product->save();
+            $c++;
+        }
+
+        return response()->json(['true'=>true,'count'=>$c]);
+    }
 
 }

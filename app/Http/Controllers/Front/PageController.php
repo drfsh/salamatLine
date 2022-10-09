@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactRequest;
 use App\Models\Faq;
 use App\Models\InfoPage;
+use App\Models\Log;
 use App\Models\Page;
 use App\Models\RequestContact;
 use Artesaos\SEOTools\Facades\SEOTools;
@@ -118,7 +119,8 @@ class PageController extends Controller
             'body'=>$body,
             'type'=>'faq'
         ]);
-
+        $log = Log::where([['name','contact'],['for','admin']])->first();
+        $log->add();
         Session::flash('success', 'پیام شما با موفقیت ارسال شد!');
 
         return redirect()->back();
@@ -139,6 +141,8 @@ class PageController extends Controller
             'body'=>$body,
         ]);
 
+        $log = Log::where([['name','contact'],['for','admin']])->first();
+        $log->add();
         Session::flash('success', 'پیام شما با موفقیت ارسال شد!');
 
         return redirect()->back();

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Log;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -64,6 +65,8 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $log = Log::where([['name','users'],['for','admin']])->first();
+        $log->add();
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

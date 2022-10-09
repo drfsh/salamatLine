@@ -4,12 +4,13 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use App\Traits\ImportCart;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
 
-    use AuthenticatesUsers;
+    use AuthenticatesUsers,ImportCart;
 
     protected $redirectTo = '/';
 
@@ -35,15 +36,17 @@ class LoginController extends Controller
     public function handleProviderCallback($provider)
     {
         $user = Socialite::driver($provider)->stateless()->user();
-        $authUser = $this->findOrCreateUser($user,$provider);
-        Auth::login($authUser,true);
+        $authUser = $this->findOrCreateUser($user, $provider);
+        Auth::login($authUser, true);
+        if (Auth::user() != null)
+            $this->import();
         return redirect($this->redirectTo);
     }
 
-    public function findOrCreateUser($user,$provider)
+    public function findOrCreateUser($user, $provider)
     {
-        $authUser = User::where('email',$user->email)->first();
-        if($authUser){
+        $authUser = User::where('email', $user->email)->first();
+        if ($authUser) {
             return $authUser;
         }
         return User::firstOrCreate([

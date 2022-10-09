@@ -4,6 +4,10 @@
             <div class="entry-content">
                 <div class="woocommerce">
                     <cart-message v-if="status!==''" :situation="error" :text="status"></cart-message>
+                    <div v-if="!auth" style="margin-top: -20px;" class="woocommerce-message woocommerce-error" role="alert" >
+                        حساب کاربری از قبل دارید؟
+                        <span class="link-login" @click="login">برای ورود اینجا کلیک کنید</span>
+                    </div>
                     <div class="woocommerce-notices-wrapper"></div>
                     <div class="checkout woocommerce-checkout">
                         <edit_address v-if="address_id==0 || edit"></edit_address>
@@ -96,6 +100,9 @@ export default {
         detail() {
             return this.$parent.detail
         },
+        auth(){
+            return window.auth
+        }
     },
     data() {
         return {
@@ -125,6 +132,10 @@ export default {
         }
     },
     methods: {
+        login(){
+            window.boxAlert.show = true
+            window.boxAlert.type = "login"
+        },
         back(){
             this.$parent.$parent.step=1
             $('html ,body').stop().animate({scrollTop: 0}, 500)
@@ -216,7 +227,23 @@ export default {
         }
     },
     mounted() {
+        let vm =this
+        if (window.auth)
         this.getAddress()
+        else{
+            this.status = 'جهت ادامه فرایند خرید وارد حساب کاربری خود شوید!'
+            this.error = 'warning'
+        }
+        let inter = setInterval(function () {
+            if (window.auth)
+            {
+                vm.auth = true
+                this.getAddress()
+                clearInterval(inter)
+            }else {
+                vm.auth = false
+            }
+        }, 500)
     }
 }
 </script>
