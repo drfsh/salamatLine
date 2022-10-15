@@ -1,6 +1,14 @@
 <template>
     <div class="auth-box">
-        <h4> ثبت نام</h4>
+
+        <div class="title-p">
+            <div class="current-page">ثبت نام</div>
+            <a href="/login" class="next-page">
+                ورود
+                <ic_arrow_left></ic_arrow_left>
+            </a>
+        </div>
+
 
         <div class="body-login text-center">
             <auth-phone v-if="page===1"></auth-phone>
@@ -46,13 +54,14 @@ import Ic_email from "../icon/ic_email";
 import AuthGoogle from "./auth-google";
 import AuthPhone from "./number/auth-phone";
 import RegisterEmail from "./register/register-email";
+import Ic_arrow_left from "../icon/ic_arrow_left";
 
 export default {
     name: "register",
-    components: {RegisterEmail, AuthEnterCode, Ic_mobile, Ic_email, AuthGoogle, AuthPhone},
+    components: {Ic_arrow_left, RegisterEmail, AuthEnterCode, Ic_mobile, Ic_email, AuthGoogle, AuthPhone},
     data(){
         return{
-            page:1,
+            page:2,
             mobile:'09',
         }
     }

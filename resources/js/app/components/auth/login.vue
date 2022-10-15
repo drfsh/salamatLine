@@ -1,6 +1,12 @@
 <template>
 <div class="auth-box">
-    <h4>ورود </h4>
+    <div class="title-p">
+        <div class="current-page">ورود</div>
+        <a href="/register" class="next-page">
+            ثبت نام
+            <ic_arrow_left></ic_arrow_left>
+        </a>
+    </div>
 
     <div class="body-login text-center">
         <auth-phone v-if="page===1"></auth-phone>
@@ -14,6 +20,7 @@
             </div>
             <auth-google></auth-google>
             <div>
+
                 <a @click="page=2" v-if="page===1" class="open-auth-email">
                     <span class="icon-email">
                         <ic_email></ic_email>
@@ -46,12 +53,13 @@ import Ic_email from "../icon/ic_email";
 import Ic_mobile from "../icon/ic_mobile";
 import AuthEmail from "./login/auth-email";
 import AuthEnterCode from "./number/auth-enter-code";
+import Ic_arrow_left from "../icon/ic_arrow_left";
 export default {
     name: "login",
-    components: {AuthEnterCode, AuthEmail, Ic_mobile, Ic_email, AuthGoogle, AuthPhone},
+    components: {Ic_arrow_left, AuthEnterCode, AuthEmail, Ic_mobile, Ic_email, AuthGoogle, AuthPhone},
     data(){
         return{
-            page:1,
+            page:2,
             mobile:'09',
         }
     }
