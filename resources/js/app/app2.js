@@ -33,7 +33,6 @@ import test from "./components/test";
 require('./bootstrap')
 require('jquery-confirm')
 window.moment = require('jalali-moment');
-window.axios = require('axios')
 
 setApp([
     {

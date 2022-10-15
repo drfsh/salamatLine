@@ -38,7 +38,7 @@ class DayReport extends Command
      */
     public function handle()
     {
-        $emails = ["mahdidera63@gmail.com", "test@gmail.com"];
+        $emails = ["mahdidera63@gmail.com"];
         foreach ($emails as $email) {
             dispatch(new SendMailJob($email));
         }
