@@ -27,6 +27,7 @@
                     </li>
                     <li>
                         <div class="item-mini-menu">
+                            <span class="click clposis1"></span>
                             <a class="btnh" aria-label="My Profile">
                                 @include('icons.user')
                             </a>

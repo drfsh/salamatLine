@@ -13,7 +13,7 @@
         </div>
     </div>
     @error('email')
-    <span class="invalid-feedback">
+    <span class="invalid-feedback" style="width: 100%;">
         کاربری با این ایمیل یافت نشد
     </span>
     @enderror

@@ -3,8 +3,8 @@
         <input type="text" v-model="email">
         <span>ایمیل خود را وارد نمایید</span>
     </div>
-    <div role="button" v-if="status!=''" class="status">
-        {{status}}
+    <div role="button" v-if="status!=''" class="status mb2">
+        {{ status }}
     </div>
     <div role="button" @click="send" class="btn submit">
         عضویت
@@ -20,17 +20,21 @@ export default {
     data() {
         return {
             email: '',
-            status:''
+            status: ''
         }
     },
     methods: {
         async send() {
+            let vm = this
             let {data} = await window.axios.post('/subscribe', {email: this.email})
-            if (data.errors && data.errors.length>0){
+            if (data.errors && data.errors.length > 0) {
                 console.log(data)
                 this.status = data.errors.email[0];
-            }else {
+            } else {
                 this.status = data.status
+                setTimeout(function () {
+                    vm.status = ''
+                }, 2000)
             }
         }
     }
