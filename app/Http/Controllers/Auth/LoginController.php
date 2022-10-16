@@ -3,14 +3,16 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
 use App\Traits\ImportCart;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
 {
 
-    use AuthenticatesUsers,ImportCart;
+    use AuthenticatesUsers, ImportCart;
 
     protected $redirectTo = '/';
 
@@ -59,5 +61,22 @@ class LoginController extends Controller
         ]);
     }
 
-
+    public function loginByEmail(Request $request)
+    {
+        $v = Validator::make($request->all(), [
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'password' => ['required', 'string', 'min:8'],
+            'captcha' => 'required|captcha'
+        ]);
+        if ($v->fails()) {
+            return response()->json(['true' => false, 'messages' => $v->errors()]);
+        } else {
+            if (Auth::attempt(['email' => $request->email, 'password' => $request->password,])){
+                $this->import();
+                return response()->json(['true' => true,'redirect'=> '/profile']);
+            }else{
+                return response()->json(['true' => false, 'messages' => ['auth'=>[__('auth.failed')]]]);
+            }
+        }
+    }
 }

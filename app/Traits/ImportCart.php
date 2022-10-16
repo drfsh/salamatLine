@@ -15,7 +15,7 @@ trait ImportCart
         $guestId = Cookie::get("guest_id");
         $userId = Auth::id();
 
-        $oldConditions = Cart::session($guestId)->getConditions()['Shipping'];
+
         $oldContent = Cart::session($guestId)->getContent();
 
         foreach ($oldContent as $item) {
@@ -41,7 +41,11 @@ trait ImportCart
                 )
             );
         }
-        Cart::session($userId)->condition($oldConditions);
+        $con = Cart::session($guestId)->getConditions();
+        if (sizeof($con)>0){
+            $oldConditions = $con['Shipping'];
+            Cart::session($userId)->condition($oldConditions);
+        }
 
 
         Cookie::queue(Cookie::forget("guest_id"));

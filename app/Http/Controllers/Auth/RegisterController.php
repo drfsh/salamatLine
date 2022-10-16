@@ -6,7 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Models\Log;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use App\Traits\ImportCart;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -23,7 +26,7 @@ class RegisterController extends Controller
     |
     */
 
-    use RegistersUsers;
+    use RegistersUsers,ImportCart;
 
     /**
      * Where to redirect users after registration.
@@ -54,6 +57,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+
         ]);
     }
 
@@ -72,5 +76,35 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+
+
+    public function loginByEmail(Request $request)
+    {
+        $v = Validator::make($request->all(), [
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8'],
+            'captcha' => 'required|captcha'
+        ]);
+        if ($v->fails()) {
+            return response()->json(['true' => false, 'messages' => $v->errors()]);
+        } else {
+            $user = User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make( $request->password),
+            ]);
+
+            Auth::login($user);
+            $this->afterLogin();
+            return response()->json(['true' => true,'redirect'=> '/profile']);
+        }
+    }
+
+    private function afterLogin(){
+        $log = Log::where([['name','users'],['for','admin']])->first();
+        $log->add();
+        $this->import();
     }
 }

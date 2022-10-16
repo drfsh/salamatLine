@@ -29,12 +29,21 @@ Route::get('/products', [App\Http\Controllers\Front\ProductHolderController::cla
 Route::get('/products/{slug}', [App\Http\Controllers\Front\ProductController::class, 'main'])->name('product');
 Route::get('/test', function () {
 
-    $id = Cookie::get("guest_id");
+    $guestId = Cookie::get("guest_id");
+    $oldConditions = Cart::session($guestId)->getConditions();
 
-   $data =  Log::getAdminLog();
-
-   dd($data);
+   dd($oldConditions);
 });
+
+
+//security , login
+Route::get('/reload-captcha', [App\Http\Controllers\API\CaptchaServiceController::class, 'reloadCaptcha']);
+Route::get('/check-captcha', [App\Http\Controllers\API\CaptchaServiceController::class, 'capthcaFormValidate']);
+
+Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'loginByEmail']);
+Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, 'loginByEmail']);
+
+
 
 
 Route::group(['middleware' => ['web']], function () {

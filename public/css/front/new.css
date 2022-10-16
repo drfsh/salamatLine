@@ -846,10 +846,11 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     justify-content: center;
     flex-direction: column;
     margin-top: -35px;
+    flex-wrap: wrap;
 }
 
 .auth .logo {
-    margin-bottom: 35px;
+    margin-bottom: 23px;
 }
 
 #salamat-logo .cls-4 {
@@ -868,7 +869,7 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     margin-bottom: .3125rem;
     overflow: hidden;
     box-shadow: -5px 5px 27px -10px #2a272736;
-    padding: 37px 27px;
+    padding: 37px 27px 15px;
 }
 
 .auth-box h4 {
@@ -894,7 +895,7 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
 }
 
 .body-login {
-    margin-top: 30px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -988,7 +989,30 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     border-radius: 6px;
     align-items: center;
     justify-content: flex-end;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+.captcha{
+    display: flex;
+    align-items: center;
+    margin: 7px 0px;
+}
+.captcha span{
+    border-radius: 7px;
+    overflow: auto;
+}
+.captcha svg{
+    cursor: pointer;
+    margin-left: 8px;
+    width: 36px;
+    height: 36px;
+    background: #f0f0f0;
+    padding: 9px;
+    border-radius: 7px;
+    transition: 0.2s;
+}
+.captcha svg:hover{
+    background: #09487354;
+    color: white;
 }
 
 .input-login.rtl {
@@ -1080,6 +1104,11 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     background: #053658
 }
 
+.btn-login.active {
+    background: #ffdc00;
+    color: #474747;
+}
+
 .btn-login:disabled {
     background: #747474;
     opacity: 0.5;
@@ -1092,7 +1121,7 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     justify-content: space-between;
     flex-direction: row;
     user-select: none;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     width: 235px;
 }
 
@@ -1141,7 +1170,7 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
 }
 
 .open-auth-email {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .auth-box .icon-google svg {
@@ -1200,9 +1229,6 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
 }
 
 .invalid-feedback {
-    position: fixed;
-    top: 23px;
-    right: 18px;
     padding: 8px;
     color: white;
     font-weight: 600;
@@ -7549,6 +7575,13 @@ footer .sub {
         box-sizing: border-box;
     }
 }
+
+@media only screen and (max-height: 761px) {
+    .back-to-home{
+        display: none;
+    }
+}
+
 
 .disableT *:not(.share-link-pop,.simple-item *) {
     transform: none !important;
