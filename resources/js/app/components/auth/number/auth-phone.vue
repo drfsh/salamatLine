@@ -1,5 +1,5 @@
 <template>
-    <div class=" info">لطفا کد کشور را انتخاب و شماره خود را وارد کنید</div>
+    <div class=" info" style="margin-top: 25px;">لطفا کد کشور را انتخاب و شماره خود را وارد کنید</div>
     <div class="alert" v-if="alert!==null">{{ alert }}</div>
     <div class="">
         <div class="input-phone">
