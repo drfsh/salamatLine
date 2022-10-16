@@ -8,7 +8,7 @@
 
             @if (session('status'))
                 <div>
-                    {{ session('status') }}
+                    لینک بازیابی پسورد به ایمیل شما ارسال شد!
                 </div>
             @endif
             @include('auth.passwords.email.form')

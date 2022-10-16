@@ -46,7 +46,7 @@
     </div>
     <div>
         <button type="submit" class="btn-login">
-            <span>{{ __('Reset Password') }}</span>
+            <span>{{ __('تغییر پسورد') }}</span>
         </button>
     </div>
 </form>
