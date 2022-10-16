@@ -61,7 +61,7 @@ export default {
     components: {Ic_arrow_left, RegisterEmail, AuthEnterCode, Ic_mobile, Ic_email, AuthGoogle, AuthPhone},
     data(){
         return{
-            page:2,
+            page:1,
             mobile:'09',
         }
     }
