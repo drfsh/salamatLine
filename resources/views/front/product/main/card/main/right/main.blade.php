@@ -8,7 +8,7 @@
 				@endif
 
 				@foreach($data['product']->photos as $item)
-					<div  style="background-image: url('{{$data['product']->large}}')" class="swiper-slide zoom" onmousemove="zoom(event)"><img src="{{$item->large}}" alt=""></div>
+					<div  style="background-image: url('{{$item->large}}')" class="swiper-slide zoom" onmousemove="zoom(event)"><img src="{{$item->large}}" alt=""></div>
 				@endforeach
 			</div>
 		</div>
@@ -29,8 +29,8 @@
 </div>
 
 @else
-	<div class="product-slider">
-		<img src="{{$data['product']->large}}" alt="">
+	<div class="product-slider zoom" onmousemove="zoom(event)" style="background-image: url('{{$data['product']->large}}')">
+		<img src="{{$data['product']->large}}"  alt="">
 	</div>
 @endif
 <script>

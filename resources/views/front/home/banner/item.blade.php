@@ -1,3 +1,3 @@
 <a href="{{$item->link}}">
-	<img src="{{$item->large}}" alt="{{$item->title}}">
+	<img class="lozad" data-src="{{$item->large}}" alt="{{$item->title}}">
 </a>

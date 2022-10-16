@@ -1,7 +1,7 @@
 <a href="{{ route('product', $item->slug) }}" class="horizontal  @if(!$item->active)out-of-stock @endif" title="{{$item->title}}">
 	<div class="grid-x align-middle">
 		<div class="cell shrink">
-			<img src="{{$item->tiny}}" alt="{{$item->title}}" width="100">
+			<img class="lozad" data-src="{{$item->tiny}}" alt="{{$item->title}}" width="100">
 		</div>
 		<div class="cell auto">
 			<div class="content">

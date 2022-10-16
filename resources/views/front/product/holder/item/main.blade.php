@@ -1,7 +1,7 @@
 <div class="simple-item @if(!$item->active)out-of-stock @endif" title="{{$item->title}}">
     <a href="{{ route('product', $item->slug) }}">
         <div class="cover">
-            <img src="{{$item->tiny}}" alt="{{$item->title}}">
+            <img class="lozad" data-src="{{$item->tiny}}" alt="{{$item->title}}">
             <span class="add-shop-">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path

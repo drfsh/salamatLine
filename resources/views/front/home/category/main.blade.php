@@ -9,7 +9,7 @@
                     <div class="item swiper-slide">
                         <a href="{{$item->link}}">
                             <div class="box">
-                                <img src="{{$item->large}}">
+                                <img class="lozad" data-src="{{$item->large}}">
                                 <span>{{$item->title}}</span>
                             </div>
                         </a>
@@ -29,7 +29,7 @@
             <div class="item">
                 <a href="{{$item->link}}">
                     <div class="box">
-                        <img src="{{$item->large}}">
+                        <img class="lozad" data-src="{{$item->large}}">
                         <span>{{$item->title}}</span>
                     </div>
                 </a>

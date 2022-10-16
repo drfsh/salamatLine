@@ -31,8 +31,6 @@ import numHeart from "./components/header/num-heart";
 import test from "./components/test";
 
 require('./bootstrap')
-require('jquery-confirm')
-window.moment = require('jalali-moment');
 
 setApp([
     {

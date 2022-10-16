@@ -107,19 +107,19 @@ export default {
     },
     mounted() {
         this.setTime(2, 0);
-        $(document).ready(function () {
-            let inputs = $('.input-code input').keyup(function (e) {
-                let num = inputs.index(this) + 1
-                if (e.which === 8) {
-                    num = inputs.index(this) - 1
-                }
-                // let nextInput = inputs.get(num)
-                // if (nextInput) {
-                //     nextInput.focus();
-                //     nextInput.select();
-                // }
-            })
-        })
+        // $(document).ready(function () {
+        //     let inputs = $('.input-code input').keyup(function (e) {
+        //         let num = inputs.index(this) + 1
+        //         if (e.which === 8) {
+        //             num = inputs.index(this) - 1
+        //         }
+        //         // let nextInput = inputs.get(num)
+        //         // if (nextInput) {
+        //         //     nextInput.focus();
+        //         //     nextInput.select();
+        //         // }
+        //     })
+        // })
     },
     watch: {
         c1(v) {
