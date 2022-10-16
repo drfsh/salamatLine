@@ -7,16 +7,13 @@ $categories = App\Models\Category::defaultOrder()->toTree()->get();
 		@include('front.global.head.main')
 	</head>
 	<body>
-		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJJLRZT"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<!-- End Google Tag Manager (noscript) -->
+
 		<div class="off-canvas-wrapper" id="app">
 			<div class="content">
 
 				@include('front.global.topbar.main')
 
-				<div class="off-canvas-content" data-off-canvas-content>
+				<div class="off-canvas-content">
 					@yield('content')
 				</div>
 
