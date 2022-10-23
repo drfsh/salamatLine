@@ -24,7 +24,7 @@
                             <i class="fas fa-edit"></i>
                         </a>
                     </li>
-                    @if(auth()->id()==4 || auth()->id()==1192 )
+                    @if(Auth::user()->hasRole('SuperAdmin'))
                     <li class="delete">
                         {!! Form::open(['method' => 'DELETE', 'route' => ['users.destroy', $user->id] ]) !!}
                             <button type="submit" value="Delete" class="delete">

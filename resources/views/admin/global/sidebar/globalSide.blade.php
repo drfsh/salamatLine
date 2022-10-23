@@ -102,7 +102,7 @@
             </a>
         </li>
         <li>
-            <a class="{{\App\Traits\CheckRoute::check('requestContact')}}" href="{{ route('requestContact') }}">
+            <a class="{{\App\Traits\CheckRoute::check('requestContact.index')}}" href="{{ route('requestContact.index') }}">
                 <i class="fas fa-list"></i>
                 <span>درخواست های تماس</span>
                 @if($data[4]!=0)<span class="num">{{$data[4]}}</span>@endif

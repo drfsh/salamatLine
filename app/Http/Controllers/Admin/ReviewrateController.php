@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Log;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Codebyray\ReviewRateable\Models\Rating;
@@ -23,6 +24,7 @@ class ReviewrateController extends Controller
             $item->created_at = Verta($item->created_at)->format('Y/m/d H:i:s');
             $item['reviewrateable2'] = Product::find($item['reviewrateable_id']);
         }
+        Log::clear('review');
         return view('admin.reviews.unapprove', compact('ratings'));
     }
 

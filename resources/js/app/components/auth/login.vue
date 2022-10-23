@@ -1,12 +1,13 @@
 <template>
 <div class="auth-box">
-    <div class="title-p">
+    <div class="title-p" v-if="false">
         <div class="current-page">ورود</div>
         <a href="/register" class="next-page">
             ثبت نام
             <ic_arrow_left></ic_arrow_left>
         </a>
     </div>
+    <h4>ورود</h4>
 
     <div class="body-login text-center">
         <auth-phone v-if="page===1"></auth-phone>

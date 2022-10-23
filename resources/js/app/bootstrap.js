@@ -177,7 +177,9 @@ $(document).ready(function () {
     })
 })
 
-
+if (window.innerWidth>600){
+    $('footer .whatsapp').slideUp()
+}
 let t = 0;
 $(window).scroll((function () {
     var e = $(this), n = $(this).scrollTop();
@@ -197,6 +199,14 @@ $(window).scroll((function () {
     }else {
         $('.contact-popup').slideDown()
     }
+
+    if (window.innerWidth>600){
+        if (e.scrollTop()>1000){
+            $('footer .whatsapp').slideDown()
+        }else {
+            $('footer .whatsapp').slideUp()
+        }
+    }
 }))
 var menu = false
 $('.menu-profile-i').click(function () {
@@ -210,23 +220,14 @@ $('.menu-profile-i').click(function () {
     }
 })
 
-$('.item-mini-menu .click').click(function () {
-
-})
-$('body').click(function (e) {
-
-    let vm = $(e.target)
-    if (vm.hasClass('clposis1')){
-        let p = $('.item-mini-menu');
-        if (p.hasClass('active')){
-            p.removeClass('active')
-        }else {
-            p.addClass('active')
-        }
-    }else{
-        $('.item-mini-menu').removeClass('active');
+$('.item-mini-menu').click(function () {
+    if ($(this).hasClass('active')){
+        $(this).removeClass('active')
+    }else {
+        $(this).addClass('active')
     }
 })
+
 import lozad from 'lozad'
 const observer = lozad();
 observer.observe();

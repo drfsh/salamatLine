@@ -862,8 +862,6 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
 }
 
 .auth-box {
-    display: flex;
-    min-height: 288px;
     position: relative;
     background: #fff;
     border: none;
@@ -872,8 +870,6 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     overflow: hidden;
     box-shadow: -5px 5px 27px -10px #2a272736;
     padding: 37px 27px 15px;
-    justify-content: center;
-    align-items: center;
 }
 
 .auth-box h4 {
@@ -944,11 +940,9 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     display: flex;
     align-items: center;
 }
-
-.auth-box .next-page * {
+.auth-box .next-page *{
     z-index: 1;
 }
-
 .next-page:before {
     transition: .6s;
     content: "";
@@ -963,25 +957,14 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     z-index: 0;
 }
 
-.recovery-email-send {
-    background: #6dbb70;
-    color: white;
-    padding: 8px;
-    font-size: 15px;
-    margin-bottom: 18px;
-    border-radius: 8px;
-}
-
 .next-page:hover:before {
     animation: login-hover 0.8s;
 }
-
-.next-page:hover {
+.next-page:hover{
     background: rgb(9, 72, 115);
     color: white;
     border-radius: 22px 0;
 }
-
 @keyframes login-hover {
     0% {
         width: 0;
@@ -1008,19 +991,16 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     justify-content: flex-end;
     margin-bottom: 10px;
 }
-
-.captcha {
+.captcha{
     display: flex;
     align-items: center;
     margin: 7px 0px;
 }
-
-.captcha span {
+.captcha span{
     border-radius: 7px;
     overflow: auto;
 }
-
-.captcha svg {
+.captcha svg{
     cursor: pointer;
     margin-left: 8px;
     width: 36px;
@@ -1030,8 +1010,7 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     border-radius: 7px;
     transition: 0.2s;
 }
-
-.captcha svg:hover {
+.captcha svg:hover{
     background: #09487354;
     color: white;
 }
@@ -1345,6 +1324,7 @@ body.auth #salamat-logo {
     margin: 10px 15px 30px;
     /*margin: 10px 3px 20px;*/
     border: 1px solid #e5e9f0;
+    cursor: pointer;
 }
 
 .simple-item .cover {
@@ -4859,10 +4839,10 @@ footer .sub .co:nth-child(1), footer .sub .co:nth-child(3) {
 footer .sub .co:nth-child(2) {
     width: 60%;
 }
-
 footer .whatsapp {
-    width: 50px;
-    height: 50px;
+    position: fixed;
+    width: 60px;
+    height: 60px;
     color: white;
     background: #2db742;
     padding: 10px;
@@ -4870,8 +4850,10 @@ footer .whatsapp {
     display: flex;
     align-items: center;
     justify-content: center;
+    bottom: 101px;
+    z-index: 100;
+    right: 32px;
 }
-
 footer .whatsapp:not(footer .whatsapp.active) {
     box-shadow: 0 0 0 0 #007e37a8;
     animation: pulse 2s cubic-bezier(0.66, 0, 0, 1) infinite;
@@ -5632,7 +5614,7 @@ footer .sub {
     float: right;
     width: 300px;
     background: #fff;
-    z-index: 1000;
+    z-index: 1;
     position: absolute;
     border-radius: 15px;
     color: #3b4359;
@@ -5809,19 +5791,17 @@ footer .sub {
     position: relative;
 }
 
-.item-mini-menu .click{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 10;
-}
-
 .mini-menu-3 {
     left: 0;
 }
 
+.item-mini-menu:hover .mini-menu-3, .item-mini-menu.active .mini-menu-3 {
+    opacity: 1;
+    transition: 0.3s;
+    height: unset;
+    overflow: visible;
+    padding: 15px 0;
+}
 
 .mini-menu-3 .items {
     text-align: right;
@@ -6914,26 +6894,7 @@ footer .sub {
     padding: 30px
 }
 
-
-@media only screen and (min-width: 700px) {
-    .item-mini-menu:hover .mini-menu-3 {
-        opacity: 1;
-        transition: 0.3s;
-        height: unset;
-        overflow: visible;
-        padding: 15px 0;
-    }
-}
-
 @media only screen and (max-width: 700px) {
-    .item-mini-menu.active .mini-menu-3 {
-        opacity: 1;
-        transition: 0.3s;
-        height: unset;
-        overflow: visible;
-        padding: 15px 0;
-    }
-
     .sidebar-exit {
         padding: 10px 6px !important;
     }
@@ -7619,7 +7580,7 @@ footer .sub {
 }
 
 @media only screen and (max-height: 761px) {
-    .back-to-home {
+    .back-to-home{
         display: none;
     }
 }

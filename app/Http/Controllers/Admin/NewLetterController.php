@@ -36,6 +36,12 @@ class NewLetterController extends Controller
                 'User successfully added.');
     }
 
+    public function destroy($id) {
+        $permission = Newsletter::findOrFail($id);
+        $permission->delete();
+        return redirect()->route('newsletter.index');
+    }
+
     public function emails(){
         $emails = Newsletter::latest()->get();
         return response()->json($emails);

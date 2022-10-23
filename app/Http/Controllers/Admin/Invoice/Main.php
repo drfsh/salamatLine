@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Invoice;
 
 use App\Http\Controllers\Controller;
+use App\Models\Log;
 use Illuminate\Http\Request;
 use App\Models\Invoice;
 use App\Filters\InvoiceFilter;
@@ -16,6 +17,7 @@ class Main extends Controller
 
     public function index()
     {
+        Log::clear('invoice');
         return view('admin.invoice.main');
     }
 

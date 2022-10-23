@@ -1,7 +1,7 @@
 <template>
     <div class="auth-box">
 
-        <div class="title-p">
+        <div class="title-p" v-if="false">
             <div class="current-page">ثبت نام</div>
             <a href="/login" class="next-page">
                 ورود
@@ -9,6 +9,7 @@
             </a>
         </div>
 
+        <h4>ثبت نام</h4>
 
         <div class="body-login text-center">
             <auth-phone v-if="page===1"></auth-phone>

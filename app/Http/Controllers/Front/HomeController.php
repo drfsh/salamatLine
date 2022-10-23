@@ -38,10 +38,6 @@ class HomeController extends Controller
 
 		// ===Fixed=====
 
-	    $data['featured'] = Product::published()->where('active',1)->where('featured',1)->inRandomOrder()->take(8)->get();
-
-		$data['latest'] = Product::where('active', 1)->latest()->take(8)->get();
-
 		$data['most_view'] = Product::published()->orderByUniqueViews('desc', Period::pastDays(1))->limit(4)->get();
 
 	    $favorite = DB::table('favorites')->groupBy('favoriteable_id')->select(DB::raw('favoriteable_id as id'),DB::raw('count(*) as total'))->orderBy('total', 'desc')->limit(4)->pluck('id')->toArray();
@@ -49,10 +45,8 @@ class HomeController extends Controller
 		$data['slider'] = Slider::latest()->select('id','title','link','image','active')->where('active', 1)->get();
 		$data['subslider'] = Subslider::select('id','title','link','image')->get();
 		$data['banner'] = Banner::select('id','pos','title','link','active','image')->get();
-		$data['country'] = Country::whereHas('product')->whereNotNull('image')->inRandomOrder()->limit(7)->get();
 		$data['brand'] = Brand::select('id','title','slug','image')->whereNotNull('image')->inRandomOrder()->limit(7)->get();
-		// return $data['brand'];
-		$most_visit_cat_id = Category::orderByUniqueViews('desc', Period::pastDays(7))->limit(6)->get()->pluck('id')->toArray();
+		$most_visit_cat_id = Category::orderByUniqueViews('desc', Period::pastDays(1))->limit(6)->get()->pluck('id')->toArray();
 
         // if ($most_visit_cat_id) {
 			foreach ($most_visit_cat_id as $key => $item) {
