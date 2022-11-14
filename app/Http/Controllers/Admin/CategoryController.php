@@ -9,7 +9,9 @@ use App\Http\Requests\CategoryCreate;
 use App\Http\Requests\CategoryUpdate;
 use App\Models\Category;
 use Session;
-
+use Image;
+use Storage;
+use File;
 class CategoryController extends Controller
 {
     public function __construct()
@@ -48,6 +50,19 @@ class CategoryController extends Controller
             $category->makeRoot()->save();
         }
 
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $filenameWithExt = $image->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $image->getClientOriginalExtension();
+            $fileNameToStore = $request->title . '_' . time() . '.' . $extension;
+            $location = public_path('img/category/' . $fileNameToStore);
+            $location2 = public_path('img/category/tiny/' . $fileNameToStore);
+            Image::make($image)->fit(768, 640)->save($location);
+            Image::make($image)->fit(384, 320)->save($location2);
+            $category->img = $fileNameToStore;
+            $category->save();
+        }
 
         Session::flash('success', 'دسته‌بندی ایجاد شد');
         return redirect()->route('category.index');
@@ -80,6 +95,25 @@ class CategoryController extends Controller
             $category->makeRoot()->save();
         }
 
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $filenameWithExt = $image->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $image->getClientOriginalExtension();
+            $fileNameToStore = $request->title . '_' . time() . '.' . $extension;
+            $location = public_path('img/category/' . $fileNameToStore);
+            $location2 = public_path('img/category/tiny/' . $fileNameToStore);
+            Image::make($image)->fit(768, 640)->save($location);
+            Image::make($image)->fit(384, 320)->save($location2);
+            $oldFilename = $category->img;
+            if ($oldFilename){
+                Storage::delete('img/product/' . $oldFilename);
+                Storage::delete('img/product/tiny/' . $oldFilename);
+            }
+            $category->img = $fileNameToStore;
+            $category->save();
+        }
+
         $category->update($attributes);
         Session::flash('success', 'دسته‌بندی ویرایش شد');
         return redirect()->route('category.index');
@@ -89,7 +123,7 @@ class CategoryController extends Controller
     {
         Category::where('id', '=', $id)->delete();
         Session::flash('success', 'دسته‌بندی حذف شد');
-        return redirect()->route('category.index');
+        return 'ok';
     }
 
 
@@ -97,7 +131,7 @@ class CategoryController extends Controller
     {
         $category = Category::find($id);
         $bool = $category->up();
-        return redirect()->route('category.index');
+        return 'ok';
     }
 
 
@@ -105,7 +139,8 @@ class CategoryController extends Controller
     {
         $category = Category::find($id);
         $bool = $category->down();
-        return redirect()->route('category.index');
+        return 'ok';
+
     }
 
 
@@ -125,7 +160,7 @@ class CategoryController extends Controller
 //            }
 //        }
         $category->save();
-        return redirect()->route('category.index');
+        return 'ok';
     }
 
     public function hide_price($id)
@@ -139,7 +174,7 @@ class CategoryController extends Controller
             $value->save();
         }
 
-        return redirect()->route('category.index');
+        return 'ok';
     }
 
     public function show_price($id)
@@ -153,8 +188,19 @@ class CategoryController extends Controller
             $value->save();
         }
 
-        return redirect()->route('category.index');
+        return 'ok';
     }
 
+    public function getApi(Request $request)
+    {
+        $parent_id = $request->parent_id;
+        if ($parent_id == null) {
+            $cat = Category::where('parent_id', null)->defaultOrder()->get();
+        } else {
+            $cat = Category::where('parent_id', $parent_id)->defaultOrder()->get();
+        }
+
+        return response()->json($cat);
+    }
 
 }

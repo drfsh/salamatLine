@@ -25,7 +25,6 @@
 				</button>
 			{!! Form::close() !!}
 		</li>
-		@include('admin.categories.category.main.level4.main')
 	@endforeach
 </ul>
 @else

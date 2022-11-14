@@ -11,6 +11,20 @@ class Category extends RinvexCategory implements Viewable
 {
     use InteractsWithViews;
 
+    protected $appends = [
+        'child_count'
+    ];
+    public function getChildCountAttribute()
+    {
+        return Category::where([['parent_id',$this->id]])->count();
+    }
+    public function getImgAttribute($value)
+    {
+        if ($value!==null)
+        return '/img/category/'.$value;
+        else
+            return null;
+    }
     function descendants(){
         return $this->hasMany(Category::class,'parent_id','id');
     }

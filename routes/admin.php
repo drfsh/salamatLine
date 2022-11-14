@@ -26,6 +26,7 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
 	Route::get('category/hide/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'hide_show'])->name('hideCategory');
 	Route::get('category/hidePrice/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'hide_price'])->name('hideCategoryPrice');
 	Route::get('category/showPrice/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'show_price'])->name('showCategoryPrice');
+	Route::get('category/api/get',[App\Http\Controllers\Admin\CategoryController::class, 'getApi']);
 //1365 product
     Route::put('brand/change/product', [App\Http\Controllers\Admin\BrandController::class, 'productStatus']);
     Route::resource('brand', App\Http\Controllers\Admin\BrandController::class, ['except' => ['show']]);

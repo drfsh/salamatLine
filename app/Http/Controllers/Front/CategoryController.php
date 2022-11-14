@@ -87,4 +87,21 @@ class CategoryController extends Controller
         // return $data;
         return view('front.category.main.main', compact('data'));
     }
+
+    public function getCategories(){
+        $cars = Category::where('hide',false)->defaultOrder()->toTree()->get();
+        foreach ($cars as $x){
+            $x['child'] = Category::where([['parent_id',$x->id],['hide',false]])->defaultOrder()->get();
+            foreach ($x['child'] as $y){
+                $y['child'] = Category::where([['parent_id',$y->id],['hide',false]])->defaultOrder()->get();
+                foreach ($y['child'] as $z){
+                    $z['child'] = Category::where([['parent_id',$z->id],['hide',false]])->defaultOrder()->get();
+                    foreach ($z['child'] as $i){
+                        $i['child'] = Category::where([['parent_id',$i->id],['hide',false]])->defaultOrder()->get();
+                    }
+                }
+            }
+        }
+        return response()->json($cars);
+    }
 }

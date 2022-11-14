@@ -28,6 +28,7 @@
     },
     "dependencies": {
         "@handcrafted-market/vue3-numeric": "^1.0.4",
+        "@imengyu/vue3-context-menu": "^1.1.1",
         "@vueform/slider": "^2.1.2",
         "exceljs": "^4.3.0",
         "j-date": "^0.0.5",

@@ -13,11 +13,17 @@ import edit_discount from "./components/discount/edit_discount";
 import replay from "./components/comment/replay";
 import newslatest_export from "./components/newslatest/newslatest_export";
 import infoSettings from "./components/info/infoSettings";
+import categorys from "./components/category/categorys";
 
 
 
+import '@imengyu/vue3-context-menu/lib/vue3-context-menu.css'
+import ContextMenu from '@imengyu/vue3-context-menu'
+let app = Vue.createApp(categorys)
+app.use(ContextMenu)
+app.mount('#category-admin')
 
-setApp([
+setElement([
     {
         name: 'page-info-settings',
         component: infoSettings
@@ -48,7 +54,7 @@ setApp([
     },
 ])
 
-function setApp(list) {
+function setElement(list) {
     for (const i in list) {
         const ticketList = wrapper(list[i].component, Vue.createApp, Vue.h);
         customElements.define(list[i].name, ticketList)

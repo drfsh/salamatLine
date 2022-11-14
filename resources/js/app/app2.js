@@ -29,10 +29,16 @@ import alerts_cart from "./components/alerts/alerts_cart";
 import map_page from "./components/pages/map_page";
 import numHeart from "./components/header/num-heart";
 import test from "./components/test";
+import categories from "./components/category/categories";
 
 require('./bootstrap')
 
 setApp([
+    {
+        name: 'categories-items',
+        component: categories,
+        components: []
+    },
     {
         name: 'app-feature-item',
         component: {},

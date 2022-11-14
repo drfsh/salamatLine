@@ -11,7 +11,10 @@
             <div class="box shadow rounded hover space">
                 <div class="heading">دسته‌بندی جدید</div>
                 <div class="content">
-                    {{ Form::open(array('route' => 'category.store')) }}
+                    {{ Form::open(array('route' => 'category.store','files' => true)) }}
+
+                        {{ Form::label('image', 'تصویر ') }}
+                        {{ Form::file('image') }}
 
                         {{ Form::label('name', 'نام') }}
                         {{ Form::text('name', null) }}
