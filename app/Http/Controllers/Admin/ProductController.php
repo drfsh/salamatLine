@@ -568,6 +568,7 @@ class ProductController extends Controller
     public function Active(Request $request, $id)
     {
         $situation = $request->active;
+        $price = $request->price;
         $p = Product::find($id);
 
 
@@ -576,6 +577,8 @@ class ProductController extends Controller
         }
 
         $p->active = $situation;
+        $p->price_hide = $price;
+
         $p->save();
 
 

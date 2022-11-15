@@ -10,7 +10,7 @@
             <th width="50" class="text-center">برند</th>
             <th width="50" class="text-center">کشور</th>
             <th width="200" class="text-center">تاریخ ایجاد</th>
-            <th width="50" class="text-center">وضعبت</th>
+            <th width="50" class="text-center">وضعیت</th>
             <th width="50" class="text-center"></th>
             <th width="100" class="text-center">عملیات</th>
         </tr>

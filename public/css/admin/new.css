@@ -1,6 +1,13 @@
 body{
     background: #f3f6fd;
 }
+main{
+    overflow: auto;
+}
+.jconfirm .jconfirm-box div.jconfirm-closeIcon{
+    left: 10px;
+    right: unset!important;
+}
 .card-3-part{
     display: flex;
     justify-content: center;

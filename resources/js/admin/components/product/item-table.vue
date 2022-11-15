@@ -12,7 +12,7 @@
         <td class="text-center"><small v-html="brand"></small></td>
         <td class="text-center"><small v-html="country"></small></td>
         <td class="sl"><small>{{ item.created_at }}</small></td>
-        <td class="text-center" v-html="status"></td>
+        <td class="text-center" role="button" @click="changeStatus()" v-html="status"></td>
         <td class="text-center">
             <a role="button" @click="setChange()" class="button">
                 <small>
@@ -75,6 +75,53 @@ export default {
     },
     props: ['item', 'i'],
     methods: {
+        changeStatus(){
+            let textStatus,status,classStatus
+            let price,textPrice,classPrice
+            let vm = this
+            if (this.item.active==0){
+                textStatus = 'فعال سازی'
+                status = 1
+                classStatus = 'btn-green'
+            }else {
+                textStatus = 'غیر فعال سازی'
+                status = 0
+                classStatus = 'btn-red'
+            }
+            if (this.item.price_hide==0){
+                textPrice = 'مخفی کردن قیمت'
+                price = 1
+                classPrice = 'btn-red'
+            }else {
+                textPrice = 'فعال کردن قیمت'
+                price = 0
+                classPrice = 'btn-green'
+            }
+            $.confirm({
+                title:'تغییر وضعیت',
+                content:"وضعیت را انتخاب کنید",
+                closeIcon: true,
+                backgroundDismiss: true,
+                buttons:{
+                    status:{
+                        text:textStatus,
+                        btnClass:classStatus,
+                        action:async function () {
+                            await window.axios.post('/admin/product/active/' + vm.item.id,{active:status,price:vm.item.price_hide})
+                            vm.item.active = status
+                        }
+                    },
+                    price:{
+                        text:textPrice,
+                        btnClass:classPrice,
+                        action:async function () {
+                            await window.axios.post('/admin/product/active/' + vm.item.id,{active:vm.item.active,price:price})
+                            vm.item.price_hide = price
+                        }
+                    },
+                }
+            })
+        },
         async setChange() {
 
             let {data} = await window.axios.post('/admin/product/inline-update/' + this.item.id,{price:this.item.price,subtitle:this.item.subtitle,title:this.item.title})

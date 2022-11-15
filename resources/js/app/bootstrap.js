@@ -220,14 +220,6 @@ $('.menu-profile-i').click(function () {
     }
 })
 
-$('.item-mini-menu').click(function () {
-    if ($(this).hasClass('active')){
-        $(this).removeClass('active')
-    }else {
-        $(this).addClass('active')
-    }
-})
-
 import lozad from 'lozad'
 const observer = lozad();
 observer.observe();
