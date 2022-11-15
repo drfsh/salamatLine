@@ -8,21 +8,14 @@
 					</div>
 					<div class="cell shrink" style="width: 72%;">
 						<ul class="static-menu text-l">
+							@foreach($topbar as $item)
 							<li>
-								<a href="/">صفحه اصلی</a>
+								<a href="{{$item->link}}" style="background: {{$item->color}};color: {{$item->text_color}}">
+									<i style="font-size: 11px;" class="{{$item->icon}}"></i>
+									{{$item->name}}
+								</a>
 							</li>
-							<li>
-								<a href="/">مجله سایت</a>
-							</li>
-							<li>
-								<a href="{{route('OrdersTracking')}}">پیگیری سفارش</a>
-							</li>
-							<li>
-								<a href="/about-us">درباره ما</a>
-							</li>
-							<li>
-								<a href="/contact-us">تماس با ما</a>
-							</li>
+							@endforeach
 						</ul>
 					</div>
 				</div>

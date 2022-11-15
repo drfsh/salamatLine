@@ -9,7 +9,7 @@ class Banner extends Model
 {
     use HasFactory;
     protected $appends = [
-        'tiny', 'large'
+        'tiny', 'large','name_page'
      ];
      public function getTinyAttribute()
      {
@@ -24,5 +24,16 @@ class Banner extends Model
              return null;
          }
          return asset('img/banner/' . $this->image);
+     }
+
+     public function getNamePageAttribute(){
+         if ($this->page==0)
+             return 'صفحه اصلی';
+
+         $page = Collection::find($this->page);
+         if ($page==null )
+             return 'صفحه پاک شده!';
+         else
+             return $page->title;
      }
 }

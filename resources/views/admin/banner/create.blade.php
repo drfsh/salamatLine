@@ -25,6 +25,18 @@
                             {{ Form::label('link', 'لینک صفحه') }}
                             {{ Form::text('link', null) }}
                         </div>
+
+                        <div class="cell medium-4">
+                            {{ Form::label('page', 'صفحه') }}
+                            <select class="simple-select" name="page">
+                                <option value="0">صفحه اصلی</option>
+                                @foreach($collection as $item)
+                                    <option @if(request()->get('page')==$item->id) selected @endif value='{{ $item->id }}'>{{ $item->title }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+
                         <div class="cell medium-6">
                             {{ Form::label('featured_image', 'تصویر اصلی') }}
                             {{ Form::file('featured_image') }}
@@ -34,14 +46,14 @@
                             {{ Form::checkbox('active', null, true) }}
                         </div>
                     </div>
-                        
-                        <div class="double-gap"></div>
-                        {{ Form::submit('ذخیره', array('class' => 'button success')) }}
-                        <a href="{{ route('banner.index') }}" class="button alert">بازگشت</a>
+
+                    <div class="double-gap"></div>
+                    {{ Form::submit('ذخیره', array('class' => 'button success')) }}
+                    <a href="{{ route('banner.index') }}" class="button alert">بازگشت</a>
                     {!! Form::close() !!}
                 </div>
             </div>
         </div>
     </div>
-	<div class="double-gap"></div>
+    <div class="double-gap"></div>
 @endsection

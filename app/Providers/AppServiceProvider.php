@@ -36,6 +36,8 @@ class AppServiceProvider extends ServiceProvider
         View::composer('*', function($view)
         {
             $view
+            ->with('topbar', app('App\Models\NavMenu')->all())
+            ->with('ads', app('App\Models\Ads')->where('active',true)->first())
             ->with('social', Cache::remember('social', 864000, function () {return app('App\Models\Social')->where('active', 1)->select('id','title','icon','active','link')->limit(4)->get();}))
             ->with('globalpages', Cache::remember('globalpages', 86400, function () {return app('App\Models\Page')->where('active', 1)->select('id','title','slug','active')->limit(4)->get();}))
             ->with('globalcontact', Cache::remember('globalcontact', 86400, function () {return app('App\Models\Contactinfo')->select('id','phone1','phone2','address','email','mapurl')->where('id', 1)->get();}))

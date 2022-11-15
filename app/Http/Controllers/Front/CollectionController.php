@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Banner;
 use Illuminate\Http\Request;
 use App\Models\Collection;
 Use Redirect;
@@ -24,7 +25,8 @@ class CollectionController extends Controller
 		SEOTools::setTitle($data['collection']->title);
 		$data['products'] = $data['collection']->products()->published()->orderBy('active', 'desc')->latest()->paginate(28);
 		$data['other'] = Collection::latest()->where('id','!=',$data['collection']->id)->limit(8)->get();
-		return view('front.collection.main.main', compact('data'));
+        $data['banner'] = Banner::where('page',$data['collection']->id)->orderBy('pos', 'asc')->get();
+        return view('front.collection.main.main', compact('data'));
 	}
 
 }

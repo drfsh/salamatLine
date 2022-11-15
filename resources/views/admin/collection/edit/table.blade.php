@@ -1,11 +1,14 @@
-<div class="cell medium-8 medium-offset-2">
+<div class="cell medium-">
     <div class="box shadow rounded hover">
         <div class="heading">
             <div class="grid-x">
-                <div class="cell medium-6"><h4>بنر</h4></div>
-                <div class="cell medium-6 date">    
+                <div class="cell medium-6">
+                    <h4 style="display: initial">بنر</h4>
+                    <a href="/img" style="color: #35a3de;font-size: 11px;margin-right: 10px;">راهنمای جایگاه ها</a>
+                </div>
+                <div class="cell medium-6 date">
                     <div class="float-left">
-                        <a class="button success tiny" href="{{ route('banner.create') }}"><i class="fas fa-plus"></i></a>
+                        <a class="button success tiny" target="_blank" href="/admin/banner/create?page={{$collection->id}}"><i class="fas fa-plus"></i></a>
                     </div> 
                 </div>
             </div>
@@ -16,7 +19,6 @@
                     <th width="200">تصویر</th>
                     <th width="300">نام</th>
                     <th width="200">جایگاه</th>
-                    <th width="200">صفحه</th>
                     <th>فعال </th>
                     <th class="text-center">عملیات</th>
                 </tr>
@@ -27,7 +29,6 @@
                         <td><img src="{{$item->tiny}}"></td>
                         <td>{{$item->title}}</td>
                         <td>{{$item->pos}}</td>
-                        <td>{{$item->name_page}}</td>
                         <td class="text-center">
                             @if($item->active == true)
                                 <span class="label success">فعال</span>

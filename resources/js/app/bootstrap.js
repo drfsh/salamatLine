@@ -164,11 +164,13 @@ $(window).scroll((function () {
     var e = $(this), n = $(this).scrollTop();
         e.scrollTop() >= 100 && e.scrollTop() < 200 &&
         t > n ? $(".top-bar").removeClass("shadow") : e.scrollTop() >= 70 &&
-        n > t ? ($(".top-bar .top").slideUp(),
+        n > t ? ($(".top-bar .top").slideUp(),$(".top-bar .ads-layout").slideUp(),
                 $('.top-bar .bot .icon-btns').slideDown()) :
             t > n ? ($(".top-bar .top").slideDown(),
+                    $(".top-bar .ads-layout").slideDown(),
                     $('.top-bar .bot .icon-btns').slideUp()) :
                 ($(".top-bar .top").slideDown(),
+                    $(".top-bar .ads-layout").slideDown(),
                     $('.top-bar .bot .icon-btns').slideUp() ,
                     $(".top-bar").removeClass("shadow")),
         t = n
@@ -198,6 +200,19 @@ $('.menu-profile-i').click(function () {
         menu = true
     }
 })
+
+$('.item-mini-menu').click(function () {
+    if ($(this).hasClass('active')){
+        $(this).removeClass('active')
+    }else {
+        $(this).addClass('active')
+    }
+})
+
+$('#close-ads-layout').click(function () {
+    $('.ads-layout').addClass('hide');
+})
+
 
 import lozad from 'lozad'
 const observer = lozad();

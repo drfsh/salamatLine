@@ -25,6 +25,7 @@
                             {{ Form::label('sort_order', 'چینش') }}
                             {{ Form::text('sort_order', null) }}
                         </div>
+
                         <div class="cell medium-3">
                             {{ Form::label('active', 'فعال') }}
                             {{ Form::checkbox('active', null, true) }}
@@ -32,6 +33,11 @@
                         <div class="cell medium-3">
                             {{ Form::label('feature', 'برگزیده') }}
                             {{ Form::checkbox('feature', null) }}
+                        </div>
+                        <div class="cell" style="font-size: 13px;margin: 12px 0;">
+                            پس از ساخت صفحه میتوانید بنر را تنظیم کنید.
+                            <br>
+                            (راهنمایی ایجاد بنر در صفحه لندینگ: مراجعه به بخش بنر ها و ایجاد بنر برای صفحه لندینگ ، مراجعه به صفحه ویرایش لندینگ مورد نظر پس از ایجاد.)
                         </div>
                         <div class="cell medium-6">
                             {{ Form::label('featured_image', 'تصویر اصلی') }}

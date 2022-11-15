@@ -1,4 +1,7 @@
 <ul class="breadcrumbs">
+    <li class="{{\App\Traits\CheckRoute::check('navMenu.index')}}"><a href="{{ route('navMenu.index') }}">فهرست منو ها</a></li>
+    <li class="{{\App\Traits\CheckRoute::check('ads.index')}}"><a href="{{ route('ads.index') }}">اطلاع رسانی(بالا صفحه)</a></li>
+
     <li class="{{\App\Traits\CheckRoute::check('slider.index')}}"><a href="{{ route('slider.index') }}">اسلایدر</a></li>
     <li class="{{\App\Traits\CheckRoute::check('subslider.index')}}"><a href="{{ route('subslider.index') }}">نیم اسلایدر</a></li>
     <li class="{{\App\Traits\CheckRoute::check('banner.index')}}"><a href="{{ route('banner.index') }}">بنر</a></li>

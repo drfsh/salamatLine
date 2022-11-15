@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Collection;
 use Illuminate\Http\Request;
 use App\Models\Banner;
 use Session;
@@ -19,12 +20,14 @@ class BannerController extends Controller
     public function index()
     {
         $banners = Banner::orderBy('id', 'desc')->paginate(5);
+
         return view('admin.banner.index',compact('banners'));
     }
 
     public function create()
     {
-        return view('admin.banner.create');
+        $collection = Collection::all();
+        return view('admin.banner.create',compact('collection'));
     }
 
     public function store(Request $request)
@@ -33,6 +36,7 @@ class BannerController extends Controller
         $banner->title = $request->title;
         $banner->pos = $request->pos;
         $banner->link = $request->link;
+        $banner->page = $request->page;
 
         if ($request->active) {
             $banner->active = 1;
@@ -67,7 +71,8 @@ class BannerController extends Controller
     public function edit($id)
     {
         $banner = Banner::findOrFail($id);
-        return view('admin.banner.edit', compact('banner'));
+        $collection = Collection::all();
+        return view('admin.banner.edit', compact('banner','collection'));
     }
 
     public function update(Request $request, $id)
@@ -76,6 +81,7 @@ class BannerController extends Controller
         $banner->title = $request->input('title');
         $banner->pos = $request->input('pos');
         $banner->link = $request->input('link');
+        $banner->page = $request->page;
 
         if ($request->active) {
             $banner->active = 1;

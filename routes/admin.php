@@ -20,6 +20,9 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
 	Route::resource('permissions', App\Http\Controllers\Admin\PermissionController::class);
 	Route::resource('mobile', App\Http\Controllers\Admin\UsermobileController::class)->only(['create', 'store']);
 
+    Route::resource('navMenu', App\Http\Controllers\Admin\NavMenuController::class);
+    Route::resource('ads', App\Http\Controllers\Admin\AdsTopController::class);
+
 	Route::resource('category', App\Http\Controllers\Admin\CategoryController::class, ['except' => ['show']]);
 	Route::get('category/up/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'up'])->name('UpCategory');
 	Route::get('category/down/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'down'])->name('DownCategory');

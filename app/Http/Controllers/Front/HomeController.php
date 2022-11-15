@@ -44,7 +44,12 @@ class HomeController extends Controller
 	    $data['most_like'] = Product::published()->find($favorite);
 		$data['slider'] = Slider::latest()->select('id','title','link','image','active')->where('active', 1)->get();
 		$data['subslider'] = Subslider::select('id','title','link','image')->get();
-		$data['banner'] = Banner::select('id','pos','title','link','active','image')->get();
+
+
+		$data['banner'] = Banner::select('id','pos','title','link','active','image')->where('page',0)->get();
+		$data['country'] = Country::whereHas('product')->whereNotNull('image')->inRandomOrder()->limit(7)->get();
+
+
 		$data['brand'] = Brand::select('id','title','slug','image')->whereNotNull('image')->inRandomOrder()->limit(7)->get();
 		$most_visit_cat_id = Category::orderByUniqueViews('desc', Period::pastDays(1))->limit(6)->get()->pluck('id')->toArray();
 

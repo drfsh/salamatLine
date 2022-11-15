@@ -34,6 +34,13 @@
                             {{ Form::checkbox('feature', null, $collection->feature) }}
                         </div>
 
+                        <div class="cell medium-12">
+                            {{ Form::label('', 'بنر ها') }}
+
+                            @include('admin.collection.edit.table')
+
+                        </div>
+
                         <div class="cell medium-6">
                             {{ Form::label('featured_image', 'تصویر اصلی') }}
                             {{ Form::file('featured_image') }}

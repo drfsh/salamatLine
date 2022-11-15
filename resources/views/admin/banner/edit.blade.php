@@ -25,6 +25,15 @@
                             {{ Form::label('link', 'لینک اسلایدر') }}
                             {{ Form::text('link', null) }}
                         </div>
+                        <div class="cell medium-4">
+                            {{ Form::label('page', 'صفحه') }}
+                            <select class="simple-select" name="page">
+                                <option value="0">صفحه اصلی</option>
+                                @foreach($collection as $item)
+                                    <option @if($banner->page==$item->id) selected @endif value='{{ $item->id }}'>{{ $item->title }}</option>
+                                @endforeach
+                            </select>
+                        </div>
                         <div class="cell medium-6">
                             {{ Form::label('featured_image', 'تصویر اصلی') }}
                             {{ Form::file('featured_image') }}

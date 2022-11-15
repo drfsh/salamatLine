@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Banner;
 use Illuminate\Http\Request;
 use App\Models\Collection;
 use App\Models\Product;
@@ -81,9 +82,10 @@ class CollectionController extends Controller
     public function edit($id)
     {
         $collection = Collection::with('seo')->findOrFail($id);
+        $banners = Banner::where('page',$id)->orderBy('pos', 'desc')->paginate(10);
         $products = Product::all();
         $product = $collection->products->pluck('id')->toArray();
-        return view('admin.collection.edit', compact('collection', 'products', 'product'));
+        return view('admin.collection.edit', compact('collection', 'products', 'product','banners'));
     }
 
     public function update(Request $request, $id)
