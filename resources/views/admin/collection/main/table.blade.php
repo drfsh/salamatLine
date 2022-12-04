@@ -30,7 +30,7 @@
                                 <span class="label alert">غیر فعال</span>
                             @endif
                         </td>
-                        <td>{{$item->products->count()}}</td>
+                        <td>{{$item->products_count}}</td>
                         <td>
                             <ul class="modify">
                                 <li class="edit"><a href="{{ route('collection.edit', $item->id) }}"><i class="fas fa-edit"></i></a></li>

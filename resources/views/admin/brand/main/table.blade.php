@@ -10,7 +10,7 @@
                 </div>
             </div>
         </div>
-        <brand-admin></brand-admin>
+        <div id="banner-admin"></div>
 {{--        <brand ></brand>--}}
     </div>
 </div>

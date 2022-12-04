@@ -15,63 +15,77 @@ use File;
 
 class CollectionController extends Controller
 {
-    public function __construct() {
+    public function __construct()
+    {
         $this->middleware(['auth', 'isAdmin']);
     }
 
     public function index()
     {
         $collections = Collection::orderBy('id', 'desc')->paginate(15);
-        return view('admin.collection.index',compact('collections'));
+        return view('admin.collection.index', compact('collections'));
     }
 
     public function create()
     {
-        $products = product::all();
-        return view('admin.collection.create', compact('products'));
+        return view('admin.collection.create');
     }
 
     public function store(Request $request)
     {
+        $data = ['true' => true];
+        $banners = json_decode($request->banners);
+
+        $products = [];
+        $products[] = json_decode($request->product1);
+        $products[] = json_decode($request->product2);
+        $products[] = json_decode($request->product3);
+
+
         $collection = new Collection;
         $collection->title = $request->title;
         $collection->slug = $request->slug;
         $collection->sort_order = $request->sort_order;
-        $collection->content = $request->content;
-        if ($request->featured) {
-            $collection->featured = 1;
-        }else{
-            $collection->featured = 0;
-        }
+
         if ($request->active) {
             $collection->active = 1;
-        }else{
+        } else {
             $collection->active = 0;
         }
 
-        if ($request->hasFile('featured_image')) {
-            $image = $request->file('featured_image');
-            $filenameWithExt = $image->getClientOriginalName();
-            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            $extension = $image->getClientOriginalExtension();
-            $fileNameToStore = rand( 1 , 9999).'_'.time().'.'.$extension;
-            $location = public_path('img/collection/' . $fileNameToStore);
-            Image::make($image)->fit(1920, 800)->save($location);
-            $collection->image = $fileNameToStore;
+        foreach ($banners as $k => $line) {
+            $items = $line->items;
+            foreach ($items as $z => $item) {
+                $i = $k.'_'.$z;
+                if ($request->hasFile($i)) {
+                    $image = $request->file($i);
+                    $filenameWithExt = $image->getClientOriginalName();
+                    $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+                    $extension = $image->getClientOriginalExtension();
+                    $fileNameToStore = rand(1, 9999) . '_' . $i . '_' . time() . '.' . $extension;
+                    $location = public_path('img/landing/' . $fileNameToStore);
+
+                    Image::make($image)->save($location);
+                    $item->imgPath = '/img/landing/'.$fileNameToStore;
+                }
+
+            }
         }
 
-        $collection->save();
-        $collection->products()->sync($request->products, false);
+        $collection->products = json_encode($products);
 
-        if ($request->metadesc || $request->keywords){
+        $collection->banners = json_encode($banners);
+
+        $collection->save();
+//        $collection->products()->sync($request->products, false);
+
+        if ($request->metadesc || $request->keywords) {
             $seo = new Seo;
             $seo->metadesc = $request->metadesc;
             $seo->keywords = $request->keywords;
             $collection->seo()->save($seo);
         }
-
-        Session::flash('success', 'مجموعه ایجاد شد');
-        return redirect()->route('collection.index');
+        return response()->json($data);
     }
 
     public function show($id)
@@ -82,65 +96,74 @@ class CollectionController extends Controller
     public function edit($id)
     {
         $collection = Collection::with('seo')->findOrFail($id);
-        $banners = Banner::where('page',$id)->orderBy('pos', 'desc')->paginate(10);
-        $products = Product::all();
-        $product = $collection->products->pluck('id')->toArray();
-        return view('admin.collection.edit', compact('collection', 'products', 'product','banners'));
+        return view('admin.collection.edit', compact('collection'));
     }
 
     public function update(Request $request, $id)
     {
-        $collection = Collection::findOrFail($id);
-        $collection->title = $request->input('title');
-        $collection->slug = $request->input('slug');
-        $collection->content = $request->input('content');
-        $collection->sort_order = $request->input('sort_order');
 
-        if ($request->active) {
+        $data = ['true' => true];
+        $collection = Collection::findOrFail($id);
+
+        $banners = json_decode($request->banners);
+
+        $products = [];
+        $products[] = json_decode($request->product1);
+        $products[] = json_decode($request->product2);
+        $products[] = json_decode($request->product3);
+
+        $collection->title = $request->title;
+        $collection->slug = $request->slug;
+        $collection->sort_order = $request->sort_order;
+
+        if ($request->active == 'true') {
             $collection->active = 1;
-        }else{
+        } else {
             $collection->active = 0;
         }
-        if ($request->featured) {
-            $collection->featured = 1;
-        }else{
-            $collection->featured = 0;
-        }
-        if ($request->hasFile('featured_image')) {
-            $image = $request->file('featured_image');
-            $filenameWithExt = $image->getClientOriginalName();
-            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            $extension = $image->getClientOriginalExtension();
-            $fileNameToStore = $request->title.'_'.time().'.'.$extension;
-            $location = public_path('img/collection/' . $fileNameToStore);
-            Image::make($image)->fit(1920, 1080)->save($location);
-            $oldFilename = $collection->image;
-            $collection->image = $fileNameToStore;
 
-            Storage::delete('img/collection/' . $oldFilename);
+        foreach ($banners as $k => $line) {
+            $items = $line->items;
+            foreach ($items as $z => $item) {
+                $i = $k.'_'.$z;
+                if ($request->hasFile($i)) {
+                    $image = $request->file($i);
+                    $filenameWithExt = $image->getClientOriginalName();
+                    $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+                    $extension = $image->getClientOriginalExtension();
+                    $fileNameToStore = rand(1, 9999) . '_' . $i . '_' . time() . '.' . $extension;
+                    $location = public_path('img/landing/' . $fileNameToStore);
+
+                    Image::make($image)->save($location);
+                    $item->imgPath = '/img/landing/'.$fileNameToStore;
+                }
+
+            }
         }
+
+
+        $collection->products = json_encode($products);
+
+        $collection->banners = json_encode($banners);
 
         $collection->save();
-        if (isset($request->products)) {
-            $collection->products()->sync($request->products);
-        } else {
-            $post->products()->sync(array());
-        }
+
         // $collection->products()->sync($products[],false);
 
-        if ($collection->seo){
+        if ($collection->seo) {
             $seo = $collection->seo()->first();
             $seo->metadesc = $request->input('metadesc');
             $seo->keywords = $request->input('keywords');
             $collection->seo()->save($seo);
-        } else if ($request->metadesc || $request->keywords){
+        } else if ($request->metadesc || $request->keywords) {
             $seo = new Seo;
             $seo->metadesc = $request->metadesc;
             $seo->keywords = $request->keywords;
             $collection->seo()->save($seo);
         }
-        Session::flash('success', 'مجموعه ویرایش شد');
-        return redirect()->route('collection.index');
+
+
+        return response()->json($data);
 
     }
 
@@ -151,5 +174,21 @@ class CollectionController extends Controller
         $collection->seo()->delete();
         Session::flash('success', 'مجموعه حذف شد');
         return redirect()->route('collection.index');
+    }
+
+    public function getLanding($id)
+    {
+        $page = Collection::find($id);
+        if (is_null($page)) return response()->json(['true' => false]);
+
+
+        if ($page->seo) {
+            $seo = $page->seo()->first();
+            $page['metadesc'] = $seo->metadesc;
+            $page['keywords'] = $seo->keywords;
+        }
+
+
+        return response()->json(['true' => true, 'data' => $page]);
     }
 }

@@ -18,6 +18,7 @@ class CreateAdsTable extends Migration
             $table->string('body');
             $table->string('link');
             $table->string('color');
+            $table->string('text_color');
             $table->string('img')->nullable();
             $table->boolean('active');
             $table->timestamps();

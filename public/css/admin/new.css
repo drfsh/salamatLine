@@ -20,7 +20,21 @@ main{
     color: white;
     box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
 }
-
+.uploadFileH img{
+    position: absolute;
+    max-width: unset;
+}
+.uploadFileH {
+    overflow: hidden;
+    height: 57px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+.uploadFileH:hover{
+    filter: brightness(0.5);
+}
 .card-3-part .b {
     background: linear-gradient(45deg, #becbe3, #92a8d1);
 }
@@ -793,6 +807,186 @@ button {
 .child--cat{
     display: flex;
     flex-direction: row;
+}
+.slug-landing input{
+    margin: 0;
+}
+.slug-landing{
+    display: flex;
+    direction: ltr;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 1rem;
+}
+.bg-banner {
+    position: relative;
+    padding: 10px 17px 25px;
+    margin: 10px !important;
+    width: 100%;
+    border-radius: 15px;
+    background: #e1eef7;
+}
+.bg-banner .menus{
+    display: flex;
+}
+.bg-banner .icon{
+    cursor: pointer;
+    background: rgb(255 255 255);
+    padding: 6px;
+    border-radius: 8px;
+    margin-left: 4px;
+    font-size: 13px;
+}
+.bg-banner .slid-col{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.bg-banner .slid-col .menu{
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: 0.2s;
+    opacity: 0;
+    height: 25px;
+}
+.bg-banner .slid-col:hover .menu{
+    width: 100%;
+    padding: 0 2px;
+    opacity: 1;
+}
+.bg-banner .slid-col .menu .item{
+    cursor: pointer;
+    background: rgb(255 255 255);
+    padding: 6px;
+    border-radius: 8px;
+    margin-left: 4px;
+    font-size: 13px;
+    display: flex;
+    transition: 0.2s;
+}
+
+.bg-banner .slid-col .menu .item:hover,.bg-banner .slid-col .menu .item.active{
+    background: #616161;
+}
+
+.bg-banner .slid-col .menu .item._1 span{
+    background: #b5b5b5;
+    width: 12px;
+    height: 13px;
+    display: block;
+    border-radius: 3px;
+}
+.bg-banner .slid-col .menu .item._1 span:first-child{
+    margin-left:1px;
+}
+.bg-banner .slid-col .menu .item._1 span:last-child{
+    margin-right:1px;
+}
+button.btn-blue {
+    background-color: #3498db;
+    color: #FFF;
+    text-shadow: none;
+    transition: background .2s;
+    margin-bottom: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 80px;
+    height: 33px;
+    padding: 0;
+}
+.install-banner{
+    text-align: center;
+}
+.install-banner .text{
+    font-size: 14px;
+    margin: 9px 0px;
+    color: #5d5d5d;
+}
+.fullLoading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1b1b1b8c;
+    z-index: 1020000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.jconfirm {
+    z-index: 99999;
+}
+.banner-session,.product-session{
+    transition: 0.2s;
+    cursor: pointer;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid #949494;
+    align-items: center;
+    justify-content: center;
+}
+.change-size--banner{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background: white;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 13px;
+}
+.product-session img{
+    border-radius: 13px;
+    max-width: 187px;
+}
+.product-session{
+    padding: 11px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 12px;
+
+}
+.change-size--banner.right{
+    left: unset;
+    right: 5px;
+}
+.change-size--banner.fa-edit{
+    left: unset;
+    top: unset;
+    bottom: 5px;
+    right: 5px;
+}
+.banner-session img.banner{
+    height: 100%;
+    margin: auto;
+    max-width: unset;
+    text-align: center;
+}
+.banner-session img.text{
+    max-height: 100%;
+    padding: 30px;
+}
+.banner-session:hover,.product-session:hover{
+    background: #ffffff42;
+}
+.banner-session .body{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.mt-3{
+    margin-top: 10px;
 }
 @media (max-width: 900px) {
     .child--cat .main--category,.main--category .item{

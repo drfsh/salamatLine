@@ -1,8 +1,8 @@
-<div class="bg-banner @if($data['page']['banners'][3]->style->container)grid-container @endif"
-     style="background: {{$data['page']['banners'][3]->style->mainBackground}}">
+<div class="bg-banner @if($data['page']['banners'][1]->style->container)grid-container @endif"
+     style="background: {{$data['page']['banners'][1]->style->mainBackground}}">
     <div class="grid-x grid-padding-x ">
 
-        @foreach($data['page']['banners'][3]->items as $item)
+        @foreach($data['page']['banners'][1]->items as $item)
             @if($item->type=='banner')
                 <div class="cell small-12 medium-{{$item->size}}">
                     <div class="landing-banner">

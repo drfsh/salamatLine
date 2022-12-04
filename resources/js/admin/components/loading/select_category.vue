@@ -1,13 +1,13 @@
 <template>
-    <div class="nice-select pro wide p-0" tabindex="0">
-        <input autocomplete="off" id="search_city" style="margin: 0 !important;width: 100%;" v-model="text"
+    <div class="nice-select cat wide p-0" tabindex="0">
+        <input autocomplete="off" id="search_category" style="margin: 0 !important;width: 100%;" v-model="text"
                @click="show=true"
-               class="input-1 no-hover add-inputs-p"
+               class="input-1 no-hover add-inputs-c"
                type="text" :placeholder="name">
 
         <ul class="list" v-if="show">
             <li v-for="(item ,i) in items" @click="select(item)" class="option text-right selected focus">
-                {{ item.title }}
+                {{ item.name }}
             </li>
             <li v-if="items.length===0" @click="show=false">
                 صبر کنید...
@@ -18,7 +18,7 @@
 
 <script>
 export default {
-    name: "select_product",
+    name: "select_category",
     props:{
         id:{
             default:null
@@ -39,7 +39,7 @@ export default {
     },
     methods: {
         async getData() {
-            let {data} = await window.axios.get('/admin/allapi/products')
+            let {data} = await window.axios.get('/admin/allapi/category')
             this.itemsM = data;
             this.items = data;
             if (this.id!==null){
@@ -52,11 +52,11 @@ export default {
             }
         },
         select(i) {
-            let items = $('.nice-select.pro .list')
+            let items = $('.nice-select.cat .list')
             items.hide();
-            this.text = i.title
+            this.text = i.name
             this.model = i.id
-            this.$parent.product_id = i.id
+            this.$parent.cat_id = i.id
             let vm = this
             setTimeout(function () {
                 vm.show = false
@@ -68,7 +68,7 @@ export default {
 
             this.items = []
             for (const i in this.itemsM) {
-                if (this.itemsM[i].title.indexOf(this.text.trim())!==-1){
+                if (this.itemsM[i].name.indexOf(this.text.trim())!==-1){
                     this.items.push(this.itemsM[i])
                 }
             }
@@ -80,7 +80,7 @@ export default {
         $(document).ready(function () {
             let typingTimer;
             const doneTypingInterval = 100;
-            const $input = $('#search_city');
+            const $input = $('#search_category');
             $input.on('keyup', function () {
                 clearTimeout(typingTimer)
                 typingTimer = setTimeout(doneTyping, doneTypingInterval)
@@ -96,8 +96,8 @@ export default {
 
             $('body').click(function (e) {
                 let $this = $(e.target)
-                let items = $('.nice-select.pro .list')
-                if (!$this.hasClass('add-inputs-p')) {
+                let items = $('.nice-select.cat .list')
+                if (!$this.hasClass('add-inputs-c')) {
                     vm.show = false
                     items.hide()
                 } else {

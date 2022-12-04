@@ -20,6 +20,8 @@ Route::get('change-password', [App\Http\Controllers\Front\Profile\PasswordContro
 Route::post('success-invoice/{id}', [App\Http\Controllers\Front\Profile\OrdersController::class, 'Success'])->name('SuccessInvoice');
 Route::post('delete-invoice/{id}', [App\Http\Controllers\Front\Profile\OrdersController::class, 'Delete'])->name('DeleteInvoice');
 Route::put('update-profile/{id}', [App\Http\Controllers\Front\Profile\EditController::class, 'update'])->name('UpdateProfile');
+Route::post('verifyUser', [App\Http\Controllers\Front\Profile\EditController::class, 'verifyUser']);
+Route::post('sendCodeVerify', [App\Http\Controllers\Front\Profile\EditController::class, 'sendCodeVerify']);
 
 Route::put('update-password', [App\Http\Controllers\Front\Profile\PasswordController::class, 'update'])->name('UpdatePassword');
 Route::put('change-avatar', [App\Http\Controllers\Front\Profile\HomeController::class, 'ChangeProfilePic'])->name('ChangeAvatar');

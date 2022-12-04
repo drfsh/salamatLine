@@ -11,6 +11,10 @@ class Collection extends Model
     use HasFactory;
     use SoftDeletes;
 
+    protected $appends = [
+        'products_count'
+    ];
+
     public function products()
     {
     	return $this->belongsToMany('App\Models\Product');
@@ -21,4 +25,20 @@ class Collection extends Model
         return $this->morphOne('App\Models\Seo', 'seoable');
     }
 
+    public function getProductsCountAttribute()
+    {
+        $count = 0;
+        $products = $this->products;
+        foreach ($products as $p)
+        $count += sizeof($p);
+        return $count;
+    }
+    public function getProductsAttribute($value)
+    {
+        return json_decode($value);
+    }
+    public function getBannersAttribute($value)
+    {
+        return json_decode($value);
+    }
 }

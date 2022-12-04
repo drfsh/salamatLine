@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Banner;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\Collection;
 Use Redirect;
@@ -20,12 +21,20 @@ class CollectionController extends Controller
 
     public function main($slug)
 	{
-		$data['collection'] = Collection::where('slug', $slug)->first();
-		if (!$data['collection']) {return Redirect::route('home');}
-		SEOTools::setTitle($data['collection']->title);
-		$data['products'] = $data['collection']->products()->published()->orderBy('active', 'desc')->latest()->paginate(28);
-		$data['other'] = Collection::latest()->where('id','!=',$data['collection']->id)->limit(8)->get();
-        $data['banner'] = Banner::where('page',$data['collection']->id)->orderBy('pos', 'asc')->get();
+		$data['page'] = Collection::where('slug', $slug)->first();
+		if (!$data['page']) {return Redirect::route('home');}
+		SEOTools::setTitle($data['page']->title);
+
+        $productsId = $data['page']->products;
+
+        $data['products'] = [];
+        foreach ($productsId as $k=>$item) {
+            $data['products'][$k] = [];
+            foreach ($item as $id) {
+                $data['products'][$k][] = Product::find($id);
+            }
+        }
+
         return view('front.collection.main.main', compact('data'));
 	}
 

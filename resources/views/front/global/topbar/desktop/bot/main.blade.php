@@ -6,7 +6,7 @@
 					<div class="cell shrink">
 						@include('front.global.topbar.desktop.bot.menu.main')
 					</div>
-					<div class="cell shrink" style="width: 72%;">
+					<div class="cell shrink" style="width: 75%;">
 						<ul class="static-menu text-l">
 							@foreach($topbar as $item)
 							<li>

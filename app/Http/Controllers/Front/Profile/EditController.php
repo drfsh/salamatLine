@@ -4,6 +4,10 @@ namespace App\Http\Controllers\Front\Profile;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Entry;
+use App\Traits\Smstrait;
+use App\Traits\UnicodeNumber;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Requests\UpdateProfile;
 use Auth;
@@ -14,7 +18,10 @@ use Session;
 
 class EditController extends Controller
 {
-	public function __construct(){$this->middleware('auth');
+    use UnicodeNumber;
+    use Smstrait;
+
+    public function __construct(){$this->middleware('auth');
         View::share('categories',Category::defaultOrder()->toTree()->get());
     }
 	public function main()
@@ -42,7 +49,6 @@ class EditController extends Controller
 		$user->nama_name = $request->nama_name;
 		$user->email = $request->email;
 //		$user->phone = $request->phone;
-		$user->mobile = $request->mobile;
 		$user->code_m = $request->code_m;
 
         if (!is_null($request->password1)){
@@ -58,5 +64,74 @@ class EditController extends Controller
         Session::flash('success', 'اطلاعات شما با موفقیت به‌روز گردید.');
         return redirect()->route('ProfileEdit');
 	}
+
+
+    public function sendCodeVerify(Request $request)
+    {
+        $data = ['true' => true];
+
+
+        $phone = $this->convert2english($request->mobile);
+        $number = rand(1000, 9999);
+        $current = Carbon::now();
+
+
+        if (!$phone) {
+            return response()->json(['EnterPhone' => true, 'color' => 'warning', 'alert' => 'شماره موبایل را وارد کنید.', 'show_name' => false]);
+        }
+        if (strlen($phone) != 11 && strlen($phone) != 10) {
+            return response()->json(['EnterPhone' => true, 'color' => 'warning', 'alert' => 'شماره موبایل عددی یازده یا ده رقمی است.', 'show_name' => false]);
+        }
+
+        if (!is_numeric($phone)) {
+            return response()->json(['EnterPhone' => true, 'color' => 'warning', 'alert' => 'شماره موبایل را با فرمت صحیح وارد نمایید.', 'show_name' => false]);
+        }
+
+        $entry = Entry::where('user_id', auth()->id())->first();
+
+        if (!$entry) {
+            $entry = Entry::create([
+                'user_id' => auth()->id(),
+                'code' => $number,
+                'expire' => $current->addMinute(2),
+            ]);
+        } else {
+            $entry->code = $number;
+            $entry->expire = $current->addMinute(2);
+            $entry->save();
+        }
+
+        $this->Sendsms($phone, 'AuthUser', $number, $number, null, auth()->user()->name);
+
+        return response()->json(['EnterPhone' => false]);
+    }
+    public function verifyUser(Request $request)
+    {
+        $id = $request->code;
+        $code = $this->convert2english($id);
+        $phone = $this->convert2english($request->mobile);
+
+        if ($code == null) {
+            return response()->json(['color' => 'warning', 'alert' => 'کد رو وارد کن']);
+        }
+
+        $entry = Entry::where('code', $code)->first();
+
+        if (!$entry) {
+            return response()->json(['color' => 'warning', 'alert' => 'کد اشتباه است.']);
+        }
+
+        $now = Carbon::now();
+        $active = Carbon::parse($entry->expire);
+        if ($now > $active) {
+            return response()->json(['color' => 'warning', 'alert' => 'زمان ورود به پایان رسیده، لطفا دوباره تلاش کن.']);
+        }
+
+        $entry->delete();
+        auth()->user()->mobile = $phone;
+        auth()->user()->save();
+
+        return response()->json(['color' => 'success', 'alert' => 'در حال انتقال به صفحه اصلی!']);
+    }
 
 }

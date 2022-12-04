@@ -90,6 +90,9 @@ export default {
     },
     created() {
         this.getData()
+        document.oncontextmenu = function () {
+            return false
+        }
     },
     watch: {
         page() {

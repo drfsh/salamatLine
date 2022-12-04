@@ -201,13 +201,6 @@ $('.menu-profile-i').click(function () {
     }
 })
 
-$('.item-mini-menu').click(function () {
-    if ($(this).hasClass('active')){
-        $(this).removeClass('active')
-    }else {
-        $(this).addClass('active')
-    }
-})
 
 $('#close-ads-layout').click(function () {
     $('.ads-layout').addClass('hide');

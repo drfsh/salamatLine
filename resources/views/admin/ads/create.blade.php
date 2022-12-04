@@ -22,6 +22,9 @@
                     {{ Form::label('color', 'رنگ پس زمینه') }}
                     {{ Form::color('color', '#f2f6fc') }}
 
+                    {{ Form::label('text_color', 'رنگ متن') }}
+                    {{ Form::color('text_color', '#413f3e') }}
+
                     {{ Form::label('img', 'تصویر') }}
                     {{ Form::file('img', null) }}
 

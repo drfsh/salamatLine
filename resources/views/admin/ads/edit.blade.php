@@ -11,7 +11,7 @@
                     <h4>ویرایش {{$menu->name}}</h4>
                 </div>
                 <div class="content">
-                    {!! Form::model($menu, ['route' => ['ads.update', $menu->id], 'method' => 'PUT']) !!}
+                    {!! Form::model($menu, ['route' => ['ads.update', $menu->id], 'method' => 'PUT','files' => true]) !!}
 
 
                     {{ Form::label('body', 'متن') }}
@@ -22,6 +22,9 @@
 
                     {{ Form::label('color', 'رنگ پس زمینه') }}
                     {{ Form::color('color', null) }}
+
+                    {{ Form::label('text_color', 'رنگ متن') }}
+                    {{ Form::color('text_color', null) }}
 
                     {{ Form::label('img', 'تصویر') }}
                     {{ Form::file('img', null) }}

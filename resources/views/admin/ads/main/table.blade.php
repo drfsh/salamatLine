@@ -1,4 +1,4 @@
-<div class="cell medium-4 medium-offset-4">
+<div class="cell medium-8 medium-offset-2">
     <div class="box shadow rounded hover">
         <div class="heading">
             <div class="grid-x">
@@ -16,7 +16,8 @@
                     <th>متن</th>
                     <th>لینک</th>
                     <th>تصویر</th>
-                    <th>رنگ</th>
+                    <th> رنگ پس زمینه</th>
+                    <th> رنگ متن</th>
                     <th>وضعیت</th>
                     <th class="text-center">عملیات</th>
                 </tr>
@@ -28,6 +29,7 @@
                         <td>{{$item->link}}</td>
                         <td><img src="/img/ads/{{$item->img}}"></td>
                         <td style="background: {{$item->color}}"></td>
+                        <td style="background: {{$item->text_color}}"></td>
                         <td>@if($item->active) فعال @elseغیر فعال @endif</td>
                         <td>
                             <ul class="modify">

@@ -2,7 +2,7 @@
 	<div class="gap"></div>
 	<ul class="vertical">
 		<li>
-			<a href="/">
+			<a target="_blank" href="/">
 				<i class="fas fa-home"></i>
 			</a>
 			</li>

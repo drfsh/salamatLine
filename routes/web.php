@@ -82,7 +82,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/category', [App\Http\Controllers\Front\CategoryController::class, 'holder'])->name('categoryHolder');
     Route::get('/category/{slug}', [App\Http\Controllers\Front\CategoryController::class, 'main'])->name('category');
     Route::get('/collection', [App\Http\Controllers\Front\CollectionController::class, 'holder'])->name('collectionHolder');
-    Route::get('/collection/{slug}', [App\Http\Controllers\Front\CollectionController::class, 'main'])->name('collection');
+    Route::get('/landing/{slug}', [App\Http\Controllers\Front\CollectionController::class, 'main'])->name('collection');
 
 //review & rate
     Route::post('/products/{slug}', [App\Http\Controllers\Front\ProductController::class, 'review'])->name('review');

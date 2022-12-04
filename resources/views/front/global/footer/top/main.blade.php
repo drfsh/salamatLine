@@ -89,7 +89,7 @@
             </ul>
         </div>
     </div>
-    <div class="co-12">
+    <div style="opacity: 0;" class="co-12">
         <div class="info">
             <div class="title">عضویت در خبرنامه</div>
             <div class="news-letter">

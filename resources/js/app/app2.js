@@ -30,6 +30,7 @@ import map_page from "./components/pages/map_page";
 import numHeart from "./components/header/num-heart";
 import test from "./components/test";
 import categories from "./components/category/categories";
+import mobile from "./components/mobile/mobile";
 
 require('./bootstrap')
 
@@ -96,6 +97,10 @@ setElement([
     {
         name: 'cart-test',
         component: test
+    },
+    {
+        name: 'edit-mobile',
+        component: mobile
     },
     {
         name: 'count-heart',

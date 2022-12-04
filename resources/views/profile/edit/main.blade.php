@@ -87,13 +87,8 @@
 
                 </div>
 
-                <div class="cell medium-12">
-                    {{ Form::label('mobile', 'شماره تلفن همراه') }}
-                    {{ Form::text('mobile', null) }}
-                    @if ($errors->has('mobile'))
-                        <span class="invalid-feedback">{{ $errors->first('mobile') }}</span>
-                    @endif
-                </div>
+                <edit-mobile class="cell medium-12" mobile="{{$user->mobile}}"></edit-mobile>
+
             </div>
 
             <div class="text-left">

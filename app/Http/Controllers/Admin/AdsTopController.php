@@ -31,6 +31,7 @@ class AdsTopController extends Controller
         $menu->body = $request->body;
         $menu->link = $request->link;
         $menu->color = $request->color;
+        $menu->text_color = $request->text_color;
 
         if ($request->active=='on')
             $menu->active = true;
@@ -67,6 +68,7 @@ class AdsTopController extends Controller
         $menu->body = $request->body;
         $menu->link = $request->link;
         $menu->color = $request->color;
+        $menu->text_color = $request->text_color;
         if ($request->active=='on')
         $menu->active = true;
         else

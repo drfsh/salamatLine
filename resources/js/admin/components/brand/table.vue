@@ -7,56 +7,22 @@
             <th class="text-center">نام</th>
             <th class="text-center">تعداد محصول</th>
             <th class="text-center">عملیات</th>
-            <th class="text-center">محصولات</th>
         </tr>
         </thead>
         <tbody>
-        <tr class="text-center " :class="{'bg-ani':item.hide==1}" v-for="(item,i) in list">
+        <tr @contextmenu="menu($event,item,i)" class="text-center " :class="{'bg-ani':item.hide==1}" v-for="(item,i) in list">
             <td>{{ item.id }}</td>
             <td><a :href="'../brands/'+item.slug" target="_blank"><img :src="item.tiny" alt=""
                                                                        width="50"></a></td>
             <td><a :href="'../brands/'+item.slug" target="_blank">{{ item.title }}</a></td>
             <td>{{ item.product_count }}</td>
-            <td>
-                <ul class="modify">
-                    <li>
-
-                    </li>
-                    <li class="edit"><a class="btn-edit-blue" :href="'../brands/'+item.slug" target="_blank"><i
-                        class="fas fa-eye"></i></a></li>
-                    <li class="edit"><a class="btn-edit-blue" style="margin-right: 2px"
-                                        :href="'./brand/'+item.id+'/edit'" target="_blank"><i
-                        class="fas fa-edit"></i></a></li>
-                    <li class="delete">
-                        <button class="btn-edit-danger" @click="delete_(item.id,i)" type="submit" value="Delete"><i
-                            class="fas fa-trash"></i></button>
-                    </li>
-                </ul>
-
-
-                <a :href="'/admin/brand/hide/'+item.id">
-                    <div  v-if="!item.hide" class="hide_price">مخفی کردن</div>
-                    <div v-else class="show_price">نمایش</div>
-                </a>
-            </td>
-            <td>
+            <td role="button">
                 <div class="pp">
-                    <div @click="disableProduct(item.id,item.title)" class="btn-edit-danger"
+                    <div  @click="menu($event,item,i)" class="btn-edit-blue"
                          title="غیرفعال کردن تمام محصولات">
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <div @click="enableProduct(item.id,item.title)" class="btn-edit-blue"
-                         title="فعال کردن تمام محصولات">
-                        <i class="fas fa-check"></i>
+                        <i class="fas fa-ellipsis-v"></i>
                     </div>
                 </div>
-
-                <a :href="'/admin/brand/hidePrice/'+item.id">
-                    <div class="hide_price">پنهان کردن قیمت محصولات</div>
-                </a>
-                <a :href="'/admin/brand/showPrice/'+item.id">
-                    <div class="show_price">لغو پنهان</div>
-                </a>
             </td>
         </tr>
         </tbody>
@@ -70,6 +36,136 @@ export default {
     name: "table",
     props: ['list'],
     methods: {
+        menu(e,item,i) {
+            let vm = this
+            let iconHide = ''
+            if (item.hide)
+                iconHide = 'fas fa-check'
+
+
+            this.$contextmenu({
+                x: e.x,
+                y: e.y,
+                items: [
+                    {
+                        label: 'مشاهده',
+                        icon: 'fas fa-eye',
+                        onClick: () => {
+                            window.open('/brands/' + item.slug, '_blank').focus()
+                        }
+                    },
+                    {
+                        label: 'ویرایش',
+                        icon: 'fas fa-edit',
+                        onClick: () => {
+                            window.open('/admin/brand/' + item.id + '/edit', '_blank').focus()
+                        }
+                    },
+                    {
+                        label: 'حذف',
+                        icon: 'fas fa-trash',
+                        onClick: () => {
+                            $.confirm({
+                                title: 'حذف',
+                                backgroundDismiss: true,
+                                closeButton: true,
+                                content: 'از حذف این دسته بندی به صورت برگشت‌ناپذیر اطمینان دارید؟',
+                                buttons: {
+                                    ok: {
+                                        text: 'حذف',
+                                        btnClass: 'btn-red',
+                                        action: async () => {
+                                            vm.delete_(item.id,i)
+                                        }
+                                    },
+                                    no: {
+                                        text: 'لغو'
+                                    },
+
+                                }
+                            })
+                        }
+                    },
+                    {
+                        label: 'پنهان بودن',
+                        icon: iconHide,
+                        onClick: async () => {
+                            await window.axios.get('/admin/brand/hide/' + item.id)
+                            item.hide = !item.hide
+                        }
+                    },
+                    {
+                        label: 'محصولات...',
+                        icon: 'fas fa-ellipsis-v',
+                        children: [
+                            {
+                                label: 'تغییر قیمت ',
+                                icon: 'fas fa-daler',
+                                onClick: () => {
+                                    let text = "<div style='font-size:13px'>" +
+                                        "تغییر قیمت را به درصد وارد کنید.برای کاهش درصد را منفی وارد کنید" +
+                                        "</div>" +
+                                        "<div class=\"cell medium-12\">\n" +
+                                        "        <label>\n" +
+                                        "            درصد\n" +
+                                        "            <input placeholder='-مثال : 20' style='direction: ltr;' type=\"text\" id=\"change-price\">\n" +
+                                        "        </label>\n" +
+                                        "    </div>"
+                                    $.confirm({
+                                        title:'',
+                                        content:text,
+                                        buttons:{
+                                            ok:{
+                                                text:'اعمال',
+                                                action:async () => {
+                                                    let p = document.getElementById('change-price').value
+                                                    let {data} = await window.axios.post('/admin/brand/changePrice',{id:item.id,p:p})
+                                                    if (data['true']==true)
+                                                        $.alert('با موفقیت اعمال شد!')
+                                                    else
+                                                        $.alert('خطا!')
+                                                }
+                                            },
+                                            cancel:{
+                                                text:'لغو'
+                                            }
+                                        }
+                                    })
+                                }
+                            },
+                            {
+                                label: 'غیر فعال کردن',
+                                icon: 'fas fa-circle',
+                                onClick: () => {
+                                    vm.disableProduct(item.id,item.title)
+                                }
+                            },
+                            {
+                                label: 'فعال کردن',
+                                icon: 'fas fa-circle',
+                                onClick: () => {
+                                    vm.enableProduct(item.id,item.title)
+                                }
+                            },
+                            {
+                                label: 'پنهان کردن قیمت',
+                                icon: 'fas fa-circle',
+                                onClick: async () => {
+                                    await window.axios.get('/admin/brand/hidePrice/'+item.id)
+                                }
+                            },
+                            {
+                                label: 'نمایش قیمت',
+                                icon: 'fas fa-circle',
+                                onClick: async () => {
+                                    await window.axios.get('/admin/brand/showPrice/' + item.id)
+                                }
+                            },
+                        ]
+                    },
+                ]
+            })
+        },
         async delete_(id, i) {
             let vm = this
             $.confirm({
@@ -118,7 +214,7 @@ export default {
                 content: 'تمامی محصولات این برند غیر فعال شوند؟',
                 buttons: {
                     ok: {
-                        text: 'فعال سازی',
+                        text: 'غیر فعال سازی',
                         btnClass: 'btn-blue',
                         action: async function () {
                             let {data} = await window.axios.put('./brand/change/product', {type: 0, id: id})
@@ -131,7 +227,7 @@ export default {
                     }
                 }
             })
-        }
+        },
     }
 }
 </script>

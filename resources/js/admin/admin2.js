@@ -14,6 +14,8 @@ import replay from "./components/comment/replay";
 import newslatest_export from "./components/newslatest/newslatest_export";
 import infoSettings from "./components/info/infoSettings";
 import categorys from "./components/category/categorys";
+import create_landing from "./components/landing/create_landing";
+import edit_landing from "./components/landing/edit_landing";
 
 
 
@@ -23,7 +25,24 @@ let app = Vue.createApp(categorys)
 app.use(ContextMenu)
 app.mount('#category-admin')
 
+
+let app2 = Vue.createApp(brand)
+app2.use(ContextMenu)
+app2.mount('#banner-admin')
+
 setElement([
+    {
+        name: 'landing-create',
+        component: create_landing
+    },
+    {
+        name: 'landing-edit',
+        component: edit_landing
+    },
+    {
+        name: 'edit-landing',
+        component: edit_landing
+    },
     {
         name: 'page-info-settings',
         component: infoSettings

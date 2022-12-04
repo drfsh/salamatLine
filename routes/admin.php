@@ -37,6 +37,7 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
     Route::get('brand/hidePrice/{id}', [App\Http\Controllers\Admin\BrandController::class, 'hide_price']);
     Route::get('brand/showPrice/{id}', [App\Http\Controllers\Admin\BrandController::class, 'show_price']);
     Route::get('brand/hide/{id}', [App\Http\Controllers\Admin\BrandController::class, 'showhide']);
+    Route::post('/brand/changePrice', [App\Http\Controllers\Admin\BrandController::class, "changePrice"]);
 
 	Route::resource('company', App\Http\Controllers\Admin\CompanyController::class, ['except' => ['show']]);
 	Route::resource('country', App\Http\Controllers\Admin\CountryController::class, ['except' => ['show']]);
@@ -93,6 +94,8 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
 	Route::post('inventory/update/{id}', [App\Http\Controllers\Admin\InventoryController::class, 'update']);
 	Route::delete('inventory/delete/{id}', [App\Http\Controllers\Admin\InventoryController::class, 'delete']);
 	Route::get('allapi/products', [App\Http\Controllers\Admin\AllController::class, 'Products']);
+	Route::get('allapi/category', [App\Http\Controllers\Admin\AllController::class, 'Category']);
+	Route::get('allapi/category/{id}', [App\Http\Controllers\Admin\AllController::class, 'CategoryProducts']);
 	Route::get('allapi/product-detail/{id}', [App\Http\Controllers\Admin\AllController::class, 'ProductDetail']);
 	Route::get('allapi/set-multiprice/{id}', [App\Http\Controllers\Admin\AllController::class, 'SetMultiPrice']);
 	Route::get('allapi/users', [App\Http\Controllers\Admin\AllController::class, 'Users']);
@@ -124,6 +127,9 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
 
 	Route::get('re-stock',[App\Http\Controllers\Admin\ReStockController::class, 'main'])->name('AdminRestock');
 	Route::get('re-stock-notified',[App\Http\Controllers\Admin\ReStockController::class, 'notified'])->name('RestockNotified');
+
+
+	Route::get('api/landing/{id}',[App\Http\Controllers\Admin\CollectionController::class, 'getLanding']);
 
     Route::resource('requestContact',App\Http\Controllers\Admin\RequestContactController::class);
 
