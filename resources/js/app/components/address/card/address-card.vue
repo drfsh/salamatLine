@@ -37,8 +37,6 @@
 export default {
     name: "address-card",
     props:['value'],
-
-
 }
 </script>
 

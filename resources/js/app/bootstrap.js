@@ -117,15 +117,12 @@ window.cart_back2 = false;
 $('.faq .list .item').click(function () {
     $('.faq .list .item').removeClass('active');
     let b = $(this);
-    if (b.attr('active')==='true')
-    {
+    if (b.attr('active') === 'true') {
         b.removeClass('active')
-        b.attr('active','false')
-    }
-    else
-    {
+        b.attr('active', 'false')
+    } else {
         b.addClass('active')
-        b.attr('active','true')
+        b.attr('active', 'true')
     }
 })
 
@@ -156,46 +153,45 @@ $(document).ready(function () {
     })
 })
 
-if (window.innerWidth>600){
+if (window.innerWidth > 600) {
     $('footer .whatsapp').slideUp()
 }
 let t = 0;
 $(window).scroll((function () {
     var e = $(this), n = $(this).scrollTop();
-        e.scrollTop() >= 100 && e.scrollTop() < 200 &&
-        t > n ? $(".top-bar").removeClass("shadow") : e.scrollTop() >= 70 &&
-        n > t ? ($(".top-bar .top").slideUp(),$(".top-bar .ads-layout").slideUp(),
-                $('.top-bar .bot .icon-btns').slideDown()) :
-            t > n ? ($(".top-bar .top").slideDown(),
-                    $(".top-bar .ads-layout").slideDown(),
-                    $('.top-bar .bot .icon-btns').slideUp()) :
-                ($(".top-bar .top").slideDown(),
-                    $(".top-bar .ads-layout").slideDown(),
-                    $('.top-bar .bot .icon-btns').slideUp() ,
-                    $(".top-bar").removeClass("shadow")),
+    e.scrollTop() >= 100 && e.scrollTop() < 200 &&
+    t > n ? $(".top-bar").removeClass("shadow") : e.scrollTop() >= 70 &&
+    n > t ? ($(".top-bar .top").slideUp(), $(".top-bar .ads-layout").slideUp(),
+            $('.top-bar .bot .icon-btns').slideDown()) :
+        t > n ? ($(".top-bar .top").slideDown(),
+                $(".top-bar .ads-layout").slideDown(),
+                $('.top-bar .bot .icon-btns').slideUp()) :
+            ($(".top-bar .top").slideDown(),
+                $(".top-bar .ads-layout").slideDown(),
+                $('.top-bar .bot .icon-btns').slideUp() ,
+                $(".top-bar").removeClass("shadow")),
         t = n
 
-    if (e.scrollTop()>1000){
+    if (e.scrollTop() > 1000) {
         $('.contact-popup').slideUp()
-    }else {
+    } else {
         $('.contact-popup').slideDown()
     }
 
-    if (window.innerWidth>600){
-        if (e.scrollTop()>1000){
+    if (window.innerWidth > 600) {
+        if (e.scrollTop() > 1000) {
             $('footer .whatsapp').slideDown()
-        }else {
+        } else {
             $('footer .whatsapp').slideUp()
         }
     }
 }))
 var menu = false
 $('.menu-profile-i').click(function () {
-    if (menu)
-    {
+    if (menu) {
         $('.menu-profile').slideUp()
         menu = false
-    }else {
+    } else {
         $('.menu-profile').slideDown()
         menu = true
     }
@@ -205,8 +201,79 @@ $('.menu-profile-i').click(function () {
 $('#close-ads-layout').click(function () {
     $('.ads-layout').addClass('hide');
 })
+let shadow = document.createElement('div')
+shadow.className = 'js-off-canvas-overlay'
 
+let mainMenu = $('.off-canvas.position-right')
+$('.content').append(shadow)
+let overly = $(shadow)
 
+let menus = $('.menu.drilldown').children('li')
+let sizeMenu = menus.length
+for (let i = 0; i < sizeMenu; i++) {
+    let child = $(menus.get(i))
+    let ul = setListMenu(child)
+    setupList(ul)
+}
+
+function setupList(ul) {
+    let liSize = ul.length
+    for (let j = 0; j < liSize; j++) {
+        let li = $(ul.get(j))
+        if (!li.hasClass('all')) {
+            let ul2 = setListMenu(li)
+            setupList(ul2)
+        }
+    }
+}
+
+function setListMenu(child) {
+    let list = child.children('ul')
+    if (list.children().length > 0) {
+        let back = document.createElement('li')
+        let a = document.createElement('a')
+        a.innerText = 'بازگشت'
+        back.className = 'js-drilldown-back'
+        back.append(a)
+        list.prepend(back)
+        child.addClass('is-drilldown-submenu-parent is-submenu-item is-drilldown-submenu-item')
+        list.addClass('menu vertical nested submenu is-drilldown-submenu drilldown-submenu-cover-previous')
+        back.onclick = () => {
+            list.removeClass('is-active')
+        }
+    }
+    child.children('a').click(function () {
+        let isShow = list.attr('show-data')
+        if (!list.hasClass('is-active')) {
+            list.addClass('is-active')
+        } else {
+            list.removeClass('is-active')
+        }
+    })
+    return list.children()
+}
+
+$('.menu-icon').click((e) => {
+    mainMenu.addClass('is-open')
+    overly.addClass('is-visible is-closable')
+})
+overly.click(() => {
+    mainMenu.removeClass('is-open')
+    overly.removeClass('is-visible is-closable')
+})
 import lozad from 'lozad'
+
 const observer = lozad();
 observer.observe();
+
+window.push = require('push.js')
+
+if (Notification.permission === 'default' && localStorage.notification !== "false") {
+    setTimeout(() => {
+        window.boxAlert.type = 'request';
+        window.boxAlert.show = true;
+    }, 0)
+}
+
+
+require('./utils/SetupSwiper')

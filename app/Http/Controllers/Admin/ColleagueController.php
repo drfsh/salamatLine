@@ -16,7 +16,8 @@ class ColleagueController extends Controller
     }
 
     public function index() {
-        $users = OtherUser::where('type_buy','==','0')->latest()->paginate(10);
+//        $users = OtherUser::where('type_buy','==','0')->latest()->paginate(10);
+        $users = User::where('type',1)->latest()->paginate(10);
         return view('admin.security.users.colleague.main')->with('users', $users);
     }
 

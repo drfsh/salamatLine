@@ -24,12 +24,15 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
     Route::resource('ads', App\Http\Controllers\Admin\AdsTopController::class);
 
 	Route::resource('category', App\Http\Controllers\Admin\CategoryController::class, ['except' => ['show']]);
+	Route::delete('category/api/destroy/{child_id}/{parent_id}',[App\Http\Controllers\Admin\CategoryController::class, 'destroy']);
 	Route::get('category/up/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'up'])->name('UpCategory');
 	Route::get('category/down/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'down'])->name('DownCategory');
 	Route::get('category/hide/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'hide_show'])->name('hideCategory');
 	Route::get('category/hidePrice/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'hide_price'])->name('hideCategoryPrice');
 	Route::get('category/showPrice/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'show_price'])->name('showCategoryPrice');
 	Route::get('category/api/get',[App\Http\Controllers\Admin\CategoryController::class, 'getApi']);
+	Route::post('category/api/copy',[App\Http\Controllers\Admin\CategoryController::class, 'copy']);
+	Route::post('category/api/cat',[App\Http\Controllers\Admin\CategoryController::class, 'cat']);
 //1365 product
     Route::put('brand/change/product', [App\Http\Controllers\Admin\BrandController::class, 'productStatus']);
     Route::resource('brand', App\Http\Controllers\Admin\BrandController::class, ['except' => ['show']]);
@@ -71,9 +74,12 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
 	Route::resource('banner', App\Http\Controllers\Admin\BannerController::class, ['except' => ['show']]);
 	Route::resource('faq', App\Http\Controllers\Admin\FaqController::class, ['except' => ['show']]);
 	Route::resource('info', App\Http\Controllers\Admin\InfoController::class, ['except' => ['show']]);
+	Route::resource('inquirySale', App\Http\Controllers\Admin\InqutyController::class, ['except' => ['show']]);
+	Route::post('api/inquiry/change', [App\Http\Controllers\Admin\InqutyController::class,'changeText'])->name('inquiryText');
 	Route::get('api/info', [App\Http\Controllers\Admin\InfoController::class,'getData']);
 	Route::post('api/info/updateimg', [App\Http\Controllers\Admin\InfoController::class,'updateImg']);
 	Route::post('api/info/uodateicon', [App\Http\Controllers\Admin\InfoController::class,'uodateicon']);
+	Route::post('api/info/changeImages', [App\Http\Controllers\Admin\InfoController::class,'changeImages']);
 	Route::post('api/info/newUser', [App\Http\Controllers\Admin\InfoController::class,'newUser']);
 	Route::post('api/info/editUser', [App\Http\Controllers\Admin\InfoController::class,'editUser']);
 	Route::delete('api/info/deleteUser/{id}', [App\Http\Controllers\Admin\InfoController::class,'deleteUser']);

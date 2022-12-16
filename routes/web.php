@@ -29,10 +29,7 @@ Route::get('/products', [App\Http\Controllers\Front\ProductHolderController::cla
 Route::get('/products/{slug}', [App\Http\Controllers\Front\ProductController::class, 'main'])->name('product');
 Route::get('/test', function () {
 
-    $guestId = Cookie::get("guest_id");
-    $oldConditions = Cart::session($guestId)->getConditions();
-
-   dd($oldConditions);
+   dd(\App\Models\Log::all()->count());
 });
 
 
@@ -99,7 +96,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('faq', [App\Http\Controllers\Front\PageController::class, 'faq'])->name('faq');
     Route::post('faq', [App\Http\Controllers\Front\PageController::class, 'faq_new'])->name('faq_new');
     Route::post('contact-us', [App\Http\Controllers\Front\PageController::class, 'contact_new']);
+    Route::post('inquiry', [App\Http\Controllers\Front\PageController::class, 'inquiry_new'])->name('inquiry_new');
     Route::get('help', [App\Http\Controllers\Front\PageController::class, 'help'])->name('help');
+    Route::get('inquiry', [App\Http\Controllers\Front\PageController::class, 'inquiry'])->name('inquiry');
 
     Route::get('brands', [App\Http\Controllers\Front\BrandController::class, 'holder'])->name('brandHolder');
     Route::get('brands/{slug}', [App\Http\Controllers\Front\BrandController::class, 'main'])->name('brand');

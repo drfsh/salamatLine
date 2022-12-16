@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category_relation;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Requests\CategoryCreate;
@@ -119,9 +120,14 @@ class CategoryController extends Controller
         return redirect()->route('category.index');
     }
 
-    public function destroy($id)
+    public function destroy($child_id,$parent_id)
     {
-        Category::where('id', '=', $id)->delete();
+        $rlation = Category_relation::where([['child_id',$child_id],['parent_id',$parent_id]])->first();
+        if ($rlation)
+            $rlation->delete();
+        else
+            Category::where('id', '=', $child_id)->delete();
+
         Session::flash('success', 'دسته‌بندی حذف شد');
         return 'ok';
     }
@@ -197,10 +203,34 @@ class CategoryController extends Controller
         if ($parent_id == null) {
             $cat = Category::where('parent_id', null)->defaultOrder()->get();
         } else {
-            $cat = Category::where('parent_id', $parent_id)->defaultOrder()->get();
+            $cat = Category::find($parent_id)->child_cats;
         }
 
+//        Category::withTrashed()->find(120)->restore();
         return response()->json($cat);
+    }
+    public function copy(Request $request)
+    {
+        $parent_id = $request->parent_id;
+        $child_id = $request->child_id;
+
+        Category_relation::create([
+           'child_id'=>$child_id,
+           'parent_id'=>$parent_id
+        ]);
+
+        return true;
+    }
+    public function cat(Request $request)
+    {
+        $newParent_id = $request->new_parent_id;
+        $oldParent_id = $request->old_parent_id;
+        $child_id = $request->child_id;
+
+        $catR = Category_relation::where([['child_id',$child_id],['parent_id',$oldParent_id]])->first();
+        $catR->parent_cat = $newParent_id;
+        $catR->save();
+        return true;
     }
 
 }

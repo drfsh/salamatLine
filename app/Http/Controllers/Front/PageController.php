@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactRequest;
 use App\Models\Faq;
 use App\Models\InfoPage;
+use App\Models\InquiryRequest;
 use App\Models\Log;
 use App\Models\Page;
 use App\Models\RequestContact;
@@ -86,7 +87,9 @@ class PageController extends Controller
         $b4 = InfoPage::find(6);
         $b5 = InfoPage::find(7);
         $users = InfoPage::where([['id','!=', 1], ['id','!=', 2], ['id','!=', 3], ['id', '!=',4],
-            ['id','!=', 5], ['id','!=', 6], ['id', '!=',7]])->get();
+            ['id','!=', 5], ['id','!=', 6], ['id', '!=',7],['name','!=','images']])->get();
+
+        $images = InfoPage::where('name','images')->first();
 
         $data['img1'] = $img1->img;
         $data['img2'] = $img2->img;
@@ -96,6 +99,7 @@ class PageController extends Controller
         $data['b4'] = $b4;
         $data['b5'] = $b5;
         $data['users'] = $users;
+        $data['images'] = json_decode($images->info);
 
         return view('front.page.about.main',compact('data'));
     }
@@ -147,9 +151,48 @@ class PageController extends Controller
 
         return redirect()->back();
     }
+    public function inquiry_new(\App\Http\Requests\InquiryRequest $request){
+        $office = $request->office;
+        $name = $request->name;
+        $email = $request->email;
+        $mobile = $request->mobile;
+        $products = $request->products;
+        $count = $request->count;
+
+
+        InquiryRequest::create([
+            'office'=>$office,
+            'name'=>$name,
+            'email'=>$email,
+            'mobile'=>$mobile,
+            'products'=>$products,
+            'count'=>$count,
+            ]);
+
+        $log = Log::where([['name','inquiry'],['for','admin']])->first();
+        $log->add();
+        Session::flash('success', 'پیام شما با موفقیت ارسال شد!');
+
+        return redirect()->back();
+    }
 
     public function help(){
         $list = Faq::latest()->where('active',1)->get();
         return view('front.page.help.main',compact('list'));
+    }
+    public function inquiry(){
+        $b1 = InfoPage::find(3);
+        $b2 = InfoPage::find(4);
+        $b3 = InfoPage::find(5);
+        $b4 = InfoPage::find(6);
+        $b5 = InfoPage::find(7);
+
+        $data['b1'] = $b1;
+        $data['b2'] = $b2;
+        $data['b3'] = $b3;
+        $data['b4'] = $b4;
+        $data['b5'] = $b5;
+        $text = Page::where('title','inquiry')->first()->content;
+        return view('front.page.inquiry.main',compact('data','text'));
     }
 }

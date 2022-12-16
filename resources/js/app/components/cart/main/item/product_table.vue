@@ -3,7 +3,7 @@
 
         <td class="product-remove">
             <a @click="itemDelete"
-               class="remove" aria-label="حذف این آیتم" data-product_id="4291"
+               class="remove"
                data-product_sku="">×</a></td>
 
         <td class="product-thumbnail">
@@ -13,20 +13,20 @@
             </a>
         </td>
 
-        <td class="product-name" data-title="محصول">
+        <td class="product-name">
             <a :href="'./products/'+v.attributes.slug" target="_blank">{{ v.name }}
             <span v-if="v.attributes.feature!==null">({{v.attributes.feature}})</span>
             </a>
         </td>
 
-        <td class="product-price" data-title="قیمت">
+        <td class="product-price">
             <span class="woocommerce-Price-amount amount">
                 <bdi>{{ $parent.$parent.separate(v.price) }}<span class="woocommerce-Price-currencySymbol">تومان</span></bdi>
                 <bdi class="old" v-if="v.attributes.discount_price!==0">{{ $parent.$parent.separate(v.attributes.original_price) }}<span class="woocommerce-Price-currencySymbol">تومان</span></bdi>
             </span>
         </td>
 
-        <td class="product-quantity" data-title="تعداد">
+        <td class="product-quantity">
             <div class="quantity">
                 <input type="number" id="quantity_6315e2c19aea2" class="input-text qty text"
                        step="1" min="0" max="11" v-model="count"
@@ -34,7 +34,7 @@
             </div>
         </td>
 
-        <td class="product-price" data-title="مجموع">
+        <td class="product-price">
             <span class="woocommerce-Price-amount amount">
                 <bdi>{{ $parent.$parent.separate(v.price * v.quantity) }}
                     <span class="woocommerce-Price-currencySymbol">تومان</span>

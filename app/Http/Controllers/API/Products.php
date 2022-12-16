@@ -67,12 +67,3 @@ class Products extends Controller
         return response()->json($product);
     }
 }
-
-
-// {
-//     product_id: '...',
-//     page_url: '...',
-//     price: '...',
-//     availability: '...',
-//     old_price: '...',
-// }

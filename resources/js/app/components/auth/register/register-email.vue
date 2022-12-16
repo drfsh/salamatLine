@@ -1,6 +1,5 @@
 <template>
     <errors :items="error"></errors>
-    <div class=" info">مشخصات خود را برای ثبت نام کامل کنید</div>
     <form class="f-ho">
         <input type="hidden" name="_token" :value="csrf_token">
         <div class="input-login rtl">

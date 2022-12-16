@@ -16,7 +16,7 @@
                 </div>
                 <div class="flex-column" style="display: flex;justify-content: space-between;">
                     <span>آدرس حمل و نقل</span>
-                    <span class="text-noting" v-if="list!==null && list.length==0">شما هنوز آدرسی ثبت نکرده اید</span>
+                    <span class="text-noting" v-if="list!==null && list.length===0">شما هنوز آدرسی ثبت نکرده اید</span>
                 </div>
             </div>
             <div>
@@ -33,12 +33,11 @@
 
 import Loading from "../loading/loading";
 import AddressCard from "./card/address-card";
-import Edit_address from "../cart/main/level2/edit_address";
 import AddressEdit from "./address-edit";
 
 export default {
     name: "test",
-    components: {AddressEdit, Edit_address, AddressCard, Loading},
+    components: {AddressEdit, AddressCard, Loading},
     data() {
         return {
             list: null,

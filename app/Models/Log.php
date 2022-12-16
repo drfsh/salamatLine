@@ -37,6 +37,7 @@ class Log extends Model
         $review = Log::where([['for','admin'],['name','review']])->first()->value;
         $contact = Log::where([['for','admin'],['name','contact']])->first()->value;
         $emails = Log::where([['for','admin'],['name','emails']])->first()->value;
-        return [$users,$invoice,$surveys,$review,$contact,$emails];
+        $inquiry = Log::where([['for','admin'],['name','inquiry']])->first()->value;
+        return [$users,$invoice,$surveys,$review,$contact,$emails,$inquiry];
     }
 }

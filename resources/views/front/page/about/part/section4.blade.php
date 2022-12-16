@@ -3,7 +3,7 @@
         <h4>تیم فروشگاه سلامت لاین</h4>
     </div>
 
-    <div class="swiper owl-5 flex-column box-info box-info-user">
+    <div class="swiper owl-5 flex-column box-info-user">
         <div class="swiper-wrapper">
             @foreach($data['users'] as $v)
                 <div class="swiper-slide">

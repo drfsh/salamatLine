@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Front\Profile;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Entry;
+use App\Models\Specialty;
+use App\Models\UserRole;
 use App\Traits\Smstrait;
 use App\Traits\UnicodeNumber;
 use Carbon\Carbon;
@@ -33,7 +35,9 @@ class EditController extends Controller
         if ($user->nama_name==null){
             $user->nama_name = $user->full_name;
         }
-		return view('profile.edit.main',compact('user'));
+        $role = UserRole::all();
+        $specialties = Specialty::all();
+		return view('profile.edit.main',compact('user','role','specialties'));
 	}
 
 	public function update($id,UpdateProfile $request)
@@ -48,8 +52,10 @@ class EditController extends Controller
         $user->full_name = $request->full_name;
 		$user->nama_name = $request->nama_name;
 		$user->email = $request->email;
-//		$user->phone = $request->phone;
+		$user->phone = $request->phone;
 		$user->code_m = $request->code_m;
+		$user->role = $request->role;
+		$user->specialty = $request->specialty;
 
         if (!is_null($request->password1)){
             if ($request->password1!=$request->password2){

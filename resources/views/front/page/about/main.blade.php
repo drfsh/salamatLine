@@ -19,6 +19,7 @@
                 @include('front.page.about.part.section1')
                 @include('front.page.about.part.section2')
                 @include('front.page.about.part.section3')
+                @include('front.page.about.part.sectionImages')
                 @include('front.page.about.part.section4')
                 <div class="double-gap"></div>
                 <div class="double-gap"></div>

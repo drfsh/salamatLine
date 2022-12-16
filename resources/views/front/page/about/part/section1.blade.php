@@ -1,5 +1,5 @@
 <div class="c-40">
-    <img src="/img/page/{{$data['img1']}}" alt="img">
+    <video controls src="/video/page/{{$data['img1']}}" alt="img"></video>
 </div>
 <div class="c-60">
     <div class="p-title">

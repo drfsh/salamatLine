@@ -37,6 +37,7 @@
         "js-table2excel": "^1.0.3",
         "leaflet": "^1.8.0",
         "lozad": "^1.16.0",
+        "push.js": "^1.0.12",
         "vue-excel-xlsx": "^1.2.2",
         "vue-moment-jalaali": "^2.0.0",
         "vue-owl-carousel": "^2.0.3",

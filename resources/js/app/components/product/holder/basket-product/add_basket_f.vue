@@ -3,14 +3,10 @@
 </template>
 
 <script>
-import Ic_basket from "../../../icon/ic_basket";
-import AlertAded from "./alert-aded";
-import Ic_refresh from "../../../icon/ic_refresh";
 
 export default {
     name: "add_basket_f",
     props: ['id', 'name', 'model', 'img', 'active'],
-    components: {Ic_refresh, AlertAded, Ic_basket},
     data() {
         return {
             status: {error: false, text: ''},

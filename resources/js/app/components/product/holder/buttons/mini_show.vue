@@ -64,7 +64,6 @@
 </template>
 
 <script>
-import Full_loading from "../../../loading/full_loading";
 import Loading from "../../../loading/loading";
 import Ic_shield from "../../../icon/ic_shield";
 import Ic_clock from "../../../icon/ic_clock";
@@ -74,7 +73,7 @@ import One_price from "../../price/one_price";
 
 export default {
     name: "mini_show",
-    components: {One_price, Multi_price, Feature, Ic_clock, Ic_shield, Loading, Full_loading},
+    components: {One_price, Multi_price, Feature, Ic_clock, Ic_shield, Loading},
     props: ['id'],
     computed:{
         more_feature(){

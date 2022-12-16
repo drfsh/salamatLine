@@ -1,9 +1,7 @@
 <div class="c-100">
     <div class="flex-column box-info">
         <div class="item">
-            <span class="icon">
             <img src="/img/page/{{$data['b1']->img}}">
-            </span>
             <span>{{$data['b1']->info}}</span>
         </div>
         <div class="item">

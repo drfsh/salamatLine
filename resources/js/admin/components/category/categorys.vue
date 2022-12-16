@@ -5,7 +5,6 @@
         </div>
     </div>
     <full_loading v-else></full_loading>
-
     <div class="childern" v-if="select1!==null">
         <div class="title">
             <span role="button" @click="select3=null;select4=null;select2=null">
@@ -37,6 +36,10 @@
             <full_loading v-else-if="select4!==null"></full_loading>
         </div>
     </div>
+    <div v-if="copy!==-1" class="copy-p">
+        <span class="close" @click="copy===-1">لغو</span>
+        در حال کپی.
+    </div>
 </template>
 
 <script>
@@ -58,6 +61,8 @@ export default {
             data3: null,
             data4: null,
             data5: null,
+
+            copy:-1,
         }
     },
     methods: {

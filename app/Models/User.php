@@ -75,6 +75,22 @@ class User extends Authenticatable
         return asset('img/profile/' . $value);
     }
 
+    public function getRoleAttribute($value){
+        $role = UserRole::find($value);
+        if ($role)
+            return $role->name;
+        else
+            return null;
+    }
+
+    public function getSpecialtyAttribute($value){
+        $role = Specialty::find($value);
+        if ($role)
+            return $role->name;
+        else
+            return null;
+    }
+
     public function tickets()
     {
         return $this->hasMany(Ticket::class);

@@ -1,18 +1,3 @@
-
-<cat-filter
- show_in="{{$data['show']['in']}}"
- show_to="{{$data['show']['to']}}"
- total="{{$data['products']->total()}}"
- name="{{$data['category']->name}}"
- f1="{{request()->f}}"
- order_by="{{request()->order_by}}"
- active="{{request()->active}}"
-
- p1="{{request()->p1}}"
- p2="{{request()->p2}}"
->
-</cat-filter>
-
 <div class="double-gap"></div>
 
 <div class="grid-x">

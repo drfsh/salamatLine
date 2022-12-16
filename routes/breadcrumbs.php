@@ -26,13 +26,15 @@ Breadcrumbs::for('CategoryHolder', function ($trail) {
 });
 
 // Category
-Breadcrumbs::for('category', function ($trail, $data) {
+Breadcrumbs::for('category', function ($trail, $data,$one=true) {
     if (is_array($data) or $data instanceof Traversable)
     {
-        $trail->parent('home');
         $trail->push($data[sizeof($data)-1]->name ,route('category', $data[sizeof($data)-1]->slug));
     }else{
-        $trail->parent('CategoryHolder');
+        if ($one)
+            $trail->parent('home');
+        if (isset($data->parent_cat) && $data->parent_cat)
+            $trail->parent('category',$data->parent_cat,false);
         $trail->push($data->name ,route('category', $data->slug));
     }
 });

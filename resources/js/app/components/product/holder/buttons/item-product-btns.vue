@@ -16,8 +16,7 @@
 </template>
 
 <script>
-import Ic_basket from "../../../icon/ic_basket";
-import Ic_refresh from "../../../icon/ic_refresh";
+
 import Ic_search from "../../../icon/ic_search";
 import Ic_shuffle from "../../../icon/ic_shuffle";
 import Ic_heart from "../../../icon/ic_heart";
@@ -26,7 +25,7 @@ import Ic_status from "../../../icon/ic_status";
 export default {
     name: "item-product-btns",
     props: ['id', 'slug'],
-    components: { Ic_status, Ic_heart, Ic_shuffle, Ic_search, Ic_refresh, Ic_basket},
+    components: { Ic_status, Ic_heart, Ic_shuffle, Ic_search},
     data() {
         return {
             status: {error: false, text: ''},

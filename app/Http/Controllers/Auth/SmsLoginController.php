@@ -43,6 +43,7 @@ class SmsLoginController extends Controller
         $phone = $this->convert2english($request->mobile);
         $name = $request->name;
         $lname = $request->lname;
+        $type = $request->type;
         $number = rand(1000, 9999);
         $current = Carbon::now();
 
@@ -77,8 +78,11 @@ class SmsLoginController extends Controller
         if (!$user) {
             $authUser->name = $name;
             $authUser->lname = $lname;
+            $authUser->type = $type;
             $log = Log::where([['name','users'],['for','admin']])->first();
             $log->add();
+        }else{
+            $authUser->type = $type;
         }
 
 

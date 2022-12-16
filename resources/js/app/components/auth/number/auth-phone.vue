@@ -1,5 +1,4 @@
 <template>
-    <div class=" info" style="margin-top: 25px;">لطفا کد کشور را انتخاب و شماره خود را وارد کنید</div>
     <div class="alert" v-if="alert!==null">{{ alert }}</div>
     <div class="">
         <div class="input-phone">
@@ -41,14 +40,11 @@
 </template>
 
 <script>
-import AuthGoogle from "../auth-google";
-import Ic_email from "../../icon/ic_email";
 import Ic_user1 from "../../icon/ic_user1";
 import Loading from "../../loading/loading";
-
 export default {
     name: "auth-phone",
-    components: {Loading, Ic_user1, Ic_email, AuthGoogle},
+    components: {Loading, Ic_user1,},
     data() {
         return {
             mobile: '09',
@@ -68,7 +64,7 @@ export default {
             let input = document.getElementById('number')
             this.loading = true
             input.disabled = 'disabled'
-            let m = {lname: '', mobile: "0"+this.mobile, name: this.name}
+            let m = {lname: '', mobile: "0"+this.mobile, name: this.name,type:this.$parent.userType}
             let {data} = await window.axios.post('/request-login/1', m)
 
             if (data['EnterPhone'] === true) {

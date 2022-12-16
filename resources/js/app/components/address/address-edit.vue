@@ -1,7 +1,7 @@
 <template>
 
     <div v-if="text!==''" class="woocommerce-notices-wrapper">
-        <ul class="woocommerce-error" role="alert" style="background: #ffa9a982;">
+        <ul class="woocommerce-error" style="background: #ffa9a982;">
             <li>
                 {{text}}
             </li>
@@ -137,7 +137,7 @@ export default {
     },
     methods: {
         async remove() {
-            let {data} = await window.axios.get('/cart/address/delete/' + this.address.id)
+            await window.axios.get('/cart/address/delete/' + this.address.id)
             location.reload()
         },
         async senddata() {

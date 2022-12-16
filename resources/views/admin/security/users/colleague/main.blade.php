@@ -16,12 +16,12 @@
         <div class="cell medium-10 medium-offset-1">
             <div class="title_b">کاربران همکار
 
-                <a href="{{route('colleague.create')}}">
-                <span class="create">
-                    <i class="fas fa-plus"></i>
-                    ایجاد
-                </span>
-                </a>
+{{--                <a href="{{route('colleague.create')}}">--}}
+{{--                <span class="create">--}}
+{{--                    <i class="fas fa-plus"></i>--}}
+{{--                    ایجاد--}}
+{{--                </span>--}}
+{{--                </a>--}}
             </div>
             <div class="box rounded">
                 @include('admin.security.users.colleague.table')

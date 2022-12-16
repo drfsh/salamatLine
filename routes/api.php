@@ -25,6 +25,10 @@ Route::get('/country', [App\Http\Controllers\API\MoreController::class, 'country
 Route::get('/test', [App\Http\Controllers\API\MoreController::class, 'test']);
 Route::get('/categories', [App\Http\Controllers\Front\CategoryController::class, 'getCategories']);
 
+Route::post('/category/{id}', [App\Http\Controllers\Front\CategoryController::class, 'getProductCat']);
+Route::post('/categoryChild/{id}', [App\Http\Controllers\Front\CategoryController::class, 'getChildCat']);
+Route::get('/category/install', [App\Http\Controllers\Front\CategoryController::class, 'install']);
+
 
 
 

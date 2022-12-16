@@ -30,6 +30,13 @@
                     </a>
                 </li> --}}
         <li>
+            <a  class="{{\App\Traits\CheckRoute::check('inquirySale.index')}}" href="{{ route('inquirySale.index') }}">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <span>درخواست فروش و ...</span>
+                @if($data[6]!=0)<span class="num">{{$data[6]}}</span>@endif
+            </a>
+        </li>
+        <li>
             <a  class="{{\App\Traits\CheckRoute::check('AdminInvoice')}}" href="{{ route('AdminInvoice') }}">
                 <i class="fas fa-file-invoice-dollar"></i>
                 <span>سفارشات</span>

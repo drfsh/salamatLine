@@ -47,17 +47,12 @@
 </template>
 
 <script>
-import CartMessage from "../topbar/cart-message";
-import Cart_date_item from "./level3/cart_date_item";
-import Ic_dliver from "../../icon/ic_dliver";
-import Ic_dliver_fast from "../../icon/ic_dliver_fast";
-import Ic_p_circle from "../../icon/ic_p_circle";
-import Ic_ticke_circle from "../../icon/ic_ticke_circle";
 import Full_loading from "../../loading/full_loading";
+import CartMessage from "../topbar/cart-message";
 
 export default {
     name: "cart_level4",
-    components: {Full_loading, Ic_ticke_circle, Ic_p_circle, Ic_dliver_fast, Ic_dliver, Cart_date_item, CartMessage},
+    components: {CartMessage, Full_loading},
     data() {
         return {
             status: '',
@@ -79,8 +74,8 @@ export default {
             let m = {
                 address: this.$parent.address_id, delivery: this.$parent.delivery,typeSend:this.$parent.typeSend
             }
-            let {data} = await window.axios.post('/payment/pasargad', m)
 
+            await window.axios.post('/payment/pasargad', m)
 
             this.fullLoading = false
             $('html ,body').stop().animate({scrollTop:0},500)

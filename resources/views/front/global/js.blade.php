@@ -1,5 +1,5 @@
-<script src="{{ URL::asset('js/library/swiper-v2.js') }}"></script>
-<script src="{{ mix('js/front/app.js') }}"></script>
+{{--<script src="{{ URL::asset('js/library/swiper-v2.js') }}"></script>--}}
+{{--<script src="{{ mix('js/front/app.js') }}"></script>--}}
 <script src="{{ mix('js/front/app2.js') }}"></script>
 <!---start GOFTINO code--->
 <script type="text/javascript"> !function () {

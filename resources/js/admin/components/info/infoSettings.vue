@@ -1,12 +1,12 @@
 <template>
     <div class="box info" v-if="data!==null">
         <div class="title">تصاویر</div>
-        <input style="display: none" type="file" accept="image/*" id="file1">
+        <input style="display: none" type="file" accept="video/*" id="file1">
         <input style="display: none" type="file" accept="image/*" id="file2">
         <div style="padding: 10px;display: flex">
             <div class="img">
                 <div>تصویر 1</div>
-                <img role="button" id="img1" @click="openImg(1)" :src="'/img/page/'+data.img1">
+                <video role="button" id="img1" @click="openImg(1)" :src="'/video/page/'+data.img1"></video>
             </div>
             <div class="img">
                 <div>تصویر 2</div>
@@ -69,6 +69,29 @@
         <button @click="saveB()" class="save">ذخیره</button>
     </div>
     <br>
+
+    <div class="box info" v-if="data!==null">
+        <div class="title">تصوایر فروشگاه</div>
+        <div class="flex-column box-info">
+            <div class="cell mt-3 small-12">
+                <label class="product-session" >
+                    <div style="text-align: center;">
+                        <div style="font-size: 17px;">افزودن تصویر فروشگاه</div>
+                        <input style="display: none" accept="image/*" type="file" id="g_img" @change="importFile()">
+                        <img style="width: 104px;" src="/img/page/empty-cart.svg"/>
+                    </div>
+                </label>
+            </div>
+            <div class="cell mt-3 small-6 medium-6 large-3" v-for="(v,i) in images">
+                <div style="max-height: 200px;display: flex;align-items: center;justify-content: center;overflow: hidden;" @click="editImage(i)">
+                    <img :src="v.path">
+                </div>
+            </div>
+        </div>
+        <button @click="saveImages()" class="save">ذخیره</button>
+    </div>
+    <br>
+
     <div class="box info" style="margin-bottom: 130px;" v-if="data!==null">
         <div class="title">تیم فروشگاه سلامت لاین</div>
         <info-user :list="data.users"></info-user>
@@ -89,10 +112,55 @@ export default {
     data() {
         return {
             data: null,
-            loading: false
+            loading: false,
+            images:[],
         }
     },
     methods: {
+        importFile(){
+            let vm = this
+            let file = document.getElementById('g_img').files[0]
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                vm.images.push({path:e.target.result,file:file,name:new Date().getMilliseconds()})
+            }
+            reader.readAsDataURL(file)
+        },
+        editImage(i){
+            let vm = this
+          $.confirm({
+              title:'حذف',
+              content:'حذف شود؟',
+              backgroundDismiss:true,
+              buttons:{
+                  ok:{
+                      text:'حذف',
+                      btnClass:'btn-red',
+                      action:()=>{
+                          vm.images.splice(i,1)
+                      }
+                  },
+                  no:{
+                      text:'لغو'
+                  }
+              }
+          })
+        },
+        async saveImages() {
+            this.loading = true
+
+            let form = new FormData();
+            for (const i in this.images) {
+                form.append(this.images[i].name, this.images[i].file)
+                delete this.images[i].file
+            }
+            form.append('images', JSON.stringify(this.images))
+            let {data} = await window.axios.post('api/info/changeImages', form)
+            if (data==true){
+                location.reload();
+            }
+            this.loading = false
+        },
         openImg(i) {
             let vm = this
             let inputProfile = $('#file' + i);
@@ -130,6 +198,7 @@ export default {
 
             let {data} = await window.axios.get('/admin/api/info')
             this.data = data
+            this.images = data['images']
             this.loading = false
         },
         async saveImg() {

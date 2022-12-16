@@ -2,6 +2,7 @@
 namespace App\Models;
 
 use App\Models\Product;
+use Rinvex\Categories\Traits\Categorizable;
 use Spatie\Searchable\Searchable;
 use Rinvex\Categories\Models\Category as RinvexCategory;
 use CyrildeWit\EloquentViewable\InteractsWithViews;
@@ -12,11 +13,38 @@ class Category extends RinvexCategory implements Viewable
     use InteractsWithViews;
 
     protected $appends = [
-        'child_count'
+        'child_count',
+        'products_count',
     ];
     public function getChildCountAttribute()
     {
-        return Category::where([['parent_id',$this->id]])->count();
+        return  Category_relation::where('parent_id',$this->id)->count();
+    }
+    public function getProductsCountAttribute()
+    {
+        return Product::withAnyCategories($this->id)->count();
+    }
+    public function getParentCatAttribute()
+    {
+        $re = [];
+        $child =  Category_relation::where('child_id',$this->id)->get()->pluck('parent');
+        foreach ($child as $v){
+            if ($v!=null){
+                $re[] = $v;
+            }
+        }
+        return $re;
+    }
+    public function getChildCatsAttribute()
+    {
+        $re = [];
+        $child =  Category_relation::where('parent_id',$this->id)->get()->pluck('child');
+        foreach ($child as $v){
+            if ($v!=null){
+                $re[] = $v;
+            }
+        }
+        return $re;
     }
     public function getImgAttribute($value)
     {

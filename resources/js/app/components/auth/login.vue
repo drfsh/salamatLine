@@ -7,7 +7,22 @@
             <ic_arrow_left></ic_arrow_left>
         </a>
     </div>
-    <h4>ورود</h4>
+    <h4 v-if="page!==1">ورود</h4>
+    <h4 v-else>ورود یا ثبت نام</h4>
+
+    <div v-if="page===1" class="user-type-">
+        <span>نوع کاربری خود را انتخابی کنید</span>
+        <div style="margin: 13px 0;">
+            <input id="dc" class="rd1" type="radio" v-model="userType" value="0">
+            <label for="dc">
+                مصرف کننده
+            </label>
+            <input id="df" class="rd1" type="radio" v-model="userType" value="1">
+            <label for="df">
+                همکار و متخصص
+            </label>
+        </div>
+    </div>
 
     <div class="body-login text-center">
         <auth-phone v-if="page===1"></auth-phone>
@@ -62,6 +77,7 @@ export default {
         return{
             page:1,
             mobile:'09',
+            userType : 0
         }
     }
 }

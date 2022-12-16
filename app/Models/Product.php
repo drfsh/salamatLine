@@ -44,7 +44,7 @@ class Product extends Model implements Searchable, Viewable, ReviewRateable, Aud
 
     public function feature()
     {
-        return $this->hasOne('App\Models\Feature');
+        return $this->hasOne('App\Models\Feature')->with('company');
     }
 
     public function inventory()

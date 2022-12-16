@@ -24,6 +24,7 @@ main{
     position: absolute;
     max-width: unset;
 }
+
 .uploadFileH {
     overflow: hidden;
     height: 57px;
@@ -620,7 +621,7 @@ body::-webkit-scrollbar-thumb {
     color: white;
 }
 
-.box.info .img img {
+.box.info .img img,.box.info .img video {
     width: 100%;
     height: 100%;
     background: aliceblue;
@@ -653,15 +654,17 @@ body::-webkit-scrollbar-thumb {
 
 .box-info .item input {
     width: 80%;
+    margin: 18px auto;
 }
 
 .box-info .item img {
     height: 100px;
-    width: 80%;
+    width: auto;
 }
 
 .box-info .item {
     width: 50%;
+    text-align: center;
 }
 
 button {
@@ -996,4 +999,23 @@ button.btn-blue {
         font-size: 11px;
     }
 }
-
+.p-count{
+    background: red!important;
+    color: white!important;
+    margin-right: 5px!important;
+}
+.copy-p{
+    position: fixed;
+    background: #094873;
+    color: white;
+    border-radius: 11px;
+    bottom: 10px;
+    left: 10px;
+    padding: 1px 2px 1px 17px;
+}
+.copy-p .close{
+    cursor: pointer;
+    background: red;
+    border-radius: 10px;
+    padding: 0 9px;
+}

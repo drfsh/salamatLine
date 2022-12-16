@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 use Session;
 use Image;
+use Video;
 use Storage;
 use File;
 
@@ -28,9 +29,10 @@ class InfoController extends Controller
         $b3 = InfoPage::find(5);
         $b4 = InfoPage::find(6);
         $b5 = InfoPage::find(7);
+        $images = InfoPage::where('name','images')->first();
 
         $users = InfoPage::where([['id','!=', 1], ['id','!=', 2], ['id','!=', 3], ['id', '!=',4],
-            ['id','!=', 5], ['id','!=', 6], ['id', '!=',7]])->get();
+            ['id','!=', 5], ['id','!=', 6], ['id', '!=',7],['name','!=','images']])->get();
 
         $data['img1'] = $img1->img;
         $data['img2'] = $img2->img;
@@ -40,6 +42,7 @@ class InfoController extends Controller
         $data['b4'] = $b4;
         $data['b5'] = $b5;
         $data['users'] = $users;
+        $data['images'] = json_decode($images->info);
 
 
 
@@ -54,12 +57,11 @@ class InfoController extends Controller
 
         if ($request->hasFile('img1')) {
             $image = $request->file('img1');
-            $filenameWithExt = $image->getClientOriginalName();
-            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            $extension = $image->getClientOriginalExtension();
+            $extension = $image->getClientOriginalName();
             $fileNameToStore = $request->title . '_' . time() . '.' . $extension;
-            $location = public_path('img/page/' . $fileNameToStore);
-            Image::make($image)->save($location);
+            $location = public_path('video/page/');
+//            Video::make($image)->save($location);
+            $image->move($location,$fileNameToStore);
             $img1->img = $fileNameToStore;
             $img1->save();
         }
@@ -196,5 +198,29 @@ class InfoController extends Controller
     public function deleteUser($id){
         InfoPage::find($id)->delete();
         return response()->json(['true'=>true]);
+    }
+    public function changeImages(Request $request){
+
+        $images = json_decode($request->images);
+        $infoPage = InfoPage::where('name','images')->first();
+        $newImage = [];
+         foreach($images as $k => $img){
+             if (isset($img->path)) $newImage[$k] = ['path'=>$img->path];
+             if (!isset($img->name)) continue;
+            if ($request->hasFile($img->name)) {
+                $image = $request->file($img->name);
+                $filenameWithExt = $image->getClientOriginalName();
+                $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+                $extension = $image->getClientOriginalExtension();
+                $fileNameToStore = $request->title .'_'.$k.'_' . time() . '.' . $extension;
+                $location = public_path('img/page/' . $fileNameToStore);
+                Image::make($image)->save($location);
+                $newImage[$k] = ['path'=>'/img/page/' . $fileNameToStore];
+            }
+        }
+         $infoPage->info = json_encode($newImage);
+         $infoPage->save();
+
+         return 'true';
     }
 }

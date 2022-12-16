@@ -16,11 +16,8 @@ import addedCard from "./components/product/alert/added-card";
 import cart from "./components/cart/cart";
 import cart_num from "./components/cart/cart_num";
 import newsletter from "./components/newsletter/newsletter";
-import checkBox from "./components/inputs/check-box";
-import filterPrice from "./components/product/filter/filterPrice";
 import basketProduct from "./components/product/holder/basket-product/basket-product";
 import itemProductBtns from "./components/product/holder/buttons/item-product-btns";
-import cat_filter from "./components/categoty/filter";
 import Orders from "./components/orders/Orders";
 import invoice from "./components/orders/invoice/invoice";
 import add_basket_f from "./components/product/holder/basket-product/add_basket_f";
@@ -30,6 +27,7 @@ import map_page from "./components/pages/map_page";
 import numHeart from "./components/header/num-heart";
 import test from "./components/test";
 import categories from "./components/category/categories";
+import category_index from "./components/category/category_index";
 import mobile from "./components/mobile/mobile";
 
 require('./bootstrap')
@@ -38,6 +36,11 @@ setApp([
     {
         name: 'categories-items',
         component: categories,
+        components: []
+    },
+    {
+        name: 'category',
+        component: category_index,
         components: []
     },
     {
@@ -114,10 +117,10 @@ setElement([
         name: 'add-basket-f',
         component: add_basket_f
     },
-    {
-        name: 'cat-filter',
-        component: cat_filter
-    },
+    // {
+    //     name: 'cat-filter',
+    //     component: cat_filter
+    // },
     {
         name: 'product-btns',
         component: itemProductBtns
@@ -126,14 +129,14 @@ setElement([
         name: 'basket-product',
         component: basketProduct
     },
-    {
-        name: 'price-range-box',
-        component: filterPrice
-    },
-    {
-        name: 'check-box',
-        component: checkBox
-    },
+    // {
+    //     name: 'price-range-box',
+    //     component: filterPrice
+    // },
+    // {
+    //     name: 'check-box',
+    //     component: checkBox
+    // },
     {
         name: 'ticket-list',
         component: tickets

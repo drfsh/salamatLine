@@ -28,13 +28,13 @@
 @else
     <div class="contact">
         <div style="font-size: 14px;margin-bottom: 14px;">برای اطلاع از قیمت تماس بگیرید</div>
-        <a class="d-inline-block w100px" href="#">
+        <a class="d-inline-block w100px" href="whatsapp://send?phone=+98{{$globalcontact[0]->whatsapp}}&text=/">
             <div class="whatsapp text-l">
                 <span class="d-flex">@include('icons.whatsApp')</span>
                 <span class="text-l">واتساپ</span>
             </div>
         </a>
-        <a class="d-inline-block w100px" href="#">
+        <a class="d-inline-block w100px" href="https://t.me/{{$globalcontact[0]->telegram}}">
             <div class="telegram text-l">
                 <span class="d-flex">@include('icons.telegram')</span>
                 <span class="text-l">تلگرام</span>

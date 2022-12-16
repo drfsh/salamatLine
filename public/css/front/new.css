@@ -1,132 +1,130 @@
 body {
-    background: #f2f6fc !important;
+    background: #f2f6fc !important
 }
 
 body::-webkit-scrollbar {
     background-color: #fefefe;
-    width: 10px;
+    width: 10px
 }
 
 *[role='button'] {
-    cursor: pointer;
+    cursor: pointer
 }
 
 body::-webkit-scrollbar-thumb {
     background: #c0c2c5;
     border-radius: 15px;
-    border: 1px solid white;
+    border: 1px solid #fff
 }
 
 .ProfileName .pic .hupload {
-
     border-radius: 0;
     box-shadow: unset;
     height: 70px;
     width: 70px;
     position: relative;
     left: 0;
-    transform: unset;
+    transform: unset
 }
 
 .ProfileName .pic .hupload img {
     border-radius: 100%;
-    box-shadow: 0 5px 20px -12px rgba(0, 26, 102, .4);
+    box-shadow: 0 5px 20px -12px rgba(0, 26, 102, .4)
 }
 
 .ProfileName {
     padding: 32px 10px 15px;
-    margin: 0 !important;
+    margin: 0 !important
 }
 
 .box2 {
-    /*box-shadow: 0 0 11px -6px #00000021;*/
-    background: #ffffff;
-    border-radius: 6px;
+    background: #fff;
+    border-radius: 6px
 }
 
 .box3 {
-    box-shadow: 0px 2px 35px #3b43590f;
-    background: #ffffff;
-    border-radius: 14px;
+    box-shadow: 0 2px 35px #3b43590f;
+    background: #fff;
+    border-radius: 14px
 }
 
 .bbox {
     border-radius: 10px;
     border: 1px solid #d9d9d9;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .ProfileName .title {
-    padding: 0.5rem .625rem .625rem;
-    color: #202636;
+    padding: .5rem .625rem .625rem;
+    color: #202636
 }
 
 hr {
-    border-color: #bec7d170;
+    border-color: #bec7d170
 }
 
 .pside {
-    margin-top: 20px !important;
+    margin-top: 20px !important
 }
 
 ul.pside li {
-    position: relative;
+    position: relative
 }
 
 ul.pside li a {
-    padding: 15px 23px !important;
+    padding: 15px 23px !important
 }
 
 ul.pside li a i {
     margin-right: 12px;
     margin-top: -1px;
-    color: #727378;
+    color: #727378
 }
 
 .products-items {
     padding: 0 21px 27px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center
 }
 
 .products-items .feacher {
-    font-size: 14px;
+    font-size: 14px
 }
 
 .products-items .feacher .item {
     cursor: pointer;
     padding: 3px 8px;
-    background: white;
-    border-radius: 10px;
+    background: #fff;
+    border-radius: 10px
 }
 
 .products-items .feacher .item:hover, .products-items .feacher .item.active {
     background: #f2f6fc;
-    color: #565656;
+    color: #565656
 }
 
 ul.pside li a i svg {
     width: 19px;
-    height: 19px;
+    height: 19px
 }
 
 ul.pside li a span {
     font-size: 15px;
     margin-right: 24px;
-    color: #727378;
+    color: #727378
 }
 
 ul.pside li a {
-    border: none;
+    border: none
 }
 
 ul.pside li a:hover span, ul.pside li.active a span, ul.pside li.active a i {
-    color: #094873;
+    color: #094873
 }
 
 ul.pside li a:hover {
-    background: unset;
+    background: unset
 }
 
 ul.pside li.active:before {
@@ -138,11 +136,11 @@ ul.pside li.active:before {
     width: 4px;
     height: 54%;
     border-radius: 13px 0 0 13px;
-    top: 11px;
+    top: 11px
 }
 
 .hupload .upload {
-    background: white;
+    background: #fff;
     border-radius: 100px;
     cursor: pointer;
     height: 22px;
@@ -150,25 +148,25 @@ ul.pside li.active:before {
     width: 22px;
     left: 0;
     top: 26px;
-    color: #727378;
+    color: #727378
 }
 
 .hupload .upload i {
     color: #727378;
-    font-size: 14px;
+    font-size: 14px
 }
 
 .hupload:hover .upload {
     transform: translateY(100%);
-    box-shadow: 0 5px 20px -12px rgba(0, 26, 102, .4);
+    box-shadow: 0 5px 20px -12px rgba(0, 26, 102, .4)
 }
 
 .callout.success {
-    background-color: #f2f6fc;
+    background-color: #f2f6fc
 }
 
 .router svg {
-    margin-bottom: 8px;
+    margin-bottom: 8px
 }
 
 .router {
@@ -185,33 +183,32 @@ ul.pside li.active:before {
     background: #f5f3f4;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-
+    justify-content: center
 }
 
 .router span {
     color: #a2a2a2;
     font-size: 15px;
-    user-select: none;
+    user-select: none
 }
 
 .box2.p {
-    padding: 24px 18px;
+    padding: 24px 18px
 }
 
 .flex-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 19px 22px;
+    padding: 19px 22px
 }
 
 .font-16 {
-    font-size: 14px;
+    font-size: 14px
 }
 
 .color-info {
-    color: #f9a725;
+    color: #f9a725
 }
 
 .color-next {
@@ -220,38 +217,38 @@ ul.pside li.active:before {
 
 .flex-center {
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
 .ml-2 {
-    margin-left: 9px;
+    margin-left: 9px
 }
 
 .mt-3 {
-    margin-top: 18px;
+    margin-top: 18px
 }
 
 .w-100 {
-    width: 100%;
+    width: 100%
 }
 
 .border-14 {
-    border-right: 14px;
+    border-right: 14px
 }
 
 .menu-bl {
     border-left: 2px solid #e4e4e48f;
     margin-left: 33px;
-    height: 87px;
+    height: 87px
 }
 
 .menu-bl-p {
-    padding: 60px 40px;
+    padding: 60px 40px
 }
 
 .name-menu-order {
     font-size: 13px;
-    line-height: 2.17;
+    line-height: 2.17
 }
 
 .bbox > .title {
@@ -261,11 +258,11 @@ ul.pside li.active:before {
     margin: 0 9px;
     font-size: 17px;
     font-weight: 600;
-    color: #5c5b56;
+    color: #5c5b56
 }
 
 .p-12 {
-    padding: 15px;
+    padding: 15px
 }
 
 .box2 > .title {
@@ -273,15 +270,15 @@ ul.pside li.active:before {
     font-weight: 600;
     font-size: 18px;
     color: #57564f;
-    position: relative;
+    position: relative
 }
 
 .box2 > .title._2 {
-    padding-left: 15px;
+    padding-left: 15px
 }
 
 .box2 > .title._2 > span {
-    position: relative;
+    position: relative
 }
 
 .box2 > .title:not(._2):before {
@@ -294,7 +291,7 @@ ul.pside li.active:before {
     position: absolute;
     right: 18px;
     top: 47%;
-    bottom: 50%;
+    bottom: 50%
 }
 
 .box2 > .title._2 > span:before {
@@ -307,33 +304,33 @@ ul.pside li.active:before {
     position: absolute;
     top: 47%;
     right: 34px;
-    bottom: 50%;
+    bottom: 50%
 }
 
 .btns-viewpager {
-    margin: 0 23px;
+    margin: 0 23px
 }
 
 .btns-viewpager li div {
     padding: 11px 0;
     position: relative;
     display: flex;
-    font-size: 13px;
+    font-size: 13px
 }
 
 .btns-viewpager li {
     display: inline-block;
     list-style-type: none;
-    padding: 0 3px;
+    padding: 0 3px
 }
 
 .btns-viewpager li span.name {
     color: #a3a3a3;
-    margin-right: 10px;
+    margin-right: 10px
 }
 
 .btns-viewpager li.active span.name {
-    color: #094873;
+    color: #094873
 }
 
 .btns-viewpager li.active div:before {
@@ -343,13 +340,13 @@ ul.pside li.active:before {
     width: 100%;
     height: 4px;
     background: #094873;
-    border-radius: 5px 5px 0px 0px;
-    bottom: 0;
+    border-radius: 5px 5px 0 0;
+    bottom: 0
 }
 
 .btns-viewpager li .count {
     background: #a3a3a3;
-    color: white;
+    color: #fff;
     width: 20px;
     height: 20px;
     margin-right: 5px;
@@ -358,16 +355,16 @@ ul.pside li.active:before {
     justify-content: center;
     border-radius: 3px;
     margin-left: 10px;
-    font-size: 12px;
+    font-size: 12px
 }
 
 .btns-viewpager li.active span.count {
     background: #094873;
-    color: white;
+    color: #fff
 }
 
 .min-h-500 {
-    min-height: 600px;
+    min-height: 600px
 }
 
 .noting-orders {
@@ -377,40 +374,63 @@ ul.pside li.active:before {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: 380px;
+    min-height: 380px
 }
 
 .breadcrumbs {
-    margin-right: 12px;
+    margin-right: 12px
 }
 
 .noting-orders img {
-    margin-bottom: 15px;
+    margin-bottom: 15px
 }
 
 .breadcrumbs li, .breadcrumbs a {
     color: #3b4359;
     font-size: 15px;
     user-select: none;
-    font-weight: 400;;
+    font-weight: 400;
 }
-
+.breadcrumbs a{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.breadcrumbs a:before {
+    content: "";
+    transition: 0.2s;
+    width: 87%;
+    height: 81%;
+    background: #0071e31c;
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+    z-index: -1;
+    opacity: 0;
+}
+footer .swiper{width: 100%}
+.breadcrumbs a:hover:before {
+    width: 112%;
+    height: 107%;
+    opacity: 1;
+}
 .product-item-h {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 0;
+    padding: 5px 0
 }
 
 .product-item-h .infos {
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: row
 }
 
 .product-item-h .infos i {
     padding: 18px;
-    margin-right: 28px;
+    margin-right: 28px
 }
 
 .product-item-h img {
@@ -418,96 +438,94 @@ ul.pside li.active:before {
     height: 94px;
     box-shadow: 0 0 33px -2px #3c3c3c2e;
     border-radius: 13px;
-    margin: 17px 29px 17px 38px;
+    margin: 17px 29px 17px 38px
 }
 
 .product-item-h .infos .texts {
     display: flex;
-    flex-direction: column;
+    flex-direction: column
 }
 
 .product-item-h .infos .texts span {
-    color: #838383;
+    color: #838383
 }
 
 .add-shop {
-
     background: #094873;
-    color: white;
+    color: #fff;
     padding: 16px;
     border-radius: 8px;
-    margin-left: 32px;
+    margin-left: 32px
 }
 
 .justify-content-between {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .flex-column {
     display: flex;
-    flex-direction: column;
+    flex-direction: column
 }
 
 .flex-start {
     display: flex;
-    align-items: start;
+    align-items: start
 }
 
 .text-noting {
     color: #9e9e9e;
     font-size: 12px;
     font-style: italic;
-    margin-top: 10px;
+    margin-top: 10px
 }
 
 .m-0 {
-    margin: 0 !important;
+    margin: 0 !important
 }
 
 ul.pside li a {
-    transition: all .0s ease-in-out;
+    transition: all .0s ease-in-out
 }
 
 ul.pside li a span {
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
 }
 
-/*loading*/
 @keyframes loading-dot {
     to {
-        opacity: 0.1;
-        transform: translate3d(0, -10px, 0);
+        opacity: .1;
+        transform: translate3d(0, -10px, 0)
     }
 }
 
 .loading-dot {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 .loading-dot > div {
     width: 10px;
     height: 10px;
-    margin: 3rem 0.2rem;
+    margin: 3rem .2rem;
     background: #094873;
     border-radius: 50%;
-    animation: loading-dot 0.6s infinite alternate;
+    animation: loading-dot 0.6s infinite alternate
 }
 
 .loading-dot > div:nth-child(2) {
-    animation-delay: 0.2s;
+    animation-delay: 0.2s
 }
 
 .loading-dot > div:nth-child(3) {
-    animation-delay: 0.4s;
+    animation-delay: 0.4s
 }
 
 @keyframes loading-dot-small {
     to {
-        opacity: 0.1;
-        transform: translate3d(0, -6px, 0);
+        opacity: .1;
+        transform: translate3d(0, -6px, 0)
     }
 }
 
@@ -515,35 +533,34 @@ ul.pside li a span {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 5px
 }
 
 .resend-code .loading-dot.small {
-    padding-top: 10px;
+    padding-top: 10px
 }
 
 .loading-dot.small > div {
     width: 8px;
     height: 8px;
-    margin: 0rem 0.1rem;
-    background: #ffffff;
+    margin: 0rem .1rem;
+    background: #fff;
     border-radius: 50%;
-    animation: loading-dot-small 0.6s infinite alternate;
+    animation: loading-dot-small 0.6s infinite alternate
 }
 
 .loading-dot.small.blue > div {
-    background: #094873;
+    background: #094873
 }
 
 .loading-dot.small > div:nth-child(2) {
-    animation-delay: 0.2s;
+    animation-delay: 0.2s
 }
 
 .loading-dot.small > div:nth-child(3) {
-    animation-delay: 0.4s;
+    animation-delay: 0.4s
 }
 
-/*end loading*/
 .item-address {
     border: 1px solid #bdbdbd;
     position: relative;
@@ -552,8 +569,7 @@ ul.pside li a span {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    align-items: center;
-
+    align-items: center
 }
 
 .item-address:before {
@@ -566,7 +582,7 @@ ul.pside li a span {
     position: absolute;
     right: 0;
     top: -3px;
-    width: 100%;
+    width: 100%
 }
 
 .item-address .edit {
@@ -579,94 +595,92 @@ ul.pside li a span {
     justify-content: center;
     left: 0;
     top: 0;
-    position: absolute;
+    position: absolute
 }
 
 .item-address .name {
     padding: 15px;
-    border-bottom: 1px solid #bdbdbd;
+    border-bottom: 1px solid #bdbdbd
 }
 
 .d-flex {
-    display: flex;
+    display: flex
 }
 
 .item-address .cities {
-    border-left: 1px solid #bdbdbd;
+    border-left: 1px solid #bdbdbd
 }
 
 .item-address .section .item {
     padding: 12px;
     color: #7a7a7e;
-    font-size: 13px;
-
+    font-size: 13px
 }
 
 .item-address .section .item span {
     color: #232323;
-    font-size: 14px;
+    font-size: 14px
 }
 
 .item-address .section .item.bb {
-    border-bottom: 1px solid #bdbdbd;
+    border-bottom: 1px solid #bdbdbd
 }
 
 .mb-3 {
-    margin-bottom: 26px;
+    margin-bottom: 26px
 }
 
 label {
     display: inline-block;
-    margin: 5px;
+    margin: 5px
 }
 
 label + .info {
     font-size: 12px;
-    color: #929292;
+    color: #929292
 }
 
 .hr-2 {
     width: 100%;
     margin-top: 17px;
     border-bottom: 2px solid #094873;
-    margin-bottom: 16px;
+    margin-bottom: 16px
 }
 
 .bbox .title2 {
     padding: 12px;
     background: #fcfcfc;
     border-radius: 9px 9px 0 0;
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9
 }
 
 [type=color], [type=date], [type=datetime-local], [type=datetime], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=time], [type=url], [type=week], textarea {
-    font-size: 14px;
+    font-size: 14px
 }
 
 .mt-17 {
-    margin-top: 17px;
+    margin-top: 17px
 }
 
 .p-status {
     filter: grayscale(100%);
     opacity: .6;
-    flex-direction: column;
+    flex-direction: column
 }
 
 .p-status.active {
     filter: grayscale(0%);
-    opacity: 1;
+    opacity: 1
 }
 
 .sidebar-exit {
     display: flex;
     padding: 10px 23px !important;
     width: 100%;
-    align-items: center;
+    align-items: center
 }
 
 .sidebar-exit i {
-
     margin-right: 12px;
     margin-top: -1px;
     color: rgb(114, 115, 120);
@@ -674,106 +688,104 @@ label + .info {
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: 0.3125rem;
-    transition: all 0.3s ease-in-out 0s;
-
+    right: .3125rem;
+    transition: all 0.3s ease-in-out 0s
 }
 
 .sidebar-exit i svg {
-
     width: 18px;
-    height: 18px;
+    height: 18px
 }
 
 .sidebar-exit span {
     color: #727378;
     font-size: 15px;
-    margin-right: 24px;
+    margin-right: 24px
 }
 
 .btn-new-ticket {
     border: none;
     padding: 15px 16px;
-    background: white;
+    background: #fff;
     box-shadow: 0 2px 20px -5px #97979763;
     border-radius: 5px;
     transition: 0.2s;
     font-size: 15px;
     margin: 10px 9px;
-    cursor: pointer;
+    cursor: pointer
 }
 
 button.btn-new-ticket:hover {
     border-radius: 10px;
     background: #094873;
-    color: white;
+    color: #fff
 }
 
 .sub-title {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center
 }
 
 .sub-title .info {
     font-size: 14px;
-    color: #a2a2a2;
+    color: #a2a2a2
 }
 
 .table1 {
     border-collapse: collapse;
-    background: white;
+    background: #fff;
     border-radius: 10px;
     overflow: hidden;
     width: 100%;
     margin: 0 auto;
     position: relative;
-    border: none;
+    border: none
 }
 
 .table1 tbody tr {
-    transition: 0.2s;
+    transition: 0.2s
 }
 
 .table1 tbody tr:nth-child(2n) {
-    background-color: white;
-    border: none;
+    background-color: #fff;
+    border: none
 }
 
 .table1 thead th {
     border: none !important;
-    text-align: center;
+    text-align: center
 }
 
 .table1 tbody tr:hover th i {
     background: #d4dde3;
-    color: #747474;
+    color: #747474
 }
 
 .table1 tbody tr:hover {
-    background-color: #b8b8b80f;
+    background-color: #b8b8b80f
 }
 
 .table1 thead, .table1 tbody {
-    border: none !important;
+    border: none !important
 }
 
 .table1 tbody tr {
-    border-top: 1px solid #d9d9d9;
+    border-top: 1px solid #d9d9d9
 }
 
 .table1 thead tr {
     background-color: #f3f6fd;
-    text-align: left;
+    text-align: left
 }
 
 .noting-table-item {
     text-align: center;
-    padding: 18px;
+    padding: 18px
 }
 
 .justify-content-center {
-    justify-content: center;
+    justify-content: center
 }
 
 .icon-email {
@@ -785,7 +797,7 @@ button.btn-new-ticket:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #adadad;
+    color: #adadad
 }
 
 .back-ticket {
@@ -794,50 +806,49 @@ button.btn-new-ticket:hover {
     font-size: 11px;
     align-items: center;
     display: inline-flex;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .upload-box {
     padding: 35px;
     border: 1px dashed #b9c6d3;
-    border-radius: 4px;
+    border-radius: 4px
 }
 
 .upload-box label {
-    cursor: pointer;
+    cursor: pointer
 }
 
 .upload-box .info {
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column
 }
 
 .upload-box .info svg {
     width: 50px;
     height: 50px;
-    color: #094873;
+    color: #094873
 }
 
 .upload-box .info .text {
-    margin-top: 9px;
+    margin-top: 9px
 }
 
 .d-none {
-    display: none;
+    display: none
 }
 
 .info-file {
     font-size: 12px;
     color: #767676;
     margin-top: 12px;
-    padding-right: 11px;
+    padding-right: 11px
 }
 
-/*auth*/
 body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-center {
     height: 100%;
-    min-height: 708px;
+    min-height: 708px
 }
 
 .auth .grid-x.align-middle.align-center {
@@ -846,19 +857,19 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     justify-content: center;
     flex-direction: column;
     margin-top: -35px;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .auth .logo {
-    margin-bottom: 23px;
+    margin-bottom: 23px
 }
 
 #salamat-logo .cls-4 {
-    fill: #ffdc00;
+    fill: #ffdc00
 }
 
 #salamat-logo .cls-3, #salamat-logo:hover .cls-3 {
-    fill: #747474;
+    fill: #747474
 }
 
 .auth-box {
@@ -869,29 +880,29 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     margin-bottom: .3125rem;
     overflow: hidden;
     box-shadow: -5px 5px 27px -10px #2a272736;
-    padding: 37px 27px 15px;
+    padding: 37px 27px 15px
 }
 
 .auth-box h4 {
     font-size: 15px;
     text-align: center;
-    margin-bottom: 21px;
+    margin-bottom: 21px
 }
 
 .back-to-home {
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 .back-to-home a {
     color: #2484ff !important;
     font-size: 11px;
-    font-weight: 500;
+    font-weight: 500
 }
 
 .auth-box .body-login .info {
     font-size: 12px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 .body-login {
@@ -899,7 +910,7 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
+    align-items: center
 }
 
 .auth-box .title-p {
@@ -909,24 +920,24 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     width: 100%;
     right: 0;
     justify-content: space-between;
-    background: #fafafa;
+    background: #fafafa
 }
 
 .auth-box .current-page {
     z-index: 1;
-    right: 0px;
-    top: 0px;
+    right: 0;
+    top: 0;
     font-size: 14px;
     background: rgb(9, 72, 115);
-    color: white;
+    color: #fff;
     padding: 5px 22px;
-    border-radius: 0px 22px;
+    border-radius: 0 22px
 }
 
 .auth-box .next-page svg {
     width: 15px;
     height: 15px;
-    margin-right: 5px;
+    margin-right: 5px
 }
 
 .auth-box .next-page {
@@ -938,11 +949,13 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     color: #177abd;
     font-weight: 800;
     display: flex;
-    align-items: center;
+    align-items: center
 }
-.auth-box .next-page *{
-    z-index: 1;
+
+.auth-box .next-page * {
+    z-index: 1
 }
+
 .next-page:before {
     transition: .6s;
     content: "";
@@ -954,29 +967,31 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     width: 10%;
     border-radius: 22px;
     background: #094873;
-    z-index: 0;
+    z-index: 0
 }
 
 .next-page:hover:before {
-    animation: login-hover 0.8s;
+    animation: login-hover 0.8s
 }
-.next-page:hover{
+
+.next-page:hover {
     background: rgb(9, 72, 115);
-    color: white;
-    border-radius: 22px 0;
+    color: #fff;
+    border-radius: 22px 0
 }
+
 @keyframes login-hover {
     0% {
-        width: 0;
+        width: 0
     }
     50% {
         width: 100%;
-        left: 0;
+        left: 0
     }
     100% {
         width: 0;
         right: 100%;
-        left: 0;
+        left: 0
     }
 }
 
@@ -989,18 +1004,21 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     border-radius: 6px;
     align-items: center;
     justify-content: flex-end;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
-.captcha{
+
+.captcha {
     display: flex;
     align-items: center;
-    margin: 7px 0px;
+    margin: 7px 0
 }
-.captcha span{
+
+.captcha span {
     border-radius: 7px;
-    overflow: auto;
+    overflow: auto
 }
-.captcha svg{
+
+.captcha svg {
     cursor: pointer;
     margin-left: 8px;
     width: 36px;
@@ -1008,15 +1026,16 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     background: #f0f0f0;
     padding: 9px;
     border-radius: 7px;
-    transition: 0.2s;
+    transition: 0.2s
 }
-.captcha svg:hover{
+
+.captcha svg:hover {
     background: #09487354;
-    color: white;
+    color: #fff
 }
 
 .input-login.rtl {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse
 }
 
 .input-phone .select-code, .input-login .icon {
@@ -1029,24 +1048,24 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     height: 79%;
     border-right: 1px solid #80808075;
     justify-content: space-evenly;
-    padding-right: 8px;
+    padding-right: 8px
 }
 
 .input-login .icon {
     padding-right: 9px;
-    padding-left: 4px;
+    padding-left: 4px
 }
 
 .input-login.rtl .icon {
     border-right: none;
     border-left: 1px solid #80808075;
     padding-right: 4px;
-    padding-left: 9px;
+    padding-left: 9px
 }
 
 .input-login .icon svg {
     width: 20px;
-    height: 20px;
+    height: 20px
 }
 
 .input-phone input, .input-login input {
@@ -1056,30 +1075,30 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     margin: 0;
     direction: ltr;
     padding: 0 0 0 8px;
-    font-size: 13px;
+    font-size: 13px
 }
 
 .input-login.rtl input {
     direction: rtl;
-    padding: 0 8px;
+    padding: 0 8px
 }
 
 .input-phone input:focus, .input-login input:focus {
     background: transparent;
     border: none;
-    outline: none;
+    outline: none
 }
 
 .input-login input::placeholder {
-    color: #878787;
+    color: #878787
 }
 
 .input-phone .select-code i {
-    margin: 0 6px;
+    margin: 0 6px
 }
 
 .input-phone .select-code span {
-    margin-left: 3px;
+    margin-left: 3px
 }
 
 .input-phone .select-code img {
@@ -1087,17 +1106,16 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     width: 22px;
     height: 16px;
     background: burlywood;
-    border-radius: 3px;
+    border-radius: 3px
 }
 
 .btn-login {
-
     height: 40px;
     background: #094873;
-    color: white;
+    color: #fff;
     cursor: pointer;
     min-width: 235px;
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 .btn-login:hover {
@@ -1106,13 +1124,13 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
 
 .btn-login.active {
     background: #ffdc00;
-    color: #474747;
+    color: #474747
 }
 
 .btn-login:disabled {
     background: #747474;
-    opacity: 0.5;
-    cursor: not-allowed;
+    opacity: .5;
+    cursor: not-allowed
 }
 
 .or-line {
@@ -1122,18 +1140,18 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     flex-direction: row;
     user-select: none;
     margin-bottom: 10px;
-    width: 235px;
+    width: 235px
 }
 
 .or-line .line {
     width: 100%;
     height: 1px;
-    background: #cfcfcf;
+    background: #cfcfcf
 }
 
 .or-line .text {
     height: 25px;
-    background: white;
+    background: #fff;
     border: 1px solid;
     border-radius: 50px;
     max-width: 25px;
@@ -1142,7 +1160,7 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 44%;
+    width: 44%
 }
 
 .auth-box .icon-google svg {
@@ -1150,13 +1168,13 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     background: #fff;
     border-radius: 6px;
     height: 32px;
-    padding: 5px;
+    padding: 5px
 }
 
 .google-button__text {
     transition: 0.2s;
     font-weight: 500;
-    padding: 0;
+    padding: 0
 }
 
 .auth-google, .open-auth-email {
@@ -1166,29 +1184,29 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     align-items: center;
     justify-content: center;
     color: #515151;
-    margin-bottom: 5px;
+    margin-bottom: 5px
 }
 
 .open-auth-email {
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 .auth-box .icon-google svg {
-    height: 25px;
+    height: 25px
 }
 
 .auth-google:hover {
     background: #4285f4;
-    border-radius: 6px;
+    border-radius: 6px
 }
 
 .auth-google:hover .google-button__text {
     margin-right: 8px;
-    color: white;
+    color: #fff
 }
 
 .open-auth-email:hover .google-button__text {
-    color: #8f8f8f;
+    color: #8f8f8f
 }
 
 .open-auth-email .icon-email {
@@ -1197,25 +1215,25 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     height: 18px;
     margin-left: 4px;
     color: #515151;
-    background: transparent;
+    background: transparent
 }
 
 .open-auth-email:hover .icon-email {
-    color: #8f8f8f;
+    color: #8f8f8f
 }
 
 .auth-box .q {
     font-size: 11px;
-    color: #ababab;
+    color: #ababab
 }
 
 .f-ho {
     display: flex;
-    flex-direction: column;
+    flex-direction: column
 }
 
 .body-login .check-q label {
-    font-size: 12px;
+    font-size: 12px
 }
 
 .body-login .check-q {
@@ -1225,45 +1243,45 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     justify-content: flex-start;
     flex-direction: row;
     margin-bottom: 7px;
-    margin-right: 5px;
+    margin-right: 5px
 }
 
 .invalid-feedback {
     padding: 8px;
-    color: white;
+    color: #fff;
     font-weight: 600;
     font-size: 12px;
-    border-radius: 6px;
+    border-radius: 6px
 }
 
 .forms .invalid-feedback {
-    position: unset;
+    position: unset
 }
 
 .auth-box .alert {
     border: 1px solid;
     padding: 6px 12px;
     background: #cf2e2e;
-    color: #ffffff;
+    color: #fff;
     border-radius: 6px;
     font-size: 13px;
-    margin-bottom: 19px;
+    margin-bottom: 19px
 }
 
 .body-login .number-edit .text svg {
     width: 15px;
-    height: 15px;
+    height: 15px
 }
 
 .body-login .number-edit .text {
     display: flex;
     align-items: center;
     color: #d9b856;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .body-login .number-edit .number {
-    color: #094873;
+    color: #094873
 }
 
 .body-login .number-edit {
@@ -1271,7 +1289,7 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 .input-code {
@@ -1279,7 +1297,7 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     align-items: center;
     justify-content: space-around;
     flex-direction: row-reverse;
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 .input-code input {
@@ -1287,48 +1305,47 @@ body.auth, .auth #app, .auth .grid-container, .auth .grid-x.align-middle.align-c
     height: 40px;
     padding: 0;
     margin: 0;
-    text-align: center;
+    text-align: center
 }
 
 .auth-box .timer {
     margin-bottom: 20px;
-    letter-spacing: 3px;
+    letter-spacing: 3px
 }
 
 .body-login .timer {
-    cursor: alias;
+    cursor: alias
 }
 
 .body-login .resend-code span {
-    cursor: pointer;
+    cursor: pointer
 }
 
 .body-login .resend-code {
     margin-bottom: 21px;
     font-size: 13px;
-    color: #094873;
+    color: #094873
 }
 
 body.auth #salamat-logo {
-    height: 35px;
+    height: 35px
 }
 
 .hw100 {
     width: 100%;
-    height: 100%;
+    height: 100%
 }
 
 .simple-item {
     box-shadow: none;
     border-radius: 15px;
     margin: 10px 15px 30px;
-    /*margin: 10px 3px 20px;*/
     border: 1px solid #e5e9f0;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .simple-item .cover {
-    min-height: unset;
+    min-height: unset
 }
 
 .checkbox {
@@ -1341,12 +1358,12 @@ body.auth #salamat-logo {
     height: 50px;
     display: flex;
     align-items: center;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .checkbox.active {
     color: #094873;
-    border-color: #094873;
+    border-color: #094873
 }
 
 .checkbox:before {
@@ -1357,11 +1374,11 @@ body.auth #salamat-logo {
     border-radius: 50px;
     border: 1px solid #6f6a6a;
     position: absolute;
-    right: 15px;
+    right: 15px
 }
 
 .checkbox.active:before {
-    border-color: #094873;
+    border-color: #094873
 }
 
 .checkbox:after {
@@ -1373,75 +1390,75 @@ body.auth #salamat-logo {
     border-radius: 50px;
     background: #959595;
     position: absolute;
-    right: 34px;
+    right: 34px
 }
 
 .checkbox.active:after {
     background: #094873;
     right: 19px;
-    animation: checkbox-active 0.5s;
+    animation: checkbox-active 0.5s
 }
 
 .checkbox:hover:before {
-    animation: scale-wow 0.5s;
+    animation: scale-wow 0.5s
 }
 
 @keyframes scale-wow {
     0% {
-        transform: scale(1);
+        transform: scale(1)
     }
     50% {
-        transform: scale(1.1);
+        transform: scale(1.1)
     }
     70% {
-        transform: scale(0.9);
+        transform: scale(.9)
     }
     100% {
-        transform: scale(1);
+        transform: scale(1)
     }
 }
 
 @keyframes trans-b-wow {
     0% {
-        transform: translateY(0px);
+        transform: translateY(0)
     }
     50% {
-        transform: translateY(5px);
+        transform: translateY(5px)
     }
     70% {
-        transform: translateY(2px);
+        transform: translateY(2px)
     }
     100% {
-        transform: translateY(0px);
+        transform: translateY(0)
     }
 }
 
 @keyframes checkbox-active {
     0% {
         width: 13px;
-        right: 34px;
+        right: 34px
     }
     50% {
         width: 24px;
-        right: 23px;
+        right: 23px
     }
     70% {
         width: 10px;
-        right: 19px;
+        right: 19px
     }
     100% {
         width: 13px;
-        right: 19px;
+        right: 19px
     }
 }
 
 .home-list .box {
     box-shadow: none;
-    border-radius: 15px;
+    border-radius: 15px
 }
 
 .home-list .horizontal img {
-    box-shadow: 0 3px 18px -1px #9999992e;
+    box-shadow: 0 3px 18px -1px #9999992e
 }
 
 .home-list .center-title h3 {
@@ -1451,15 +1468,15 @@ body.auth #salamat-logo {
     border-radius: 10px;
     background: #f2f6fc;
     padding: 6px 14px;
-    color: #555555;
-    display: inline-block;
+    color: #555;
+    display: inline-block
 }
 
 .home-banner2 {
     margin-top: 20px;
-    background: white;
+    background: #fff;
     padding-top: 42px;
-    padding-bottom: 42px;
+    padding-bottom: 42px
 }
 
 .brand .center-title {
@@ -1467,7 +1484,7 @@ body.auth #salamat-logo {
     display: flex;
     align-items: center;
     padding-right: 24px;
-    font-size: 20px;
+    font-size: 20px
 }
 
 .brand .center-title:before {
@@ -1478,7 +1495,7 @@ body.auth #salamat-logo {
     height: 5px;
     background: #094873;
     border-radius: 45px;
-    right: 0;
+    right: 0
 }
 
 .g-item {
@@ -1487,30 +1504,30 @@ body.auth #salamat-logo {
     align-items: center;
     align-content: center;
     justify-content: center;
-    box-shadow: 0 5px 20px -10px rgb(0 0 0 / 15%);
+    box-shadow: 0 5px 20px -10px rgb(0 0 0 / 15%)
 }
 
 .g-item .cover {
-    padding: .625rem .625rem;
+    padding: .625rem .625rem
 }
 
 .g-item .cover img {
-    max-width: 105px;
+    max-width: 105px
 }
 
 .home-list .horizontal {
     border-bottom: 2px dotted #b0b0b0;
-    padding-bottom: 15px;
+    padding-bottom: 15px
 }
 
 .home-list .box .cell:last-child .horizontal {
-    border: none;
+    border: none
 }
 
 .home-list .basket {
     margin-top: 3px;
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
 .simple-item .add-shop- {
@@ -1521,49 +1538,48 @@ body.auth #salamat-logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #fff;
     font-size: 24px;
     width: 100%;
-    height: 90%;
+    height: 90%
 }
 
 .simple-item:hover .add-shop- {
     opacity: 1;
     height: 100%;
-    border-radius: 0;
+    border-radius: 0
 }
 
 .simple-item:hover {
     transform: none;
-    box-shadow: 0 5px 19px -5px #00000017;
+    box-shadow: 0 5px 19px -5px #00000017
 }
 
 .simple-item .meta li {
     border-radius: 8px;
     font-size: 12px;
-    color: white;
+    color: #fff;
     font-weight: 600 !important;
     padding: 2px 6px;
-    margin-bottom: 5px;
+    margin-bottom: 5px
 }
 
 .simple-item .meta li span {
-    font-weight: 600 !important;
-
+    font-weight: 600 !important
 }
 
 .simple-item * {
-    transition: 0.2s;
+    transition: 0.2s
 }
 
 .simple-item .body {
-    padding: 17px 25px;
+    padding: 17px 25px
 }
 
 .simple-item .body .model {
     font-size: 13px;
-    color: #666666;
-    margin: 6px 0;
+    color: #666;
+    margin: 6px 0
 }
 
 .slider-connect {
@@ -1576,34 +1592,42 @@ body.auth #salamat-logo {
 
 .range-price-f .price {
     margin: 0 8px;
-    color: #0071e3;
+    color: #0071e3
 }
 
 .range-price-f {
-    padding: 28px 0px 7px;
-    text-align: center;
+    padding: 8px 0 7px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
-
+.ifp{
+    border: unset!important;
+    text-align: center;
+    width: 90px;
+    margin: 0;
+    color: #0071e3;
+}
 .change-filter {
     cursor: pointer;
     background: #0071e3;
-    color: white;
+    color: #fff;
     border-radius: 10px;
     padding: 10px;
     font-size: 16px;
     text-align: center;
     position: relative;
     margin-top: 16px;
-    transition: 0.2s;
+    transition: 0.2s
 }
 
 .change-filter svg {
     position: absolute;
-    right: 15px;
+    right: 15px
 }
 
 .change-filter:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px)
 }
 
 .simple-item .price {
@@ -1613,17 +1637,17 @@ body.auth #salamat-logo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    font-size: 17px;
+    font-size: 17px
 }
 
 .price .old {
-    color: #bbbbbb;
+    color: #bbb;
     text-decoration: unset;
-    margin-bottom: 2px;
+    margin-bottom: 2px
 }
 
 .simple-item .price span {
-    font-size: 100%;
+    font-size: 100%
 }
 
 .simple-item .body .title {
@@ -1631,8 +1655,8 @@ body.auth #salamat-logo {
     font-size: 15px;
     text-align: right;
     margin: 0;
-    color: black;
-    font-weight: normal;
+    color: #000;
+    font-weight: 400
 }
 
 .simple-item .body .basket {
@@ -1640,26 +1664,25 @@ body.auth #salamat-logo {
     width: 50px;
     height: 50px;
     background: #094873;
-    color: white;
+    color: #fff;
     border-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .simple-item .body .basket svg {
     width: 24px;
-    height: 24px;
+    height: 24px
 }
 
 .simple-item .body .basket:hover svg.b {
-    animation: scale-wow 0.5s;
+    animation: scale-wow 0.5s
 }
 
 .simple-item .body .basket:hover {
     background: #8ed557;
-    box-shadow: 1px 4px 8px 1px #0000002e;
-
+    box-shadow: 1px 4px 8px 1px #0000002e
 }
 
 .simple-item .body .price-box {
@@ -1667,37 +1690,37 @@ body.auth #salamat-logo {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #e5e9f0;
-    padding-bottom: 18px;
+    padding-bottom: 18px
 }
 
 .simple-item .buttons {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 .simple-item .buttons span {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 13px 6px 0;
+    margin: 13px 6px 0
 }
 
 .simple-item .buttons span:not(.l):hover {
     color: #346284;
-    animation: scale-wow 0.5s;
+    animation: scale-wow 0.5s
 }
 
 .circle-hover:before {
     content: "";
     display: block;
     width: 0;
-    height: 0px;
+    height: 0;
     position: absolute;
     background: #004b7e2e;
     z-index: 0;
     transition: 0.2s;
-    border-radius: 25px;
+    border-radius: 25px
 }
 
 .circle-hover:hover:before {
@@ -1708,21 +1731,21 @@ body.auth #salamat-logo {
     position: absolute;
     background: #004b7e2e;
     z-index: 0;
-    border-radius: 25px;
+    border-radius: 25px
 }
 
 .simple-item .buttons span svg {
     width: 20px;
     height: 20px;
-    color: #4d4d4d;
+    color: #4d4d4d
 }
 
 .simple-item .meta li {
-    background: #527e9d;
+    background: #527e9d
 }
 
 .bg-l {
-    overflow: hidden;
+    overflow: hidden
 }
 
 .bg-l:before {
@@ -1732,23 +1755,23 @@ body.auth #salamat-logo {
     content: "";
     position: absolute;
     background: radial-gradient(#bdb9b945, #9d9d9d21, #ffffff00, #ffffff00);
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
     left: var(--mouse-x, 0);
     top: var(--mouse-y, 0);
     transform: translateX(-50%) translateY(-50%);
-    border-radius: 100px;
+    border-radius: 100px
 }
 
 .bg-l:hover:before {
     opacity: 1;
     width: 100%;
     height: 0;
-    padding-bottom: 100%;
+    padding-bottom: 100%
 }
 
 .simple-item .cover ul.badge li.s {
-    padding: 0;
+    padding: 0
 }
 
 .simple-item .cover ul.badge li.s .star {
@@ -1758,7 +1781,7 @@ body.auth #salamat-logo {
     padding: 0;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 2px 3px 18px 1px #0000001a;
+    box-shadow: 2px 3px 18px 1px #0000001a
 }
 
 .simple-item .cover ul.badge li.s .star .icon {
@@ -1767,52 +1790,52 @@ body.auth #salamat-logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 9px;
+    padding: 9px
 }
 
 .simple-item .cover ul.badge li.s .star .text {
     width: 100%;
-    background: white;
+    background: #fff;
     color: #626262;
     text-align: center;
     height: 0;
-    padding: 0;
+    padding: 0
 }
 
 .simple-item:hover .cover ul.badge li.s .star .text {
     height: auto;
-    padding: 6px 0;
+    padding: 6px 0
 }
 
 .product-box .bbox {
-    border-color: #e6e9f0;
+    border-color: #e6e9f0
 }
 
 .product-box {
     padding: 23px 25px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row
 }
 
 .product-box hr {
-    border-top: 1px solid white;
-    margin: 0 17px;
+    border-top: 1px solid #fff;
+    margin: 0 17px
 }
 
 .mw-100 {
-    max-width: 100%;
+    max-width: 100%
 }
 
 .product-box .buttons ul.badge {
-    margin: 0;
+    margin: 0
 }
 
 .product-box .buttons ul.badge li {
-    list-style-type: none;
+    list-style-type: none
 }
 
 .product-box .buttons ul.badge li.s {
-    padding: 0;
+    padding: 0
 }
 
 .product-box .buttons ul.badge li.s .star {
@@ -1823,45 +1846,45 @@ body.auth #salamat-logo {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 2px 3px 18px 1px #0000001a;
-    margin-bottom: 12px;
+    margin-bottom: 12px
 }
 
 .product-box .buttons ul.badge li.s .star .icon {
     background: #8ed557;
-    color: white;
+    color: #fff;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 9px;
+    padding: 9px
 }
 
 .product-box .buttons ul.badge li.s .star.percent .icon {
-    background: #f3a600;
+    background: #f3a600
 }
 
 .product-box .buttons ul.badge li.s .star .text {
     width: 100%;
-    background: white;
+    background: #fff;
     color: #626262;
     text-align: center;
     padding: 7px;
     font-size: 11px;
-    line-height: 1;
+    line-height: 1
 }
 
 .product-box .buttons ul.badge li.s .star.percent .text {
     color: #f3a600;
     font-size: 18px;
-    padding: 9px 5px;
+    padding: 9px 5px
 }
 
 .product-box .buttons ul.badge li.s .star.diactive .icon {
-    background: #7a7a7a;
+    background: #7a7a7a
 }
 
 .product-box .buttons ul.badge li div.bs div:nth-child(2n) {
-    margin: 16px 0;
+    margin: 16px 0
 }
 
 .product-box .buttons ul.badge li div.bs {
@@ -1872,8 +1895,7 @@ body.auth #salamat-logo {
     border-radius: 38px;
     margin: 19px 0 13px;
     padding: 23px 0 17px;
-    color: #555555;
-
+    color: #555
 }
 
 .product-box .buttons span {
@@ -1881,23 +1903,23 @@ body.auth #salamat-logo {
     color: #363636;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .product-box .buttons {
     margin-left: 24px;
     margin-right: -10px;
-    width: 42px;
+    width: 44px
 }
 
 .product-box .buttons .circle-hover:hover {
-    color: #3a5a70b5;
+    color: #3a5a70b5
 }
 
 .product-box .buttons .circle-hover:hover:before {
     width: 38px;
     height: 38px;
-    z-index: 0;
+    z-index: 0
 }
 
 .product-box .name h1 {
@@ -1908,7 +1930,7 @@ body.auth #salamat-logo {
     margin-bottom: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: nowrap
 }
 
 .product-box .name-en .zm {
@@ -1927,7 +1949,7 @@ body.auth #salamat-logo {
     align-items: center;
     justify-content: center;
     position: relative;
-    white-space: nowrap;
+    white-space: nowrap
 }
 
 .product-box .name-en .nm {
@@ -1935,24 +1957,24 @@ body.auth #salamat-logo {
     width: unset;
     margin-top: 8px;
     font-size: 16px;
-    color: #474747;
+    color: #474747
 }
 
 .product-box .name-en .zm svg {
     margin-left: 6px;
-    width: 17px;
+    width: 17px
 }
 
 .product-box .name-en {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-top: 13px;
+    margin-top: 13px
 }
 
 .product-box .last-update {
     user-select: none;
-    background: #ffffff;
+    background: #fff;
     border-radius: 20px;
     padding: 5px 13px;
     font-size: 14px;
@@ -1962,13 +1984,13 @@ body.auth #salamat-logo {
     position: relative;
     box-shadow: 3px 1px 20px -7px #00000036;
     max-width: 100%;
-    width: auto;
+    width: auto
 }
 
 .product-box .last-update svg {
     width: 18px;
     height: 18px;
-    margin-left: 9px;
+    margin-left: 9px
 }
 
 .star-rating {
@@ -1978,29 +2000,29 @@ body.auth #salamat-logo {
     font-size: .9375rem;
     justify-content: flex-start;
     flex-direction: row;
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 .text-l {
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: nowrap
 }
 
 .mt50 {
-    margin-top: 50px;
+    margin-top: 50px
 }
 
 .product-box .price {
     font-size: 25px;
     font-weight: 800;
-    color: #39435c;
+    color: #39435c
 }
 
 .product-box .price span {
     margin-right: 3px;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 18px
 }
 
 .product-box .old {
@@ -2010,7 +2032,7 @@ body.auth #salamat-logo {
     text-decoration: none;
     font-size: 20px;
     text-decoration-color: #bcbcbc;
-    text-align: right;
+    text-align: right
 }
 
 .product-box .old:before {
@@ -2020,7 +2042,7 @@ body.auth #salamat-logo {
     height: 1px;
     background: #aaaaaa9c;
     position: absolute;
-    top: 50%;
+    top: 50%
 }
 
 .product-box .d-add-shop .count-box {
@@ -2030,7 +2052,7 @@ body.auth #salamat-logo {
     padding: 7px;
     user-select: none;
     margin-top: 22px;
-    width: 30%;
+    width: 30%
 }
 
 .product-box .d-add-shop .count-box .count {
@@ -2040,14 +2062,14 @@ body.auth #salamat-logo {
     padding: 0;
     border: none;
     margin: 0;
-    display: inline;
+    display: inline
 }
 
 .product-box .d-add-shop {
     width: auto;
     display: inline-flex;
     flex-wrap: wrap;
-    max-width: 330px;
+    max-width: 330px
 }
 
 .product-box .d-add-shop .count-box .btn {
@@ -2055,11 +2077,11 @@ body.auth #salamat-logo {
     height: 24px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .product-box .d-add-shop .count-box .btn.circle-hover:before {
-    z-index: 0;
+    z-index: 0
 }
 
 .product-box .d-add-shop .add {
@@ -2067,7 +2089,7 @@ body.auth #salamat-logo {
     align-items: center;
     justify-content: center;
     background: #8ed557;
-    color: white;
+    color: #fff;
     padding: 12px;
     margin-right: 13px;
     border-radius: 8px;
@@ -2076,21 +2098,21 @@ body.auth #salamat-logo {
     width: 197px;
     margin-top: 22px;
     transition: 0.2s;
-    width: 66%;
+    width: 66%
 }
 
 .product-box .d-add-shop .add svg {
-    margin-left: 5px;
+    margin-left: 5px
 }
 
 .product-box .d-add-shop .add span {
     display: inline-flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .product-box .d-add-shop .add:hover {
-    background: #6faf3d;
+    background: #6faf3d
 }
 
 .info-orng {
@@ -2106,11 +2128,11 @@ body.auth #salamat-logo {
     justify-content: flex-start;
     position: relative;
     white-space: nowrap;
-    margin-top: 16px;
+    margin-top: 16px
 }
 
 .info-orng svg {
-    margin-left: 10px;
+    margin-left: 10px
 }
 
 .product-page .meta-box ul li {
@@ -2118,41 +2140,41 @@ body.auth #salamat-logo {
     align-items: center;
     margin-bottom: 12px;
     flex-wrap: wrap;
-    font-size: 14px;
+    font-size: 14px
 }
 
 .product-page .meta-box ul li span {
     min-width: unset;
     color: #454f62;
     font-weight: 600;
-    display: flex;
+    display: flex
 }
 
 .product-page .meta-box ul li span svg {
     width: 20px;
-    height: 20px;
+    height: 20px
 }
 
 .product-page .meta-box ul li a {
-    color: #595959;
+    color: #595959
 }
 
 .product-page .meta-box {
-    margin-top: 12px;
+    margin-top: 12px
 }
 
 .product-box .more-features {
     background: #f3f6fd;
     padding: 15px;
-    border-radius: 16px;
+    border-radius: 16px
 }
 
 .product-page .more-features ul {
-    margin-right: 27px;
+    margin-right: 27px
 }
 
 .product-page .comment-info .more-features ul {
-    margin-right: 15px;
+    margin-right: 15px
 }
 
 .product-page .more-features ul li {
@@ -2162,20 +2184,20 @@ body.auth #salamat-logo {
     font-size: 13px;
     align-items: center;
     color: #4c5366;
-    margin-bottom: 6px;
+    margin-bottom: 6px
 }
 
 .product-page .comment-info .more-features ul li {
-    font-size: 14px;
+    font-size: 14px
 }
 
 .product-page .more-features ul li.title {
     font-size: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 15px
 }
 
 .product-page .more-features ul li:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0
 }
 
 .product-page .more-features ul li:before {
@@ -2186,28 +2208,28 @@ body.auth #salamat-logo {
     width: 7px;
     height: 7px;
     background: #c3c9d7;
-    border-radius: 14px;
+    border-radius: 14px
 }
 
 .product-page .comment-info .more-features ul li:before {
     background: #faaa02;
     width: 5px;
     height: 5px;
-    right: -14px;
+    right: -14px
 }
 
 .product-page .more-features ul li.title:before {
     width: 10px;
     height: 5px;
-    background: #faaa02;
+    background: #faaa02
 }
 
 .product-box > .mw-p {
-    max-width: calc(100% - 72px);
+    max-width: calc(100% - 72px)
 }
 
 .product-box .contact {
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 .product-box .contact .whatsapp, .product-box .contact .telegram, .product-box .contact .call {
@@ -2221,39 +2243,39 @@ body.auth #salamat-logo {
     word-spacing: -1px;
     transition: 0.2s;
     margin-bottom: 15px;
-    font-weight: 600;
+    font-weight: 600
 }
 
 .product-box .contact .call {
-    color: #4e6ab0;
+    color: #4e6ab0
 }
 
 .product-box .contact .telegram {
-    color: #2ca4e1;
+    color: #2ca4e1
 }
 
 .product-box .contact .whatsapp svg, .product-box .contact .telegram svg, .product-box .contact .call svg {
-    margin-left: 8px;
+    margin-left: 8px
 }
 
 .product-box .contact .whatsapp:hover {
     background: #2eba40;
-    color: white;
+    color: #fff
 }
 
 .product-box .contact .telegram:hover {
     background: #2ca4e1;
-    color: white;
+    color: #fff
 }
 
 .product-box .contact .call:hover {
     background: #4e6ab0;
-    color: white;
+    color: #fff
 }
 
 .product-box .send-day {
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
 .product-box .send-day .icon {
@@ -2265,12 +2287,11 @@ body.auth #salamat-logo {
     width: 47px;
     height: 47px;
     justify-content: center;
-    margin: 19px 0 13px 15px;
+    margin: 19px 0 13px 15px
 }
 
 .product-page .product-icons {
-    padding: 40px;
-
+    padding: 40px
 }
 
 .product-page .product-icons ul {
@@ -2279,31 +2300,31 @@ body.auth #salamat-logo {
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-around
 }
 
 .product-page .product-icons ul li {
     margin: 0;
-    list-style-type: none;
+    list-style-type: none
 }
 
 .product-page .product-icons ul li .item {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column
 }
 
 .product-page .product-icons ul li .item .icon svg {
     width: 50px;
-    height: 50px;
+    height: 50px
 }
 
 .product-page .product-tabs .title-tabs {
     list-style-type: none;
     margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: center
 }
 
 .product-page .product-tabs .title-tabs li > a > div {
@@ -2315,7 +2336,7 @@ body.auth #salamat-logo {
     padding: 15px 23px;
     border-radius: 10px;
     box-shadow: 0 1px 20px -4px #0000001a;
-    margin: 10px;
+    margin: 10px
 }
 
 .title-tabs .tabs-title > a {
@@ -2323,26 +2344,26 @@ body.auth #salamat-logo {
     display: unset;
     font-size: unset;
     line-height: unset;
-    padding: 0;
+    padding: 0
 }
 
 .product-page .product-tabs .title-tabs li > a > div .icon svg {
     width: 28px;
-    height: 28px;
+    height: 28px
 }
 
 .product-page .product-tabs .title-tabs li.is-active > a > div, .product-page .product-tabs .title-tabs li > a > div:hover {
     background: #094873;
-    color: white;
+    color: #fff
 }
 
 .product-page .product-info {
-    padding: 15px 15px 23px;
+    padding: 15px 15px 23px
 }
 
 .product-page .product-info p {
     line-height: 28px;
-    font-size: 15px;
+    font-size: 15px
 }
 
 .product-page .product-info > .title {
@@ -2352,8 +2373,7 @@ body.auth #salamat-logo {
     display: flex;
     position: relative;
     align-items: center;
-    margin-bottom: 20px;
-
+    margin-bottom: 20px
 }
 
 .product-page .product-info > .title:before {
@@ -2364,22 +2384,22 @@ body.auth #salamat-logo {
     height: 5px;
     background: #094873;
     border-radius: 45px;
-    right: 0;
+    right: 0
 }
 
 .product-page .product-info.comment-show > .title:before {
-    background: #094873;
+    background: #094873
 }
 
 #app-feature-item .item {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 12px;
+    margin-bottom: 12px
 }
 
 #app-feature-item .item div.name svg {
-    margin-left: 10px;
+    margin-left: 10px
 }
 
 #app-feature-item .item div.name {
@@ -2389,7 +2409,7 @@ body.auth #salamat-logo {
     width: 30%;
     color: #4d4d4d;
     font-size: 15px;
-    margin-left: 10px;
+    margin-left: 10px
 }
 
 #app-feature-item .item div.text {
@@ -2399,52 +2419,52 @@ body.auth #salamat-logo {
     width: 100%;
     color: #4d4d4d;
     font-size: 15px;
-    margin-left: 10px;
+    margin-left: 10px
 }
 
 .product-page .comment-info {
     background: #094873;
     border-radius: 10px;
-    padding: 10px;
+    padding: 10px
 }
 
 .product-page .comment-info .product-info .title {
     font-size: 18px;
     font-weight: 500;
-    color: #43535e;
+    color: #43535e
 }
 
 .product-page .comment-info .product-info .title2 {
     font-size: 15px;
     text-align: center;
-    margin: 10px 0px 7px;
-    font-weight: 400;
+    margin: 10px 0 7px;
+    font-weight: 400
 }
 
 .product-page .comment-info .product-info {
     padding: 11px 20px;
-    background: #ffffff;
-    border-radius: 10px;
+    background: #fff;
+    border-radius: 10px
 }
 
 .product-page .comment-new {
-    margin-top: 25px;
+    margin-top: 25px
 }
 
 .product-page .comment-new .title svg {
     color: #4d71ff;
-    margin-left: 10px;
+    margin-left: 10px
 }
 
 .product-page .comment-new .title {
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 14px
 }
 
 .product-page .comment-new .subtitle {
     line-height: 3;
-    font-size: 14px;
+    font-size: 14px
 }
 
 .product-page .comment-new .body .star {
@@ -2456,69 +2476,68 @@ body.auth #salamat-logo {
     justify-content: space-between;
     box-shadow: 0 2px 16px -12px #00000059;
     border-radius: 10px;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .product-page .comment-new .body .star .star-rating {
-    margin-top: 0;
+    margin-top: 0
 }
 
 .back-stars {
     color: #d3ced2;
-    font-size: 14px;
+    font-size: 14px
 }
 
 .m0 {
-    margin: 0;
+    margin: 0
 }
 
 .mt30 {
-    margin-top: 30px;
+    margin-top: 30px
 }
 
 .product-page .comment-new .body .input-g {
-    padding: 6px;
+    padding: 6px
 }
 
 .product-page .comment-new .body .input-g span {
-
     line-height: 3;
-    font-size: 14px;
+    font-size: 14px
 }
 
 .button.success {
-    background: #094873;
+    background: #094873
 }
 
 .button.success:hover {
-    background: #094873ab;
+    background: #094873ab
 }
 
 .p0 {
-    padding: 0;
+    padding: 0
 }
 
 .p2012 {
-    padding: 20px 12px;
+    padding: 20px 12px
 }
 
 .product-page .comment-show {
     background: #f2f6fc;
     border-radius: 10px;
-    padding: 40px 20px;
+    padding: 40px 20px
 }
 
 .product-page .comment-show .body .item {
-    background: white;
+    background: #fff;
     border-radius: 10px;
     padding: 17px 23px;
-    box-shadow: 0 0 21px -6px #00000014;
+    box-shadow: 0 0 21px -6px #00000014
 }
 
 .product-page .comment-show .body .item .info {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center
 }
 
 .product-page .comment-show .body .item .info .user-info {
@@ -2527,55 +2546,55 @@ body.auth #salamat-logo {
     width: 100%;
     justify-content: space-between;
     padding: 13px 0 18px;
-    border-bottom: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7
 }
 
 .product-page .comment-show .body .item .info img {
     width: 37px;
     height: 37px;
     border-radius: 50px;
-    margin-left: 19px;
+    margin-left: 19px
 }
 
 .product-page .comment-show .body .item p {
     padding: 15px;
     margin-right: 44px;
-    color: #555b6e;
+    color: #555b6e
 }
 
 .product-page .comment-show .body .item .info .user-info .user-name span:first-child {
     font-size: 15px;
     font-weight: 600;
-    color: #555b6e;
+    color: #555b6e
 }
 
 .product-page .comment-show .body .item .info .user-info .user-name span:last-child {
     font-size: 15px;
-    color: #555b6e;
+    color: #555b6e
 }
 
 .product-page .comment-show .body .item .star-rating {
-    margin: 0;
+    margin: 0
 }
 
 .mw-300 {
-    max-width: 310px;
+    max-width: 310px
 }
 
 .diactive .button.icon i {
     font-size: 156%;
-    right: 21px;
+    right: 21px
 }
 
 .diactive .button.expanded {
     padding: 16px;
-    font-size: 15px;
+    font-size: 15px
 }
 
 .product-page .timer {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around
 }
 
 .product-page .timer .item {
@@ -2583,12 +2602,12 @@ body.auth #salamat-logo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 12px 4px 4px;
+    margin: 12px 4px 4px
 }
 
 .product-page .timer .item:first-child span:first-child {
     background: #094873;
-    color: white;
+    color: #fff
 }
 
 .product-page .timer .item span:first-child {
@@ -2600,17 +2619,17 @@ body.auth #salamat-logo {
     padding: 2px;
     font-size: 13px;
     box-shadow: 0 2px 20px -6px #00000042;
-    background: #ffffff;
+    background: #fff;
     color: #40475a;
     height: 49px;
-    justify-content: center;
+    justify-content: center
 }
 
 .product-page .timer .item span:last-child {
     font-size: 12px;
     margin-top: 9px;
     color: #7c828e;
-    font-weight: 600;
+    font-weight: 600
 }
 
 .product-page .timer .item span:first-child svg {
@@ -2618,50 +2637,50 @@ body.auth #salamat-logo {
     width: 17px;
     height: 0;
     margin-bottom: 2px;
-    margin-top: 6px;
+    margin-top: 6px
 }
 
 .product-page .timer .item:first-child span:first-child svg {
-    height: 17px;
+    height: 17px
 }
 
 .product-page .timer:hover .item:first-child span:first-child svg {
-    height: 0;
+    height: 0
 }
 
 .product-page .timer:hover .item:first-child span:first-child {
-    background: #ffffff;
+    background: #fff;
     color: #40475a
 }
 
 .product-page .timer .item:hover span:first-child svg {
-    height: 17px !important;
+    height: 17px !important
 }
 
 .product-page .timer .item:hover span:first-child {
     background: #094873 !important;
-    color: white !important;
+    color: white !important
 }
 
 .product-page .timer .item span:first-child div.hid {
-    animation: timer 0.2s;
+    animation: timer 0.2s
 }
 
 @keyframes timer {
     0% {
-        transform: translateY(0px);
-        opacity: 1;
+        transform: translateY(0);
+        opacity: 1
     }
     50% {
         transform: translateY(10px);
-        opacity: 0;
+        opacity: 0
     }
     51% {
-        transform: translateY(-10px);
+        transform: translateY(-10px)
     }
     100% {
-        transform: translateY(0px);
-        opacity: 1;
+        transform: translateY(0);
+        opacity: 1
     }
 }
 
@@ -2675,25 +2694,25 @@ body.auth #salamat-logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 .multi-price .item span {
-    z-index: 1;
+    z-index: 1
 }
 
 .multi-price .item .name {
-    margin-right: 15px;
+    margin-right: 15px
 }
 
 .multi-price .item .per {
     background: #f3a600;
-    color: white;
+    color: #fff;
     border-radius: 10px;
     text-align: center;
-    padding: 0px 7px 0px 14px;
+    padding: 0 7px 0 14px;
     margin-right: 8px;
-    font-size: 12px;
+    font-size: 12px
 }
 
 .multi-price .item:before {
@@ -2706,11 +2725,11 @@ body.auth #salamat-logo {
     width: 9px;
     height: 9px;
     right: 15px;
-    margin-top: -3px;
+    margin-top: -3px
 }
 
 .multi-price .item.active span {
-    color: white;
+    color: #fff
 }
 
 .multi-price .item.active:before {
@@ -2721,26 +2740,25 @@ body.auth #salamat-logo {
     border-radius: 10px;
     left: 0;
     right: 0;
-    z-index: 0;
+    z-index: 0
 }
 
 .d-inline-block {
-    display: inline-block;
+    display: inline-block
 }
 
 .w100px {
-    width: 100px;
+    width: 100px
 }
 
 .breadcrumbs li:not(:last-child):after {
     margin: 0 10px;
-    color: #3b4159;
+    color: #3b4159
 }
 
 .text-red, .text-red svg {
-    color: red !important;
+    color: red !important
 }
-
 
 .share-link-pop {
     position: fixed;
@@ -2751,7 +2769,7 @@ body.auth #salamat-logo {
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .dismiss {
@@ -2764,11 +2782,11 @@ body.auth #salamat-logo {
 
 .card-share-link {
     z-index: 2;
-    background: white;
+    background: #fff;
     padding: 27px 19px;
     position: relative;
     border-radius: 10px;
-    min-width: 600px;
+    min-width: 600px
 }
 
 .card-share-link .fa-times {
@@ -2777,20 +2795,20 @@ body.auth #salamat-logo {
     top: 12px;
     right: 12px;
     background: #0a4773;
-    color: white;
+    color: #fff;
     border-radius: 50px;
     width: 30px;
     height: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 .card-share-link .t {
     display: flex;
     align-items: center;
     position: relative;
-    margin: 16px 40px 30px;
+    margin: 16px 40px 30px
 }
 
 .product-aspk {
@@ -2799,19 +2817,19 @@ body.auth #salamat-logo {
     background: #fff;
     padding: 7px;
     box-sizing: border-box;
-    box-shadow: 0px 2px 6px #e2e5eaf2;
+    box-shadow: 0 2px 6px #e2e5eaf2;
     height: 50px;
     border-radius: 150px;
     margin-top: -15px;
     margin-left: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .product-aspk img {
     height: auto;
-    max-width: 100%;
+    max-width: 100%
 }
 
 .card-share-link .s {
@@ -2819,7 +2837,7 @@ body.auth #salamat-logo {
     width: auto !important;
     text-align: right;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 400
 }
 
 .card-share-link .n {
@@ -2828,7 +2846,7 @@ body.auth #salamat-logo {
     width: auto !important;
     background: #f2f6fc;
     border-radius: 10px;
-    padding: 2px 16px;
+    padding: 2px 16px
 }
 
 .card-share-link .t:before {
@@ -2840,12 +2858,12 @@ body.auth #salamat-logo {
     height: 5px;
     border-radius: 13px;
     top: 43%;
-    right: -22px;
+    right: -22px
 }
 
 .co, .copy {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .co .copy .link {
@@ -2855,7 +2873,7 @@ body.auth #salamat-logo {
     height: 35px;
     margin-left: 11px;
     font-size: 14px;
-    color: #898989;
+    color: #898989
 }
 
 .co .copy .btn-copy {
@@ -2865,50 +2883,50 @@ body.auth #salamat-logo {
     background: #ffdc00;
     height: 35px;
     width: 35px;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .co .copy .btn-copy svg {
-    width: 17px;
+    width: 17px
 }
 
 .co {
-    padding: 0 15px;
+    padding: 0 15px
 }
 
 .co .so {
-    display: flex;
+    display: flex
 }
 
 .co .so svg {
-    width: 17px;
+    width: 17px
 }
 
 .co .so span {
     transition: 0.2s;
     width: 35px;
     height: 35px;
-    color: white;
+    color: #fff;
     border-radius: 10px;
-    margin-left: 3px;
+    margin-left: 3px
 }
 
 .co .so span:hover {
-    filter: opacity(0.7);
+    filter: opacity(.7)
 }
 
 .co .so .telegram {
-    background: #2ca5e0;
+    background: #2ca5e0
 }
 
 .co .so .whatsapp {
-    background: #1bd741;
+    background: #1bd741
 }
 
 .product-page .woocommerce-message {
     background: #fff;
     padding-top: 32px;
-    padding-bottom: 27px;
+    padding-bottom: 27px
 }
 
 .woocommerce-error, .woocommerce-info, .woocommerce-message {
@@ -2920,14 +2938,14 @@ body.auth #salamat-logo {
     border-top: 3px solid #a46497;
     list-style: none outside;
     width: auto;
-    word-wrap: break-word;
+    word-wrap: break-word
 }
 
 .link-login {
     font-size: 14px;
     color: #757575;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.2s
 }
 
 .e-g-a {
@@ -2935,11 +2953,11 @@ body.auth #salamat-logo {
     flex-direction: column;
     align-items: center;
     margin-bottom: 16px;
-    margin-top: 32px;
+    margin-top: 32px
 }
 
 .e-g-a img {
-    width: 260px;
+    width: 260px
 }
 
 .e-g-a span {
@@ -2947,19 +2965,19 @@ body.auth #salamat-logo {
     max-width: 219px;
     text-align: center;
     line-height: 2;
-    color: #6a6a6a;
+    color: #6a6a6a
 }
 
 .link-login:hover {
     color: #2196f3;
-    text-decoration: underline;
+    text-decoration: underline
 }
 
 .woocommerce-error .wc-forward {
     background-color: #094873 !important;
     color: white !important;
     border-radius: 6px !important;
-    margin-top: -4px !important;
+    margin-top: -4px !important
 }
 
 .woocommerce-error, .woocommerce-info, .woocommerce-message {
@@ -2969,7 +2987,7 @@ body.auth #salamat-logo {
     border-radius: 10px;
     font-weight: 400;
     font-size: 15px !important;
-    color: #3b4359;
+    color: #3b4359
 }
 
 .woocommerce-error::before, .woocommerce-info::before, .woocommerce-message::before {
@@ -2985,14 +3003,13 @@ body.auth #salamat-logo {
     background: #094873;
     border-radius: 90px;
     margin-top: 8px;
-    margin-left: 10px;
+    margin-left: 10px
 }
 
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
     font-size: 100%;
     margin: 0;
     line-height: 1;
-
     position: relative;
     text-decoration: none;
     overflow: visible;
@@ -3006,9 +3023,8 @@ body.auth #salamat-logo {
     display: inline-block;
     background-image: none;
     box-shadow: none;
-    text-shadow: none;
+    text-shadow: none
 }
-
 
 .button.wc-forward {
     margin-top: -14px;
@@ -3018,12 +3034,11 @@ body.auth #salamat-logo {
     padding: 15px 20px;
     font-weight: 400;
     border-radius: 7px;
-    float: left;
+    float: left
 }
 
 .button.wc-forward.disabled {
-    cursor: not-allowed;
-
+    cursor: not-allowed
 }
 
 .fullLoading {
@@ -3036,21 +3051,21 @@ body.auth #salamat-logo {
     z-index: 1020000;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .fullLoading .loading-dot {
     width: 120px;
-    background: #ffffff;
+    background: #fff;
     border-radius: 12px;
     height: 100px;
-    padding-top: 16px;
+    padding-top: 16px
 }
 
 .tooltip-meta-v-sepid {
     position: absolute;
     background: #fff;
-    box-shadow: 0px 2px 7px #33343933;
+    box-shadow: 0 2px 7px #33343933;
     min-width: 120px;
     font-size: 15px;
     padding: 7px;
@@ -3063,17 +3078,17 @@ body.auth #salamat-logo {
     font-family: iranyekan;
     color: #3b4359;
     z-index: 100;
-    text-align: center;
+    text-align: center
 }
 
 .circle-hover:hover .tooltip-meta-v-sepid {
-    display: block;
+    display: block
 }
 
 .left-sepoid-product {
     float: right;
     width: 66%;
-    padding-right: 30px;
+    padding-right: 30px
 }
 
 .sepid-offer-403 {
@@ -3081,53 +3096,53 @@ body.auth #salamat-logo {
     width: 100%;
     border-bottom: 1px solid #F2F6FC;
     padding-bottom: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 30px
 }
 
 .right-new-123-1 {
     float: right;
     width: 33%;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .left-two-p-sepid {
     float: right;
     width: 60%;
     padding-left: 20px;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .right-new-123-1 .slider-wrapper._1 {
     margin: 16px;
     border-radius: 10px !important;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .right-new-123-1 .slider-wrapper._2 {
-    margin: 5px 7px;
+    margin: 5px 7px
 }
 
 .right-new-123-1 .slider-wrapper._2 {
     border-radius: 10px;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .right-two-p-sepid-asli {
     float: left;
-    width: 40%;
+    width: 40%
 }
 
 .zoom {
     background-position: 50% 50%;
-    cursor: zoom-in;
+    cursor: zoom-in
 }
 
 .zoom img:hover {
-    opacity: 0;
+    opacity: 0
 }
 
 .mt15 {
-    margin-top: 15px;
+    margin-top: 15px
 }
 
 .first-sepid-product-box {
@@ -3135,30 +3150,29 @@ body.auth #salamat-logo {
     width: 100%;
     padding: 25px;
     background: #fff;
-    box-shadow: 0px 2px 35px #3b43590f !important;
+    box-shadow: 0 2px 35px #3b43590f !important;
     border-radius: 15px;
-    /*margin-bottom: 25px;*/
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .meta-sepid-new-1 {
     float: right;
     width: 16.6%;
     text-align: center;
-    display: block;
+    display: block
 }
 
 .woocommerce img, .woocommerce-page img {
     height: auto;
-    max-width: 100%;
+    max-width: 100%
 }
 
 .meta-sepid-new-1 h6 {
-    margin: 0px;
+    margin: 0;
     font-size: 15px;
     color: #3b4359;
     font-weight: 400;
-    margin-top: 10px;
+    margin-top: 10px
 }
 
 .sgare-sepid-box {
@@ -3170,56 +3184,56 @@ body.auth #salamat-logo {
     font-size: 20px;
     padding: 16px 9px;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .head-page {
     width: 100%;
     background: #094873;
     position: relative;
-    padding: 15px 0px;
+    padding: 15px 0
 }
 
 .head-page h1 {
     display: block;
     color: #fff;
     font-size: 28px;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+    margin-block-start: .67em;
+    margin-block-end: .67em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: 700
 }
 
 .size {
     width: 1300px;
-    margin: auto;
+    margin: auto
 }
 
 .pro-1-2 {
     box-shadow: 0 5px 19px -5px #00000017 !important;
     background: #fff;
-    margin: 35px 0px;
+    margin: 35px 0;
     padding: 35px;
     border-radius: 15px;
     float: right;
     width: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .p50 {
-    padding: 50px;
+    padding: 50px
 }
 
 .mt-0 {
-    margin-top: 0;
+    margin-top: 0
 }
 
 #app-cart .route {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: row
 }
 
 #app-cart .route .item {
@@ -3227,21 +3241,21 @@ body.auth #salamat-logo {
     flex-direction: column;
     align-items: center;
     padding: 0 10px;
-    color: #e2e3e5;
+    color: #e2e3e5
 }
 
 #app-cart .route .item svg {
     width: 30px;
     height: 30px;
-    color: #d2d2d2;
+    color: #d2d2d2
 }
 
 #app-cart .route .item span {
     font-size: 12px;
     margin-top: 10px;
-    color: #999999;
+    color: #999;
     font-weight: 600;
-    text-align: center;
+    text-align: center
 }
 
 #app-cart .route .line {
@@ -3249,16 +3263,16 @@ body.auth #salamat-logo {
     width: 28%;
     height: 5px;
     background: #e2e3e5;
-    overflow: hidden;
+    overflow: hidden
 }
 
 #app-cart .route .item.active svg {
-    color: #292d32;
+    color: #292d32
 }
 
 #app-cart .route .item.active span {
     color: #4d4f52;
-    text-align: center;
+    text-align: center
 }
 
 #app-cart .route .line .bg {
@@ -3266,16 +3280,15 @@ body.auth #salamat-logo {
     background: #094873;
     height: 100%;
     width: 0%;
-    position: absolute;
+    position: absolute
 }
 
 #app-cart .empty {
-
     display: flex;
     justify-content: center;
     padding: 61px 61px 90px;
     flex-direction: column;
-    align-items: center;
+    align-items: center
 }
 
 #app-cart .empty .links .line {
@@ -3283,7 +3296,7 @@ body.auth #salamat-logo {
     height: 15px;
     background: #c4c4c4;
     display: inline-block;
-    margin: 0px 11px;
+    margin: 0 11px
 }
 
 #app-cart .empty .links {
@@ -3293,29 +3306,29 @@ body.auth #salamat-logo {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 #app-cart .empty img {
     width: 267px;
-    margin-left: 14px;
+    margin-left: 14px
 }
 
 #app-cart .empty .title-empty {
-    margin-top: 22px;
+    margin-top: 22px
 }
 
 #app-cart .empty .sub-title-empty {
     font-size: 13px;
     margin-top: 22px;
-    color: #5e5e5e;
+    color: #5e5e5e
 }
 
 .woocommerce-cart-holder {
     float: right;
     width: 70%;
     padding-left: 20px;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .cart-collaterals.sticky-sidebar {
@@ -3324,21 +3337,21 @@ body.auth #salamat-logo {
     background: #094873;
     padding: 10px;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .woocommerce-cart-holder .woocommerce-cart-form {
     background: #f2f6fc;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .woocommerce-cart-holder .woocommerce-cart-form .woocommerce-cart-form__contents {
     background: #fff;
-    border: 0px solid;
+    border: 0 solid;
     padding: 20px;
-    margin: 0px;
-    border-radius: 10px;
+    margin: 0;
+    border-radius: 10px
 }
 
 .woocommerce table.shop_table {
@@ -3347,19 +3360,19 @@ body.auth #salamat-logo {
     text-align: right;
     width: 100%;
     border-collapse: separate;
-    border-radius: 5px;
+    border-radius: 5px
 }
 
 .woocommerce table.shop_table th {
     font-weight: 700;
     padding: 9px 12px;
     line-height: 1.5em;
-    background: white;
-    border: none !important;
+    background: #fff;
+    border: none !important
 }
 
 #add_payment_method table.cart .product-thumbnail, .woocommerce-cart table.cart .product-thumbnail, .woocommerce-checkout table.cart .product-thumbnail {
-    min-width: 32px;
+    min-width: 32px
 }
 
 .woocommerce-cart-holder th:not(.product-remove,.product-thumbnail)::before {
@@ -3370,11 +3383,11 @@ body.auth #salamat-logo {
     float: right;
     border-radius: 90px;
     margin-top: 8px;
-    margin-left: 8px;
+    margin-left: 8px
 }
 
 #mySidenav .dmega .sub-menu:hover li:first-child a, .menu-header.sepid-menu-asli .dmega .sub-menu li:hover a, .dmega .sub-menu li.lins:first-child a, .seconds.time1.mini-1-time, .woocommerce-cart-holder .coupon button, .woocommerce-cart-holder .product-subtotal::before {
-    background: #094873 !important;
+    background: #094873 !important
 }
 
 .woocommerce-cart-holder .product-subtotal {
@@ -3384,13 +3397,13 @@ body.auth #salamat-logo {
 .woocommerce table.shop_table td {
     padding: 15px;
     font-size: 15px;
-    background: white;
+    background: #fff;
     border: none !important;
-    border-top: 1px solid #e8eff9 !important;
+    border-top: 1px solid #e8eff9 !important
 }
 
 .woocommerce table.shop_table td {
-    text-align: right;
+    text-align: right
 }
 
 .woocommerce a.remove {
@@ -3404,7 +3417,7 @@ body.auth #salamat-logo {
     color: red !important;
     text-decoration: none;
     font-weight: 700;
-    border: 0;
+    border: 0
 }
 
 .woocommerce a.remove {
@@ -3414,65 +3427,65 @@ body.auth #salamat-logo {
     line-height: 22px !important;
     height: 20px;
     width: 20px;
-    font-size: 20px;
+    font-size: 20px
 }
 
 .woocommerce-cart-holder .product-thumbnail img {
     background: #fff;
-    box-shadow: 0px 2px 10px #33354024 !important;
+    box-shadow: 0 2px 10px #33354024 !important;
     width: 60px !important;
     border-radius: 8px;
     padding: 10px;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .woocommerce img, .woocommerce-page img {
     height: auto;
-    max-width: 100%;
+    max-width: 100%
 }
 
 .woocommerce-Price-currencySymbol {
-    margin-right: 5px;
+    margin-right: 5px
 }
 
 .woocommerce .quantity .qty {
     width: unset;
     text-align: center;
     background: #f2f6fc;
-    border: 0px solid;
+    border: 0 solid;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 8px
 }
 
 .woocommerce-cart-holder .product-subtotal span {
     color: #3b4359;
-    font-weight: 400;
+    font-weight: 400
 }
 
 .woocommerce-cart-holder #coupon_code {
-    border: 0px solid !important;
+    border: 0 solid !important;
     font-size: 15px;
     padding: 9px 20px;
     width: unset !important;
     margin-left: 10px !important;
     float: right;
     border-radius: 8px;
-    height: 44px;
+    height: 44px
 }
 
 .woocommerce-cart-holder #coupon_code::placeholder {
-    color: #7d7d7e;
+    color: #7d7d7e
 }
 
 .product-price .amount {
     display: flex;
-    flex-direction: column;
+    flex-direction: column
 }
 
 .product-price .amount .old {
     text-decoration: line-through;
     font-size: 12px;
-    color: #939393;
+    color: #939393
 }
 
 #add_payment_method table.cart td.actions .coupon .input-text, .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text {
@@ -3481,14 +3494,14 @@ body.auth #salamat-logo {
     border: 1px solid #d3ced2;
     padding: 6px 6px 5px;
     margin: 0 0 0 4px;
-    outline: 0;
+    outline: 0
 }
 
 .woocommerce-cart-holder .actions {
     background: #ebeff7 !important;
-    border: 0px solid !important;
+    border: 0 solid !important;
     padding: 20px !important;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .woocommerce-cart-holder .coupon button {
@@ -3496,15 +3509,15 @@ body.auth #salamat-logo {
     font-weight: 400 !important;
     padding: 15px 20px !important;
     border-radius: 8px !important;
-    box-shadow: 0px 6px 15px #ecf0f7b8 !important;
+    box-shadow: 0 6px 15px #ecf0f7b8 !important;
     background: #094873 !important;
     color: #fff !important;
     line-height: 1;
-    border: 0;
+    border: 0
 }
 
 .bg-warning {
-    background: #f4ebeb;
+    background: #f4ebeb
 }
 
 .button.button_update_cart {
@@ -3513,28 +3526,28 @@ body.auth #salamat-logo {
     font-weight: 400 !important;
     padding: 15px 20px !important;
     border-radius: 8px !important;
-    box-shadow: 0px 6px 15px #ecf0f7b8 !important;
+    box-shadow: 0 6px 15px #ecf0f7b8 !important;
     color: #3b4359 !important;
     opacity: .5;
     cursor: not-allowed;
     float: left;
     display: flex !important;
-    align-items: center;
+    align-items: center
 }
 
 .button_update_cart svg {
     color: #f9ab00;
     width: 19px;
     height: 19px;
-    margin-left: 10px;
+    margin-left: 10px
 }
 
 .button_update_cart.active:hover {
-    background: #ffdc00 !important;
+    background: #ffdc00 !important
 }
 
 .button_update_cart.active:hover svg {
-    color: #094873;
+    color: #094873
 }
 
 .p-discount {
@@ -3545,17 +3558,17 @@ body.auth #salamat-logo {
     margin-right: 9px;
     direction: ltr;
     font-style: italic;
-    color: #474747;
+    color: #474747
 }
 
 .button.button_update_cart.active {
     opacity: 1;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .news-letter {
     float: left;
-    width: 100%;
+    width: 100%
 }
 
 .cart-collaterals-inner {
@@ -3564,27 +3577,27 @@ body.auth #salamat-logo {
     background: #fff;
     padding: 20px;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
     float: left;
-    width: 48%;
+    width: 48%
 }
 
 .cart-collaterals-inner h2 {
-    margin: 10px 0px 25px;
+    margin: 10px 0 25px;
     font-size: 20px;
     color: #3b4359;
-    font-weight: 400;
+    font-weight: 400
 }
 
 .woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
-    width: 100%;
+    width: 100%
 }
 
 .wc-proceed-to-checkout {
-    padding: 1em 0;
+    padding: 1em 0
 }
 
 .woocommerce a.button.alt {
@@ -3593,18 +3606,17 @@ body.auth #salamat-logo {
     font-weight: 400;
     border-radius: 8px;
     padding: 1em 0;
-    width: 100%;
+    width: 100%
 }
 
 .woocommerce a.button.alt:hover {
-    background-color: #3b4359;
+    background-color: #3b4359
 }
 
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
     font-size: 100%;
     margin: 0;
     line-height: 1;
-    /*cursor: pointer;*/
     position: relative;
     text-decoration: none;
     overflow: visible;
@@ -3618,7 +3630,7 @@ body.auth #salamat-logo {
     display: inline-block;
     background-image: none;
     box-shadow: none;
-    text-shadow: none;
+    text-shadow: none
 }
 
 .checkout.woocommerce-checkout #customer_details .col-1 {
@@ -3627,65 +3639,65 @@ body.auth #salamat-logo {
     background: #f2f6fc;
     padding: 10px;
     border-radius: 10px;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .checkout.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields {
-    background: #ffff;
+    background: #fff;
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .woocommerce .form-row .required {
     color: red;
     font-weight: 700;
     border: 0 !important;
-    text-decoration: none;
+    text-decoration: none
 }
 
 .woocommerce .form-row-first, .woocommerce .form-row-last, .woocommerce-page .form-row-first, .woocommerce-page .form-row-last {
     width: 47%;
-    overflow: visible;
+    overflow: visible
 }
 
 .checkout.woocommerce-checkout #customer_details {
     float: right;
     width: 70%;
     padding-left: 40px;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .cell-30-left {
     float: left;
-    width: 30%;
+    width: 30%
 }
 
 .nextstep {
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 .checkout.woocommerce-checkout #order_review {
     background: #d7e2f2;
     padding: 10px;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .woocommerce .form-row {
     padding: 3px;
-    margin: 0 0 6px;
+    margin: 0 0 6px
 }
 
 .woocommerce .form-row-first, .woocommerce-page .form-row-first {
-    float: right;
+    float: right
 }
 
 .woocommerce .form-row-last, .woocommerce-page .form-row-last {
-    float: left;
+    float: left
 }
 
 .woocommerce .form-row input.input-text, .woocommerce .form-row textarea {
-    height: 45px !important;
+    height: 45px !important
 }
 
 .address-manager {
@@ -3699,7 +3711,7 @@ body.auth #salamat-logo {
     border-radius: 6px;
     color: #979797;
     position: relative;
-    z-index: 1;
+    z-index: 1
 }
 
 .address-manager:before {
@@ -3712,15 +3724,15 @@ body.auth #salamat-logo {
     right: 0;
     top: 0;
     height: 100%;
-    background: #094873;
+    background: #094873
 }
 
 .address-manager:hover:before {
-    width: 100%;
+    width: 100%
 }
 
 .address-manager:hover {
-    color: white;
+    color: #fff
 }
 
 .checkout.woocommerce-checkout h3::before {
@@ -3731,13 +3743,13 @@ body.auth #salamat-logo {
     content: "";
     border-radius: 90px;
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 10px
 }
 
 .checkout_coupon {
-    border: 0px solid;
+    border: 0 solid;
     background: #f2f6fc;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .woocommerce .checkout_coupon, .woocommerce .login, .woocommerce .register {
@@ -3745,20 +3757,20 @@ body.auth #salamat-logo {
     padding: 20px;
     margin: 2em 0;
     text-align: right;
-    border-radius: 5px;
+    border-radius: 5px
 }
 
 .woocommerce-billing-fields .sub-title {
     font-size: 12px;
     margin: 6px 18px;
-    color: #5d6771;
+    color: #5d6771
 }
 
 .woocommerce-info.address {
     transition: 0.2s;
     margin-bottom: 12px;
     position: relative;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .woocommerce-info.address .content {
@@ -3767,43 +3779,43 @@ body.auth #salamat-logo {
     font-size: 13px;
     color: #434140;
     max-width: 85%;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .woocommerce-info.address .content .item {
     margin-left: 15px;
     display: flex;
     align-items: center;
-    margin-top: 8px;
+    margin-top: 8px
 }
 
 .woocommerce-info.address .content .item:nth-child(1) {
-    margin-right: 0px;
+    margin-right: 0
 }
 
 .woocommerce-info.address .content .icon {
     display: flex;
-    margin-left: 5px;
+    margin-left: 5px
 }
 
 .woocommerce-info.address .content .icon svg {
     width: 17px;
     height: 17px;
-    margin-bottom: 3px;
+    margin-bottom: 3px
 }
 
 .item-address-cart {
     transition: 0.2s;
     padding-right: 60px;
-    position: relative;
+    position: relative
 }
 
 .item-address-cart.active {
-    padding: 0;
+    padding: 0
 }
 
 .item-address-cart.active .woocommerce-info.address {
-    padding-right: 46px;
+    padding-right: 46px
 }
 
 .item-address-cart .selecting {
@@ -3811,7 +3823,7 @@ body.auth #salamat-logo {
     height: 100%;
     width: 100%;
     top: 0;
-    left: 0;
+    left: 0
 }
 
 .item-address-cart .selecting i {
@@ -3819,7 +3831,7 @@ body.auth #salamat-logo {
     position: absolute;
     font-size: 13px;
     color: #b9b9b9;
-    right: 16px;
+    right: 16px
 }
 
 .item-address-cart .selecting:after {
@@ -3834,7 +3846,7 @@ body.auth #salamat-logo {
     top: 50%;
     transform: translateY(-50%);
     right: 10px;
-    color: #c8d7e4;
+    color: #c8d7e4
 }
 
 .item-address-cart .selecting:before {
@@ -3848,27 +3860,26 @@ body.auth #salamat-logo {
     right: 10px;
     background: #0948730f;
     width: 27px;
-    height: 27px;
+    height: 27px
 }
 
 .item-address-cart.active .selecting:after {
     width: 100%;
     height: 100%;
-    right: 0;
+    right: 0
 }
 
 .item-address-cart.active .selecting:before {
     width: 100%;
     height: 100%;
-    right: 0;
+    right: 0
 }
 
 .item-address-cart.active .selecting i {
-    color: #3eaa3e;
+    color: #3eaa3e
 }
 
 .item-address-cart .edit {
-
     position: absolute;
     top: 33px;
     left: 27px;
@@ -3880,23 +3891,22 @@ body.auth #salamat-logo {
     justify-content: center;
     align-items: center;
     color: #8a8e91;
-    border: 2px solid #c8d7e4;
+    border: 2px solid #c8d7e4
 }
 
 .item-address-cart .edit svg {
     width: 18px;
-    height: 18px;
+    height: 18px
 }
 
 footer .bg-swip .box {
-    /*width: 18%;*/
-    text-align: center;
+    text-align: center
 }
 
 .checkout.woocommerce-checkout .order_review_heading {
     font-size: 17px;
     margin-block-start: 1em;
-    margin-block-end: 1em;
+    margin-block-end: 1em
 }
 
 .checkout.woocommerce-checkout .order_review_heading::before {
@@ -3907,17 +3917,17 @@ footer .bg-swip .box {
     background: #2962ff;
     border-radius: 90px;
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 10px
 }
 
 .checkout.woocommerce-checkout #order_review .shop_table.woocommerce-checkout-review-order-table {
-    border: 0px solid;
+    border: 0 solid;
     background: #fff;
     padding: 20px;
     box-sizing: border-box;
     margin-bottom: 10px !important;
     border-radius: 15px;
-    margin-top: 15px !important;
+    margin-top: 15px !important
 }
 
 .checkout.woocommerce-checkout #payment {
@@ -3925,34 +3935,34 @@ footer .bg-swip .box {
     padding: 6px;
     border-radius: 15px;
     margin-top: 30px !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 20px !important
 }
 
 .leaflet-touch .leaflet-control-attribution {
-    display: none;
+    display: none
 }
 
 .map {
     width: 100% !important;
     height: 270px !important;
     position: relative;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px
 }
 
 .info-map {
     font-size: 13px;
     padding: 12px 17px;
     font-weight: 600;
-    color: #51586b;
+    color: #51586b
 }
 
 .leaflet-left {
     bottom: 6px;
-    top: unset !important;
+    top: unset !important
 }
 
 .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
-    border: none !important;
+    border: none !important
 }
 
 .leaflet-touch .leaflet-bar a {
@@ -3962,39 +3972,39 @@ footer .bg-swip .box {
     box-shadow: 0 1px 4px 0 #0000004d;
     width: 27px;
     height: 27px;
-    line-height: 27px;
+    line-height: 27px
 }
 
 .nice-select ul {
     max-height: 250px;
     position: absolute;
-    background: white;
+    background: #fff;
     border: 1px solid #cfdcea;
     width: 100%;
     list-style-type: none;
     overflow-y: auto;
     border-radius: 4px;
     margin: 6px 0 0;
-    z-index: 2;
+    z-index: 2
 }
 
 .nice-select {
-    position: relative;
+    position: relative
 }
 
 .nice-select ul li {
-    padding: 4px 13px;
+    padding: 4px 13px
 }
 
 .nice-select ul li:hover {
-    color: white;
-    background: dodgerblue;
+    color: #fff;
+    background: dodgerblue
 }
 
 .cart-date .items, .cart-send .items {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 22px;
+    margin-top: 22px
 }
 
 .cart-date .items .item, .cart-send .items .item {
@@ -4006,11 +4016,11 @@ footer .bg-swip .box {
     align-items: center;
     margin: 5px;
     width: 31.33%;
-    position: relative;
+    position: relative
 }
 
 .cart-send .items .item {
-    padding: 22px 20px;
+    padding: 22px 20px
 }
 
 .cart-date .items .item:before, .cart-send .items .item:before {
@@ -4020,34 +4030,34 @@ footer .bg-swip .box {
     width: 17px;
     height: 17px;
     border-radius: 50px;
-    box-shadow: inset 0 0 0 1px #094873;
+    box-shadow: inset 0 0 0 1px #094873
 }
 
 .cart-send .items .item:before {
-    box-shadow: inset 0 0 0 1px #989898;
+    box-shadow: inset 0 0 0 1px #989898
 }
 
 .cart-date .items .item .text {
     font-size: 19px;
     color: #094873;
-    margin-right: 14px;
+    margin-right: 14px
 }
 
 .cart-send .items .item .text {
     font-size: 16px;
     color: #b1b1b1;
-    margin-right: 13px;
+    margin-right: 13px
 }
 
 .cart-send .items .item.active .text {
-    color: #5d5d5d;
+    color: #5d5d5d
 }
 
 .cart-date .items .item .content {
     padding-right: 15px;
     border-right: 2px solid #1d73ae;
     font-size: 14px;
-    margin-right: 16px;
+    margin-right: 16px
 }
 
 .cart-send .items .item .icon {
@@ -4056,33 +4066,32 @@ footer .bg-swip .box {
     left: 15px;
     border: 0;
     display: flex;
-    color: #c6c6c6;
+    color: #c6c6c6
 }
 
 .cart-send .items .item .icon svg {
-
     width: 54px;
-    height: 54px;
+    height: 54px
 }
 
 .cart-date .items .item.active {
-    background: #ebeef9;
+    background: #ebeef9
 }
 
 .cart-date .items .item.active:before {
-    box-shadow: inset 0 0 0 20px #094873;
+    box-shadow: inset 0 0 0 20px #094873
 }
 
 .cart-send .items .item.active {
-    background: #ebeef9;
+    background: #ebeef9
 }
 
 .cart-send .items .item.active:before {
-    box-shadow: inset 0 0 0 20px #094873;
+    box-shadow: inset 0 0 0 20px #094873
 }
 
 .cart-send .items .item.active .icon {
-    color: #094873;
+    color: #094873
 }
 
 .cart-new-address {
@@ -4093,26 +4102,26 @@ footer .bg-swip .box {
     display: flex;
     align-items: center;
     color: #a0a9b7;
-    justify-content: center;
+    justify-content: center
 }
 
 .cart-new-address .icon {
-    display: flex;
+    display: flex
 }
 
 .cart-new-address .icon svg {
     width: 30px;
     height: 30px;
-    margin-left: 10px;
+    margin-left: 10px
 }
 
 .cart-new-address .text {
-    font-size: 18px;
+    font-size: 18px
 }
 
 .cart-new-address:hover {
     background: #e5ecf5;
-    color: #8b8b8b;
+    color: #8b8b8b
 }
 
 .cart-finish {
@@ -4120,18 +4129,18 @@ footer .bg-swip .box {
     align-items: center;
     justify-content: space-between;
     margin-top: 30px;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .cart-finish .info .item a {
     margin: 0 3px;
-    color: #1a669a;
+    color: #1a669a
 }
 
 .cart-finish .info .item svg {
     width: 17px;
     height: 17px;
-    margin-left: 7px;
+    margin-left: 7px
 }
 
 .cart-finish .info .item {
@@ -4143,7 +4152,7 @@ footer .bg-swip .box {
     white-space: normal;
     flex-wrap: wrap;
     position: relative;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .cart-finish .info .item:before {
@@ -4156,21 +4165,21 @@ footer .bg-swip .box {
     border: 0;
     height: 15px;
     transition: 0.2s;
-    opacity: 0;
+    opacity: 0
 }
 
 .cart-finish .info .item.active {
     z-index: 2;
     padding: 3px 10px;
-    color: white;
+    color: #fff;
     --pluse-color: #094873;
-    --pluse-start: 0px;
+    --pluse-start: 0;
     --pluse-end: 4px;
     animation: pulse-color 0.6s;
     animation-delay: 0.25s;
     -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: cubic-bezier(0.73, 0.63, 0.65, 0.82);
-    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: cubic-bezier(.73, .63, .65, .82);
+    -webkit-animation-direction: alternate
 }
 
 .cart-finish .info .item.active:before {
@@ -4182,109 +4191,114 @@ footer .bg-swip .box {
     border-radius: 8px;
     height: 100%;
     z-index: -1;
-    opacity: 1;
+    opacity: 1
 }
 
 .cart-finish .info .item.active svg {
-    color: #67e76c;
+    color: #67e76c
 }
 
 .cart-finish .info .item.active a {
-    color: #03a9f4;
+    color: #03a9f4
 }
 
 .cart-finish .info {
     width: 70%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start
 }
 
 .cart-finish .nextstep {
     width: 30%;
-    padding-left: 60px;
+    padding-left: 60px
 }
 
 .bank .item {
     width: auto !important;
-    padding: 12px 22px !important;
+    padding: 12px 22px !important
 }
 
 .bank .item .icon {
     float: none !important;
     position: unset !important;
     margin-right: 22px;
-    background: white;
+    background: #fff;
     border-radius: 10px;
     overflow: hidden;
-    padding: 6px;
+    padding: 6px
 }
 
 .top-bar {
-    box-shadow: 0px 3px 20px -5px rgb(0 0 0 / 21%);
+    box-shadow: 0 3px 20px -5px rgb(0 0 0 / 21%)
 }
 
 .top-bar .sub {
-    background: #ffffff;
+    background: #fff;
     border-bottom: 1px solid #ebebebcf;
-    padding: 8px 0;
+    padding: 8px 0
 }
 
 .top-bar ul li {
     font-weight: 400;
-    color: #707070;
+    color: #707070
 }
 
 .top-bar .sub a {
     font-weight: 400;
     color: #707070;
-    padding: 4px 10px;
-
+    padding: 4px 10px
 }
 
 .top-bar .sub a:hover, .static-menu li a:hover {
     border-radius: 7px;
-    background: #eaf0f8!important;
+    background: #eaf0f8 !important
 }
-.ads-layout{
-    background-position: center!important;
+
+.ads-layout {
+    background-position: center !important;
     padding: 7px;
     border-bottom: 3px solid #094873;
-    background: #f2f6fc;
+    background: #f2f6fc
 }
-.see-ads{
-    background: white;
+
+.see-ads {
+    background: #fff;
     margin-right: 21px;
     padding: 6px 17px;
-    color: #094873;
+    color: #094873
 }
-.ads-layout .body .text{
+
+.ads-layout .body .text {
     display: flex;
     font-size: 13px;
-    align-items: center;
+    align-items: center
 }
-.ads-layout .body{
+
+.ads-layout .body {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center
 }
-.ads-layout .fa-times{
+
+.ads-layout .fa-times {
     font-size: 10px;
     border-radius: 6px;
-    border: 2px solid ;
+    border: 2px solid;
     width: 20px;
     height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 1px;
+    padding-left: 1px
 }
+
 .top-bar .top {
-    padding: 17px 0;
+    padding: 17px 0
 }
 
 #salamat-logo, a.logo {
-    height: 45px;
+    height: 45px
 }
 
 form.search-menu input {
@@ -4294,23 +4308,23 @@ form.search-menu input {
     padding: 0 21px;
     font-size: 13px;
     height: 50px;
-    margin: 3px 0;
+    margin: 3px 0
 }
 
 .top-bar ul li.line {
     width: 2px;
     height: 18px;
     background: #e8e8e8;
-    transform: translateY(5px);
+    transform: translateY(5px)
 }
 
 form.search-menu button {
     color: #bdbdbd;
-    top: 53%;
+    top: 53%
 }
 
 form.search-menu {
-    margin-right: 30px;
+    margin-right: 30px
 }
 
 .header-left-btns li .btnh {
@@ -4324,32 +4338,30 @@ form.search-menu {
     justify-content: center;
     border-radius: 50px;
     margin-right: 8px;
-    position: relative;
+    position: relative
 }
 
 .header-left-btns li .btnh svg {
     width: 25px;
-    height: 25px;
+    height: 25px
 }
 
 .header-left-btns li .btnh:hover svg {
-    animation: scale-wow 0.5s;
+    animation: scale-wow 0.5s
 }
 
 .header-left-btns li .login:hover svg, .sepid-mini-cart-header:hover a > svg {
-    animation: trans-b-wow 0.5s !important;
+    animation: trans-b-wow 0.5s !important
 }
 
 .header-left-btns li .login {
     width: auto;
     padding: 0 15px;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none
 }
 
 .fixed_login {
@@ -4361,7 +4373,7 @@ input::-webkit-inner-spin-button {
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .fixed_login .disabling {
@@ -4371,7 +4383,7 @@ input::-webkit-inner-spin-button {
     width: 100%;
     height: 100%;
     background: #3236399e;
-    z-index: 0;
+    z-index: 0
 }
 
 .fixed_login .auth-box {
@@ -4380,14 +4392,14 @@ input::-webkit-inner-spin-button {
     padding: 0;
     height: 0;
     opacity: 0;
-    transition: 0.3s;
+    transition: 0.3s
 }
 
 .fixed_login .auth-box.active {
     opacity: 1;
     height: unset;
     overflow: visible;
-    padding: 37px 27px;
+    padding: 37px 27px
 }
 
 .fixed_login .auth-box .fa-times {
@@ -4400,11 +4412,10 @@ input::-webkit-inner-spin-button {
     height: 25px;
     border-radius: 100px;
     display: flex;
-    color: white;
+    color: #fff;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
-
 
 .diactive_no {
     overflow: hidden;
@@ -4413,64 +4424,64 @@ input::-webkit-inner-spin-button {
     padding: 0;
     height: 0;
     opacity: 0;
-    transition: 0.3s;
+    transition: 0.3s
 }
 
 .diactive_no.active {
     opacity: 1;
     height: unset;
     overflow: visible;
-    padding: 23px 35px;
+    padding: 23px 35px
 }
 
 .diactive_no .title {
     font-weight: 600;
     font-size: 15px;
     padding: 15px 0;
-    border-bottom: 1px solid #dedede;
+    border-bottom: 1px solid #dedede
 }
 
 .diactive_no .list {
-    margin: 16px 0 0;
+    margin: 16px 0 0
 }
 
 .diactive_no .list li {
-    list-style-type: none;
+    list-style-type: none
 }
 
 .diactive_no input[type='number'] {
-    border: 0.1rem solid #dedede;
+    border: .1rem solid #dedede;
     border-radius: 3px;
     width: 100%;
     padding: 12px;
     direction: ltr;
-    margin-top: 11px;
+    margin-top: 11px
 }
 
 .diactive_no input[type='number']::placeholder {
-    color: #9d9d9d;
+    color: #9d9d9d
 }
 
 .diactive_no .list li label {
-    font-size: 12px;
+    font-size: 12px
 }
 
 input[type=number] {
-    -moz-appearance: textfield; /* Firefox */
+    -moz-appearance: textfield
 }
 
 .header-left-btns li .btnh.login svg {
-    margin-left: 4px;
+    margin-left: 4px
 }
 
 .header-left-btns li .btnh:hover {
-    box-shadow: inset 0 3px 10px -5px #00000069;
+    box-shadow: inset 0 3px 10px -5px #00000069
 }
 
 .header-left-btns li .btnh .num {
     position: absolute;
     right: 0;
-    background: white;
+    background: #fff;
     bottom: 0;
     box-shadow: 0 0 4px 0 #0000004a;
     height: 18px;
@@ -4478,24 +4489,24 @@ input[type=number] {
     padding: 3px 5px;
     border-radius: 5px;
     font-size: 10px;
-    justify-content: center;
+    justify-content: center
 }
 
 .static-menu {
-    height: 100%;
+    height: 100%
 }
 
 .static-menu li {
     display: inline-flex !important;
     align-items: center;
-    height: 100%;
+    height: 100%
 }
 
 .static-menu li a {
     transition: 0.2s;
     color: #494747;
     padding: 4px 10px;
-    border-radius: 7px;
+    border-radius: 7px
 }
 
 .menu-category {
@@ -4504,87 +4515,90 @@ input[type=number] {
     border-radius: 10px 10px 0 0;
     display: flex;
     align-content: center;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .menu-category span:nth-child(2) {
-    margin: 0 8px;
+    margin: 0 8px
 }
 
 .utb {
-    height: 195px;
+    height: 195px
 }
-.bg-banner{
+
+.bg-banner {
     padding: 22px;
-    margin: 22px auto;
+    margin: 22px auto
 }
-.bg-banner.grid-container{
-    border-radius: 21px;
+
+.bg-banner.grid-container {
+    border-radius: 21px
 }
-.landing-banner img.text{
+
+.landing-banner img.text {
     height: 100%;
-    padding: 30px;
+    padding: 30px
 }
-.landing-banner{
+
+.landing-banner {
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 20px
 }
+
 .desk-list {
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: nowrap;
-    width: 100%;
+    width: 100%
 }
 
 .top-bar .top .logo span {
-    color: white;
+    color: #fff;
     font-size: 9px;
     margin-top: 4px;
     margin-bottom: -7px;
     background: #094873;
     border-radius: 10px;
-    padding: 1px 14px;
+    padding: 1px 14px
 }
 
 .top-bar .top .logo {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start
 }
 
 .menu-category span:nth-child(3) {
     transition: 0.2s;
-    transform: rotate(180deg);
+    transform: rotate(180deg)
 }
 
 .menu-category:hover span:nth-child(3) {
-    transform: rotate(0deg);
+    transform: rotate(0deg)
 }
-.menu-category .main-cat{
 
-}
 .top-bar .bot {
-    padding-top: 12px;
+    padding-top: 12px
 }
 
 .menu-category span {
     display: flex;
-    align-content: center;
+    align-content: center
 }
 
 .search-cell {
-    width: 50% !important;
+    width: 50% !important
 }
 
 #menu-item-category {
     display: flex;
     flex-direction: column;
-    background: white;
+    background: #fff;
     box-shadow: 0 15px 20px -7px #00000052;
     position: absolute;
     width: 100%;
@@ -4592,66 +4606,74 @@ input[type=number] {
     padding-bottom: 15px;
     height: 550px;
     align-items: flex-start;
-    overflow: hidden;
-}
-.mega > ul {
-    max-height: 500px;
+    overflow: hidden
 }
 
-#menu-item-category *{
-    transition: 0.2s;
+.mega > ul {
+    max-height: 500px
 }
+
+#menu-item-category * {
+    transition: 0.2s
+}
+
 #menu-item-category .main {
     border-radius: 0 0 10px 10px;
     width: 20%;
     border-left: 1px solid rgb(233, 233, 233);
-    flex-direction: column;
+    flex-direction: column
 }
 
 #menu-item-category .child {
-    width: 70%;
+    width: 70%
 }
+
 .main-cats {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 3px;
-    padding: 8px 12px;
+    padding: 8px 12px
 }
-.main-cats .main-cat{
+
+.main-cats .main-cat {
     padding: 10px;
     width: 50%;
-    text-align: center;
+    text-align: center
 }
+
 .main-cats .main-cat div {
     padding: 18px;
     background: #e0e7f1;
     color: #094873;
     border-radius: 6px;
-    font-size: 26px;
+    font-size: 20px;
     transition: 0.2s;
     font-weight: 600;
-    cursor: pointer;
+    cursor: pointer
 }
-.child--item ul{
+
+.child--item ul {
     width: 25%;
     height: 100%;
     display: flex;
     flex-direction: column;
     padding-top: 11px;
-    border-left: 1px solid #00000012;
+    border-left: 1px solid #00000012
 }
-.child--item ul > li a{
+
+.child--item ul > li a {
     position: relative;
-    padding: 9px 43px 9px 6px;
+    padding: 7px 43px 7px 6px;
     font-size: 14px;
     display: flex;
     color: #000000d4;
     align-items: center;
     cursor: pointer;
-    font-weight: 300;
+    font-weight: 300
 }
+
 .child--item ul > li a:before {
     content: "";
     display: block;
@@ -4661,45 +4683,52 @@ input[type=number] {
     height: 6px;
     background: #e0e7f1;
     border-radius: 21px;
-    transition: 0.2s;
+    transition: 0.2s
 }
-.child--item ul > li a:hover ,.child--item ul > li a.active{
+
+.child--item ul > li a:hover, .child--item ul > li a.active {
     background: #f3f6fd;
     color: #094873;
-    font-weight: 500;
+    font-weight: 500
 }
-.child--item ul > li a:hover:before ,.child--item ul > li a.active:before{
-    background: #094873;
+
+.child--item ul > li a:hover:before, .child--item ul > li a.active:before {
+    background: #094873
 }
-.child--item .items{
+
+.child--item .items {
     width: 80%;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: flex-start
 }
+
 .child--item .img {
     position: absolute;
     width: 20%;
     height: 100%;
     display: flex;
     align-items: center;
-    left: 54px;
+    left: 54px
 }
-.child--item{
+
+.child--item {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     border-top: 1px solid #00000012;
     margin-top: 6px;
-    position: relative;
+    position: relative
 }
-.main-cats .main-cat  div.active,.main-cats .main-cat  div:hover {
+
+.main-cats .main-cat div.active, .main-cats .main-cat div:hover {
     color: #e0e7f1;
-    background: #094873;
+    background: #094873
 }
+
 .top-bar .bot .main > li > a:hover:after {
-    opacity: 0 !important;
+    opacity: 0 !important
 }
 
 .top-bar .bot .main > li > a {
@@ -4709,43 +4738,43 @@ input[type=number] {
     position: relative;
     transition: all .3s ease-in-out;
     width: 200px;
-    margin: 5px 15px 3px;
+    margin: 5px 15px 3px
 }
 
 .top-bar .bot .main > li:nth-child(1) > a {
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 #menu-item-category .mega {
-    background: white;
+    background: #fff;
     box-shadow: none;
     display: none;
-    padding: 0.625rem 1.25rem;
+    padding: .625rem 1.25rem;
     position: unset;
     width: 100%;
-    z-index: 9999;
+    z-index: 9999
 }
 
 .top-bar .bot .main > li > a {
     border-radius: 10px;
-    transition: 0.2s;
+    transition: 0.2s
 }
 
 .top-bar .bot .main > li > a:hover, .main-item-category.active {
     background: #094873;
     color: white !important;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .mega > ul > li {
     display: block;
-    margin: 10px 6px;
+    margin: 10px 6px
 }
 
 .mega > ul > li > a {
     color: #094873;
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
 .mega > ul > li > a:before {
@@ -4755,65 +4784,71 @@ input[type=number] {
     width: 10px;
     height: 5px;
     border-radius: 10px;
-    margin-left: 8px;
+    margin-left: 8px
 }
 
 .mega > ul > li > ul > li {
-    margin: 8px 6px;
+    margin: 8px 6px
 }
 
 .mega > ul > li > a:hover {
-    color: #0b304e;
+    color: #0b304e
 }
 
 .mega > ul > li > ul > li a:hover {
-    color: #434343;
+    color: #434343
 }
-footer{
+
+footer {
     position: relative;
-    overflow: hidden;
+    overflow: hidden
 }
-.footer-bottom{
+
+.footer-bottom {
     text-align: center;
     font-size: 13px;
     margin-top: -14px;
     margin-bottom: 12px;
-    color: #6d7e8c;
+    color: #6d7e8c
 }
-.img-footer img{
+
+.img-footer img {
     width: 100%;
     height: 100%;
-    border-right: 6px;
+    border-right: 6px
 }
+
 .img-footer {
     position: absolute;
     z-index: -1;
     height: 100%;
     width: max-content;
-    left: -287px;
+    left: -287px
 }
-.img-footer:before{
+
+.img-footer:before {
     content: "";
     width: 100%;
     height: 100%;
     position: absolute;
     display: block;
     z-index: 1000;
-    background: linear-gradient(270deg, #f2f6fc,#f2f6fceb,#f2f6fca3,#f2f6fc00,#f2f6fc4d, transparent);
+    background: linear-gradient(270deg, #f2f6fc, #f2f6fceb, #f2f6fca3, #f2f6fc00, #f2f6fc4d, transparent);
     bottom: 0;
-    left: 0;
+    left: 0
 }
+
 footer .top {
     padding: 1.25rem 0 .625rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    background: transparent;
+    background: transparent
 }
 
 footer .top ul li a {
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
 footer .top ul li a:before {
@@ -4823,18 +4858,18 @@ footer .top ul li a:before {
     width: 10px;
     height: 5px;
     border-radius: 10px;
-    margin-left: 8px;
+    margin-left: 8px
 }
 
 footer .top ul li a span {
     color: #5a5a5a;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 400
 }
 
 footer .top .contact-us .numbers div {
     font-size: 22px;
-    color: #094873;
+    color: #094873
 }
 
 footer .top .contact-us .numbers {
@@ -4842,54 +4877,54 @@ footer .top .contact-us .numbers {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column
 }
 
 footer .top .contact-us .numbers span {
     font-size: 14px;
     color: #797979;
-    margin-right: -3px;
+    margin-right: -3px
 }
 
 footer .top .contact-us .accounts {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 15px 0px;
+    margin: 15px 0
 }
 
 footer .top .contact-us {
-    background: white;
+    background: #fff;
     padding: 55px;
     border-radius: 10px 0 0 10px;
-    z-index: 2;
+    z-index: 2
 }
 
 footer .top .contact-us .accounts svg {
     color: #858585;
-    margin: 0 5px;
+    margin: 0 5px
 }
 
 footer .top .contact-us .email {
     text-align: center;
     margin-top: 15px;
-    font-size: 13px;
+    font-size: 13px
 }
 
 footer .top .contact-us .mapurl span:nth-child(2) {
     margin-bottom: -6px;
     font-size: 17px;
     font-weight: 600;
-    margin-right: 3px;
+    margin-right: 3px
 }
 
 footer .top .contact-us .mapurl span:nth-child(3) {
     margin-bottom: -6px;
-    font-size: 17px;
+    font-size: 17px
 }
 
 footer .top .contact-us .mapurl img {
-    width: 25px;
+    width: 25px
 }
 
 footer .top .contact-us .mapurl {
@@ -4899,28 +4934,28 @@ footer .top .contact-us .mapurl {
     justify-content: center;
     direction: ltr;
     margin-top: 17px;
-    color: #676161;
+    color: #676161
 }
 
 footer .top .co-12 {
     padding: 15px 30px;
-    min-height: 350px;
+    min-height: 350px
 }
 
 footer .top .co-12:nth-child(1) {
-    width: 28%;
+    width: 28%
 }
 
 footer .top .co-12:nth-child(2) {
-    width: 29%;
+    width: 29%
 }
 
 footer .top .co-12:nth-child(3) {
-    width: 18%;
+    width: 18%
 }
 
 footer .top .co-12:nth-child(4) {
-    width: 25%;
+    width: 25%
 }
 
 footer .top .info p {
@@ -4928,13 +4963,13 @@ footer .top .info p {
     font-size: 14px;
     color: #424242;
     line-height: 2;
-    padding: 0 0 9px 9px;
+    padding: 0 0 9px 9px
 }
 
 footer .top .title {
     font-size: 19px;
     color: #094873;
-    margin: 12px 0 22px 12px;
+    margin: 12px 0 22px 12px
 }
 
 .news-letter .input span {
@@ -4943,7 +4978,7 @@ footer .top .title {
     font-size: 13px;
     right: 27px;
     background: #f2f6fc;
-    padding: 0 10px;
+    padding: 0 10px
 }
 
 .news-letter .status {
@@ -4955,18 +4990,18 @@ footer .top .title {
     height: 38px;
     border: 2px solid #ffdc00;
     color: #ffdc00;
-    background: #4c4c4b;
+    background: #4c4c4b
 }
 
 .news-letter .input {
-    position: relative;
+    position: relative
 }
 
 .news-letter input {
     border-radius: 29px;
     height: 45px;
     background: transparent;
-    border: 2px solid #c4d3de;
+    border: 2px solid #c4d3de
 }
 
 .news-letter .btn.submit {
@@ -4976,13 +5011,13 @@ footer .top .title {
     padding: 13px;
     background: #094873;
     border-radius: 37px;
-    color: white;
-    height: 45px;
+    color: #fff;
+    height: 45px
 }
 
 footer .top .more svg {
     width: 20px;
-    margin-right: 10px;
+    margin-right: 10px
 }
 
 footer .top .more {
@@ -4995,33 +5030,34 @@ footer .top .more {
     align-items: center;
     justify-content: space-between;
     color: #094873;
-    margin-top: 22px;
+    margin-top: 22px
 }
 
 footer .top .more:hover {
     background: #094873;
-    color: white;
+    color: #fff
 }
 
 footer .sub .co {
     padding: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 footer .sub .co:nth-child(1), footer .sub .co:nth-child(3) {
-    width: 20%;
+    width: 20%
 }
 
 footer .sub .co:nth-child(2) {
-    width: 60%;
+    width: 60%
 }
+
 footer .whatsapp {
     position: fixed;
     width: 60px;
     height: 60px;
-    color: white;
+    color: #fff;
     background: #2db742;
     padding: 10px;
     border-radius: 80px;
@@ -5030,11 +5066,12 @@ footer .whatsapp {
     justify-content: center;
     bottom: 101px;
     z-index: 100;
-    right: 32px;
+    right: 32px
 }
+
 footer .whatsapp:not(footer .whatsapp.active) {
     box-shadow: 0 0 0 0 #007e37a8;
-    animation: pulse 2s cubic-bezier(0.66, 0, 0, 1) infinite;
+    animation: pulse 2s cubic-bezier(.66, 0, 0, 1) infinite
 }
 
 .whatsapp-panel .list .item .icon::before {
@@ -5051,7 +5088,7 @@ footer .whatsapp:not(footer .whatsapp.active) {
     -webkit-animation-duration: .6s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-direction: alternate;
+    -webkit-animation-direction: alternate
 }
 
 @-webkit-keyframes blinker {
@@ -5065,7 +5102,7 @@ footer .whatsapp:not(footer .whatsapp.active) {
 
 footer .whatsapp svg {
     width: 100%;
-    height: 100%;
+    height: 100%
 }
 
 footer .to-up {
@@ -5078,16 +5115,16 @@ footer .to-up {
     justify-content: center;
     color: #7f7f7f9e;
     background: #ffffff52;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px)
 }
 
 footer .swiper-wrapper img {
     max-height: 93px;
-    width: auto !important;
+    width: auto !important
 }
 
 footer .bg-swip {
-    background: white;
+    background: #fff;
     border-radius: 40px;
     box-shadow: 0 2px 28px -11px #b9b9b9;
     height: 165px;
@@ -5096,20 +5133,20 @@ footer .bg-swip {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 footer .center {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 footer .sub {
     background: transparent;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: center
 }
 
 .sub-bg-switch {
@@ -5122,7 +5159,7 @@ footer .sub {
     display: flex;
     top: -9px;
     height: 9px;
-    justify-content: center;
+    justify-content: center
 }
 
 .sub-bg-switch .swup {
@@ -5131,14 +5168,14 @@ footer .sub {
     position: absolute;
     top: 7px;
     background: #124e76;
-    border-radius: 0 0 50px 50px;
+    border-radius: 0 0 50px 50px
 }
 
 .sub-bg-switch .swup svg:nth-child(1) {
-    color: white;
+    color: #fff;
     position: absolute;
     z-index: 1000;
-    top: -4px;
+    top: -4px
 }
 
 .sub-bg-switch .swup svg:nth-child(2) {
@@ -5146,24 +5183,23 @@ footer .sub {
     position: absolute;
     color: #124e76;
     width: 159px;
-    top: -6px;
+    top: -6px
 }
-
 
 .error h1 {
     font-size: 28px !important;
-    color: #094873 !important;
+    color: #094873 !important
 }
 
 .error p {
     font-size: 13px !important;
     color: #888888 !important;
-    margin: 10px !important;
+    margin: 10px !important
 }
 
 .error form.search-menu {
     width: 290px !important;
-    margin: 18px auto auto !important;
+    margin: 18px auto auto !important
 }
 
 .error .back a {
@@ -5172,69 +5208,69 @@ footer .sub {
     align-items: center;
     font-size: 10px;
     color: #3e3e3e;
-    margin: 0 14px;
+    margin: 0 14px
 }
 
 .error img {
     max-width: 78%;
-    margin: auto;
+    margin: auto
 }
 
 .h-100 {
-    height: 100%;
+    height: 100%
 }
 
 .error .back svg {
     margin-bottom: 6px;
-    width: 20px;
+    width: 20px
 }
 
 .error form.search-menu input {
-    height: 40px;
+    height: 40px
 }
 
 .error form.search-menu svg {
-    width: 18px;
+    width: 18px
 }
 
 .white {
-    background: white !important;
+    background: white !important
 }
 
 .home-slider .swiper-pointer-events {
-    border-radius: 25px;
+    border-radius: 25px
 }
 
 .home-slider .item {
-    border-radius: 15px;
+    border-radius: 15px
 }
 
 .home-icons {
     display: flex;
-    margin-top: 30px;
+    margin-top: 30px
 }
 
 .home-icons .item {
     float: none;
     width: 20%;
-    padding: 0px 7px;
+    padding: 0 7px
 }
 
 .home-icons .item .meta-sepid-new-1 img {
     width: 45px;
-    height: 45px;
+    height: 45px
 }
 
 .home-icons .item .meta-sepid-new-1 h6 {
-    margin: 0;
+    margin: 0
 }
 
 .home-section {
-    margin-top: 45px;
+    margin-top: 45px
 }
 
 .home-product-item {
-    margin-top: 30px;
+    margin-top: 30px
 }
 
 .home-icons .item .meta-sepid-new-1 {
@@ -5242,15 +5278,15 @@ footer .sub {
     display: flex;
     flex-direction: row;
     width: 100%;
-    background: white;
+    background: #fff;
     border-radius: 10px;
-    padding: 24px 20px 24px 0;
+    padding: 24px 20px 24px 0
 }
 
 .home-icons .item .meta-sepid-new-1 .text span {
     font-size: 11px;
     color: #6b6b6b;
-    margin-top: 4px;
+    margin-top: 4px
 }
 
 .home-icons .item .meta-sepid-new-1 .text {
@@ -5258,12 +5294,12 @@ footer .sub {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: center
 }
 
 .s-slid {
     display: flex;
-    flex-direction: row;
+    flex-direction: row
 }
 
 .s-slid .co a {
@@ -5272,28 +5308,28 @@ footer .sub {
     background: #7555b6;
     border-radius: 15px;
     width: 100%;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .s-slid .co {
     width: 50%;
-    padding: 0;
+    padding: 0
 }
 
 .s-slid .co:nth-child(1) {
-    padding-left: 10px;
+    padding-left: 10px
 }
 
 .s-slid .co:nth-child(2) {
-    padding-right: 10px;
+    padding-right: 10px
 }
 
 .home-category-top {
-    max-width: 82rem;
+    max-width: 82rem
 }
 
 .home-category-top .item {
-    padding: 0px 16px;
+    padding: 0 16px
 }
 
 .home-category-top .box {
@@ -5303,14 +5339,14 @@ footer .sub {
     flex-direction: column;
     box-shadow: none;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 .home-products .titles {
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .home-products .titles .item {
@@ -5318,49 +5354,49 @@ footer .sub {
     margin: 0 4px;
     padding: 7px 14px;
     border-radius: 10px;
-    background: white;
+    background: #fff;
     transition: 0.2s
 }
 
 .home-products .titles .item.active {
     background: #094873;
-    color: white;
+    color: #fff
 }
 
 .home-products .titles .item:hover {
-    background: rgba(9, 72, 115, 0.45);
-    color: white;
+    background: rgba(9, 72, 115, .45);
+    color: #fff
 }
 
 .home-category-top .box span {
-    color: #094873;
+    color: #094873
 }
 
 .home-category-top .box img {
     margin-bottom: 28px;
     margin-top: 15px;
     width: 140px;
-    height: 140px;
+    height: 140px
 }
 
 .side-bar {
     box-shadow: 0 0 18px -1px #74747424;
-    border: none;
+    border: none
 }
 
 .top-bar .bot .relative {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .icon-btns .header-left-btns li .btnh svg {
     width: 20px;
-    height: 20px;
+    height: 20px
 }
 
 .icon-btns .header-left-btns li .btnh {
     width: 35px;
-    height: 35px;
+    height: 35px
 }
 
 .icon-btns .header-left-btns li .btnh .num {
@@ -5368,22 +5404,22 @@ footer .sub {
     display: flex;
     padding: 2px 5px;
     border-radius: 19px;
-    font-size: 8px;
+    font-size: 8px
 }
 
 .side-bar a > svg {
     width: 17px;
     height: 17px;
     margin-left: 10px;
-    color: #a1a1a1;
+    color: #a1a1a1
 }
 
 .side-bar .first-level > li {
-    border: none;
+    border: none
 }
 
 .side-bar .body {
-    padding-bottom: 5px;
+    padding-bottom: 5px
 }
 
 .side-bar a {
@@ -5391,13 +5427,13 @@ footer .sub {
     display: flex;
     align-items: center;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 14px
 }
 
 .side-bar .title {
     font-size: 15px;
     font-weight: 400;
-    padding: 11px 0;
+    padding: 11px 0
 }
 
 .side-bar .title::before {
@@ -5408,74 +5444,70 @@ footer .sub {
     background: #ffdc00;
     border-radius: 90px;
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 10px
 }
 
 .mini-show .product-aspk {
     min-width: 200px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .mini-show .card-share-link {
     min-width: 735px;
-    padding-bottom: 0;
+    padding-bottom: 0
 }
 
 .mini-show .btn {
     background: #094873;
     border-radius: 10px;
-    color: white;
+    color: #fff;
     font-size: 15px;
     padding: 10px 17px;
-    margin-top: 9px;
+    margin-top: 9px
 }
 
 .mini-show .btn:hover {
-    background: #9e9e9e;
+    background: #9e9e9e
 }
 
 .mini-show .price {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: center
 }
 
 .btns-viewpager li {
     cursor: pointer;
-    user-select: none;
+    user-select: none
 }
 
 .order-item {
     border: 1px solid #d9d9d9;
     margin: 15px;
     display: block;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .order-item .status {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 20px;
+    padding: 15px 20px
 }
 
 .order-item .status .text {
     display: flex;
     align-items: center;
     color: #232933;
-    font-size: 13px;
+    font-size: 13px
 }
 
 .order-item .status svg {
     margin-left: 8px;
     width: 20px;
     height: 20px;
-    color: #77be46;
-}
-
-.order-item .status .go {
-
+    color: #77be46
 }
 
 .order-item .val, .invoice .val {
@@ -5486,45 +5518,44 @@ footer .sub {
 }
 
 .leaflet-top, .leaflet-bottom {
-    z-index: 100;
+    z-index: 100
 }
 
 .order-item .val .date {
-    color: #81858b;
+    color: #81858b
 }
 
 .order-item .val .t, .invoice .val .t {
     font-size: 12px;
     color: #a1a3a8;
-    margin-right: 15px;
+    margin-right: 15px
 }
 
 .order-item .val .icon {
     display: inline-flex;
-    align-items: center;
+    align-items: center
 }
 
 .order-item .val .icon svg {
     width: 17px;
     height: 17px;
-    color: #dbbd00;
+    color: #dbbd00
 }
 
 .order-item .val .d, .invoice .val .d {
-
     color: #424750;
     font-size: 13px;
     margin-right: 4px;
-    font-weight: 600;
+    font-weight: 600
 }
 
 .order-item .products {
     display: grid;
-    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-template-columns:repeat(8, minmax(0, 1fr));
     padding: 10px 24px;
     border-bottom: 1px solid #e0e0e2;
     border-top: 1px solid #e0e0e2;
-    margin-top: 16px;
+    margin-top: 16px
 }
 
 .order-item .products .item {
@@ -5534,14 +5565,13 @@ footer .sub {
     align-items: center;
     flex-direction: column;
     font-size: 11px;
-    color: #686868;
-
+    color: #686868
 }
 
 .order-item .btns {
     padding: 20px 25px;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse
 }
 
 .order-item .btns .btn-f {
@@ -5552,48 +5582,47 @@ footer .sub {
 
 .order-item .btns .icon svg {
     width: 18px;
-    height: 18px;
+    height: 18px
 }
 
 .order-item .btns .icon {
     height: 18px;
-    margin-left: 5px;
+    margin-left: 5px
 }
 
 .invoice {
     max-width: 29.7cm;
     font-weight: 600;
     color: #605e5e;
-    margin-top: 30px;
+    margin-top: 30px
 }
 
 .invoice > .title svg {
-    margin-left: 12px;
+    margin-left: 12px
 }
 
 .invoice > .title {
     padding: 5px 12px;
     border-bottom: 1px solid #d6d6d6;
-    display: flex;
+    display: flex
 }
 
 .invoice .logo svg {
-    margin-bottom: 9px;
+    margin-bottom: 9px
 }
 
 .invoice .logo {
     display: flex;
     flex-direction: column;
-    font-size: 15px;
+    font-size: 15px
 }
 
 .hA4.invoice > .title {
-
-    border-bottom: none;
+    border-bottom: none
 }
 
 .hA4.invoice .title svg {
-    display: none;
+    display: none
 }
 
 .invoice .top {
@@ -5601,16 +5630,16 @@ footer .sub {
     align-items: center;
     justify-content: space-between;
     padding: 23px 10px;
-    margin-top: 15px;
+    margin-top: 15px
 }
 
 .hA4.invoice .top {
     padding-bottom: 0;
-    margin-top: 0;
+    margin-top: 0
 }
 
 .invoice .code .t {
-    color: #535458;
+    color: #535458
 }
 
 .invoice .sell {
@@ -5619,7 +5648,7 @@ footer .sub {
     display: flex;
     align-items: center;
     margin: 9px 0;
-    padding-left: 30px;
+    padding-left: 30px
 }
 
 .invoice .sell .title {
@@ -5627,66 +5656,66 @@ footer .sub {
     height: 100%;
     display: flex;
     background: #34495e;
-    color: white;
+    color: #fff;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .invoice .sell .title span {
     transform: rotate(90deg);
     display: block;
-    font-size: 11px;
+    font-size: 11px
 }
 
 .invoice .sell .text {
-    font-size: 0.84rem;
-    margin: 0 16px;
+    font-size: .84rem;
+    margin: 0 16px
 }
 
 .invoice .sell .c {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .invoice .table {
     border-radius: 4px;
-    border: 1px;
+    border: 1px
 }
 
 .invoice .table thead tr th {
     text-align: center;
     border: none !important;
     font-size: 12px;
-    color: white;
-    background: #34495e;
+    color: #fff;
+    background: #34495e
 }
 
 .invoice .table tbody tr {
-    border: .1rem solid #8b8a8a !important;
+    border: .1rem solid #8b8a8a !important
 }
 
 .invoice .table tbody, .invoice .table thead {
-    border: .1rem solid #8b8a8a !important;
+    border: .1rem solid #8b8a8a !important
 }
 
 .invoice .table tbody th {
     border: none;
     border-left: .1rem solid #8b8a8a;
-    font-size: .84rem;
+    font-size: .84rem
 }
 
 .invoice tbody tr:nth-child(2n) {
-    background: white;
+    background: #fff
 }
 
 .invoice tbody tr:last-child th {
-    padding: 5px;
+    padding: 5px
 }
 
 .invoice tbody tr:not(.footer) th:nth-child(2) {
     max-width: 180px;
-    text-align: right;
+    text-align: right
 }
 
 .invoice .finish .val {
@@ -5695,40 +5724,40 @@ footer .sub {
     line-height: 2;
     font-size: .84rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: column
 }
 
 .invoice .finish {
     margin-top: 9px;
-    border: 0.1rem solid #8b8a8a !important;
+    border: .1rem solid #8b8a8a !important;
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: row
 }
 
 .hA4 {
     margin-top: 10px;
     width: 19.5cm !important;
-    height: auto;
+    height: auto
 }
 
 .hA4 * {
-    font-size: 0.66rem !important;
+    font-size: 0.66rem !important
 }
 
 .invoice .veryf {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-end
 }
 
 .invoice .veryf span {
     margin-top: 50px;
-    font-size: 11px;
+    font-size: 11px
 }
 
 .invoice .veryf img {
-    width: 100px;
+    width: 100px
 }
 
 .invoice .finish .t .titlr {
@@ -5737,7 +5766,7 @@ footer .sub {
     flex-direction: column;
     align-items: flex-end;
     font-size: .84rem;
-    line-height: 2;
+    line-height: 2
 }
 
 .invoice .finish .t {
@@ -5745,47 +5774,47 @@ footer .sub {
     justify-content: space-between;
     align-items: flex-start;
     width: 60%;
-    border-left: 0.1rem solid #8b8a8a !important;
+    border-left: .1rem solid #8b8a8a !important
 }
 
 .invoice .finish .type_send {
     font-size: 14px;
     color: #8b8a8a;
-    padding: 12px;
+    padding: 12px
 }
 
 .invoice .price_fa {
-    border: 0.1rem solid #8B8A8A;
+    border: .1rem solid #8B8A8A;
     border-top: none;
     padding: 8px;
     text-align: center;
-    font-size: .9rem;
+    font-size: .9rem
 }
 
 .invoice .price_fa span:nth-child(1) {
-    color: #828485;
+    color: #828485
 }
 
 .invoice .price_fa span:nth-child(2) {
     font-weight: 700;
-    font-size: .94rem;
+    font-size: .94rem
 }
 
 .invoice .alert {
-    border: 0.1rem solid #8B8A8A;
+    border: .1rem solid #8B8A8A;
     padding: 8px;
     text-align: center;
     font-size: .9rem;
     margin-top: 14px;
     color: #535353;
-    background: #f4f4f4;
+    background: #f4f4f4
 }
 
 .sepid-mini-cart-header .mini-cart-3 .widget_shopping_cart_content {
     float: right;
     width: 100%;
-    margin: 0px;
-    padding: 0px 15px;
+    margin: 0;
+    padding: 0 15px
 }
 
 .mini-cart-3, .mini-menu-3 {
@@ -5798,23 +5827,23 @@ footer .sub {
     border-radius: 15px;
     color: #3b4359;
     text-align: center;
-    box-shadow: 0px 6px 15px #3b43590f !important;
+    box-shadow: 0 6px 15px #3b43590f !important;
     margin-right: -264px;
-    margin-top: 0px;
+    margin-top: 0;
     opacity: 0;
-    padding: 0px;
-    height: 0px;
-    overflow: hidden;
+    padding: 0;
+    height: 0;
+    overflow: hidden
 }
 
 .sepid-mini-cart-header .mini-cart-3 .widget_shopping_cart_content .woocommerce-mini-cart.cart_list {
     float: right;
     width: 100%;
-    padding: 0px 10px 10px 10px;
+    padding: 0 10px 10px 10px;
     border-radius: 10px;
     background: #f2f6fc;
-    margin-top: 0px;
-    margin-bottom: 15px;
+    margin-top: 0;
+    margin-bottom: 15px
 }
 
 .sepid-mini-cart-header .mini-cart-3 .woocommerce-mini-cart__total.total {
@@ -5826,9 +5855,9 @@ footer .sub {
     color: #f9ab00;
     font-size: 15px;
     text-align: right;
-    font-weight: bold;
-    margin-top: 0px;
-    margin-bottom: 26px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 26px
 }
 
 .sepid-mini-cart-header .mini-cart-3 .button.wc-forward {
@@ -5836,18 +5865,18 @@ footer .sub {
     background: #f2f6fc;
     font-size: 14px;
     padding: 14px 17px;
-    margin-left: 0px;
+    margin-left: 0;
     border-radius: 10px;
     color: #3b4359;
     font-weight: 400;
-    box-shadow: unset !important;
+    box-shadow: unset !important
 }
 
 .sepid-mini-cart-header .mini-cart-3 .button.checkout.wc-forward {
     float: left;
-    margin-left: 0px;
+    margin-left: 0;
     background: #094873;
-    color: #fff;
+    color: #fff
 }
 
 .sepid-mini-cart-header:hover .mini-cart-3 {
@@ -5855,7 +5884,7 @@ footer .sub {
     transition: 0.3s;
     height: unset;
     overflow: visible;
-    padding: 15px 0;
+    padding: 15px 0
 }
 
 .sepid-mini-cart-header .mini-cart-3 .widget_shopping_cart_content .woocommerce-mini-cart.cart_list .woocommerce-mini-cart-item.mini_cart_item {
@@ -5866,7 +5895,7 @@ footer .sub {
     border-radius: 10px;
     position: relative;
     list-style: none;
-    margin-top: 10px;
+    margin-top: 10px
 }
 
 .sepid-mini-cart-header .mini-cart-3 .remove.remove_from_cart_button {
@@ -5881,14 +5910,14 @@ footer .sub {
     margin-right: 5px;
     margin-top: -5px;
     top: 10px;
-    font-size: 15px !important;
+    font-size: 15px !important
 }
 
 .sepid-mini-cart-header .mini-cart-3 .widget_shopping_cart_content .woocommerce-mini-cart.cart_list .woocommerce-mini-cart-item.mini_cart_item .cart-item-image {
     float: right;
     width: 40px;
     border-radius: 7px;
-    height: 40px;
+    height: 40px
 }
 
 .sepid-mini-cart-header .mini-cart-3 .cart-item-content {
@@ -5897,17 +5926,17 @@ footer .sub {
     padding-right: 15px;
     box-sizing: border-box;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 400
 }
 
 .sepid-mini-cart-header .mini-cart-3 .widget_shopping_cart_content .woocommerce-mini-cart.cart_list .woocommerce-mini-cart-item.mini_cart_item .cart-item-image img {
-    border-radius: 7px;
+    border-radius: 7px
 }
 
 .sepid-mini-cart-header .mini-cart-3 .widget_shopping_cart_content .woocommerce-mini-cart.cart_list .woocommerce-mini-cart-item.mini_cart_item .product-title {
     float: right;
     text-align: right;
-    color: #3b4359;
+    color: #3b4359
 }
 
 .sepid-mini-cart-header .mini-cart-3 .cart-item-content .quantity {
@@ -5917,21 +5946,20 @@ footer .sub {
     font-size: 13px;
     color: #5e440b;
     border-radius: 8px;
-    margin-top: 10px;
+    margin-top: 10px
 }
 
 .sepid-mini-cart-header .mini-cart-3 .cart-item-content .quantity .woocommerce-Price-currencySymbol {
     float: left;
-    margin-right: 5px;
-
+    margin-right: 5px
 }
 
 .sepid-mini-cart-header .mini-cart-3 .woocommerce-mini-cart__total.total strong {
-    float: right;
+    float: right
 }
 
 .sepid-mini-cart-header .mini-cart-3 .woocommerce-mini-cart__total.total .woocommerce-Price-amount {
-    float: left;
+    float: left
 }
 
 .sepid-mini-cart-header .mini-cart-3 .woocommerce-mini-cart__total.total i {
@@ -5939,11 +5967,11 @@ footer .sub {
     float: right;
     margin-top: 2px;
     margin-left: 8px;
-    margin-bottom: -10px;
+    margin-bottom: -10px
 }
 
 .woocommerce-Price-currencySymbol {
-    margin-right: 5px;
+    margin-right: 5px
 }
 
 .sepid-mini-cart-header .mini-cart-3 .button.wc-forward {
@@ -5951,11 +5979,11 @@ footer .sub {
     background: #f2f6fc;
     font-size: 14px;
     padding: 14px 17px;
-    margin-left: 0px;
+    margin-left: 0;
     border-radius: 10px;
     color: #3b4359;
     font-weight: 400;
-    box-shadow: unset !important;
+    box-shadow: unset !important
 }
 
 .attachment-woocommerce_thumbnail {
@@ -5963,15 +5991,15 @@ footer .sub {
     margin-right: 4px;
     width: 32px;
     height: auto;
-    box-shadow: none;
+    box-shadow: none
 }
 
 .item-mini-menu {
-    position: relative;
+    position: relative
 }
 
 .mini-menu-3 {
-    left: 0;
+    left: 0
 }
 
 .item-mini-menu:hover .mini-menu-3, .item-mini-menu.active .mini-menu-3 {
@@ -5979,23 +6007,23 @@ footer .sub {
     transition: 0.3s;
     height: unset;
     overflow: visible;
-    padding: 15px 0;
+    padding: 15px 0
 }
 
 .mini-menu-3 .items {
     text-align: right;
-    padding: 0 10px;
+    padding: 0 10px
 }
 
 .mini-menu-3 .items li {
-    padding: 0px 4px;
+    padding: 0 4px;
     width: 100%;
-    height: 41px;
+    height: 41px
 }
 
 .mini-menu-3 .items li:hover {
     background: #f2f6fc;
-    border-radius: 7px;
+    border-radius: 7px
 }
 
 .mini-menu-3 .items li > a {
@@ -6003,18 +6031,18 @@ footer .sub {
     align-items: center;
     transition: 0.2s;
     cursor: pointer;
-    height: 100%;
+    height: 100%
 }
 
 .mini-menu-3 .items li > a:hover {
     transform: translateX(-5px);
-    color: #1374a9;
+    color: #1374a9
 }
 
 .mini-menu-3 .items li > a > svg {
     margin-left: 10px;
     width: 18px;
-    height: 18px;
+    height: 18px
 }
 
 .OrderSteps_svgBackgroundAnimation__1dZh2 {
@@ -6025,12 +6053,12 @@ footer .sub {
     stroke-dasharray: 3 10;
     stroke-dashoffset: 1000;
     -webkit-animation: OrderSteps_dashedAnimation__1vcfx 20s linear infinite;
-    animation: OrderSteps_dashedAnimation__1vcfx 20s linear infinite;
+    animation: OrderSteps_dashedAnimation__1vcfx 20s linear infinite
 }
 
 .whatsapp-panel-p {
     position: relative;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .whatsapp-panel {
@@ -6041,22 +6069,22 @@ footer .sub {
     border-radius: 15px;
     color: #3b4359;
     text-align: center;
-    box-shadow: 0px 6px 15px #3b43590f !important;
+    box-shadow: 0 6px 15px #3b43590f !important;
     margin-right: -264px;
-    margin-top: 0px;
+    margin-top: 0;
     opacity: 0;
-    padding: 0px;
-    height: 0px;
+    padding: 0;
+    height: 0;
     overflow: hidden;
     right: 250px;
-    z-index: 100;
+    z-index: 100
 }
 
 .whatsapp-panel-p.active .whatsapp-panel {
     opacity: 1;
     height: unset;
     padding: 0 0 15px;
-    transition: 0.3s;
+    transition: 0.3s
 }
 
 .whatsapp-panel .title {
@@ -6064,7 +6092,7 @@ footer .sub {
     flex-direction: row;
     align-items: center;
     background: #2db742;
-    padding: 8px;
+    padding: 8px
 }
 
 .whatsapp-panel .title .icon {
@@ -6072,27 +6100,27 @@ footer .sub {
     flex-direction: row;
     align-items: center;
     margin-left: 12px;
-    color: white;
+    color: #fff
 }
 
 .whatsapp-panel .title .text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start
 }
 
 .whatsapp-panel .title .text span:nth-child(1) {
     font-size: 15px;
-    color: #ffffff;
+    color: #fff
 }
 
 .whatsapp-panel .title .text span:nth-child(2) {
-    font-size: 11px;
+    font-size: 11px
 }
 
 .whatsapp-panel .info {
     color: #8b8b8b;
-    margin: 16px 0;
+    margin: 16px 0
 }
 
 @keyframes OrderSteps_dashedAnimation__1vcfx {
@@ -6113,7 +6141,7 @@ footer .sub {
     flex-direction: column;
     padding-bottom: 6.3rem;
     padding-top: 6.3rem;
-    width: 100%;
+    width: 100%
 }
 
 .container {
@@ -6121,30 +6149,30 @@ footer .sub {
     width: -webkit-calc(100% - 20px);
     width: calc(100% - 20px);
     margin: 0 auto;
-    position: relative;
+    position: relative
 }
 
 .flex-center, .justify-between {
     display: -webkit-flex;
-    display: flex;
+    display: flex
 }
 
 .justify-between {
     -webkit-justify-content: space-between;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .OrderSteps_context__3g4f0 {
     top: 0;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: absolute
 }
 
 .OrderSteps_firstStep__3Mhvx {
     grid-gap: .5rem 0;
     gap: .5rem 0;
-    margin: 5rem 0 0 1.4rem;
+    margin: 5rem 0 0 1.4rem
 }
 
 .OrderSteps_step__21iBQ {
@@ -6160,18 +6188,18 @@ footer .sub {
     -webkit-flex-direction: column;
     flex-direction: column;
     -webkit-justify-content: flex-end;
-    justify-content: flex-end;
+    justify-content: flex-end
 }
 
 .OrderSteps_step__text__13Cux {
     line-height: 2;
     max-width: 7.2em;
     text-align: center;
-    font-size: 0.82rem;
+    font-size: .82rem
 }
 
 .OrderSteps_firstStep__3Mhvx svg {
-    width: 112px;
+    width: 112px
 }
 
 .OrderSteps_step__number__1MeUc {
@@ -6184,7 +6212,7 @@ footer .sub {
     border-radius: 100%;
     background-color: #f5f5f5;
     -webkit-box-shadow: 0 0 0 10px #fff;
-    box-shadow: 0 0 0 10px #fff;
+    box-shadow: 0 0 0 10px #fff
 }
 
 .OrderSteps_step__number__1MeUc:before {
@@ -6194,14 +6222,14 @@ footer .sub {
     display: block;
     position: absolute;
     -webkit-transform: rotate(145deg);
-    transform: rotate(145deg);
+    transform: rotate(145deg)
 }
 
 .OrderSteps_step__21iBQ:nth-child(2n) .OrderSteps_step__number__1MeUc:before {
     top: -3px;
     right: 9px;
     border-right: 8px solid transparent;
-    border-bottom: 15px solid #f5f5f5;
+    border-bottom: 15px solid #f5f5f5
 }
 
 .OrderSteps_lastStep__26CmT {
@@ -6209,12 +6237,12 @@ footer .sub {
     gap: 1.5rem 0;
     margin: auto 4rem 0 0;
     -webkit-align-items: center;
-    align-items: center;
+    align-items: center
 }
 
 .OrderSteps_lastStep__text__2eOkD {
     color: #094873;
-    font-weight: 600;
+    font-weight: 600
 }
 
 .OrderSteps_lastStep__icon__35VnC {
@@ -6225,49 +6253,49 @@ footer .sub {
     border-radius: 100%;
     background-color: #094873;
     box-shadow: 0 10px 30px -5px #094873;
-    color: white;
-    padding-top: 4px;
+    color: #fff;
+    padding-top: 4px
 }
 
 .OrderSteps_firstStep__text__3Axcg {
     font-size: .82rem;
     padding: 3px 0;
     text-align: center;
-    color: white;
+    color: #fff;
     border-radius: 30px 30px 30px 0;
-    background-color: #094873;
+    background-color: #094873
 }
 
 .OrderSteps_step__21iBQ:nth-child(odd) {
     -webkit-flex-direction: column-reverse;
-    flex-direction: column-reverse;
+    flex-direction: column-reverse
 }
 
 .flex-center, .justify-between {
     display: -webkit-flex;
-    display: flex;
+    display: flex
 }
 
 .flex-center {
     -webkit-justify-content: center;
     justify-content: center;
     -webkit-align-items: center;
-    align-items: center;
+    align-items: center
 }
 
 .whatsapp-panel-p .w {
     width: 100%;
-    height: 100%;
+    height: 100%
 }
 
 .whatsapp-panel-p .c {
     width: 100%;
     height: 100%;
-    display: none;
+    display: none
 }
 
 .whatsapp-panel-p.active .w {
-    display: none;
+    display: none
 }
 
 .whatsapp-panel-p.active .c {
@@ -6275,7 +6303,7 @@ footer .sub {
     align-items: center;
     justify-content: center;
     font-size: 29px;
-    padding-top: 4px;
+    padding-top: 4px
 }
 
 .whatsapp-panel .list .item {
@@ -6285,11 +6313,11 @@ footer .sub {
     justify-content: space-between;
     margin: 2px 12px;
     border-radius: 16px;
-    transition: 0.2s;
+    transition: 0.2s
 }
 
 .whatsapp-panel .list .item:hover {
-    background: #f0f1f4;
+    background: #f0f1f4
 }
 
 .whatsapp-panel .list .item .icon {
@@ -6302,26 +6330,26 @@ footer .sub {
     justify-content: center;
     color: #7c7c7c;
     margin-left: 12px;
-    position: relative;
+    position: relative
 }
 
 .whatsapp-panel .list .item .icon svg {
     width: 24px;
-    height: 24px;
+    height: 24px
 }
 
 .whatsapp-panel .list .item .text {
     font-size: 14px;
-    color: #868686;
+    color: #868686
 }
 
 .whatsapp-panel .list .item .fa-chevron-left {
     font-size: 13px;
-    color: #8d8f92;
+    color: #8d8f92
 }
 
 .box3.contactus {
-    padding: 35px;
+    padding: 35px
 }
 
 .box3.contactus .title {
@@ -6330,7 +6358,7 @@ footer .sub {
     display: flex;
     justify-content: center;
     align-items: center;
-    white-space: nowrap;
+    white-space: nowrap
 }
 
 .box3.contactus .title:after {
@@ -6339,42 +6367,45 @@ footer .sub {
     width: 100%;
     height: 1px;
     background: #e5e5e5b5;
-    margin-right: 14px;
+    margin-right: 14px
 }
 
 .box3.contactus .drow, .row {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: row
 }
 
 .box3.contactus .drow .c-about {
-    width: 37%;
+    width: 37%
 }
 
 .box3.contactus .drow .c-map {
     width: 63%;
     padding-right: 38px;
-    padding-top: 26px;
+    padding-top: 26px
 }
 
 .about .row {
-    padding: 0 33px;
+    padding: 0 33px
 }
 
 .about .row .c-40 img, .about .row .c-60 img {
     width: 100%;
     height: 325px;
     background: antiquewhite;
-    border-radius: 15px;
+    border-radius: 15px
 }
-
+.about video{
+    width: 100%;
+    height: 325px;
+    border-radius: 15px
+}
 .box-info {
     margin-top: 84px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row
 }
-
 
 .box-info .item {
     display: flex;
@@ -6387,21 +6418,21 @@ footer .sub {
     padding: 18px 40px;
     width: 20%;
     text-align: center;
-    margin: 0 15px;
+    margin: 0 15px
 }
 
-.box-info .item .icon {
-
+.box-info .item > img{
+    width: 55px;
 }
-
 .box-info .item .icon svg {
     width: 70px;
     height: 70px;
-    color: #094873;
+    color: #094873
 }
 
 .box-info-user {
     margin-top: 33px;
+    text-align: center;
 }
 
 .box-info-user .item img {
@@ -6411,24 +6442,25 @@ footer .sub {
     width: auto;
     height: 100%;
     max-width: none;
-    filter: brightness(0.9);
+    filter: brightness(.9)
 }
 
 .box-info-user .item:hover img {
-    scale: 1.1;
+    scale: 1.1
 }
 
 .box-info-user .item {
     position: relative;
     display: flex;
-    padding: 0px;
-    justify-content: space-between;
+    padding: 0;
+    justify-content: center;
     align-items: center;
     width: calc(100% - 15px);
     overflow: hidden;
     max-width: unset;
     height: 253px;
     margin: 0;
+    border-radius: 12px
 }
 
 .box-info-user .item .text {
@@ -6442,34 +6474,30 @@ footer .sub {
     bottom: 0;
     width: calc(100% - 59px);
     z-index: 11;
-    backdrop-filter: blur(5px);
-}
-
-.box-info-user .item .text .name {
-
+    backdrop-filter: blur(5px)
 }
 
 .box-info-user .item .text .role {
     font-size: 13px;
     margin-top: 11px;
-    color: #959595;
+    color: #959595
 }
 
 .c-60 {
-    width: 56%;
+    width: 56%
 }
 
 .c-40 {
-    width: 44%;
+    width: 44%
 }
 
 .c-100 {
-    width: 100%;
+    width: 100%
 }
 
 .box3.contactus .drow .c-map .map {
     height: 100% !important;
-    border-radius: 10px !important;
+    border-radius: 10px !important
 }
 
 .box3.contactus .drow .c-about .item {
@@ -6478,31 +6506,30 @@ footer .sub {
     align-items: center;
     justify-content: space-between;
     padding: 25px 0;
-    border-bottom: 0.1rem solid #e5e5e591;
+    border-bottom: .1rem solid #e5e5e591;
     font-weight: 600;
-    color: #767676;
+    color: #767676
 }
 
 .box3.contactus .drow .c-about .item .name {
     display: flex;
     align-items: center;
     font-size: 14px;
-    justify-content: flex-start;
+    justify-content: flex-start
 }
 
 .box3.contactus .drow .c-about .item .name svg {
-
     width: 22px;
     height: 22px;
     color: #094873;
-    margin-left: 8px;
+    margin-left: 8px
 }
 
 .box3.contactus .drow .c-about .so {
     display: flex;
     align-items: center;
     padding: 24px 0;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .box3.contactus .drow .c-about .so a {
@@ -6511,65 +6538,64 @@ footer .sub {
     align-items: center;
     padding: 0 15px;
     font-size: 13px;
-    color: #6d6f71;
+    color: #6d6f71
 }
 
 .box3.contactus .drow .c-about .so a svg {
-    margin-bottom: 6px;
+    margin-bottom: 6px
 }
 
-.box3.contactus input[type='text'] {
+.box3.contactus input[type='text']:not(.not) {
     height: 55px;
-    padding: 6px 17px;
+    padding: 6px 17px
 }
 
 .box3.contactus input[type='text']::placeholder {
-    color: #a2a4a4;
+    color: #a2a4a4
 }
 
 .top-bar.shadow {
-    box-shadow: 0px 3px 20px -5px rgb(0 0 0 / 21%);
+    box-shadow: 0 3px 20px -5px rgb(0 0 0 / 21%)
 }
 
 .contact-popup a {
-    color: black;
+    color: #000;
     width: 45px;
     height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 15px -4px #00000029;
-    background: white;
-    border-radius: 10px;
+    background: #fff;
+    border-radius: 10px
 }
 
 .contact-popup a:nth-child(2) {
-    margin-top: 8px;
+    margin-top: 8px
 }
 
 .contact-popup {
     position: fixed;
     display: flex;
     flex-direction: column;
-    top: 250px;
-
+    top: 250px
 }
 
 .about .title {
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 20px
 }
 
 .about .c-60 {
     padding-right: 36px;
-    padding-top: 28px;
+    padding-top: 28px
 }
 
 .p-title {
-    border-bottom: 0.1rem solid #e5e5e5;
+    border-bottom: .1rem solid #e5e5e5;
     padding: 0;
-    position: relative;
+    position: relative
 }
 
 .p-title h4 {
@@ -6577,7 +6603,7 @@ footer .sub {
     margin: 0 0 -3px;
     position: relative;
     padding-bottom: 23px;
-    font-size: 19px;
+    font-size: 19px
 }
 
 .p-title h4:before {
@@ -6588,52 +6614,52 @@ footer .sub {
     background: #ffdc00;
     height: 5px;
     border-radius: 16px;
-    bottom: 1px;
+    bottom: 1px
 }
 
 .about .c-60 p {
     font-size: 14px;
     line-height: 2;
-    padding-top: 17px;
+    padding-top: 17px
 }
 
 .about ul {
-    margin: 30px 0 0;
+    margin: 30px 0 0
 }
 
 .about ul li {
     list-style-type: none;
     font-size: 14px;
-    margin: 20px 0px;
+    margin: 20px 0
 }
 
 .about ul li i {
-    color: #094873;
+    color: #094873
 }
 
 .faq .list {
-    padding: 20px;
+    padding: 20px
 }
 
 .faq .list .item * {
-    transition: 0.2s;
+    transition: 0.2s
 }
 
 .faq .list .item {
     padding: 20px;
     border-radius: 10px;
     border: 1px solid #d8d8d8;
-    margin-bottom: 13px;
+    margin-bottom: 13px
 }
 
 .faq .list .item .title {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .faq .list .item .title i {
-    color: gray;
+    color: gray
 }
 
 .faq .list .item .answer {
@@ -6642,24 +6668,23 @@ footer .sub {
     font-size: 14px;
     transition: 0.2s;
     color: #838383;
-    padding: 0;
+    padding: 0
 }
 
 .faq .list .item.active .title i {
-    transform: rotate(45deg);
+    transform: rotate(45deg)
 }
 
 .faq .list .item.active .answer {
     height: unset;
-    padding: 18px 0 6px;
-
+    padding: 18px 0 6px
 }
 
 .nextstep {
     display: flex;
     align-items: center;
     margin-bottom: 19px;
-    padding: 0 11px;
+    padding: 0 11px
 }
 
 .nextstep .back {
@@ -6667,25 +6692,63 @@ footer .sub {
     color: black !important;
     width: 149px !important;
     float: right !important;
-    margin-left: 11px !important;
+    margin-left: 11px !important
 }
 
 .cart-date .item.disable {
-    opacity: 0.5;
+    opacity: .5;
     cursor: no-drop;
-    background: #cedaeca6;
+    background: #cedaeca6
 }
 
-/*help page*/
 .wrapper {
-    padding: 40px 40px 0;
+    padding: 40px 40px 0
+}
+.pagi{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
+.pagi .page-item a.page-link{
+    width: 24px;
+    height: 23px;
+    text-align: center;
+    border-radius: 10px;
+    display: block;
+    margin-right: 5px;
+    background: #dee8f1;
+    color: #616161;
+    box-shadow: 0px 2px 8px -4px black;
+    transition: 0.2s;
+}
+.pagi .page-item.active a.page-link{
+    color: white;
+    background: #094873;
+}
+.pagi .page-item a.page-link:hover {
+    transform: translateY(-2px);
+}
+.pagi .page-item:last-child a,.pagi .page-item:first-child a{
+    box-shadow: unset;
+    transition: 0.2s;
+    overflow: hidden;
+    background: unset;
+    color: #5c5c5c;
+    white-space: nowrap;
+    width: 70px;
+    font-size: 14px;
+}
+.pagi .page-item.disabled a{
+    width: 0;
+}
 .header {
     background: #0b2c6e url(/img/page/header_pattern.webp) no-repeat top;
     border-radius: 32px;
     padding: 80px 104px 72px 40px;
-    margin-bottom: 72px;
+    margin-bottom: 72px
 }
 
 .header .header_flex {
@@ -6695,19 +6758,19 @@ footer .sub {
     align-items: flex-start;
     -webkit-box-pack: justify;
     justify-content: space-between;
-    margin: 0 -32px;
+    margin: 0 -32px
 }
 
 .header .header_flex > div {
     margin: 0 32px;
-    width: 50%;
+    width: 50%
 }
 
 .header .header_context_holder .title_header {
     color: #fff;
     font-weight: 900;
     text-align: right;
-    margin-bottom: 24px;
+    margin-bottom: 24px
 }
 
 .header .header_context_holder .title_header_bg {
@@ -6719,7 +6782,7 @@ footer .sub {
     width: -moz-fit-content;
     width: fit-content;
     padding: 0 4px;
-    margin-bottom: 0;
+    margin-bottom: 0
 }
 
 .title_main {
@@ -6729,34 +6792,34 @@ footer .sub {
     text-align: center;
     margin-top: 0;
     margin-bottom: 48px;
-    color: #094772;
+    color: #094772
 }
 
 .header .header_context_holder .header_text {
     color: #fafafa;
     line-height: 38px;
-    margin-top: 32px;
+    margin-top: 32px
 }
 
 .header .header_flex > div {
     margin: 0 32px;
-    width: 50%;
+    width: 50%
 }
 
 .header .header_video_holder .video {
     max-width: 100%;
     height: auto;
-    border-radius: 16px;
+    border-radius: 16px
 }
 
 .section {
-    padding-bottom: 72px;
+    padding-bottom: 72px
 }
 
 .steps_loan {
     position: relative;
     z-index: 2;
-    margin-top: 96px;
+    margin-top: 96px
 }
 
 .steps_loan .steps {
@@ -6768,30 +6831,30 @@ footer .sub {
     justify-content: flex-start;
     width: 1000px;
     max-width: 100%;
-    margin: auto;
+    margin: auto
 }
 
 .steps_loan .steps .steps_context {
     width: calc(50% - 51px);
-    min-height: 192px;
+    min-height: 192px
 }
 
 .steps_loan .steps .steps_icon {
-    padding: 0 32px;
+    padding: 0 32px
 }
 
 .steps_loan .steps .empty {
-    width: calc(50% - 51px);
+    width: calc(50% - 51px)
 }
 
 .steps_loan .steps .steps_context .steps_title {
     font-size: 20px;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 8px
 }
 
 .steps_loan .steps .steps_context .steps_text {
-    text-align: justify;
+    text-align: justify
 }
 
 .steps_loan .steps .steps_context .steps_link {
@@ -6800,11 +6863,11 @@ footer .sub {
     color: #0082fd;
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 10px
 }
 
 .steps_loan .steps .steps_context .steps_link svg {
-    transform: rotate(90deg);
+    transform: rotate(90deg)
 }
 
 .steps_loan:before {
@@ -6816,7 +6879,7 @@ footer .sub {
     left: calc(50% - 2px);
     z-index: -1;
     width: 2px;
-    background: url(/img/page/Line_steps.png?167a161f50acc37f321af7851c435d8a) no-repeat top;
+    background: url(/img/page/Line_steps.png?167a161f50acc37f321af7851c435d8a) no-repeat top
 }
 
 .steps_icon h2 {
@@ -6828,7 +6891,7 @@ footer .sub {
     justify-content: center;
     border-radius: 50px;
     color: #094772;
-    font-size: 60px;
+    font-size: 60px
 }
 
 .request_credit_box {
@@ -6843,11 +6906,11 @@ footer .sub {
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .request_credit_box .title_main {
-    margin-bottom: 48px;
+    margin-bottom: 48px
 }
 
 .request_credit_box .cta_btn {
@@ -6865,28 +6928,28 @@ footer .sub {
     padding: 0 32px;
     border-radius: 12px;
     background-color: #0ac974;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .section.faq_section {
     background: #f0f0f0;
     padding: 80px 164px;
     margin-right: -40px;
-    margin-left: -40px;
+    margin-left: -40px
 }
 
 .faq_accordion {
     background: #fff;
     border: 1px solid rgba(8, 27, 64, .03);
     border-radius: 16px;
-    padding: 24px 72px;
+    padding: 24px 72px
 }
 
 .faq_accordion .faq_accordion_item {
     padding: 32px 0;
     border-bottom: 1px solid #d9d9d9;
     color: #141414;
-    list-style-type: none;
+    list-style-type: none
 }
 
 .faq_accordion .faq_accordion_item .title {
@@ -6895,7 +6958,7 @@ footer .sub {
     font-weight: 700;
     position: relative;
     padding-left: 40px;
-    margin: 0;
+    margin: 0
 }
 
 .faq_accordion .faq_accordion_item .title .icon {
@@ -6913,25 +6976,69 @@ footer .sub {
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .faq_accordion .faq_accordion_item .answer .list_indent {
-    padding-right: 16px;
+    padding-right: 16px
 }
 
 .faq_accordion .faq_accordion_item .answer .list_indent .list_indent2 {
     list-style-type: disc;
-    padding-right: 32px;
+    padding-right: 32px
 }
 
 .woocommerce-cart-holder .coupon button {
-    padding: 0 !important;
+    padding: 0 !important
+}
+
+.rd1[type="radio"]{
+    display: none;
+}
+.rd1[type="radio"] + label
+{
+    position: relative;
+    padding-right: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+.rd1[type="radio"] + label:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+.rd1[type="radio"] + label:after{
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #094873;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.rd1[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
 
 @keyframes pulse {
     to {
-        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0)
     }
 }
 
@@ -6948,132 +7055,130 @@ footer .sub {
 
 @keyframes scaling {
     to {
-        scale: 1.03;
+        scale: 1.03
     }
 }
 
 @media only screen and (max-width: 1130px) {
     .search-cell {
-        width: 40% !important;
+        width: 40% !important
     }
-    .desk-list{
-        width: 87%;
+
+    .desk-list {
+        width: 87%
     }
 }
 
 @media only screen and (max-width: 1100px) {
-
     .cart-send .items .item {
-        width: 48.33%;
+        width: 48.33%
     }
 
     .right-new-123-1 {
-        width: 35%;
+        width: 35%
     }
 
     .left-sepoid-product {
-        width: 65%;
+        width: 65%
     }
 
     .left-two-p-sepid {
         width: 55%;
-        padding-left: 10px;
+        padding-left: 10px
     }
 
     .right-two-p-sepid-asli {
-        width: 45%;
+        width: 45%
     }
 
     .woocommerce-cart-holder #coupon_code {
-        max-width: 180px;
+        max-width: 180px
     }
 
-
     footer .top .co-12:nth-child(1) {
-        padding: 30px;
+        padding: 30px
     }
 }
 
 @media only screen and (max-width: 1050px) {
     .checkout.woocommerce-checkout #customer_details {
         width: 100%;
-        padding-left: 0px;
-        box-sizing: border-box;
+        padding-left: 0;
+        box-sizing: border-box
     }
 
     .cell-30-left {
         float: right;
-        width: 100%;
+        width: 100%
     }
 }
 
 @media only screen and (max-width: 1024px) {
-
-    .desk-list{
-        width: 80%;
+    .desk-list {
+        width: 80%
     }
+
     footer .top .co-12:nth-child(1) {
-        width: 50%;
+        width: 50%
     }
 
     footer .top .co-12:nth-child(2) {
-        width: 50%;
+        width: 50%
     }
 
     footer .top .co-12:nth-child(3) {
-        width: 30%;
+        width: 30%
     }
 
     footer .top .co-12:nth-child(4) {
-        width: 70%;
+        width: 70%
     }
 
     .right-new-123-1 {
-        width: 100%;
+        width: 100%
     }
 
     .left-sepoid-product {
         width: 100%;
-        padding-right: 0px;
-        margin-top: 30px;
+        padding-right: 0;
+        margin-top: 30px
     }
 
     .left-two-p-sepid {
         width: 60%;
-        padding-left: 20px;
+        padding-left: 20px
     }
 
     .right-two-p-sepid-asli {
-        width: 40%;
+        width: 40%
     }
 
     .woocommerce-cart-holder {
         width: 100%;
-        padding-left: 0px;
-        margin-bottom: 25px;
+        padding-left: 0;
+        margin-bottom: 25px
     }
 
     .cart-collaterals.sticky-sidebar {
-        width: 100%;
+        width: 100%
     }
-
-
 }
 
 @media only screen and (max-width: 900px) {
-    .desk-list{
-        width: 76%;
+    .desk-list {
+        width: 76%
     }
+
     .home-icons .item {
-        min-width: 33.3%;
+        min-width: 33.3%
     }
 
     .cart-date .items .item {
-        width: 48.33%;
+        width: 48.33%
     }
 
     .search-cell {
-        width: 30% !important;
+        width: 30% !important
     }
 }
 
@@ -7083,279 +7188,299 @@ footer .sub {
 }
 
 @media only screen and (max-width: 700px) {
-    .desk-list{
-        width: 66%;
+    .box-info-user .item .text .name{
+        font-size: 14px;
     }
+    .box-info-user .item .text{
+        width: calc(100% - 35px);
+        padding: 11px;
+        margin: 6px;
+    }
+    .box-info-user .item{
+        width: calc(100% - 5px);
+    }
+    .request-f .box {
+        max-width: 340px !important;
+    }
+
+    .desk-list {
+        width: 66%
+    }
+
     .sidebar-exit {
-        padding: 10px 6px !important;
+        padding: 10px 6px !important
     }
 
     .sidebar-exit i {
-        position: unset;
+        position: unset
     }
 
     .box2 > .title {
-        font-size: 14px;
+        font-size: 14px
     }
 
     .menu-bl-p img {
-        width: 35px;
+        width: 35px
     }
 
     .menu-bl-p .text {
         font-size: 10px;
-        text-align: center;
+        text-align: center
     }
 
     .menu-bl-p {
-        padding: 10px 15px;
+        padding: 10px 15px
     }
 
     .ProfileName {
         padding: 12px 10px 0;
         display: flex;
         flex-direction: row-reverse;
-        justify-content: space-between;
+        justify-content: space-between
     }
 
     .ProfileName .title {
         font-size: 12px;
-        padding: 12px 0.625rem;
-        color: #202636;
+        padding: 12px .625rem;
+        color: #202636
     }
 
     .edit-profile {
         margin: 10px;
-        padding: 19px;
+        padding: 19px
     }
 
     .edit-profile .add-shop {
         padding: 12px;
-        font-size: 11px;
+        font-size: 11px
     }
 
     .s-slid {
-        flex-direction: column;
+        flex-direction: column
     }
 
     .s-slid .co {
         padding: 0 !important;
-        width: 100%;
+        width: 100%
     }
 
     .s-slid .co a {
-        height: unset;
+        height: unset
     }
 
     .s-slid .co:nth-child(2) {
-        margin-top: 8px;
+        margin-top: 8px
     }
 
     .cart-date .items .item, .cart-send .items .item, .cart-finish .nextstep, .cart-finish .info {
-        width: 100%;
+        width: 100%
     }
 
     .cart-finish .info {
-        padding: 0 15px;
+        padding: 0 15px
     }
 
     footer .top .contact-us {
-        background: white;
+        background: #fff;
         padding: 55px;
         border-radius: 19px;
-        box-shadow: 0 0 18px -6px #84848487;
+        box-shadow: 0 0 18px -6px #84848487
     }
 
     footer .top .co-12:nth-child(1) {
         width: 100%;
-        padding: 30px !important;
+        padding: 30px !important
     }
 
     footer .top .co-12:nth-child(2) {
-        width: 100%;
+        width: 100%
     }
 
     footer .top .co-12:nth-child(3) {
-        width: 100%;
+        width: 100%
     }
 
     footer .top .co-12:nth-child(4) {
-        width: 100%;
+        width: 100%
     }
 
     .right-new-123-1 {
-        width: 100%;
+        width: 100%
     }
 
     .simple-item {
-        margin: 8px 2px 21px;
+        margin: 8px 2px 21px
     }
 
     .simple-item .price {
-        font-size: 13px;
+        font-size: 13px
     }
 
     .simple-item .body .basket {
         width: 45px;
-        height: 45px;
+        height: 45px
     }
 
     .simple-item .body {
-        padding: 0 16px 17px;
+        padding: 0 16px 17px
     }
 
     .mini-show .card-share-link {
         min-width: calc(100% - 10px);
-        padding: 0;
+        padding: 0
     }
 
     .mini-show .product-aspk {
-        margin-bottom: 10px;
+        margin-bottom: 10px
     }
 
     .sgare-sepid-box .product-page {
-        flex-direction: column;
+        flex-direction: column
     }
 
     .sgare-sepid-box .product-page .product-aspk {
-        width: 100%;
+        width: 100%
     }
 
     .mini-show .btn {
-        font-size: 12px;
+        font-size: 12px
     }
 
     .mini-show .price {
-        font-size: 16px;
+        font-size: 16px
+    }
+
+    .mobile-menu ul.holder {
+        display: flex
     }
 
     form.search-menu {
-        margin: 0 0 0 30px;
+        margin: 0 0 0 7px
     }
 
     .mobile-menu ul.holder li a {
         margin: 0;
         position: unset;
-        font-size: 96%;
+        font-size: 96%
     }
 
     .mini-menu-3 .items {
-        margin: 0 6px;
+        margin: 0 6px
     }
 
     .header-left-btns li .btnh {
-        margin: 0;
+        margin: 0
     }
 
     .item-mini-menu.active .mini-menu- {
-        padding-bottom: 0;
+        padding-bottom: 0
     }
 
     .off-canvas li a, .drilldown .is-drilldown-submenu a {
-        padding: 18px 16px;
+        padding: 18px 16px
     }
 
     .home-icons .item {
-        min-width: 50% !important;
+        min-width: 50% !important
     }
 
     .home-icons .item .meta-sepid-new-1 {
-        padding: 20px 10px;
+        padding: 20px 10px
     }
 
     .home-icons .item .meta-sepid-new-1 .text {
-        margin-right: 12px;
+        margin-right: 12px
     }
 
     .home-icons .item .meta-sepid-new-1 img {
         width: 40px;
-        height: 40px;
+        height: 40px
     }
 
     .home-icons .item:not(.home-icons .item:nth-child(1),.home-icons .item:nth-child(2)) {
-        display: none;
+        display: none
     }
 
     footer .top .co-12 {
-        min-height: unset;
+        min-height: unset
     }
 
     footer .bg-swip .box {
         width: 100%;
-        text-align: center;
+        text-align: center
     }
 
     footer .bg-swip .box:not(footer .bg-swip .box:nth-child(1)) {
-        display: none;
+        display: none
     }
 
     .sub-bg-switch {
-        width: 69%;
+        width: 69%
     }
 
     .sub-bg-switch .swup svg:nth-child(2) {
         height: 26px;
-        width: 124px;
+        width: 124px
     }
 
     .card-share-link {
         width: calc(100% - 10px);
-        min-width: unset;
+        min-width: unset
     }
 
     .OrderSteps_container__1xeZ2 {
-        display: none;
+        display: none
     }
 
     .product-box .buttons {
         position: absolute;
-        z-index: 10000000;
+        z-index: 10000000
     }
 
     .product-box .name h1 {
-        font-size: 1.1rem;
+        font-size: 1.1rem
     }
 
     .right-two-p-sepid-asli, .left-two-p-sepid, .right-new-123-1, .product-box .d-add-shop {
         width: 100%;
         max-width: 100%;
-        padding-left: 0;
+        padding-left: 0
     }
 
     .meta-sepid-new-1 {
         width: 50%;
-        margin-bottom: 35px;
+        margin-bottom: 35px
     }
 
     .product-page .product-tabs .title-tabs li > a > div {
         margin: 5px;
-        padding: 15px 5px;
+        padding: 15px 5px
     }
 
     .tabs-title {
-        width: 33.3%;
+        width: 33.3%
     }
 
     #app-feature-item .item div.name {
-        width: 100%;
+        width: 100%
     }
 
     .product-page .product-info > .title {
         margin-bottom: 0;
-        font-size: 15px;
+        font-size: 15px
     }
 
     .product-box > .mw-p {
         width: 100%;
-        max-width: 100%;
+        max-width: 100%
     }
 
     .button.wc-forward {
-        margin-top: 16px;
+        margin-top: 16px
     }
 
     .product-page .woocommerce-message {
-        padding-bottom: 90px;
+        padding-bottom: 90px
     }
 
     footer .bg-swip:before {
@@ -7367,7 +7492,7 @@ footer .sub {
         left: 0;
         z-index: 10;
         display: block;
-        border-radius: 40px 0 0 40px;
+        border-radius: 40px 0 0 40px
     }
 
     footer .bg-swip:after {
@@ -7379,180 +7504,180 @@ footer .sub {
         right: 0;
         z-index: 10;
         display: block;
-        border-radius: 0 40px 40px 0;
+        border-radius: 0 40px 40px 0
     }
 
     .products-items {
-        flex-wrap: wrap;
+        flex-wrap: wrap
     }
 
     .products-items .feacher span:nth-child(1) {
         display: block;
-        margin-bottom: 15px;
+        margin-bottom: 15px
     }
 
     .products-items .feacher {
         width: 100%;
-        margin-top: 13px !important;
+        margin-top: 13px !important
     }
 
     .product-price .amount {
-        font-size: 12px;
+        font-size: 12px
     }
 
     .woocommerce table.shop_table td {
         padding: 6px;
-        font-size: 12px;
+        font-size: 12px
     }
 
     .woocommerce a.remove {
         height: 18px;
         width: 18px;
-        font-size: 15px;
+        font-size: 15px
     }
 
     .woocommerce-Price-amount.amount bdi {
         display: flex;
-        flex-direction: column;
+        flex-direction: column
     }
 
     .woocommerce-cart-holder .product-thumbnail img, .woocommerce .quantity .qty {
-        padding: 0;
+        padding: 0
     }
 
     .woocommerce-cart-holder th:not(.product-remove,.product-thumbnail)::before {
-        display: none;
+        display: none
     }
 
     .button.button_update_cart {
         width: 100%;
-        margin-top: 15px !important;
+        margin-top: 15px !important
     }
 
     .woocommerce-error {
-        margin: 13px;
+        margin: 13px
     }
 
     .item-address-cart .edit {
-        top: 56px;
+        top: 56px
     }
 
     .checkout.woocommerce-checkout .order_review_heading {
-        margin-right: 16px;
+        margin-right: 16px
     }
 
     .cart-date, .cart-send {
-        padding: 24px 13px;
+        padding: 24px 13px
     }
 
     .pro-1-2.p50 {
-        padding: 32px 20px;
+        padding: 32px 20px
     }
 
     .pro-1-2.mt-0 {
-        padding: 0;
+        padding: 0
     }
 
     .item-address-cart {
-        padding-right: 35px;
+        padding-right: 35px
     }
 
     .item-address-cart .selecting i {
-        right: 12px;
+        right: 12px
     }
 
     .item-address-cart .selecting:before, .item-address-cart .selecting:after {
-        right: 5px;
+        right: 5px
     }
 
     .checkout.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields {
-        padding: 25px 15px;
+        padding: 25px 15px
     }
 
     .woocommerce-cart-holder .woocommerce-cart-form .woocommerce-cart-form__contents {
-        padding: 10px;
+        padding: 10px
     }
 
     .woocommerce-cart-holder #coupon_code {
         width: 55% !important;
-        max-width: unset;
+        max-width: unset
     }
 
     .coupon {
-        width: 100%;
+        width: 100%
     }
 
     .cart-finish .nextstep {
-        padding: 0 23px 25px;
+        padding: 0 23px 25px
     }
 
     footer .to-up {
-        display: none;
+        display: none
     }
 
     .home-products .titles .item {
-        font-size: 13px;
+        font-size: 13px
     }
 
     .simple-item .body .title {
-        font-size: 13px;
+        font-size: 13px
     }
 
     .simple-item .body .model {
-        font-size: 11px;
+        font-size: 11px
     }
 
     .woocommerce-cart-holder .woocommerce-cart-form {
-        padding: 5px;
+        padding: 5px
     }
 
     .cart-finish .info .item {
         margin: 11px 0;
-        font-size: 12px;
+        font-size: 12px
     }
 
     .menu-bl-p > div {
         height: 94px;
         justify-content: center !important;
-        flex-direction: column !important;
+        flex-direction: column !important
     }
 
     .bbox .title2 {
-        font-size: 13px;
+        font-size: 13px
     }
 
     .menu-bl {
         border-left: none;
-        margin-left: 32px;
+        margin-left: 32px
     }
 
     .woocommerce-cart-holder .coupon button {
         width: calc(45% - 10px) !important;
-        padding: 0px !important;
+        padding: 0px !important
     }
 
     .box3.contactus .drow .c-about {
-        width: 100%;
+        width: 100%
     }
 
     .box3.contactus .drow .c-map {
         width: 100%;
         height: 294px;
-        padding: 0;
+        padding: 0
     }
 
     .box3.contactus {
-        padding: 35px 18px;
+        padding: 35px 18px
     }
 
     .header .header_flex {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-        flex-direction: column;
+        flex-direction: column
     }
 
     .header .header_flex > div {
-        width: auto;
+        width: auto
     }
 
     .steps_loan .steps .steps_context {
@@ -7563,114 +7688,113 @@ footer .sub {
         width: auto;
         -webkit-box-flex: 1;
         flex: 1;
-        margin-left: 33px;
+        margin-left: 33px
     }
 
     .section.faq_section {
-        padding: 40px;
+        padding: 40px
     }
 
     .header .header_context_holder .title_header, .header .header_context_holder .title_header_bg {
-        text-align: center;
+        text-align: center
     }
 
     .steps_loan .steps .steps_context .steps_title {
-        z-index: 15;
+        z-index: 15
     }
 
     .steps_loan .steps .steps_context .steps_text {
-        font-size: 11px;
+        font-size: 11px
     }
 
     .wrapper .header {
-        padding: 40px;
+        padding: 40px
     }
 
     .steps_loan .steps .empty {
-        display: none;
+        display: none
     }
 
     .steps_loan:before {
-        content: unset;
+        content: unset
     }
 
     .steps_icon h2 {
         width: 70px;
         height: 70px;
-        font-size: 32px;
+        font-size: 32px
     }
 
     .mini-cart-3 {
-        display: none !important;
+        display: none !important
     }
 
     #salamat-logo + span {
-        display: none;
+        display: none
     }
 
     #app-cart .empty {
-        padding: 0;
+        padding: 0
     }
 
     #app-cart .empty .title-empty {
-        font-size: 15px;
+        font-size: 15px
     }
 
     #app-cart .empty .sub-title-empty {
-        font-size: 10px;
+        font-size: 10px
     }
 
     #app-cart .empty .links {
-        font-size: 10px;
+        font-size: 10px
     }
 
     .menu-profile-i {
-        padding: 7px 15px;
+        padding: 7px 15px
     }
 
     .ProfileName .pic .hupload {
         height: 40px;
-        width: 40px;
+        width: 40px
     }
 
     .hupload .upload {
         height: 16px;
         width: 16px;
         left: -4px;
-        top: 3px;
+        top: 3px
     }
 
     .product-item-h .infos i {
-        padding: 0;
+        padding: 0
     }
 
     .product-item-h img {
         margin: 8px;
         width: 50px;
-        height: 44px;
+        height: 44px
     }
 
     .product-item-h .infos .texts span {
-        font-size: 11px;
+        font-size: 11px
     }
 
     .product-item-h .infos .texts span {
-        font-size: 10px;
+        font-size: 10px
     }
 
     .product-item-h .infos i {
         padding: 0;
         margin-right: 9px;
-        font-size: 12px;
+        font-size: 12px
     }
 
     .add-shop {
-
         padding: 9px;
         font-size: 10px;
         display: inline-block;
         text-align: center;
-        margin: 0 0 0 12px;
+        margin: 0 0 0 12px
     }
 
     .btn-new-ticket {
@@ -7682,56 +7806,56 @@ footer .sub {
         transition: 0.2s;
         font-size: 10px;
         margin: 6px 9px;
-        cursor: pointer;
+        cursor: pointer
     }
 
     .sub-title .info {
         font-size: 10px;
-        color: #a2a2a2;
+        color: #a2a2a2
     }
 
     .product-item-h .infos {
-        width: 70%;
+        width: 70%
     }
 
     .item-address .name {
         padding: 5px 9px;
-        font-size: 13px;
+        font-size: 13px
     }
 
     .item-address .section .item {
         padding: 6px 9px;
-        font-size: 12px;
+        font-size: 12px
     }
 
     .item-address .section .item span {
-        font-size: 12px;
+        font-size: 12px
     }
 
     .more-a {
         flex-direction: column;
-        border-left: 1px solid #bdbdbd;
+        border-left: 1px solid #bdbdbd
     }
 
     .item-address .section {
-        padding: 0;
+        padding: 0
     }
 
     .item-address .cities {
-        border-left: none;
+        border-left: none
     }
 
     .product-page .product-tabs .title-tabs li > a > div {
         text-align: center;
-        font-size: 14px;
+        font-size: 14px
     }
 
     .home-icons-mobile .item {
-        padding: 20px;
+        padding: 20px
     }
 
     .home-icons-mobile {
-        height: 134px;
+        height: 134px
     }
 
     .home-icons-mobile .item .meta-sepid-new-1 {
@@ -7739,69 +7863,80 @@ footer .sub {
         display: flex;
         flex-direction: row;
         width: 100%;
-        background: white;
+        background: #fff;
         border-radius: 10px;
         padding: 24px 20px 24px 0;
         align-items: center;
-        margin: 0;
+        margin: 0
     }
 
     .meta-sepid-new-1 .text {
-        text-align: right;
-
+        text-align: right
     }
 
     .meta-sepid-new-1 img {
         width: 50px;
         height: 50px;
-        margin-left: 11px;
+        margin-left: 11px
     }
 
     .meta-sepid-new-1 {
-        font-size: 13px;
+        font-size: 13px
     }
-    .img-footer:before{
-        background: radial-gradient(transparent, #f2f6fc00, #f2f6fcc4, #f2f6fc, #f2f6fc);
+
+    .img-footer:before {
+        background: radial-gradient(transparent, #f2f6fc00, #f2f6fcc4, #f2f6fc, #f2f6fc)
     }
-    .img-footer{
+
+    .img-footer {
         left: -264px;
         bottom: 0;
-        height: unset;
+        height: unset
     }
+
     .footer-bottom {
         font-size: 12px;
-        padding: 0 30px;
+        padding: 0 30px
     }
-    .c-40,.c-60{
+
+    .c-40, .c-60 {
         width: 100%;
-        padding-right: 0px!important;
-        padding-left: 0px!important;
+        padding-right: 0px !important;
+        padding-left: 0px !important
     }
-    .box-info{
+
+    .box-info {
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: center
     }
+
     .box-info .item {
         height: 168px;
         border-radius: 15px;
-        padding: 22px 50px;
+        padding: 22px 12px;
         width: calc(50% - 6px);
         margin: 3px 3px;
+        font-size: 13px;
     }
+
     .box-info .item:last-child {
-        width: 100%;
+        width: 100%
     }
-    .wrapper{
-        padding: 0;
+
+    .wrapper {
+        padding: 0
     }
+
     .steps_loan .steps .steps_icon {
-        padding: 0 11px 0 16px;
+        padding: 0 11px 0 16px
     }
-    .request_credit_box .title_main{
-        padding: 0 8px;
+
+    .request_credit_box .title_main {
+        padding: 0 8px
     }
-    .faq .list{
-        margin: 0 12px;
+
+    .faq .list {
+        margin: 0 12px
     }
 }
 
@@ -7809,35 +7944,34 @@ footer .sub {
     .size {
         width: 100%;
         padding: 0 10px;
-        box-sizing: border-box;
+        box-sizing: border-box
     }
 }
 
 @media only screen and (max-height: 761px) {
-    .back-to-home{
-        display: none;
+    .back-to-home {
+        display: none
     }
 }
-
 
 .disableT *:not(.share-link-pop,.simple-item *) {
     transform: none !important;
     filter: none !important;
     opacity: unset !important;
-    z-index: unset;
+    z-index: unset
 }
 
 .disableT .top-bar {
-    z-index: 1;
+    z-index: 1
 }
 
 #cart_invoice {
-    overflow: auto;
+    overflow: auto
 }
 
 .callout.success {
     background: rgb(3, 183, 0);
-    color: white;
+    color: #fff
 }
 
 .callout {
@@ -7849,10 +7983,104 @@ footer .sub {
     padding: 1rem;
     position: fixed;
     text-align: center;
-    border: 0px;
-    color: white;
+    border: 0;
+    color: #fff;
     padding: 11px;
     width: auto;
     left: 20px;
-    bottom: 15px;
+    bottom: 15px
+}
+
+.user-type- {
+    text-align: center;
+    font-size: 13px
+}
+
+.user-type- label {
+    font-size: 13px
+}
+
+.request-f {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    background: linear-gradient(180deg, #00000063, transparent);
+    z-index: 10000;
+    height: 146px;
+}
+
+.request-f .box {
+    max-width: 500px;
+    margin: 25px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px 0 #0000003b;
+    padding: 15px;
+}
+
+.request-f .box .title {
+    display: flex;
+}
+
+.request-f .buttons {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.btn-close, .btn-ok {
+    background: #e4e4e4;
+    color: #4c4c4c;
+    padding: 7px 16px;
+    margin: 2px 4px;
+}
+
+.btn-ok {
+    background: #094873;
+    color: white;
+}
+
+.title.no-line:after {
+    content: none !important;
+}
+
+.title.no-line {
+    justify-content: flex-start !important;
+}
+
+.body-inquiry {
+    padding: 18px 0px 18px 30px;
+    font-size: 14px
+}
+
+.body-inquiry p {
+    line-height: 2.3
+}
+
+.body-inquiry .list {
+    line-height: 2.3;
+    margin: 0;
+    list-style-type: none;
+    padding: 11px 0;
+}
+.body-inquiry .bot {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin-top: 12px;
+}
+
+.body-inquiry .bot .text {
+    color: #094873;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+.item.w {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 3px 19px -12px #22222236;
+}
+
+.request-f span {
+    margin: 0 8px;
 }
