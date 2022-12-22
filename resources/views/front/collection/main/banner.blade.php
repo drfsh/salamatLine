@@ -7,7 +7,7 @@
                 <div class="cell small-12 medium-{{$item->size}}">
                     <div class="landing-banner">
                         <a href="{{$item->link}}">
-                            <img class="lozad banner"
+                            <img class="lozad"
                                  data-src="{{$item->imgPath}}"
                                  alt="{{$item->name}}">
                         </a>
@@ -15,13 +15,13 @@
                 </div>
             @elseif($item->type=='text')
                 <div class="cell small-12 medium-{{$item->size}}">
-                    <div class="landing-banner">
+                    <div class="landing-banner text">
                         @if(isset($item->file))
                             <img class="lozad text" data-src="{{$item->imgPath}}">
                         @endif
                         <div>
-                            <div style="color: {{$item->titleColor}};font-size: {{$item->titleSize}}px">{{$item->title}}</div>
-                            <div style="color: {{$item->valueColor}};font-size: {{$item->valueSize}}px">{{$item->value}}</div>
+                            <div style="margin-bottom: 20px;color: {{$item->titleColor}};font-size: {{$item->titleSize}}px">{{$item->title}}</div>
+                            <div style="line-height: 2;color: {{$item->valueColor}};font-size: {{$item->valueSize}}px">{!! $item->value !!}</div>
                         </div>
                     </div>
                 </div>

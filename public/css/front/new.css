@@ -4537,18 +4537,24 @@ input[type=number] {
 
 .landing-banner img.text {
     height: 100%;
-    padding: 30px
+    padding: 30px;
+    border-radius: 15px;
 }
 
 .landing-banner {
-    height: 300px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    padding: 10px 0;
+}
+.landing-banner img{
     border-radius: 20px
 }
-
+.landing-banner .text{
+    padding: 15px;
+}
 .desk-list {
     display: flex;
     flex-direction: row;

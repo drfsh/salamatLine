@@ -931,6 +931,10 @@ export default {
                 "</div>"
             let vm = this
 
+            let clearClass = 'hide'
+            if (data.imgPath)
+                clearClass = ''
+
             $.confirm({
                 title: 'تنظیم متن برای جایگاه ' + p,
                 content: text,
@@ -979,6 +983,14 @@ export default {
                             data.valueColor = valueColor
                         }
                     },
+                    clear: {
+                        text: 'حذف تصویر',
+                        btnClass: clearClass,
+                        action:()=>{
+                            data.imgPath = null;
+                            data.file = null
+                        }
+                    }
                 }
             })
         },

@@ -32,7 +32,11 @@ export default {
             let parentData = null
             if (parent_role!==-1){
                 pi = this.$parent.$data['select'+parent_role]
+                if (pi!=undefined)
                 parentData = this.$parent.$data['data'+parent_role][pi]
+                else{
+                    parentData = {id:0}
+                }
             }
 
             let vm = this

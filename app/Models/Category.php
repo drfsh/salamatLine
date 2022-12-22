@@ -22,7 +22,8 @@ class Category extends RinvexCategory implements Viewable
     }
     public function getProductsCountAttribute()
     {
-        return Product::withAnyCategories($this->id)->count();
+        $sub_cat_id = Category::descendantsAndSelf($this->id)->pluck('id')->toArray();
+        return Product::withAnyCategories($sub_cat_id)->count();
     }
     public function getParentCatAttribute()
     {
