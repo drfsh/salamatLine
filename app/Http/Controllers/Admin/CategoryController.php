@@ -22,34 +22,44 @@ class CategoryController extends Controller
 
     public function index()
     {
-        $categories = Category::defaultOrder()->get()->toTree();
-
-        // return $categories;
-        return view('admin.categories.category.index', compact('categories'));
+        return view('admin.categories.category.index');
     }
 
-    public function create()
+    public function create(Request $request)
     {
-        $list = Category::get()->toFlatTree();
-        return view('admin.categories.category.create', compact('list'));
+        $parent_id = $request->parent_id; //parent show id
+        $category = Category_relation::find($parent_id);
+        if ($category)
+            $category = $category->category_id;
+        $list = Category::get();
+        return view('admin.categories.category.create', compact('list','category','parent_id'));
     }
 
     public function store(Request $request)
     {
         $parent_id = $request->input('parent_id');
+        if (!$parent_id || is_null($parent_id))
+            $parent_id = 0;
+        $name = ['fa'=>$request->input('name')];
+        $description = ['fa'=>$request->input('description')];
         $attributes = [
-            'name' => $request->input('name'),
+            'name' => json_encode($name),
             'slug' => $request->input('slug'),
-            'description' => $request->input('description')
+            'description' => json_encode($description)
         ];
-        $category = Category::create($attributes);
 
-        if ($parent_id) {
-            $parent = Category::find($parent_id);
-            $category->appendToNode($parent)->save();
-        } else {
-            $category->makeRoot()->save();
+        $sort = 0;
+        if ($parent_id!=0){
+            $show = Category_relation::where('parent_id',$parent_id)->defaultOrder()->first();
+            if ($show)
+                $sort = $show->sort+1;
         }
+        $category = Category::create($attributes);
+        Category_relation::create([
+            'category_id'=>$category->id,
+            'parent_id'=>$parent_id,
+            'sort'=>$sort
+        ]);
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
@@ -73,7 +83,7 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $category = Category::find($id);
-        $list = Category::get()->toFlatTree();
+        $list = Category::get();
         return view('admin.categories.category.edit', compact('category', 'list'));
     }
 
@@ -83,18 +93,14 @@ class CategoryController extends Controller
         $parent_id = $request->input('parent_id');
 
         $category = Category::find($id);
-        $attributes = [
-            'name' => $request->input('name'),
-            'slug' => $request->input('slug'),
-            'description' => $request->input('description')
-        ];
 
-        if ($parent_id) {
-            $parent = Category::find($parent_id);
-            $category->appendToNode($parent)->save();
-        } else {
-            $category->makeRoot()->save();
-        }
+        $name = ['fa'=>$request->input('name')];
+        $description = ['fa'=>$request->input('description')];
+        $attributes = [
+            'name' => json_encode($name),
+            'slug' => $request->input('slug'),
+            'description' => json_encode($description)
+        ];
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
@@ -122,11 +128,13 @@ class CategoryController extends Controller
 
     public function destroy($child_id,$parent_id)
     {
-        $rlation = Category_relation::where([['child_id',$child_id],['parent_id',$parent_id]])->first();
+        $rlation = Category_relation::find($child_id);
         if ($rlation)
-            $rlation->delete();
-        else
-            Category::where('id', '=', $child_id)->delete();
+        {
+            $rlation->deleteAll();
+        }
+//        else
+//            Category::where('id', '=', $child_id)->delete();
 
         Session::flash('success', 'دسته‌بندی حذف شد');
         return 'ok';
@@ -135,7 +143,7 @@ class CategoryController extends Controller
 
     public function up($id)
     {
-        $category = Category::find($id);
+        $category = Category_relation::find($id);
         $bool = $category->up();
         return 'ok';
     }
@@ -143,7 +151,7 @@ class CategoryController extends Controller
 
     public function down($id)
     {
-        $category = Category::find($id);
+        $category = Category_relation::find($id);
         $bool = $category->down();
         return 'ok';
 
@@ -152,19 +160,9 @@ class CategoryController extends Controller
 
     public function hide_show($id)
     {
-        $category = Category::find($id);
+        $category = Category_relation::find($id);
         $status = !$category->hide;
         $category->hide = $status;
-//        $category2 = $category->children;
-//        foreach ($category2 as $item2) {
-//            $item2->hide = $status;
-//            $item2->save();
-//            $category3 = $item2->children;
-//            foreach ($category3 as $item3) {
-//                $item3->hide = $status;
-//                $item3->save();
-//            }
-//        }
         $category->save();
         return 'ok';
     }
@@ -201,26 +199,40 @@ class CategoryController extends Controller
     {
         $parent_id = $request->parent_id;
         if ($parent_id == null) {
-            $cat = Category::where('parent_id', null)->defaultOrder()->get();
+            $cat = Category::getRoot();
         } else {
-            $cat = Category::find($parent_id)->child_cats;
+            $cat = Category::getRoot($parent_id);
         }
 
 //        Category::withTrashed()->find(120)->restore();
         return response()->json($cat);
     }
+
+    public function getTrash()
+    {
+        $parent_id = Category_relation::onlyTrashed()->get()->pluck('category');
+        return response()->json($parent_id);
+    }
+
+    public function trashDelete($id){
+        Category_relation::onlyTrashed()->find($id)->forceDelete();
+    }
+
+    public function trashRestore($id){
+        Category_relation::onlyTrashed()->find($id)->restore();
+    }
+
     public function copy(Request $request)
     {
-        $parent_id = $request->parent_id;
-        $child_id = $request->child_id;
+        $child_id = $request->show_id; // is copy , id => category_relations
+        $parent_id = $request->parent_id;// to copy,
 
-        Category_relation::create([
-           'child_id'=>$child_id,
-           'parent_id'=>$parent_id
-        ]);
+        $graph = Category_relation::find($child_id);
+        $graph->copy($parent_id);
 
         return true;
     }
+
     public function cat(Request $request)
     {
         $newParent_id = $request->new_parent_id;

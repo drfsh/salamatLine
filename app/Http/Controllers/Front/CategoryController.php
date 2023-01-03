@@ -57,15 +57,14 @@ class CategoryController extends Controller
 
         $name = $data['category']->name;
 
-        views($data['category'])->cooldown(1440)->record();
+//        views($data['category'])->cooldown(1440)->record();
         $this->seo()->setTitle($data['category']->name);
 
         $cat_id = $data['category']->id;
         // $data['sub_cats'] = $data['category']->descendants()->where('parent_id',$cat_id)->get();
 
-        $data['sub_cats'] = $data['category']->descendants()->hide()->get()->toTree();
-
-        $sub_cat_id = Category::descendantsAndSelf($cat_id)->pluck('id')->toArray();
+        $data['sub_cats'] = $data['category']->parent_cat;
+        $sub_cat_id = Category_relation::getAllChildId($cat_id);
 
         // if ($request->page == null) {$filters = app(ProductFilter::class)->parameters(['page' => 1]);}
         // $data['products'] = Product::published()->withAnyCategories($sub_cat_id)->filter($filters);
@@ -94,7 +93,7 @@ class CategoryController extends Controller
 
     public function getCategories()
     {
-        $cars = Category::where('hide', false)->defaultOrder()->toTree()->get();
+        $cars = Category::getRoot();
         foreach ($cars as $x) {
             $x['child'] = $x->child_cats;
             foreach ($x['child'] as $y) {
@@ -107,6 +106,7 @@ class CategoryController extends Controller
                 }
             }
         }
+
         return response()->json($cars);
     }
 
@@ -135,7 +135,7 @@ class CategoryController extends Controller
             $f = 'desc';
         }
 
-        $sub_cat_id = Category::descendantsAndSelf($id)->pluck('id')->toArray();
+        $sub_cat_id = Category_relation::getAllChildId($id);
 
         $wp = [];
         if ($price[0]!=-1)
@@ -160,21 +160,25 @@ class CategoryController extends Controller
         $id = $request->id;
         $category = Category::find($id);
         $sub_cats = $category->child_cats;
+
+
         return response()->json($sub_cats);
     }
-    public function install()
+    public function install(Request $request)
     {
-        $cates = Category::all();
-        foreach ($cates as $cat){
-            $parent = $cat->parent_id;
-            if (!is_null($parent)){
-                $relation = new Category_relation();
-                $relation->child_id = $cat->id;
-                $relation->parent_id = $parent;
-                $relation->save();
-            }
-        }
-        $relation = Category_relation::all();
-        return $relation;
+//        $step = $request->step;
+//        if ($step==1){
+//            $cat = Category::where('parent_id',null)->get();
+//            foreach ($cat as $v){
+//                Category_relation::create([
+//                   'category_id'=>$v->id,
+//                   'parent_id'=>0,
+//                ]);
+//            }
+//        }else if ($step==2){
+//
+//        }
+//        $relation = Category_relation::all();
+//        return $relation;
     }
 }

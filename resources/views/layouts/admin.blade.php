@@ -23,12 +23,12 @@
 							</div>
 						</div>
 					@else
-						<div class="cell medium-4 large-2" data-sticky-container>
+						<div class="cell navbar" data-sticky-container>
 							<div class="sticky" data-sticky data-margin-top="0">
 								@include('admin.global.sidebar.main')
 							</div>
 						</div>
-						<div class="cell medium-8 large-10">
+						<div class="cell body">
 							<div class="padding">
 								@yield('NavItems')
 								<div id="app">@yield('content')</div>

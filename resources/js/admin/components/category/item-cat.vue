@@ -52,10 +52,11 @@ export default {
                     icon: 'fas fa-paste',
                     onClick: async () => {
                         await window.axios.post('/admin/category/api/copy', {
-                            child_id: vm.$parent.copy,
-                            parent_id: vm.value.id
+                            show_id: vm.$parent.copy,
+                            parent_id: vm.value.show_id,
+
                         })
-                        vm.$parent.getChild(vm.value.id, vm.role+1)
+                        vm.$parent.getChild(vm.value.show_id, vm.role+1)
                         vm.value.child_count++
                         vm.select()
                         vm.$parent.copy = -1
@@ -66,7 +67,7 @@ export default {
                     label: 'کپی',
                     icon: 'fas fa-copy',
                     onClick: () => {
-                        vm.$parent.copy = vm.value.id
+                        vm.$parent.copy = vm.value.show_id
                     }
                 }
 
@@ -92,7 +93,7 @@ export default {
                                     text: 'حذف',
                                     btnClass: 'btn-red',
                                     action: async () => {
-                                        await window.axios.delete('/admin/category/api/destroy/' + vm.value.id+'/'+parentData.id)
+                                        await window.axios.delete('/admin/category/api/destroy/' + vm.value.show_id+'/'+parentData.id)
                                         $.alert('پاک شد!')
                                         window.location.href = '/admin/category'
                                     }
@@ -121,7 +122,7 @@ export default {
                                 vm.$parent.$data['data' + vm.role] = vm.$parent.moveArr(vm.$parent.$data['data' + vm.role], vm.i, vm.i - 1)
                                 if (selected)
                                     vm.$parent.$data['select' + vm.role] = vm.i - 1
-                                await window.axios.get('/admin/category/up/' + this.value.id)
+                                await window.axios.get('/admin/category/up/' + this.value.show_id)
                             }
                         },
                         {
@@ -135,7 +136,7 @@ export default {
                                 vm.$parent.$data['data' + vm.role] = vm.$parent.moveArr(vm.$parent.$data['data' + vm.role], vm.i, vm.i + 1)
                                 if (selected)
                                     vm.$parent.$data['select' + vm.role] = vm.i + 1
-                                await window.axios.get('/admin/category/down/' + this.value.id)
+                                await window.axios.get('/admin/category/down/' + this.value.show_id)
                             }
                         },
                     ]
@@ -155,7 +156,7 @@ export default {
                             label: 'پنهان بودن',
                             icon: iconHide,
                             onClick: async () => {
-                                await window.axios.get('/admin/category/hide/' + this.value.id)
+                                await window.axios.get('/admin/category/hide/' + this.value.show_id)
                                 vm.value.hide = !vm.value.hide
                             }
                         },
@@ -179,9 +180,15 @@ export default {
                     ]
                 },]
 
+            let target = $(e.target)
+            let isb =document.body.offsetHeight-target.offset().top
+            let y = e.y
+            if (isb<250){
+                y = y-222
+            }
             this.$contextmenu({
                 x: e.x,
-                y: e.y,
+                y: y,
                 items: option
             })
         },

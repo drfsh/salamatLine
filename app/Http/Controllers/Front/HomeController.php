@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category_relation;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use CyrildeWit\EloquentViewable\Support\Period;
@@ -55,8 +56,10 @@ class HomeController extends Controller
 
         // if ($most_visit_cat_id) {
 			foreach ($most_visit_cat_id as $key => $item) {
-				$sub_cat_id = Category::descendantsAndSelf($item)->pluck('id')->toArray();
-				$count = Product::published()->where('active',1)->withAnyCategories($sub_cat_id)->count();
+//				$sub_cat_id = Category::descendantsAndSelf($item)->pluck('id')->toArray();
+                $sub_cat_id = Category_relation::getAllChildId($item);
+
+                $count = Product::published()->where('active',1)->withAnyCategories($sub_cat_id)->count();
 				if($count > 0){
 					$data['category'][$key] = Category::find($item);
 					$data['category'][$key]['product'] = Product::published()->where('active',1)->withAnyCategories($sub_cat_id)->limit(8)->get();

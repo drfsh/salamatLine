@@ -999,6 +999,17 @@ button.btn-blue {
         font-size: 11px;
     }
 }
+@media (min-width: 700px) {
+    .navbar{
+        position: fixed;
+        z-index: 10;
+        width: 250px;
+    }
+    .body{
+        width: calc(100% - 280px);
+        margin-right: 250px;
+    }
+}
 .p-count{
     background: red!important;
     color: white!important;
@@ -1018,4 +1029,20 @@ button.btn-blue {
     background: red;
     border-radius: 10px;
     padding: 0 9px;
+}
+.page--{
+    background: #e1eef7;
+    padding: 9px;
+    border-radius: 10px;
+    position: absolute;
+    top: -42px;
+    left: 10px;
+    transition: 0.2s;
+}
+.page--.fa-trash{
+    left: 50px;
+}
+.page--:hover,.page--.active{
+    background: #094873;
+    color: white;
 }

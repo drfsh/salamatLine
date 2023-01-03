@@ -30,7 +30,7 @@ class Log extends Model
         return $users;
     }
 
-    public function getAdminLog(){
+    static public function getAdminLog(){
         $users = Log::where([['for','admin'],['name','users']])->first()->value;
         $invoice = Log::where([['for','admin'],['name','invoice']])->first()->value;
         $surveys = Log::where([['for','admin'],['name','surveys']])->first()->value;

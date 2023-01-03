@@ -31,6 +31,9 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
 	Route::get('category/hidePrice/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'hide_price'])->name('hideCategoryPrice');
 	Route::get('category/showPrice/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'show_price'])->name('showCategoryPrice');
 	Route::get('category/api/get',[App\Http\Controllers\Admin\CategoryController::class, 'getApi']);
+	Route::get('category/api/trash',[App\Http\Controllers\Admin\CategoryController::class, 'getTrash']);
+	Route::post('category/api/trash/delete/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'trashDelete']);
+	Route::post('category/api/trash/restore/{id}',[App\Http\Controllers\Admin\CategoryController::class, 'trashRestore']);
 	Route::post('category/api/copy',[App\Http\Controllers\Admin\CategoryController::class, 'copy']);
 	Route::post('category/api/cat',[App\Http\Controllers\Admin\CategoryController::class, 'cat']);
 //1365 product

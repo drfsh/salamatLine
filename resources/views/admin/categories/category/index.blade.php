@@ -13,12 +13,10 @@
 				</div>
 				<div class="double-gap"></div>
 			@endif
-                <div class="title_b">دسته بندی ها
-                    <a class="button success" href="{{ route('category.create') }}"><i class="fas fa-plus"></i> افزودن دسته‌بندی</a>
-                </div>
+                <div class="title_b">دسته بندی ها</div>
     		<div class="double-gap"></div>
 
-				<div id="category-admin"></div>
+				<div id="category-admin" style="position:relative;"></div>
 {{--			<div class="grid-x">--}}
 {{--				@foreach ($categories as $item)--}}
 {{--					<div class="cell">--}}
